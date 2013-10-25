@@ -1,0 +1,382 @@
+/*
+	- Main Menu
+	- Main Menu with Icons
+	- Dropdown Menu
+	- Grid Menu
+	- Vertical Menu
+*/
+
+
+
+/*-----------------------------------*/
+/* Main Menu */
+/*-----------------------------------*/
+
+/* Level 0 */
+
+.dropdown > li {
+  float:left;
+  position: relative;
+  border-right: 1px solid #edf6fa;
+  border-right: 1px solid rgba(237,246,250,0.15);
+}
+.dropdown > li:last-child{border-right: 0 none;}
+
+.dropdown a {
+  display: block;
+  font-size: @font-size + 2;
+  line-height: 29px;
+  color: #fff;
+  padding: 22px 27px 23px;
+}
+.dropdown > li:hover > a,
+.dropdown > li.hover > a{
+  background: #7bbbd7;
+  background: rgba(237,246,250,0.15);
+}
+
+.dropdown .link-more i{
+  display: block;
+  width: 29px;
+  height: 29px;
+  margin: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.dropdown .link-more i:before,
+.dropdown .link-more i:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  width: 15px;
+  height: 1px;
+  background: #fff;
+}
+.dropdown .link-more i:after{
+  top: 6px;
+  left: 13px;
+  width: 1px;
+  height: 15px;
+}
+
+/* Search Field */
+.dropdown li.menu-search{
+  float: right;
+  width: 236px;
+  padding: 22px 20px 20px;
+}
+.menu-search-form{position: relative;}
+
+input.menu-search-field{
+  border:0 none;
+  background: #4c9dc1;
+  padding:0 32px 0 12px;
+  font-size: @font-size;
+  font-style: italic;
+  color: #73ccf4;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height:32px;
+}
+.ie8 input.menu-search-field{line-height:30px;}
+input.menu-search-field:focus{border: 0 none;}
+
+.menu-search-field::-webkit-input-placeholder {font-size: @font-size; font-weight:300; text-transform:none; color:#73ccf4;}
+.menu-search-field:-moz-placeholder {font-size: @font-size; font-weight:300; text-transform:none; color:#73ccf4;}
+.menu-search-field:-ms-input-placeholder {font-size: @font-size; font-weight:300; text-transform:none; color:#73ccf4;}
+
+input.menu-search-submit{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background:url(images/icons/search.png) center center no-repeat;
+}
+
+/* Level 1+ */
+
+.dropdown ul{
+  position: absolute;
+  top:-9999px;
+  left:-9999px;
+  z-index: 9499;
+  width:140px;
+  padding-top: 4px;
+}
+.ie8 .dropdown ul{padding-top: 0;}
+
+.dropdown ul:before{
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -6px;
+  left: 26px;
+  border-left: 10px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid rgba(0, 0, 0, 0);
+  border-bottom: 10px solid #FFF;
+}
+.dropdown > li:hover > ul,
+.dropdown > li.hover > ul{
+  top:74px;
+  left:0;
+}
+.dropdown ul li{position: relative;}
+
+.dropdown ul a{
+  font-size: @font-size;
+  line-height: 17px;
+  font-style: italic;
+  color: #97a2ad;
+  padding: 13px 13px 13px 27px;
+  background: #fff;
+}
+.dropdown ul a:hover{
+  background: #7bbad7;
+  color: #fff;
+}
+.boxed-green.dropdown ul a:hover{background: @green;}
+.boxed-red.dropdown ul a:hover{background: @red;}
+.boxed-yellow.dropdown ul a:hover{background: @yellow;}
+.boxed-turquoise.dropdown ul a:hover{background: @turquoise;}
+.boxed-black.dropdown ul a:hover{background: @black;}
+.boxed-brown.dropdown ul a:hover{background: @brown;}
+
+.dropdown ul li.parent > a:before,
+.dropdown ul li.parent > a:after{
+  content: '';
+  display: block;
+  width: 7px;
+  height: 1px;
+  position: absolute;
+  top:22px;
+  left:10px;
+  background: #97a2ad;
+}
+.dropdown ul li.parent > a:after{
+  width: 1px;
+  height: 7px;
+  top:19px;
+  left:13px;
+}
+.dropdown ul li.parent > a:hover:before,
+.dropdown ul li.parent > a:hover:after{
+  background: #fff;
+}
+
+/* Level 2+ */
+
+.dropdown ul li:hover > ul{
+  position: absolute;
+  top:0;
+  left:100%;
+  width:100%;
+  padding-top: 0;
+  padding-left: 2px;
+}
+.dropdown ul li:hover > ul:before{display: none;}
+
+
+@media (max-width: 991px){
+  .dropdown .menu-search{display: none;}
+  .dropdown > li:nth-last-child(2) {border-right: 0 none;}
+}
+@media (max-width: 767px){
+  #topmenu .dropdown .link-more{display: none;}
+  #topmenu .dropdown > li {border-right: 0 none;}
+  #topmenu .dropdown a {
+    font-size: @font-size + 1;
+    line-height: 17px;
+    padding: 10px;
+  }
+  #topmenu .dropdown ul{
+    width:120px;
+    padding-top: 0;
+  }
+  #topmenu .dropdown ul:before{display: none;}
+
+  #topmenu .dropdown > li:hover > ul,
+  #topmenu .dropdown > li.hover > ul{
+    top:37px;
+    left:0;
+  }
+  #topmenu .dropdown ul a{
+    padding: 5px 5px 5px 16px;
+    font-size: @font-size - 1;
+  }
+  #topmenu .dropdown ul li.parent > a:before,
+  #topmenu .dropdown ul li.parent > a:after{
+    top:14px;
+    left:5px;
+  }
+  #topmenu .dropdown ul li.parent > a:after{
+    top:11px;
+    left:8px;
+  }
+}
+
+/*-----------------------------------*/
+/* Main Menu with Icons */
+/*-----------------------------------*/
+
+.dropdown-icons > li {
+  width: 25%;
+  border-right: 1px solid #ecf9f3 !important;
+  border-right: 1px solid rgba(236,249,243,0.2) !important;
+}
+.dropdown-icons > li > a {
+  padding: 0;
+  text-align: center;
+  height: 74px;
+  line-height: 90px;
+}
+.dropdown-icons > li:hover > a,
+.dropdown-icons > li.hover > a{
+  background: transparent;
+}
+.icon-menu{
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  background: url(images/icons/menu-icons.png) no-repeat;
+}
+.icon-menu-2{background-position: 0 -30px;}
+.icon-menu-3{background-position: 0 -60px;}
+.icon-menu-4{background-position: 0 -90px;}
+
+/*-----------------------------------*/
+/* Dropdown Menu */
+/*-----------------------------------*/
+
+.dropdownMenu{
+  position: relative;
+  margin-bottom: 30px;
+}
+a.dropdown-toggle{
+  display: block;
+  padding: 11px 13px;
+  background: @blue;
+  font-weight: 400;
+  color: #fff;
+}
+a.dropdown-toggle:before,
+a.dropdown-toggle:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top:13px;
+  right: 13px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid #fff;
+}
+a.dropdown-toggle:after{
+  top:17px;
+  border-top: 3px solid #fff;
+  border-bottom: 0 none;
+}
+.dropdown-menu{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0 none;
+  border-radius: 0;
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 9px 13px;
+  font-size: @font-size - 1;
+  font-style: italic;
+  font-weight: 400;
+  color: #97A2AD;
+  border-top: 1px solid #ECEFF1;
+}
+.dropdown-menu > li:first-child > a {border-top: 0 none;}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: @black;
+  background-color: transparent;
+}
+
+/*-----------------------------------*/
+/* Grid Menu */
+/*-----------------------------------*/
+
+.grid-menu{margin: -5px -5px 25px;}
+
+.grid-box{
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.grid-box-large{width: 100%;}
+
+.grid-box a{
+  display: block;
+  margin: 0;
+  padding: 56px 17px 19px;
+  font-size: @font-size * 1.62;
+  color: #fff;
+}
+
+.grid-box strong,
+.grid-box span{
+  display: block;
+}
+.grid-box strong{text-align: center; margin-bottom: 23px;}
+.grid-box-large strong{text-align: left;}
+
+.icon-grid{
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  background: url(images/icons/grid-menu-icons.png) 0 0 no-repeat;
+}
+.icon-grid-2{background-position: 0 -50px;}
+.icon-grid-3{background-position: 0 -100px;}
+
+/*-----------------------------------*/
+/* Vertical Menu */
+/*-----------------------------------*/
+
+.menu-vertical{width: 70px;}
+
+.menu-vertical li a{
+  display: block;
+  padding: 19px 0;
+  text-align: center;
+  border-top: 1px solid #fff;
+  border-top: 1px solid rgba(255,255,255,0.25);
+}
+.menu-vertical li a:hover,
+.menu-vertical li.active a{
+  background: #30664d;
+  background: rgba(0,0,0,0.5);
+  border-top: 1px solid transparent;
+}
+.menu-vertical li:first-child a{border-top: 0 none;}
+
+.menu-vertical .icon-menu{
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  background: url(images/icons/menu-icons2.png) no-repeat;
+}
+.menu-vertical .icon-menu-2{background-position: 0 -30px;}
+.menu-vertical .icon-menu-3{background-position: 0 -60px;}
+.menu-vertical .icon-menu-4{background-position: 0 -90px;}
+.menu-vertical .icon-menu-5{background-position: 0 -120px;}
+
+.menu-vertical li a:hover .icon-menu, .menu-vertical li.active .icon-menu{background-position: -30px 0;}
+.menu-vertical li a:hover .icon-menu-2, .menu-vertical li.active .icon-menu-2{background-position: -30px -30px;}
+.menu-vertical li a:hover .icon-menu-3, .menu-vertical li.active .icon-menu-3{background-position: -30px -60px;}
+.menu-vertical li a:hover .icon-menu-4, .menu-vertical li.active .icon-menu-4{background-position: -30px -90px;}
+.menu-vertical li a:hover .icon-menu-5, .menu-vertical li.active .icon-menu-5{background-position: -30px -120px;}

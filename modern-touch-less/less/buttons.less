@@ -1,0 +1,74 @@
+/*-----------------------------------*/
+/* Buttons */
+/*-----------------------------------*/
+
+/* foo classes */
+.buttons-wrap{margin-bottom: 60px;}
+.buttons{margin-bottom:10px;}
+.buttons .btn{margin-right:2px; margin-bottom:10px;}
+/* end foo classes */
+
+.btn:hover, .btn:focus {
+  -webkit-transition: background-position .0s linear;
+  -moz-transition: background-position .0s linear;
+  -o-transition: background-position .0s linear;
+  transition: background-position .0s linear;
+}
+.btn:active, .btn.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+  background-color: transparent;
+  color:#fff;
+}
+.btn{
+  display:inline-block;
+  padding: 0;
+  border: 0 none;
+  border-radius: 0;
+}
+.btn span,
+.btn input{
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 16px;
+  font-size: @font-size + 1;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow:none;
+  background-color: @turquoise;
+  border: 0 none;
+  background-image: url(images/icons/button-icons.png);
+  background-repeat: no-repeat;
+  background-position: -300px -300px;
+}
+.btn-icon-left span,
+.btn-icon-left input{
+  padding-left: 48px;
+  padding-right: 20px;
+  background-position: left top;
+}
+.btn-icon-left.btn-arrow-left span, .btn-icon-left.btn-arrow-left input{background-position: left -45px;}
+.btn-icon-left.btn-arrow-up span, .btn-icon-left.btn-arrow-up input{background-position: left -90px;}
+.btn-icon-left.btn-arrow-down span, .btn-icon-left.btn-arrow-down input{background-position: left -135px;}
+
+.btn-icon-right span,
+.btn-icon-right input{
+  padding-right: 48px;
+  padding-left: 20px;
+  background-position: right top;
+}
+.btn-icon-right.btn-arrow-left span, .btn-icon-right.btn-arrow-left input{background-position: right -45px;}
+.btn-icon-right.btn-arrow-up span, .btn-icon-right.btn-arrow-up input{background-position: right -90px;}
+.btn-icon-right.btn-arrow-down span, .btn-icon-right.btn-arrow-down input{background-position: right -135px;}
+
+.btn-blue span, .btn-blue input{background-color: @blue;}
+.btn-green span, .btn-green input{background-color: @green;}
+.btn-red span, .btn-red input{background-color: @red;}
+.btn-yellow span, .btn-yellow input{background-color: @yellow;}
+.btn-turquoise span, .btn-turquoise input{background-color: @turquoise-dark;}
+.btn-black span, .btn-black input{background-color: @black;}
+.btn-brown span, .btn-brown input{background-color: @brown;}

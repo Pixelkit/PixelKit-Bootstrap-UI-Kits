@@ -1,0 +1,64 @@
+/*-----------------------------------*/
+/* Progress Bars */
+/*-----------------------------------*/
+
+.progressbar{margin: 34px 0 26px; position: relative;}
+.progressbar .pbar::selection{background: transparent;}
+
+.progressbar .mark-left,
+.progressbar .mark-right,
+.progressbar .percent,
+.progressbar .elapsed,
+.progressbar .remained{
+  display: none;
+}
+.progressbar .ui-progressbar {
+  height: 10px;
+  overflow: visible !important;
+  position: relative;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 2px 3px -1px #CED6DB;
+  box-shadow: inset 1px 2px 3px -1px #CED6DB;
+  border: 1px solid #ECEFF1;
+  border-top: 1px solid #D1D9DD;
+  border-bottom: 1px solid #F2F2F2;
+}
+.progressbar .ui-progressbar-value {
+  display: block !important;
+  margin: 0;
+  height: 10px;
+  position: relative;
+  background: @yellow;
+  top: -1px;
+  z-index: 2;
+  border-radius: 5px;
+}
+.progressbar .ui-progressbar-value:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top:-7px;
+  right:-12px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: @gray;
+}
+
+/* Progress Bars style 2 */
+
+.progressbar.style2 .ui-progressbar,
+.progressbar.style2 .ui-progressbar-value{
+  height: 8px;
+  border-radius: 4px;
+}
+.progressbar.style2 .ui-progressbar-value:after{
+  top:-5px;
+  right:-21px;
+  width: 42px;
+  height: 18px;
+  border-radius: 9px;
+  background: #fff;
+  border: 8px solid @gray;
+}

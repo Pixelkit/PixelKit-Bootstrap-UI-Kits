@@ -1,0 +1,69 @@
+.range-slider{margin: 24px 0 20px;}
+
+.jslider { display: block; width: 100%; position: relative;}
+.jslider table { width: 100%; border-collapse: collapse; border: 0; }
+.jslider td, .jslider th { padding: 0; vertical-align: top; text-align: left; border: 0; }
+
+.jslider table,
+.jslider table tr,
+.jslider table tr td { width: 100%; vertical-align: top; padding:0; margin:0}
+
+.jslider .jslider-bg { position: relative; }
+
+.jslider .jslider-bg i {
+    position: absolute;
+    top: 0;
+    height: 8px;
+    font-size: 0;
+    margin: 0;
+    border:1px solid #eceff1;
+    border-top:1px solid #d1d9dd;
+    border-bottom:1px solid #f2f2f2;
+}
+
+.jslider .jslider-bg .l {
+    width: 50%;
+    left: 0;
+    border-right: 0 none;
+    border-radius:4px 0 0 4px;
+    -webkit-box-shadow: inset 1px 2px 3px -1px #ced6db;
+    box-shadow: inset 1px 2px 3px -1px #ced6db;
+}
+.jslider .jslider-bg .r {
+    width: 50%;
+    left: 50%;
+    border-left: 0 none;
+    border-radius: 0 4px 4px 0;
+    -webkit-box-shadow: inset -1px 2px 3px -1px #ced6db;
+    box-shadow: inset -1px 2px 3px -1px #ced6db;
+}
+.jslider .jslider-bg .v {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 0;
+    z-index: 1;
+    height: 8px;
+    background: #ebc85e;
+    border: 0 none;
+}
+
+.jslider .jslider-pointer {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border:9px solid #7b8a97;
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    z-index: 2 !important;
+    cursor: pointer;
+    margin-left: -12px;
+}
+
+.jslider-value,
+.jslider-scale,
+.jslider-single .jslider-pointer-to,
+.jslider-single .jslider-value-to,
+.jslider-single .jslider-bg .v,
+.jslider-limitless .jslider-label {	display: none; }

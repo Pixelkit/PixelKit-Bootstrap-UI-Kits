@@ -1,0 +1,132 @@
+/*
+	styles for select
+*/
+.cusel,
+.cusel .cusel-scroll-wrap,
+.cusel .jScrollPaneContainer,
+.cusel .cusel-scroll-pane {
+	width: 100% !important;
+}
+.cusel {
+	height: 43px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	z-index: 2;
+    padding: 0 30px 0 12px;
+}
+.cuselOpen {z-index: 9999;}
+
+.payment-form .cusel {width: 100% !important;}
+
+.cuselFrameRight {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 32px;
+}
+.cuselFrameRight:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #7b8a97;
+    position: absolute;
+    top:19px;
+    right: 14px;
+}
+.cusel:hover .cuselFrameRight:after,
+.cuselFocus .cuselFrameRight:after {
+    border-top-color: #333;
+}
+
+.cuselText {
+	height: 41px;
+	cursor: pointer;
+	overflow: hidden;
+	line-height:41px;
+    font-weight:400;
+    text-transform:uppercase;
+    color:#7b8a97;
+    white-space: nowrap;
+}
+
+.cusel span {
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 11px 12px;
+	zoom: 1;
+	position: relative;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    color: #97a2ad;
+    border-bottom: 1px solid #ECEFF1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@media (max-width:479px){
+	.cusel span {
+		font-size:12px; 
+		font-weight:400; 
+		text-transform:none;
+		padding-left:10px;
+		padding-right:5px;
+	}
+}
+
+.cusel span:first-child{display: none;}
+.cusel span:last-child{border-bottom: 0 none;}
+
+.cusel span:hover,
+.cusel span.cuselActive{
+    color: #333;
+}
+.cusel span.cuselActive {cursor: default;}
+
+.cusel .cusel-scroll-wrap {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	left: -2px;
+	top: 100%;
+	min-width: 100%;
+	width: auto;
+	z-index:200;
+	text-align:left;
+    border:1px solid transparent;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+    background: #FFF;
+    border: 1px solid #ECEFF1;
+    border-top: 0 none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.cusel .jScrollPaneTrack {
+	height: 100%;
+	width: 7px !important;
+	background: #3BBEC0;
+	position: absolute;
+	top: 0;
+	right: 4px;
+}
+.cusel .jScrollPaneDrag {
+	position: absolute;
+	cursor: pointer;
+	width: 15px !important;
+	height: 27px !important;
+	right: -4px;
+    background: #3BBEC0;
+}

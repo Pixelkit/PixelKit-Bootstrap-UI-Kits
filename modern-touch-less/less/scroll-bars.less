@@ -1,0 +1,59 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+
+.scrollBars{
+  float: left;
+  width: 55%;
+  padding: 0;
+  color: #fff !important;
+}
+.scrollBars .scrollbar {
+  width: 30px;
+  height: 150px;
+  overflow: auto;
+  float: left;
+}
+.scrollbar .scrollbar-inner {padding-right: 30px;}
+
+.jspContainer{overflow: hidden; position: relative;}
+.jspPane{position: absolute;}
+
+.jspVerticalBar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 100%;
+}
+.jspHorizontalBar{display: none;}
+
+.jspCap{height:5px;}
+
+.jspTrack{
+  position: relative;
+  width: 4px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 2px 1px 3px -1px #CED6DB;
+  box-shadow: inset 2px 1px 3px -1px #CED6DB;
+  border: 1px solid #ECEFF1;
+  border-left: 1px solid #D1D9DD;
+  border-right: 1px solid #F2F2F2;
+}
+.jspDrag{
+  background: @gray;
+  width: 18px;
+  position: relative;
+  top: 0;
+  left: -8px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Scroll Bars Style 2, Style 4 */
+.scrollbar.style2 .jspTrack, .scrollbar.style4 .jspTrack{width: 10px; border-radius: 5px;}
+.scrollbar.style2 .jspDrag, .scrollbar.style4 .jspDrag{width: 12px; border-radius: 6px; left: -2px;}
+
+/* Scroll Bars Style 3 */
+.scrollbar.style3 .jspDrag{width: 8px; border-radius: 4px; left: -3px;}
