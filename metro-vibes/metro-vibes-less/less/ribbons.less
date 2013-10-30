@@ -1,0 +1,42 @@
+/*-----------------------------------*/
+/* Ribbons */
+/*-----------------------------------*/
+
+.ribbons{text-align: center; padding-bottom: 14px;}
+
+.ribbon{
+  display: inline-block;
+  width:56px;
+  padding-bottom:20px;
+  background-image:url(images/ribbons.png);
+  background-repeat: no-repeat;
+  background-position: -60px bottom;
+  position: relative;
+  top:-3px;
+}
+.ribbon span{
+  display:block;
+  width:56px;
+  padding-top:16px;
+  background-image:url(images/ribbons.png);
+  background-repeat: no-repeat;
+  background-position: 0 top;
+}
+.ribbon.ribbon-blue span{background-position: -120px top;}
+.ribbon.ribbon-blue{background-position: -180px bottom;}
+
+.ribbon em, .ribbon strong{
+  display: block;
+  font-style: normal;
+  font-size: @font-size;
+  font-weight: 700;
+  color: #c2f3de;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 5px;
+}
+.ribbon strong{
+  font-size: @font-size * 1.39;
+  color: #fff;
+}
+.ribbon-blue em{color: #b4d6ec;}

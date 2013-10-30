@@ -1,0 +1,94 @@
+/*-----------------------------------*/
+/* Avatar Placeholder */
+/*-----------------------------------*/
+
+.widget_avatar {
+  margin-bottom: 30px;
+  .border-radius(@border-radius);
+}
+.widget_avatar .inner{
+  position:relative;
+  padding: 15px 10px 21px 111px;
+  min-height: 116px;
+}
+
+.widget_avatar .avatar-image img{
+  display: block;
+  width: 100%;
+  .border-radius-top(@border-radius);
+}
+.widget_avatar .avatar,
+.widget_avatar .avatar img,
+.widget_profile .avatar,
+.widget_profile .avatar img{
+  display: block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 73px;
+  height: 73px;
+}
+.widget_avatar .avatar,
+.widget_profile .avatar{
+  position: absolute;
+  top:13px;
+  left: 10px;
+  width: 89px;
+  height: 89px;
+  overflow: hidden;
+  border: 1px solid #BAB8B3;
+  padding: 7px;
+}
+.widget_avatar h5{
+  font-size: @font-size * 2;
+  font-weight: 600;
+  color: @brown;
+  margin-bottom: 10px;
+}
+.widget_avatar .subtitle{
+  display: block;
+  color: @font-color;
+}
+.widget_avatar .post-meta-links li{
+  width: 33.33333333333333%;
+}
+.widget_avatar .post-meta-links li a {padding: 10px 5px;}
+.widget_avatar .icon-post {margin-right: 5px;}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .widget_avatar .inner {padding: 15px 10px 21px 100px;}
+  .widget_avatar .avatar {left: 5px;}
+}
+
+/*-----------------------------------*/
+/* Widget Profile */
+/*-----------------------------------*/
+
+.widget_profile .widget-title {
+  background: #b1a599;
+  box-shadow: inset 0 -2px 2px rgba(73, 73, 73, 0.16);
+  padding: 33px 20px 37px 122px;
+}
+.widget_profile .avatar {
+  top: 17px;
+  left: 18px;
+  border: 1px solid #8b7f73;
+}
+.widget_profile .widget-title h5 {
+  font-size: @font-size * 1.24;
+  font-weight: 700;
+  color: #fff;
+  line-height: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.widget_profile .widget-title .subtitle{
+  font-size: @font-size - 1;
+  color: #857a70;
+  text-transform: none;
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .widget_profile .widget-title {padding: 33px 20px 37px 106px;}
+  .widget_profile .avatar {left: 8px;}
+}
+.widget_profile .inner {padding: 12px 0;}

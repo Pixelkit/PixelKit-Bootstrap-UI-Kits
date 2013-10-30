@@ -1,0 +1,379 @@
+/*-----------------------------------*/
+/* Forms */
+/*-----------------------------------*/
+
+/*
+  - Comment Form
+  - Contact Form
+  - Survey Form
+  - Payment Form
+  - Login Form
+  - Newsletter Form, Search Form
+  - Contact Form styled
+  - Login Form styled
+  - Search Form styled
+*/
+
+
+
+/*-----------------------------------*/
+/* Comment Form */
+/*-----------------------------------*/
+
+input::-webkit-input-placeholder {font-size: @font-size; color:#c9c2bc;}
+input:-moz-placeholder {font-size: @font-size; color:#c9c2bc;}
+input:-ms-input-placeholder {font-size: @font-size; color:#c9c2bc;}
+textarea::-webkit-input-placeholder {font-size: @font-size; color:#c9c2bc;}
+textarea:-moz-placeholder {font-size: @font-size; color:#c9c2bc;}
+textarea:-ms-input-placeholder {font-size: @font-size; color:#c9c2bc;}
+
+label, input, button, select, textarea {
+  font-size: inherit;
+  line-height: normal;
+}
+.input_icon{
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  z-index: 1;
+}
+.add-comment{margin-bottom: 30px;}
+.add-comment .form-inner{padding: 0 42px 24px;}
+
+.add-comment-title h3{
+  font-size: @font-size * 2.08;
+  padding: 28px 42px 32px;
+  margin-bottom: 0;
+}
+.field_text,
+.field_select{
+  float:left;
+  margin-right: 2%;
+  margin-bottom: 19px;
+  width: 48%;
+}
+.field_text.omega,
+.field_select.omega{
+  float:right;
+}
+.field_text.field_textarea{width: 100%;}
+
+.label_title{
+  display: block;
+  color: @font-color;
+  font-size: @font-size * 1.31;
+  cursor: default;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+.select_styled{
+  border:1px solid #e5d4c2;
+  background: transparent;
+  .border-radius(@border-radius-input * 0.8);
+  padding:0 16px;
+  font-size: @font-size * 1.24;
+  color: @font-color;
+  width: 100%;
+}
+textarea {padding:10px 16px;}
+
+input[type="text"],
+input[type="password"],
+textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input[type="text"],
+input[type="password"]{
+  height:43px;
+  margin: 0;
+  outline: none;
+}
+.ie8 input[type="text"],
+.ie8 input[type="password"]{
+  line-height:41px;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus{
+  border:1px solid #e5d4c2;
+  box-shadow: none;
+}
+.add-comment textarea{
+  width:100%;
+  height:145px;
+  padding:9px 15px;
+  resize: vertical;
+  overflow: auto;
+}
+.add-comment .rowSubmit {
+  padding: 19px 42px;
+  background: #f6f0ec;
+  .border-radius-bottom(@border-radius);
+}
+.add-comment .link-reset{
+  float: right;
+  font-size: @font-size + 2;
+  color: #e05033;
+  margin-top: 15px;
+}
+.add-comment .error {
+  overflow: hidden;
+  border: 1px solid #E86741 !important;
+}
+
+/*-----------------------------------*/
+/* Contact Form */
+/*-----------------------------------*/
+
+.contact-form .add-comment-title h3 {padding: 38px 44px 32px;}
+.contact-form .form-inner{padding: 0 44px 27px;}
+.contact-form .field_text.field_textarea {float: none; margin-bottom: 23px;}
+.contact-form textarea {height: 145px;}
+.contact-form .rowSubmit {padding: 20px 44px;}
+
+/*-----------------------------------*/
+/* Survey Form */
+/*-----------------------------------*/
+
+.survey-form .form-inner {padding: 38px 44px 26px;}
+.survey-form .rowSubmit {padding: 19px 44px;}
+.survey-form .add-comment-title {border: 0 none; margin: 0;}
+.survey-form .add-comment-title h3 {padding:0; margin-bottom:19px;}
+.survey-form .checklist, .survey-form .inlinelist{margin-bottom:41px;}
+.survey-form textarea {height: 145px;}
+
+/*-----------------------------------*/
+/* Payment Form */
+/*-----------------------------------*/
+
+.payment-form .form-inner {padding: 30px 40px 26px;}
+.payment-form #shipping .form-inner {padding: 42px 40px 36px;}
+.payment-form #payment .form-inner {padding: 40px 42px 18px;}
+
+.field_phone input{
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+.payment-form .rowSubmit{
+  text-align: right;
+  background: #f8f3f0;
+  padding: 20px 40px;
+  .border-radius-bottom(@border-radius);
+}
+
+.payment-form #billing .custom-checkbox label {float: left; margin-top: 5px;}
+.payment-form #billing .btn {float: right;}
+.payment-form #shipping .divider{margin: 27px 0 !important;}
+.payment-form #payment .custom-checkbox label {padding: 0 66px 0 0; background-position: right 0;}
+.payment-form #payment .custom-checkbox label.checked {background-position: right -100px;}
+.payment-form #payment .divider{margin: 13px 0 25px !important;}
+
+.payment-form .card_code{position: relative;}
+.payment-form .card_code input{padding-right: 90px;}
+.payment-form .card_code .input_icon{
+  background:url(images/icons/security_code.png);
+  width: 74px;
+  height: 23px;
+}
+.payment-form .card_type .rowRadio,
+.payment-form .card_type img{
+  display: inline-block;
+  vertical-align: text-top;
+}
+.payment-form .card_type img{
+  margin: 2px 10px 0 0;
+}
+.payment-form .btn{margin-left: 5px;}
+
+@media (min-width: 992px){
+  .payment-form{width: 616px;}
+  .payment-form #payment .field_select .field_select{width: 122px;}
+}
+
+/*-----------------------------------*/
+/* Login Form */
+/*-----------------------------------*/
+
+.widget_login .inner, .newsletterBox .inner, .widget_search .inner{padding: 34px 33px 41px;}
+.widget_login .field_text {float: none; width: auto; margin: 0 0 15px;}
+.widget_login .forget_password{float: right; margin: 14px 0;}
+.widget_login .forget_password a{font-size: @font-size - 1; color: #e7613c; text-decoration: underline;}
+.widget_login .rowRemember{margin: 24px 0 15px;}
+
+/*-----------------------------------*/
+/* Newsletter Form, Search Form */
+/*-----------------------------------*/
+
+.widget_search .inner{padding-bottom: 25px;}
+
+.newsletterBox .field_text, .widget_search .field_text{margin: 0 82px 19px 0; width: auto; float: none;}
+.newsletterBox .field_text input, .widget_search .field_text input{height:45px;}
+.newsletterBox .btn, .widget_search .btn{float:right; margin-top: 31px;}
+
+.newsletterBox .link-news-rss{
+  display: inline-block;
+  color: @font-color;
+  font-size: @font-size;
+  line-height: 16px;
+  padding-left: 20px;
+  background: url(images/icons/rss.png) no-repeat;
+}
+.newsletterBox .link-news-rss span{color: #e7613c; text-decoration: underline;}
+
+/*-----------------------------------*/
+/* Contact Form styled */
+/*-----------------------------------*/
+
+.add-comment.styled input[type="text"],
+.add-comment.styled input[type="password"] {
+  height: 48px;
+  padding-left: 10px;
+}
+.ie8 .add-comment.styled input[type="text"],
+.ie8 .add-comment.styled input[type="password"] {
+  line-height: 46px;
+}
+
+.add-comment.styled .form-inner{padding: 27px 26px 21px;}
+.add-comment.styled textarea {height:108px; padding: 10px;}
+
+.add-comment.styled .field_text,
+.add-comment.styled .field_select{
+  float: none;
+  margin-right: 0;
+  margin-bottom: 14px;
+  width: 100%;
+  position: relative;
+}
+.add-comment.styled .field_text.field_textarea{margin-bottom: 0;}
+.add-comment.styled label{font-size: @font-size * 1.24;}
+.add-comment.styled .rowSubmit {padding: 21px 26px;}
+.add-comment.styled .rowSubmit .btn{float: right;}
+.add-comment.styled .rowSubmit .checklist{margin-top: 11px; float: left;}
+.add-comment.styled .rowSubmit label{padding-left: 30px; letter-spacing: -1px;}
+
+/*-----------------------------------*/
+/* Login Form styled */
+/*-----------------------------------*/
+
+.widget_login.styled .inner{padding: 40px 28px 8px;}
+
+.widget_login.styled h6 {
+  font-weight: 700;
+  color: @font-color;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+}
+
+.widget_login.styled .field_text {
+  position: relative;
+  margin: 0 0 14px;
+}
+.widget_login.styled input[type="text"],
+.widget_login.styled input[type="password"]{
+  padding-left: 64px;
+  height: 48px;
+}
+.ie8 .widget_login.styled input[type="text"],
+.ie8 .widget_login.styled input[type="password"]{
+  line-height: 46px;
+}
+.widget_login.styled .label_title{height:23px; line-height:23px;}
+
+.widget_login.styled .input_icon {
+  top: 32px;
+  bottom: 1px;
+  left: 1px;
+  z-index: 2;
+  width: 47px;
+  border-right: 1px solid #E5D4C2;
+  background-image: url(images/icons/input-icons.png);
+  background-color: #f8ece4;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  .border-radius-left(@border-radius-input * 0.8 - 1);
+}
+.widget_login.styled .input_icon.input_email {background-position: 0 0;}
+.widget_login.styled .input_icon.input_pass {background-position: 0 -46px;}
+
+/* Error styles */
+.widget_login .field_text.error input{border: 1px solid #e86741;}
+.widget_login.styled .field_text.error .input_icon{border-right: 1px solid #e86741;}
+.widget_login.styled .field_text.error .input_icon.input_email {background-position: 0 -92px;}
+.widget_login.styled .field_text.error .input_icon.input_pass {background-position: 0 -138px;}
+/* ------------ */
+
+.widget_login.styled .rowSubmit{padding: 20px 28px 17px; background: #f8f3f0; text-align: center;}
+.widget_login.styled .rowSubmit .btn{display: block;}
+.widget_login.styled .rowSubmit .btn span{width: 100%;}
+.widget_login.styled .rowRemember{margin: 16px 0 0;}
+.widget_login.styled .forgetmenot{display: none;}
+.widget_login.styled .forget_password {float: none;}
+.widget_login.styled .forget_password a{font-size: @font-size - 2; font-weight: 600; color: @font-color;}
+
+.widget_login.styled .rowSocial{
+  padding: 12px;
+  background: #5e90af;
+  text-align: center;
+  .border-radius-bottom(@border-radius - 1);
+}
+.widget_login.styled .rowSocial i{
+  width: 15px;
+  height: 15px;
+  background: url(images/icons/facebook.png) 0 0 no-repeat;
+  margin-right: 5px;
+  vertical-align: top;
+}
+.widget_login.styled .rowSocial a{
+  font-size: @font-size - 2;
+  font-weight: 600;
+  color: #fff;
+  line-height: 15px;
+}
+
+/*-----------------------------------*/
+/* Search Form styled */
+/*-----------------------------------*/
+
+.widget_search.styled.boxed{
+  .border-radius-right(@border-radius);
+}
+.widget_search.styled .inner{padding: 26px 21px;}
+.widget_search.styled .btn {margin-top: 0;}
+.widget_search.styled .field_text {margin: 0 112px 0 0;}
+
+/* Responsive */
+@media (max-width:479px){
+		.add-comment-title h3,
+		.add-comment.boxed .form-inner,
+		.add-comment.boxed .rowSubmit{
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	.payment-form .field_text,
+	.payment-form .form-inner  > .field_select{
+		float: none !important;
+		width: 100% !important;
+	}
+	.payment-form .form-inner,
+	.tabs_framed.styled.widget-stats .tab-content{
+		padding-left:0 !important;
+		padding-right:0 !important;
+	}
+	.payment-form .rowSubmit {
+		padding: 20px;
+		margin: 0 -20px;
+	}
+		.payment-form .rowSubmit .btn {
+		margin-bottom:10px;
+	}
+}

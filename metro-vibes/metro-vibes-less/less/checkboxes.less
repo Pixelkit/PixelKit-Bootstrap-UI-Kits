@@ -1,0 +1,49 @@
+/*-----------------------------------*/
+/* Custom checkboxes, radios */
+/*-----------------------------------*/
+
+.custom-checkbox,.custom-radio {position:relative;}
+.custom-checkbox label::selection, .custom-radio label::selection {background: transparent; color: inherit;}
+.custom-checkbox input, .custom-radio input {position:absolute; top:3px; left:13px; margin:0; border:none; width:1px; height:1px; display:none;}
+.custom-checkbox input {left:4px;}
+.checkbox-middle .custom-checkbox input {left:13px; top:2px;}
+.checkbox-large .custom-checkbox input {left:13px; top:3px;}
+.ie8 .custom-checkbox input, .ie8 .custom-radio input {display:block;}
+.custom-checkbox label.focus,.custom-radio label.focus {outline: 0;}
+
+.custom-checkbox label,.custom-radio label {
+  display:block;
+  position:relative;
+  height:22px;
+  line-height:22px;
+  padding-left:34px;
+  margin-bottom:13px;
+  cursor:pointer;
+  color: @font-color;
+  background-repeat:no-repeat;
+  background-position:0 0;
+  background-image: url(images/styled_checkbox.png);
+}
+.custom-radio label {
+  height:24px;
+  line-height:24px;
+  margin-bottom:11px;
+  background-image: url(images/styled_radiobutton.png);
+}
+.custom-checkbox label.checked,.custom-radio label.checked {
+  background-position:0 -100px;
+}
+.checkbox-large .custom-checkbox label,
+.checkbox-large.checkbox-white .custom-checkbox label,
+.checkbox-large.checkbox-noText .custom-checkbox label {
+  height: 26px;
+  line-height: 26px;
+  padding-left:65px;
+  background-image: url(images/styled_checkbox_large.png);
+}
+.checkbox-large.checkbox-white .custom-checkbox label{background-image: url(images/styled_checkbox_large2.png);}
+.checkbox-large.checkbox-noText .custom-checkbox label{background-image: url(images/styled_checkbox_large3.png);}
+.checkbox-red .custom-checkbox label{background-image: url(images/styled_checkbox2.png);}
+.checkbox-filled .custom-checkbox label{background-image: url(images/styled_checkbox3.png);}
+.radio-red .custom-radio label{background-image: url(images/styled_radiobutton2.png);}
+.radio-filled .custom-radio label{background-image: url(images/styled_radiobutton3.png);}

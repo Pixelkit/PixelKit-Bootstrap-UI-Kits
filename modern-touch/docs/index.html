@@ -1,0 +1,2058 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modern Touch | Documentation</title>
+
+<!-- main JS libs -->
+<script src="../modern-touch-css/js/libs/modernizr.min.js"></script>
+<script src="../modern-touch-css/js/libs/jquery-1.10.0.js"></script>
+<script src="../modern-touch-css/js/libs/jquery-ui.min.js"></script>
+<script src="../modern-touch-css/js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="../modern-touch-css/css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="../modern-touch-css/style.css" media="screen" rel="stylesheet">
+<link href="css/docs.css" media="screen" rel="stylesheet">
+
+<!-- scripts -->
+<script src="../modern-touch-css/js/general.js"></script>
+<script src="js/general.js"></script>
+
+<!-- SyntaxHighlighter -->
+<link rel="stylesheet" href="css/shCore.css">
+<link rel="stylesheet" href="css/shThemeDefault.css">
+<script src="js/shCore.js"></script>
+<script src="js/shBrushXml.js"></script>
+<script src="js/shBrushJScript.js"></script>
+<script>
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.all();
+</script>
+
+<!-- custom input -->
+<script src="../modern-touch-css/js/jquery.customInput.js"></script>
+
+<!-- Placeholders -->
+<script type="text/javascript" src="../modern-touch-css/js/jquery.powerful-placeholder.min.js"></script>
+
+<!-- styled select -->
+<link rel="stylesheet" href="../modern-touch-css/css/cusel.css">
+<script src="../modern-touch-css/js/cusel-min.js"></script>
+
+<!-- Scroll Bars -->
+<script src="../modern-touch-css/js/jquery.mousewheel.js"></script>
+<script src="../modern-touch-css/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+    jQuery(function()
+    {
+        jQuery('.scrollbar').jScrollPane({
+            verticalDragMaxHeight: 18,
+            verticalDragMinHeight:18
+        });
+
+        jQuery('.scrollbar.style2').jScrollPane({
+            verticalDragMaxHeight: 28,
+            verticalDragMinHeight:28
+        });
+
+        jQuery('.scrollbar.style3').jScrollPane({
+            verticalDragMaxHeight: 38,
+            verticalDragMinHeight:38
+        });
+
+        jQuery('.scrollbar.style4').jScrollPane({
+            verticalDragMaxHeight: 38,
+            verticalDragMinHeight:38
+        });
+    });
+</script>
+
+<!-- Progress Bars -->
+<script src="../modern-touch-css/js/progressbar.js"></script>
+
+<!-- range sliders -->
+<script src="../modern-touch-css/js/jquery.slider.bundle.js"></script>
+<script src="../modern-touch-css/js/jquery.slider.js"></script>
+<link rel="stylesheet" href="../modern-touch-css/css/jslider.css">
+
+<!-- Video Player -->
+<link href="../modern-touch-css/css/video-js.css" rel="stylesheet">
+<script src="../modern-touch-css/js/video.js"></script>
+
+<!-- Calendar -->
+<script src="../modern-touch-css/js/jquery-ui.multidatespicker.js"></script>
+
+<!-- Lightbox prettyPhoto -->
+<link href="../modern-touch-css/css/prettyPhoto.css" rel="stylesheet">
+<script src="../modern-touch-css/js/jquery.prettyPhoto.js"></script>
+
+<!-- CarouFredSel  -->
+<script src="../modern-touch-css/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+
+        $('#carouFredsel-1').carouFredSel({
+            next : "#carousel-next-1",
+            prev : "#carousel-prev-1",
+            auto: false,
+            scroll: {items : 1}
+        });
+
+        $(window).resize(function() {
+
+            $('#carouFredsel-1').carouFredSel({
+                next : "#carousel-next-1",
+                prev : "#carousel-prev-1",
+                auto: false,
+                scroll: {items : 1}
+            });
+
+        })
+    });
+</script>
+
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+
+<!--[if lt IE 9]><script src="../modern-touch-css/js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div class="body_wrap">
+
+    <header class="header-demo">
+        <div class="inner gradient">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="logo"><img src="images/logo.png" alt="" /></div>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <h1>Modern Touch UI Kit</h1>
+                        <span>Version: 1.0</span>
+                        <span>Last update: 17.10.2013</span>
+                    </div>
+                </div>
+                <!--/ row-->
+            </div>
+            <!--/ container -->
+        </div>
+    </header>
+
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="sidebar-demo hidden-print" role="complementary" data-spy="affix" data-offset-top="200">
+                    <ul class="nav">
+						<li><a href="#about">What is Modern Touch</a></li>
+						<li><a href="#what-included">What is included</a></li>
+						<li><a href="#browser">Browser support</a></li>
+						<li><a href="#getting-started">Getting Started</a></li>
+						<li><a href="#template">Basic Template</a></li>
+						<li><a href="#typography">Typography</a></li>
+                        <li>
+                            <a href="#buttons">Components</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#buttons">Buttons</a>
+                                    <ul class="nav">
+                                        <li><a href="#buttons-colors">Different Colors</a></li>
+                                        <li><a href="#buttons-icons">Buttons with Icons</a></li>
+                                        <li><a href="#buttons-input">Buttoned Input</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#form">Form Elements</a>
+                                    <ul class="nav">
+                                        <li><a href="#form-checkboxes">Checkboxes</a></li>
+                                        <li><a href="#form-radios">Radio Buttons</a></li>
+                                        <li><a href="#form-inputs">Text Inputs</a></li>
+                                        <li><a href="#form-textarea">Textareas</a></li>
+                                        <li><a href="#form-select">Selects</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#pagination">Pagination</a></li>
+                                <li><a href="#scroll-bars">Scroll Bars</a></li>
+                                <li><a href="#progress-bars">Progress bars</a></li>
+                                <li><a href="#range-slider">Range Slider</a></li>
+                                <li>
+                                    <a href="#navigation">Navigation</a>
+                                    <ul class="nav">
+                                        <li><a href="#website-menu">Website Menu</a></li>
+                                        <li><a href="#icons-menu">Menu of Icons</a></li>
+                                        <li><a href="#vertical-menu">Vertical Menu</a></li>
+                                        <li><a href="#dropdown-menu">Dropdown Menu</a></li>
+                                        <li><a href="#grid-menu">Grid Menu</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#video-player">Widgets</a>
+                            <ul class="nav">
+                                <li><a href="#video-player">Video Player</a></li>
+                                <li>
+                                    <a href="#sliders">Sliders</a>
+                                    <ul class="nav">
+                                        <li><a href="#image-slider">Image Slider</a></li>
+                                        <li><a href="#image-carousel">Image Carousel</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#widget-calendar">Calendar</a></li>
+                                <li><a href="#user-profile">User Profile</a></li>
+                                <li>
+                                    <a href="#social-buttons">Social Buttons</a>
+                                    <ul class="nav">
+                                        <li><a href="#social-links">Social Links</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#weather-forecast">Weather Forecast</a></li>
+								<li>
+                                    <a href="#pricing">Pricing Items</a>
+                                    <ul class="nav">
+                                        <li><a href="#pricing-def">Default style</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <!-- content -->
+                <div class="content-demo" role="main">
+
+                    <!-- What is this -->
+                    <div class="section-demo">
+                        <h2 id="about">What is Modern Touch UI Kit</h2>
+
+                        <div class="description">
+                            <p><a href="http://pixelkit.com/previews/flat-ui-kit/" target="_blank">Modern Touch UI Kit</a> is a number of useful user interface components built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework. We did not modify any line of Bootstrap, so you can safely use Modern Touch UI Kit in your ongoing project.</p>
+                        </div>
+
+                    </div>
+                    <!--/ What is this -->
+
+                    <!-- What's included -->
+                    <div class="section-demo">
+                        <h2 id="what-included">What is included</h2>
+
+                        <div class="description">
+                            <p>Once purchased, unzip the compressed folder to see the directory structure of Modern Touch UI Kit. You'll see something like this:</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                    <pre class="brush: xml">
+                                        modern-touch
+                                        ├───docs
+                                        │   ├───css
+                                        │   ├───images
+                                        │   └───js
+                                        ├───modern-touch-css
+                                        │   ├───css
+                                        │   ├───fonts
+                                        │   ├───images
+                                        │   │   ├───icons
+                                        │   │   ├───prettyPhoto
+                                        │   │   └───temp
+                                        │   └───js
+                                        │       └───libs
+                                        └───modern-touch-less
+                                            ├───fonts
+                                            ├───images
+                                            │   ├───icons
+                                            │   ├───prettyPhoto
+                                            │   └───temp
+                                            ├───js
+                                            │   └───libs
+                                            └───less
+                                                └───bootstrap
+                                    </pre>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <dl class="clearfix">
+                                <dt class="parent">docs/</dt><dd>contains this documentation.</dd>
+                                <dt class="parent">modern-touch-css/</dt><dd>contains Modern Touch UI Kit in simple CSS format. Use it to easily start your project.</dd>
+                                <dt>css/</dt><dd>contains all the stylesheets for CSS version of the kit.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for CSS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for CSS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for CSS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for CSS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for CSS version of the kit.</dd>
+
+                                <dt class="parent">modern-touch-less/</dt><dd>contains Modern Touch UI Kit in LESS format. Use it to modify this kit in your project.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for LESS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for LESS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for LESS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for LESS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for LESS version of the kit.</dd>
+                                <dt>less/</dt><dd>contains all the stylesheets for LESS version of the kit.</dd>
+                            </dl>
+
+                            <p><em>Note:</em> The folders <code>modern-touch-css</code> and <code>modern-touch-less</code> is fully independent from each other, including all the images and JS files. You can use the version you prefer without pulling images or JS files from the other version of the kit.</p>
+                        </div>
+                    </div>
+                    <!--/ What's included -->
+
+                    <!-- Browser support -->
+                    <div class="section-demo">
+                        <h2 id="browser">Browser support</h2>
+
+                        <div class="description">
+                            <p>Since <a href="http://pixelkit.com/previews/flat-ui-kit/" target="_blank">Modern Touch UI Kit</a> is built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework, it supports the same <a href="http://getbootstrap.com/getting-started/#browsers" target="_blank">browsers</a> as Bootstrap.</p>
+                        </div>
+
+                    </div>
+                    <!--/ Browser support -->
+
+                    <!-- Getting Started -->
+                    <div class="section-demo">
+                        <h2 id="getting-started">Getting Started</h2>
+
+                        <div class="description">
+                            <p>To start working with <a href="http://pixelkit.com/previews/flat-ui-kit/" target="_blank">Modern Touch UI Kit</a> you can use a basic <code>template.html</code>, or take the completely functional pages included in this package. Since it is built on Bootstrap, you can also use it on your project with Bootstrap 3.
+                                <br />
+                                We provide you both CSS and LESS standalone versions which are completely identical in design and functions.
+                            </p>
+                            <p>
+                                <em>CSS Version:</em> You can use CSS version by dropping contents of <code>modern-touch-css</code> folder to your project folder and including <code>style.css</code> file in your HTML page: <code>&lt;link href="style.css" media="screen" rel="stylesheet"></code>
+                            </p>
+                            <p>
+                                <em>LESS Version:</em> You can find it in <code>modern-touch-less</code> folder. Use LESS if you want to modify Modern Touch UI Kit. We built it Bootstrap way so you won't find big difference. Use <code>less/variables.less</code> to modify different styles, use <code>style.less</code> to remove needless components.
+                            </p>
+                            <p>
+                                If you want to start from scratch, the best way is to use <a href="#template">our template</a> where all startup files are already included and ready to be used. You can find <code>template.html</code> file both for CSS and LESS version in their respective folders.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- Getting Started -->
+
+                    <!-- Basic Template -->
+                    <div class="section-demo">
+                        <h2 id="template">Basic Template</h2>
+
+                        <div class="description">
+                            <p>You can use a basic <a href="../modern-touch-css/template.html" target="_blank">HTML template</a> to write your code, or take completely functional pages included in this package. Basic template as well as completely functional pages are available both for CSS and LESS versions of the Modern Touch UI Kit.</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                    <pre class="brush: xml">
+										&lt;!doctype html>
+										<!--[if lt IE 7 ]>&lt;html lang="en" class="no-js ie6"> <![endif]-->
+										<!--[if IE 7 ]>&lt;html lang="en" class="no-js ie7"> <![endif]-->
+										<!--[if IE 8 ]>&lt;html lang="en" class="no-js ie8"> <![endif]-->
+										<!--[if IE 9 ]>&lt;html lang="en" class="no-js ie9"> <![endif]-->
+										<!--[if (gt IE 9)|!(IE)]><!-->&lt;html lang="en" class="no-js"><!--<![endif]-->
+										&lt;head>
+											&lt;meta charset="utf-8">
+											&lt;meta name="author" content="">
+											&lt;meta name="keywords" content="">
+											&lt;meta name="viewport" content="width=device-width,initial-scale=1">
+											<title></title>
+
+											<!-- main JS libs -->
+											&lt;script src="js/libs/modernizr.min.js">&lt;/script>
+											&lt;script src="js/libs/jquery-1.10.0.js">&lt;/script>
+											&lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+											&lt;script src="js/libs/bootstrap.min.js">&lt;/script>
+
+											<!-- Style CSS -->
+											&lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
+											&lt;link href="style.css" media="screen" rel="stylesheet">
+
+											<!-- scripts -->
+											&lt;script src="js/general.js">&lt;/script>
+
+											<!-- Include all needed stylesheets and scripts here -->
+
+											<!--[if lt IE 9]>&lt;script src="js/respond.min.js">&lt;/script><![endif]-->
+											<!--[if gte IE 9]>
+											<style type="text/css">
+												.gradient {filter: none !important;}
+											</style>
+											<![endif]-->
+										&lt;/head>
+
+										&lt;body>
+											&lt;div class="body_wrap">
+												&lt;div class="container">
+
+													Start your work here.
+
+												&lt;/div>
+												<!--/ container -->
+											&lt;/div>
+										&lt;/body>
+										&lt;/html>
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Basic Template -->
+
+                    <!-- Typography -->
+                    <div class="section-demo">
+                        <h2 id="typography">Typography</h2>
+
+                        <div class="description">
+                            <p>
+                                Modern Touch UI Kit uses free <a href="http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans" target="_blank">Open Sans</a> webfont available at the <a href="http://www.google.com/fonts" target="_blank">Google Fonts</a>. The global default font-size is 13px, with a font-weight of 300. This is applied to the <code>&lt;body></code> and all paragraphs. In addition, all <code>&lt;p></code> (paragraphs) receive a bottom margin of 16px.
+                                <br />
+                                Also, all headings, <code>&lt;h1></code> through <code>&lt;h6></code> are available in italic font-style.
+                            </p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <h1>Example (h1)</h1>
+                                <h2>Example (h2)</h2>
+                                <h3>Example (h3)</h3>
+                                <h4>Example (h4)</h4>
+                                <h5>Example (h5)</h5>
+                                <h6>Example (h6)</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                            </div>
+                            <div class="example-code">
+                                    <pre class="brush: xml">
+                                        <h1>Example (h1)</h1>
+                                        <h2>Example (h2)</h2>
+                                        <h3>Example (h3)</h3>
+                                        <h4>Example (h4)</h4>
+                                        <h5>Example (h5)</h5>
+                                        <h6>Example (h6)</h6>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Typography -->
+
+                    <!-- Buttons -->
+                    <div class="section-demo">
+                        <h2 id="buttons">Buttons</h2>
+
+                        <!--/ Button Colors -->
+                        <div class="description">
+                            <h3 id="buttons-colors">Different Colors</h3>
+                            <p>Use any of the available button classes to quickly create a colored button.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <a href="#" class="btn"><span>Default</span></a>
+                                <a href="#" class="btn btn-blue"><span>Blue</span></a>
+                                <a href="#" class="btn btn-green"><span>Green</span></a>
+                                <a href="#" class="btn btn-red"><span>Red</span></a>
+                                <a href="#" class="btn btn-yellow"><span>Yellow</span></a>
+                                <a href="#" class="btn btn-turquoise"><span>Turquoise</span></a>
+                                <a href="#" class="btn btn-black"><span>Black</span></a>
+                                <a href="#" class="btn btn-brown"><span>Brown</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <a href="#" class="btn"><span>Default</span></a>
+                                    <a href="#" class="btn btn-blue"><span>Blue</span></a>
+                                    <a href="#" class="btn btn-green"><span>Green</span></a>
+                                    <a href="#" class="btn btn-red"><span>Red</span></a>
+                                    <a href="#" class="btn btn-yellow"><span>Yellow</span></a>
+                                    <a href="#" class="btn btn-turquoise"><span>Turquoise</span></a>
+                                    <a href="#" class="btn btn-black"><span>Black</span></a>
+                                    <a href="#" class="btn btn-brown"><span>Brown</span></a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Button Colors -->
+
+                        <!-- Buttons with Icons -->
+                        <div class="description">
+                            <h3 id="buttons-icons">Buttons with Icons</h3>
+                            <p>Use any of the available button classes to add an arrow to button and control its position and direction.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <a href="#" class="btn btn-icon-left"><span>Right</span></a>
+                                <a href="#" class="btn btn-icon-left btn-arrow-left"><span>Left</span></a>
+                                <a href="#" class="btn btn-icon-left btn-arrow-up"><span>Up</span></a>
+                                <a href="#" class="btn btn-icon-left btn-arrow-down"><span>Down</span></a>
+                                <br />
+                                <a href="#" class="btn btn-icon-right"><span>Right</span></a>
+                                <a href="#" class="btn btn-icon-right btn-arrow-left"><span>Left</span></a>
+                                <a href="#" class="btn btn-icon-right btn-arrow-up"><span>Up</span></a>
+                                <a href="#" class="btn btn-icon-right btn-arrow-down"><span>Down</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <a href="#" class="btn btn-icon-left"><span>Right</span></a>
+                                    <a href="#" class="btn btn-icon-left btn-arrow-left"><span>Left</span></a>
+                                    <a href="#" class="btn btn-icon-left btn-arrow-up"><span>Up</span></a>
+                                    <a href="#" class="btn btn-icon-left btn-arrow-down"><span>Down</span></a>
+
+                                    <a href="#" class="btn btn-icon-right"><span>Right</span></a>
+                                    <a href="#" class="btn btn-icon-right btn-arrow-left"><span>Left</span></a>
+                                    <a href="#" class="btn btn-icon-right btn-arrow-up"><span>Up</span></a>
+                                    <a href="#" class="btn btn-icon-right btn-arrow-down"><span>Down</span></a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Buttons with Icons -->
+
+                        <!-- Buttoned Input -->
+                        <div class="description">
+                            <h3 id="buttons-input">Buttoned Input</h3>
+                            <p>Wrap <code>input type="submit"</code> into <code>span</code> and use available button classes to create a styled Input.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <span class="btn btn-icon-left"><input type="submit" value="Submit" /></span>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <span class="btn btn-icon-left"><input type="submit" value="Submit" /></span>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Buttoned Input -->
+                    </div>
+                    <!--/ Buttons -->
+
+                    <!-- Form Elements -->
+                    <div class="section-demo">
+                        <h2 id="form">Form Elements</h2>
+
+                        <!-- CheckBoxes -->
+                        <div class="description">
+                            <h3 id="form-checkboxes">Checkboxes</h3>
+                            <p>Use styled checkboxes instead of the usual ones.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Attribute <code>name</code> required for <code>input</code> element.</p>
+                                <p>Styled Checkbox require next file to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/jquery.customInput.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="input_styled checklist">
+                                    <div class="rowCheckbox"><input name="" type="checkbox" checked id="sign"><label for="sign">Simple Checkbox</label></div>
+                                    <div class="rowCheckbox checkbox-large"><input name="" type="checkbox" checked id="sign3"><label for="sign3">Switch</label></div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    &lt;div class="input_styled checklist">
+                                        <div class="rowCheckbox">
+                                            <input name="" type="checkbox" id="checkbox-1">
+                                            <label for="checkbox-1">Simple Checkbox</label>
+                                        </div>
+
+                                        <div class="rowCheckbox checkbox-large">
+                                            <input name="" type="checkbox" id="checkbox-2">
+                                            <label for="checkbox-2">Switch</label>
+                                        </div>
+                                    &lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ CheckBoxes -->
+
+                        <!-- Radios -->
+                        <div class="description">
+                            <h3 id="form-radios">Radio Buttons</h3>
+                            <p>Use styled radio buttons instead of the usual ones.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Attribute <code>name</code> required for <code>input</code> element.</p>
+                                <p>Styled Radio Button require next file to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/jquery.customInput.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="input_styled inlinelist">
+                                    <div class="rowRadio"><input type="radio" name="survey" value="radio_v3" id="radio_v3" checked><label for="radio_v3">Checked Radio Button</label></div>
+                                    <div class="rowRadio"><input type="radio" name="survey" value="radio_v4" id="radio_v4"><label for="radio_v4">Unchecked Radio Button</label></div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    &lt;div class="input_styled inlinelist">
+                                        <div class="rowRadio">
+                                            <input type="radio" name="radio" id="radio-1" checked>
+                                            <label for="radio-1">Checked Radio Button</label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="radio" id="radio-2">
+                                            <label for="radio-2">Unchecked Radio Button</label>
+                                        </div>
+                                    &lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Radios -->
+
+                        <!-- Text Inputs -->
+                        <div class="description">
+                            <h3 id="form-inputs">Text Inputs</h3>
+                            <p>All Text inputs are styled.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Text Inputs with <code>placeholders</code> require next file to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_text">
+                                    <input type="text" name="name" id="name" placeholder="Name">
+                                </div>
+                                <div class="field_text omega">
+                                    <input type="text" name="email" id="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="field_text">
+                                        <input type="text" name="name" id="name" placeholder="Name">
+                                    </div>
+
+                                    <div class="field_text omega">
+                                        <input type="text" name="email" id="email" placeholder="Email">
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Text Inputs -->
+
+                        <!-- TextAreas -->
+                        <div class="description">
+                            <h3 id="form-textarea">Textareas</h3>
+                            <p>All Textareas are styled similar to Text inputs.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Textareas with <code>placeholders</code> require next file to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_text field_textarea">
+                                    <textarea id="message" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="field_text field_textarea">
+                                        <textarea id="message" placeholder="Message"></textarea>
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ TextAreas -->
+
+                        <!-- TextAreas -->
+                        <div class="description">
+                            <h3 id="form-select">Selects</h3>
+                            <p>All Select elements are styled similar to Text inputs.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Select element require next files to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;link rel="stylesheet" href="css/cusel.css">
+                                    &lt;script src="js/cusel-min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_select">
+                                    <select class="select_styled">
+                                        <option value="">Subject</option>
+                                        <option value="Feedback">Feedback</option>
+                                        <option value="Support Question">Support Question</option>
+                                        <option value="Website Question">Website Question</option>
+                                        <option value="Other Question or Comment">Other Question or Comment</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    &lt;div class="field_select">
+                                        &lt;select class="select_styled">
+                                            <option value="">Subject</option>
+                                            <option value="Feedback">Feedback</option>
+                                            <option value="Support">Support Question</option>
+                                            <option value="Website">Website Question</option>
+                                            <option value="Other">Other Question or Comment</option>
+                                        &lt;/select>
+                                    &lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ TextAreas -->
+                    </div>
+                    <!--/ Form Elements -->
+
+                    <!-- Pagination -->
+                    <div class="section-demo">
+                        <h2 id="pagination">Pagination</h2>
+
+                        <div class="description">
+                            <p>Use any of the available classes to quickly create pagination component for your site.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="tf_pagination">
+                                    <div class="inner">
+                                        <a class="page_prev" href="#"><span></span></a>
+                                        <span class="page-numbers page_current">1</span>
+                                        <a href="#" class="page-numbers">2</a>
+                                        <a href="#" class="page-numbers">3</a>
+                                        <a class="page_next" href="#"><span></span></a>
+                                    </div>
+                                </div>
+                                <div class="tf_pagination style2">
+                                    <div class="inner">
+                                        <a class="page_prev" href="#"><span></span></a>
+                                        <span class="page-numbers page_current">1</span>
+                                        <a href="#" class="page-numbers">2</a>
+                                        <a href="#" class="page-numbers">3</a>
+                                        <a class="page_next" href="#"><span></span></a>
+                                    </div>
+                                </div>
+                                <div class="tf_pagination style3">
+                                    <div class="inner">
+                                        <a class="page_prev" href="#"><span>&lsaquo;</span></a>
+                                        <span class="page-numbers page_current">1</span>
+                                        <a href="#" class="page-numbers">2</a>
+                                        <a href="#" class="page-numbers">3</a>
+                                        <a class="page_next" href="#"><span>&rsaquo;</span></a>
+                                    </div>
+                                </div>
+                                <div class="tf_pagination style3 small">
+                                    <div class="inner">
+                                        <a class="page_prev" href="#"><span>&lsaquo;</span></a>
+                                        <a class="page-numbers" href="#"></a>
+                                        <a class="page_next" href="#"><span>&rsaquo;</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="tf_pagination">
+                                        <div class="inner">
+                                            <a class="page_prev" href="#"><span></span></a>
+                                            <span class="page-numbers page_current">1</span>
+                                            <a href="#" class="page-numbers">2</a>
+                                            <a href="#" class="page-numbers">3</a>
+                                            <a class="page_next" href="#"><span></span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="tf_pagination style2">
+                                        <div class="inner">
+                                            <a class="page_prev" href="#"><span></span></a>
+                                            <span class="page-numbers page_current">1</span>
+                                            <a href="#" class="page-numbers">2</a>
+                                            <a href="#" class="page-numbers">3</a>
+                                            <a class="page_next" href="#"><span></span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="tf_pagination style3">
+                                        <div class="inner">
+                                            <a class="page_prev" href="#"><span>&lsaquo;</span></a>
+                                            <span class="page-numbers page_current">1</span>
+                                            <a href="#" class="page-numbers">2</a>
+                                            <a href="#" class="page-numbers">3</a>
+                                            <a class="page_next" href="#"><span>&rsaquo;</span></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="tf_pagination style3 small">
+                                        <div class="inner">
+                                            <a class="page_prev" href="#"><span>&lsaquo;</span></a>
+                                            <a class="page-numbers" href="#"></a>
+                                            <a class="page_next" href="#"><span>&rsaquo;</span></a>
+                                        </div>
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Pagination -->
+
+                    <!-- Scroll Bars -->
+                    <div class="section-demo">
+                        <h2 id="scroll-bars">Scroll Bars</h2>
+
+                        <div class="description">
+                            <p>Use any of the available classes to quickly create a styled Scroll Bar for your site.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Scroll Bar require next files to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/jquery.mousewheel.js">&lt;/script>
+                                    &lt;script src="js/jquery.jscrollpane.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="scrollBars clearfix">
+                                    <div class="scrollbar">
+                                        <div class="scrollbar-inner">
+                                            <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar style2">
+                                        <div class="scrollbar-inner">
+                                            <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar style3">
+                                        <div class="scrollbar-inner">
+                                            <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar style4">
+                                        <div class="scrollbar-inner">
+                                            <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    &lt;div class="scrollbar">
+                                        <div class="scrollbar-inner">
+                                            <!--place your content here-->
+                                        </div>
+                                    &lt;/div>
+
+                                    &lt;div class="scrollbar style2">
+                                        <div class="scrollbar-inner">
+                                            <!--place your content here-->
+                                        </div>
+                                    &lt;/div>
+
+                                    &lt;div class="scrollbar style3">
+                                        <div class="scrollbar-inner">
+                                            <!--place your content here-->
+                                        </div>
+                                    &lt;/div>
+
+                                    &lt;div class="scrollbar style4">
+                                        <div class="scrollbar-inner">
+                                            <!--place your content here-->
+                                        </div>
+                                    &lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Scroll Bars via JS:</div>
+
+                                <pre class="brush: js">
+                                    &lt;script type="text/javascript">
+                                        jQuery(function()
+                                        {
+                                            jQuery('.scrollbar').jScrollPane({
+                                                verticalDragMaxHeight: 18,
+                                                verticalDragMinHeight:18
+                                            });
+
+                                            jQuery('.scrollbar.style2').jScrollPane({
+                                                verticalDragMaxHeight: 28,
+                                                verticalDragMinHeight:28
+                                            });
+
+                                            jQuery('.scrollbar.style3').jScrollPane({
+                                                verticalDragMaxHeight: 38,
+                                                verticalDragMinHeight:38
+                                            });
+
+                                            jQuery('.scrollbar.style4').jScrollPane({
+                                                verticalDragMaxHeight: 38,
+                                                verticalDragMinHeight:38
+                                            });
+                                        });
+                                    &lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Scroll Bars -->
+
+                    <!-- Progress Bars -->
+                    <div class="section-demo">
+                        <h2 id="progress-bars">Progress Bars</h2>
+
+                        <div class="description">
+                            <p>Use any of the available classes to quickly create a styled Progress Bar for your site.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Progress Bar require next files to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/jquery-ui.min.js">&lt;/script>
+                                    &lt;script src="js/progressbar.js">&lt;/script>
+                                </pre>
+                            </div>
+
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <!-- Progress Bar -->
+                                <div id="progressBar1" class="progressbar">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="pbar"></div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar1').anim_progressbar({
+                                            totaltime: 800
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar -->
+
+                                <!-- Progress Bar Style 2 -->
+                                <div id="progressBar2" class="progressbar style2">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="pbar"></div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar2').anim_progressbar({
+                                            totaltime: 600
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar Style 2 -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    &lt;div id="progressBar1" class="progressbar">
+                                        <span class="mark-left">0%</span>
+                                        <span class="mark-right">100%</span>
+                                        <div class="percent"></div>
+                                        <div class="pbar"></div>
+                                        <div class="elapsed"></div>
+                                        <div class="remained"></div>
+                                    &lt;/div>
+
+                                    &lt;div id="progressBar2" class="progressbar style2">
+                                        <span class="mark-left">0%</span>
+                                        <span class="mark-right">100%</span>
+                                        <div class="percent"></div>
+                                        <div class="pbar"></div>
+                                        <div class="elapsed"></div>
+                                        <div class="remained"></div>
+                                    &lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Progress Bars via JS:</div>
+
+                                <pre class="brush: js">
+                                    &lt;script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $('#progressBar1').anim_progressbar({
+                                                totaltime: 800
+                                            });
+
+                                            $('#progressBar2').anim_progressbar({
+                                                totaltime: 600
+                                            });
+                                        });
+                                    &lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Progress Bars -->
+
+                    <!-- Price Range -->
+                    <div class="section-demo">
+                        <h2 id="range-slider">Range Slider</h2>
+
+                        <div class="description">
+                            <p>Range Slider allow users to select a value from a numerical range by simply dragging a slider.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Range Slider require next files to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/jquery-ui.min.js">&lt;/script>
+                                    &lt;script src="js/jquery.slider.bundle.js">&lt;/script>
+                                    &lt;script src="js/jquery.slider.js">&lt;/script>
+                                    &lt;link rel="stylesheet" href="css/jslider.css">
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <!-- Range slider -->
+                                <div class="range-slider">
+                                    <input id="price_range" type="text" value="120;720">
+                                </div>
+                                <script type="text/javascript" >
+                                    jQuery(document).ready(function($) {
+                                        // Price Range Input
+                                        $("#price_range").rangeslider({
+                                            from: 0,
+                                            to: 1000,
+                                            limits: false,
+                                            scale: ['$0', '$1000'],
+                                            heterogeneity: ['50/300'],
+                                            step: 10,
+                                            smooth: true,
+                                            dimension: '$'
+                                        });
+                                    });
+                                </script>
+                                <!-- Range slider -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="range-slider">
+                                        &lt;input id="price_range" type="text" value="120;720">
+                                    </div>
+                                </pre>
+
+                                <div class="fire-js">Enable Price Range via JS:</div>
+
+                                <pre class="brush: js">
+                                    &lt;script type="text/javascript">
+                                        jQuery(document).ready(function($) {
+                                            $("#price_range").rangeslider({
+                                                from: 0,
+                                                to: 1000,
+                                                limits: false,
+                                                scale: ['$0', '$1000'],
+                                                heterogeneity: ['50/300'],
+                                                step: 10,
+                                                smooth: true,
+                                                dimension: '$'
+                                            });
+                                        });
+                                    &lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Price Range -->
+
+                    <!-- Navigation -->
+                    <div class="section-demo">
+                        <h2 id="navigation">Navigation</h2>
+
+                        <!-- Website Menu with search option -->
+                        <div class="description">
+                            <h3 id="website-menu">Website Menu with search option</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Website Menu -->
+                                <div id="topmenu">
+                                    <ul class="dropdown clearfix boxed boxed-blue">
+                                        <li class="link-more first"><a href="#"><i></i></a></li>
+                                        <li><a href="#"><span>Home</span></a></li>
+                                        <li class="parent"><a href="#"><span>Services</span></a>
+                                            <ul>
+                                                <li class="first"><a href="#">Link 1</a></li>
+                                                <li><a href="#">Link 2</a></li>
+                                                <li class="last parent"><a href="#">Link 3</a>
+                                                    <ul>
+                                                        <li class="first"><a href="#">Link 4</a></li>
+                                                        <li><a href="#">Link 5</a></li>
+                                                        <li class="last"><a href="#">Link 6</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#"><span>About</span></a></li>
+                                        <li class="menu-search last">
+                                            <form id="searchForm" class="menu-search-form" method="post">
+                                                <input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website">
+                                                <input type="submit" value="" class="btn menu-search-submit" name="search-send">
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/ Website Menu -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div id="topmenu">
+                                        <ul class="dropdown clearfix boxed boxed-blue">
+                                            <li class="link-more"><a href="#"><i></i></a></li>
+                                            <li><a href="#"><span>Home</span></a></li>
+                                            <li><a href="#"><span>Services</span></a>
+                                                <ul>
+                                                    <li><a href="#">Link 1</a></li>
+                                                    <li><a href="#">Link 2</a></li>
+                                                    <li><a href="#">Link 3</a>
+                                                        <ul>
+                                                            <li><a href="#">Link 4</a></li>
+                                                            <li><a href="#">Link 5</a></li>
+                                                            <li><a href="#">Link 6</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><span>About</span></a></li>
+                                            <li class="menu-search">
+                                                <form id="searchForm" class="menu-search-form" method="post">
+                                                    <input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website" />
+                                                    <input type="submit" value="" class="btn menu-search-submit" name="search-send" />
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Website Menu with search option -->
+
+                        <!-- Menu of Icons -->
+                        <div class="description">
+                            <h3 id="icons-menu">Menu of Icons with dropdown</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- Menu -->
+                                        <ul class="dropdown dropdown-icons clearfix boxed boxed-green">
+                                            <li><a href="#"><span><i class="icon-menu"></i></span></a>
+                                                <ul>
+                                                    <li><a href="#">Submenu 1</a></li>
+                                                    <li><a href="#">Submenu 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><span><i class="icon-menu icon-menu-2"></i></span></a>
+                                                <ul>
+                                                    <li><a href="#">Submenu 1</a></li>
+                                                    <li><a href="#">Submenu 2</a></li>
+                                                    <li><a href="#">Submenu 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><span><i class="icon-menu icon-menu-3"></i></span></a>
+                                                <ul>
+                                                    <li><a href="#">Submenu 1</a></li>
+                                                    <li><a href="#">Submenu 2</a></li>
+                                                    <li><a href="#">Submenu 3</a>
+                                                        <ul>
+                                                            <li><a href="#">Submenu 1</a></li>
+                                                            <li><a href="#">Submenu 2</a></li>
+                                                            <li><a href="#">Submenu 3</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><span><i class="icon-menu icon-menu-4"></i></span></a>
+                                                <ul>
+                                                    <li><a href="#">Submenu 1</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!--/ Menu -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <ul class="dropdown dropdown-icons clearfix boxed boxed-green">
+                                        <li>
+                                            <a href="#">
+                                                <span><i class="icon-menu"></i></span>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Submenu 1</a></li>
+                                                <li><a href="#">Submenu 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span><i class="icon-menu icon-menu-2"></i></span>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Submenu 1</a></li>
+                                                <li><a href="#">Submenu 2</a></li>
+                                                <li><a href="#">Submenu 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span><i class="icon-menu icon-menu-3"></i></span>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Submenu 1</a></li>
+                                                <li><a href="#">Submenu 2</a></li>
+                                                <li><a href="#">Submenu 3</a>
+                                                    <ul>
+                                                        <li><a href="#">Submenu 1</a></li>
+                                                        <li><a href="#">Submenu 2</a></li>
+                                                        <li><a href="#">Submenu 3</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span><i class="icon-menu icon-menu-4"></i></span>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#">Submenu 1</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Menu of Icons -->
+
+                        <!-- Vertical Menu -->
+                        <div class="description">
+                            <h3 id="vertical-menu">Vertical Menu of Icons</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Vertical Menu -->
+                                <ul class="menu-vertical boxed boxed-green">
+                                    <li class="active"><a href="#"><span><i class="icon-menu"></i></span></a></li>
+                                    <li><a href="#"><span><i class="icon-menu icon-menu-2"></i></span></a></li>
+                                    <li><a href="#"><span><i class="icon-menu icon-menu-3"></i></span></a></li>
+                                    <li><a href="#"><span><i class="icon-menu icon-menu-4"></i></span></a></li>
+                                    <li><a href="#"><span><i class="icon-menu icon-menu-5"></i></span></a></li>
+                                </ul>
+                                <!--/ Vertical Menu -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <ul class="menu-vertical boxed boxed-green">
+                                        <li class="active">
+                                            <a href="#"><span><i class="icon-menu"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span><i class="icon-menu icon-menu-2"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span><i class="icon-menu icon-menu-3"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span><i class="icon-menu icon-menu-4"></i></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span><i class="icon-menu icon-menu-5"></i></span></a>
+                                        </li>
+                                    </ul>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Vertical Menu -->
+
+                        <!-- Dropdown Menu -->
+                        <div class="description">
+                            <h3 id="dropdown-menu">Dropdown Menu</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <!-- Dropdown Menu -->
+                                        <div class="dropdownMenu">
+                                            <a id="drop" href="#" class="dropdown-toggle" data-toggle="dropdown">Sort by filter</a>
+                                            <ul class="dropdown-menu" aria-labelledby="drop">
+                                                <li><a href="#">Date</a></li>
+                                                <li><a href="#">Popularity</a></li>
+                                                <li><a href="#">Price</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--/ Dropdown Menu -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="dropdownMenu">
+                                        <a id="drop" href="#" class="dropdown-toggle" data-toggle="dropdown">Sort by filter</a>
+                                        <ul class="dropdown-menu" aria-labelledby="drop">
+                                            <li><a href="#">Date</a></li>
+                                            <li><a href="#">Popularity</a></li>
+                                            <li><a href="#">Price</a></li>
+                                        </ul>
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Dropdown Menu -->
+
+                        <!-- Grid Menu -->
+                        <div class="description">
+                            <h3 id="grid-menu">Grid Menu</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- Grid Menu -->
+                                        <div class="grid-menu clearfix">
+                                            <div class="grid-box"><a href="#" class="boxed boxed-red"><strong><i class="icon-grid"></i></strong><span>Games</span></a></div>
+                                            <div class="grid-box"><a href="#" class="boxed boxed-turquoise"><strong><i class="icon-grid icon-grid-2"></i></strong><span>Contact</span></a></div>
+                                            <div class="grid-box grid-box-large"><a href="#" class="boxed boxed-yellow"><strong><i class="icon-grid icon-grid-3"></i></strong><span>Portfolio</span></a></div>
+                                        </div>
+                                        <!--/ Grid Menu -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+									<div class="grid-menu clearfix">
+										<div class="grid-box">
+											<a href="#" class="boxed boxed-red">
+												<strong><i class="icon-grid"></i></strong>
+												<span>Games</span>
+											</a>
+										</div>
+										<div class="grid-box">
+											<a href="#" class="boxed boxed-turquoise">
+												<strong><i class="icon-grid icon-grid-2"></i></strong>
+												<span>Contact</span>
+											</a>
+										</div>
+										<div class="grid-box grid-box-large">
+											<a href="#" class="boxed boxed-yellow">
+												<strong><i class="icon-grid icon-grid-3"></i></strong>
+												<span>Portfolio</span>
+											</a>
+										</div>
+									</div>	
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Grid Menu -->
+                    </div>
+                    <!--/ Navigation -->
+
+                    <!-- Video Player -->
+                    <div class="section-demo">
+                        <h2 id="video-player">Video Player</h2>
+
+                        <div class="description">
+                            <p>Use Video.js player to play video content.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Video Player require next files to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;link href="css/video-js.css" rel="stylesheet">
+                                    &lt;script src="js/video.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-10 col-sm-offset-1">
+                                        <!-- Video Player -->
+                                        <div class="video-player boxed">
+                                            <div class="inner">
+                                                <video id="my_video_1" class="video-js" controls loop
+                                                       preload="auto" poster="../modern-touch-css/images/temp/vjs-poster2.jpg"
+                                                       data-setup="{}">
+                                                    <source src="http://test.themefuse.com/artiom/galapagos.mp4" type='video/mp4'>
+                                                </video>
+                                                <script>
+                                                    _V_("my_video_1").ready(function(){
+                                                        var myPlayer = this;
+                                                        var aspectRatio = 330/512;
+                                                        var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                                                        myPlayer.width(width).height( width * aspectRatio );
+
+                                                        function resizeVideoJS(){
+                                                            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                                                            myPlayer.width(width).height( width * aspectRatio );
+                                                        }
+                                                        resizeVideoJS();
+                                                        window.onresize = resizeVideoJS;
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <!--/ Video Player -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="video-player boxed">
+                                        <div class="inner">
+                                            &lt;video id="my_video_1" class="video-js" controls loop
+                                            preload="auto" poster="images/temp/vjs-poster2.jpg"
+                                            data-setup="{}">
+                                            &lt;source src="http://path-to-video/video.mp4" type='video/mp4'>
+                                            &lt;/video>
+                                        </div>
+                                    </div>
+                                </pre>
+
+                                <div class="fire-js">Enable Video Player via JS:</div>
+
+                                <pre class="brush: js">
+                                    &lt;script>
+                                        _V_("my_video_1").ready(function(){
+                                            var myPlayer = this;
+                                            var aspectRatio = 330/512;
+                                            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                                            myPlayer.width(width).height( width * aspectRatio );
+
+                                            function resizeVideoJS(){
+                                                var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                                                myPlayer.width(width).height( width * aspectRatio );
+                                            }
+                                            resizeVideoJS();
+                                            window.onresize = resizeVideoJS;
+                                        });
+                                    &lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Video Player -->
+
+                    <!-- Sliders -->
+                    <div class="section-demo">
+                        <h2 id="sliders">Sliders</h2>
+
+                        <!-- Image Slider -->
+                        <div class="description">
+                            <h3 id="image-slider">Image Slider</h3>
+                            <p>The slideshow is based on Bootstrap's carousel.js</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Image Slider require next files to be included into <code>head</code> section of the page:</p>
+                                    <pre class="brush: xml">
+                                        &lt;link href="css/prettyPhoto.css" rel="stylesheet">
+                                        &lt;script src="js/jquery.prettyPhoto.js">&lt;/script>
+                                    </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Image Slider -->
+                                <div class="widget-container widget-gallery boxed">
+                                    <div class="inner">
+                                        <div id="myCarousel2" class="carousel slide" data-interval="20000">
+                                            <!-- Carousel items -->
+                                            <div class="carousel-inner">
+                                                <div class="active item"><a href="../modern-touch-css/images/temp/post_img7.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img7.jpg" alt="" /></a></div>
+                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img1.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img1.jpg" alt="" /></a></div>
+                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img2.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img2.jpg" alt="" /></a></div>
+                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img4.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img4.jpg" alt="" /></a></div>
+                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img6.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img6.jpg" alt="" /></a></div>
+                                            </div>
+                                            <div class="carousel-controls">
+                                                <!-- Carousel indicators -->
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                                    <li data-target="#myCarousel2" data-slide-to="1"></li>
+                                                    <li data-target="#myCarousel2" data-slide-to="2"></li>
+                                                    <li data-target="#myCarousel2" data-slide-to="3"></li>
+                                                    <li data-target="#myCarousel2" data-slide-to="4"></li>
+                                                </ol>
+                                                <!-- Carousel nav -->
+                                                <a class="carousel-control left" href="#myCarousel2" data-slide="prev"></a>
+                                                <a class="carousel-control right" href="#myCarousel2" data-slide="next"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/ Image Slider -->
+                            </div>
+                            <div class="example-code">
+                                    <pre class="brush: xml">
+                                        <div class="widget-container widget-gallery boxed">
+                                            <div class="inner">
+                                                &lt;div id="myCarousel" class="carousel slide" data-interval="20000">
+                                                <!-- Carousel items -->
+                                                &lt;div class="carousel-inner">
+                                                <div class="item">
+                                                    &lt;a href="images/temp/post_img7.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="">
+                                                    &lt;img src="images/temp/post_img7.jpg" alt="" />
+                                                    &lt;/a>
+                                                </div>
+                                                ...
+                                                ...
+                                                ...
+                                                &lt;/div>
+
+                                                &lt;div class="carousel-controls">
+                                                <!-- Carousel indicators -->
+                                                <ol class="carousel-indicators">
+                                                    <li data-target="#myCarousel" data-slide-to="0"></li>
+                                                    ...
+                                                    ...
+                                                    ...
+                                                </ol>
+                                                <!-- Carousel nav -->
+                                                <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+                                                <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+                                                &lt;/div>
+                                                &lt;/div>
+                                            </div>
+                                        </div>
+                                    </pre>
+                            </div>
+                        </div>
+                        <!--/ Image Slider -->
+
+                        <!-- Image Carousel -->
+                        <div class="description">
+                            <h3 id="image-carousel">Image Carousel</h3>
+                            <p></p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Image Carousel require next files to be included into <code>head</code> section of the page:</p>
+                                    <pre class="brush: xml">
+                                        &lt;script src="js/jquery.carouFredSel-6.2.1-packed.js">&lt;/script>
+                                        &lt;link href="css/prettyPhoto.css" rel="stylesheet">
+                                        &lt;script src="js/jquery.prettyPhoto.js">&lt;/script>
+                                    </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Carousel -->
+                                <div class="carouFredsel">
+                                    <div class="inner">
+                                        <ul id="carouFredsel-1">
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
+                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
+                                        </ul>
+                                        <a id="carousel-prev-1" class="prev" href="#">&lsaquo;</a>
+                                        <a id="carousel-next-1" class="next" href="#">&rsaquo;</a>
+                                    </div>
+                                </div>
+                                <!--/ Carousel -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    &lt;div class="carouFredsel">
+                                        <div class="inner">
+                                            &lt;ul id="carouFredsel-1">
+                                            <li>
+                                                <div class="carousel-image">
+                                                    <a href="images/temp/carousel-1.png" data-rel="prettyPhoto" title="">
+                                                        &lt;img src="images/temp/carousel-1.png" alt="" />
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            ...
+                                            ...
+                                            ...
+                                            &lt;/ul>
+                                            <a id="carousel-prev-1" class="prev" href="#">&lsaquo;</a>
+                                            <a id="carousel-next-1" class="next" href="#">&rsaquo;</a>
+                                        </div>
+                                    &lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Carousel via JS:</div>
+
+                                <pre class="brush: js">
+                                    &lt;script>
+                                        jQuery(document).ready(function($) {
+                                            $('#carouFredsel-1').carouFredSel({
+                                                next : "#carousel-next-1",
+                                                prev : "#carousel-prev-1",
+                                                auto: false,
+                                                scroll: {items : 1}
+                                            });
+
+                                            $(window).resize(function() {
+                                                $('#carouFredsel-1').carouFredSel({
+                                                    next : "#carousel-next-1",
+                                                    prev : "#carousel-prev-1",
+                                                    auto: false,
+                                                    scroll: {items : 1}
+                                                });
+                                            })
+                                        });
+                                    &lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Image Carousel -->
+                    </div>
+                    <!--/ Sliders -->
+
+                    <!-- Calendar -->
+                    <div class="section-demo">
+                        <h2 id="widget-calendar">Calendar</h2>
+
+                        <div class="description">
+                            <p>Calendar allow users to select multiple dates.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Calendar require next files to be included into <code>head</code> section of the page:</p>
+                                <pre class="brush: xml">
+                                    &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+                                    &lt;script src="js/jquery-ui.multidatespicker.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- widget calendar-->
+                                        <div class="widget-container widget_calendar boxed boxed-red">
+                                            <div class="inner">
+                                                <input type="text" name="date_departure" class="inputField" id="date_departure">
+                                                <script>
+                                                    // <![CDATA[
+                                                    jQuery(document).ready(function($) {
+                                                        var daysRange = 5;
+
+                                                        function assignCalendar(id){
+                                                            $('<div class="calendar" />')
+                                                                    .insertAfter( $(id) )
+                                                                    .multiDatesPicker({
+                                                                        dateFormat: 'yy-mm-dd',
+                                                                        minDate: new Date(),
+                                                                        maxDate: '+1y',
+                                                                        altField: id,
+                                                                        firstDay: 1,
+                                                                        showOtherMonths: true
+                                                                    }).prev().hide();
+                                                        }
+
+                                                        assignCalendar('#date_departure');
+                                                    });
+                                                    // ]]>
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <!--/ widget calendar-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    &lt;div class="widget-container widget_calendar boxed boxed-red">
+                                        <div class="inner">
+                                            &lt;input type="text" name="date_departure" class="inputField" id="date_departure">
+                                        </div>
+                                    &lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Calendar via JS:</div>
+
+                                <pre class="brush: js">
+                                    &lt;script>
+                                        // <![CDATA[
+                                        jQuery(document).ready(function($) {
+                                            var daysRange = 5;
+
+                                            function assignCalendar(id){
+                                                $('<div class="calendar" />')
+                                                        .insertAfter( $(id) )
+                                                        .multiDatesPicker({
+                                                            dateFormat: 'yy-mm-dd',
+                                                            minDate: new Date(),
+                                                            maxDate: '+1y',
+                                                            altField: id,
+                                                            firstDay: 1,
+                                                            showOtherMonths: true
+                                                        }).prev().hide();
+                                            }
+
+                                            assignCalendar('#date_departure');
+                                        });
+                                        // ]]>
+                                    &lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Calendar -->
+
+                    <!-- Avatar Placeholder -->
+                    <div class="section-demo">
+                        <h2 id="user-profile">User Profile</h2>
+
+                        <div class="description">
+                            <p>Display user profile in a styled box.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Avatar Placeholder -->
+                                        <div class="widget-container widget-avatar boxed boxed-yellow">
+                                            <div class="inner">
+                                                <h5>Jack Daniels</h5>
+                                                <span class="subtitle">Antepreneur</span>
+                                                <div class="avatar"><img src="../modern-touch-css/images/temp/avatar.png" alt="" /></div>
+                                                <div class="followers"><span class="counter">125</span> followers</div>
+                                                <a href="#" class="btn btn-brown btn-follow"><span><i></i>Follow</span></a>
+                                            </div>
+                                        </div>
+                                        <!--/ Avatar Placeholder -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="widget-container boxed">
+                                        <div class="widget-container widget-avatar boxed boxed-yellow">
+                                            <div class="inner">
+                                                <h5>Jack Daniels</h5>
+                                                <span class="subtitle">Antepreneur</span>
+                                                <div class="avatar">
+                                                    &lt;img src="images/temp/avatar.png" alt="" />
+                                                </div>
+                                                <div class="followers">
+                                                    <span class="counter">125</span> followers
+                                                </div>
+                                                <a href="#" class="btn btn-brown btn-follow">
+                                                    <span><i></i>Follow</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Avatar Placeholder -->
+
+                    <!-- Social Buttons -->
+                    <div class="section-demo">
+                        <h2 id="social-buttons">Social Buttons</h2>
+
+                        <!-- Social Links -->
+                        <div class="description">
+                            <h3 id="social-links">Social Links</h3>
+                            <p>Add the Social links block to your site.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Widget Social Buttons -->
+                                <div class="widget-container widget-social">
+                                    <ul class="clearfix">
+                                        <li class="social-facebook"><a href="#"><i>Facebook</i></a></li>
+                                        <li class="social-twitter"><a href="#"><i>Twitter</i></a></li>
+                                        <li class="social-dribble"><a href="#"><i>Dribble</i></a></li>
+                                        <li class="social-deviantart"><a href="#"><i>DeviantArt</i></a></li>
+                                        <li class="social-google"><a href="#"><i>Google+</i></a></li>
+                                        <li class="social-vimeo"><a href="#"><i>Vimeo</i></a></li>
+                                    </ul>
+                                </div>
+                                <!--/ Widget Social Buttons -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="widget-container widget-social">
+                                        <ul class="clearfix">
+                                            <li class="social-facebook"><a href="#"><i>Facebook</i></a></li>
+                                            <li class="social-twitter"><a href="#"><i>Twitter</i></a></li>
+                                            <li class="social-dribble"><a href="#"><i>Dribble</i></a></li>
+                                            <li class="social-deviantart"><a href="#"><i>DeviantArt</i></a></li>
+                                            <li class="social-google"><a href="#"><i>Google+</i></a></li>
+                                            <li class="social-vimeo"><a href="#"><i>Vimeo</i></a></li>
+                                        </ul>
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Social Links -->
+                    </div>
+                    <!--/ Social Buttons -->
+
+                    <!-- Weather -->
+                    <div class="section-demo">
+                        <h2 id="weather-forecast">Weather Forecast</h2>
+
+                        <div class="description">
+                            <p>Use this widget to make weather forecast on the website.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Widget Weather -->
+                                        <div class="widget-container widget-weather boxed boxed-turquoise">
+                                            <div class="weather-highlighted">
+                                                <div class="weather-item clearfix su"><i class="icon-weather icon-weather-1"></i><div class="inner"><strong>31&deg;</strong><span>Mostly Sunny</span><span>31&deg;/18&deg;</span></div></div>
+                                                <div class="weather-item clearfix mo"><i class="icon-weather icon-weather-1"></i><div class="inner"><strong>20&deg;</strong><span>Rain</span><span>20&deg;/11&deg;</span></div></div>
+                                                <div class="weather-item clearfix tu active"><i class="icon-weather icon-weather-1"></i><div class="inner"><strong>27&deg;</strong><span>Partly Cloudy</span><span>27&deg;/15&deg;</span></div></div>
+                                                <div class="weather-item clearfix we"><i class="icon-weather icon-weather-1"></i><div class="inner"><strong>23&deg;</strong><span>Cloudy</span><span>23&deg;/14&deg;</span></div></div>
+                                                <div class="weather-item clearfix th"><i class="icon-weather icon-weather-1"></i><div class="inner"><strong>26&deg;</strong><span>Mostly Sunny</span><span>26&deg;/16&deg;</span></div></div>
+                                                <div class="weather-item clearfix fr"><i class="icon-weather icon-weather-1"></i><div class="inner"><strong>32&deg;</strong><span>Sunny</span><span>32&deg;/19&deg;</span></div></div>
+                                                <div class="weather-item clearfix sa"><i class="icon-weather icon-weather-1"></i><div class="inner"><strong>24&deg;</strong><span>Light Rain</span><span>24&deg;/12&deg;</span></div></div>
+                                            </div>
+                                            <div class="weather-location clearfix">
+                                                <strong>Bucharest</strong>
+                                                <form id="searchForm2" class="weather-search-form" method="post">
+                                                    <input type="text" name="search2" value="" class="weather-search-field" />
+                                                    <input type="submit" value="" class="btn weather-search-submit" name="search-send2" />
+                                                </form>
+                                            </div>
+                                            <ul class="weather-forecast clearfix">
+                                                <li><a href="javascript:;" id="su"><strong>su</strong><span><i class="icon-weather icon-weather-1"></i></span><span>31&deg;</span></a></li>
+                                                <li><a href="javascript:;" id="mo"><strong>mo</strong><span><i class="icon-weather icon-weather-2"></i></span><span>20&deg;</span></a></li>
+                                                <li><a href="javascript:;" id="tu" class="active"><strong>tu</strong><span><i class="icon-weather icon-weather-3"></i></span><span>27&deg;</span></a></li>
+                                                <li><a href="javascript:;" id="we"><strong>we</strong><span><i class="icon-weather icon-weather-4"></i></span><span>23&deg;</span></a></li>
+                                                <li><a href="javascript:;" id="th"><strong>th</strong><span><i class="icon-weather icon-weather-1"></i></span><span>26&deg;</span></a></li>
+                                                <li><a href="javascript:;" id="fr"><strong>fr</strong><span><i class="icon-weather icon-weather-1"></i></span><span>32&deg;</span></a></li>
+                                                <li><a href="javascript:;" id="sa"><strong>sa</strong><span><i class="icon-weather icon-weather-5"></i></span><span>24&deg;</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <!--/ Widget Weather -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                    <div class="widget-container widget-weather boxed boxed-turquoise">
+                                        <div class="weather-highlighted">
+                                            <div class="weather-item clearfix su">
+                                                <i class="icon-weather icon-weather-1"></i>
+                                                <div class="inner">
+                                                    <strong>31&deg;</strong>
+                                                    <span>Mostly Sunny</span>
+                                                    <span>31&deg;/18&deg;</span>
+                                                </div>
+                                            </div>
+                                            ...
+                                            ...
+                                            ...
+                                        </div>
+
+                                        <div class="weather-location clearfix">
+                                            <strong>Bucharest</strong>
+                                            <form id="searchForm" class="weather-search-form" method="post">
+                                                <input type="text" name="search" class="weather-search-field" />
+                                                <input type="submit" class="btn weather-search-submit" name="search-send" />
+                                            </form>
+                                        </div>
+
+                                        <ul class="weather-forecast clearfix">
+                                            <li>
+                                                <a href="javascript:;" id="su">
+                                                    <strong>su</strong>
+                                                    <span>
+                                                        <i class="icon-weather icon-weather-1"></i>
+                                                    </span>
+                                                    <span>31&deg;</span>
+                                                </a>
+                                            </li>
+                                            ...
+                                            ...
+                                            ...
+                                        </ul>
+                                    </div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Weather -->
+                
+					<!-- Pricing List -->
+                    <div class="section-demo">
+                        <h2 id="pricing">Pricing Items</h2>
+
+                        <!-- Pricing List Style 1 -->
+                        <div class="description">
+                            <p>
+                                Use pricing items to announce prices for your services. Add color class to <code>price_item</code> class to change item color.
+                                <br />Available color classes are the next: <code>blue</code>, <code>green</code>, <code>red</code>, <code>yellow</code>, <code>turquoise</code>, <code>black</code>, <code>brown</code>.
+                            </p>
+                            <h3 id="pricing-def">Pricing Items default style</h3>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!--pricing box-->
+                                <div class="pricing_box">
+                                    <ul class="row">
+                                        <li class="col-sm-6 price_col">
+                                            <!--pricing item-->
+                                            <div class="price_item boxed">
+                                                <div class="price_col_head">
+                                                    <strong>Premium</strong>
+                                                </div>
+                                                <div class="price_col_body">
+                                                    <div class="price_body_inner">
+                                                        <div class="price_body_top">
+                                                            <span class="price"><em>$</em>19<sup>00</sup><sub>/month</sub></span>
+                                                        </div>
+                                                        <ul>
+                                                            <li><span class="large">&infin;</span> Bandwidth</li>
+                                                            <li><span class="large">&infin;</span> Disk Space</li>
+                                                            <li><span>25</span> Databases</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="price_col_foot">
+                                                    <div class="sign_up"><a href="#" class="btn btn-icon-left"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+
+                                        <li class="col-sm-6 price_col">
+                                            <!--pricing item-->
+                                            <div class="price_item boxed blue">
+                                                <div class="price_col_head">
+                                                    <strong>Business</strong>
+                                                </div>
+                                                <div class="price_col_body">
+                                                    <div class="price_body_inner">
+                                                        <div class="price_body_top">
+                                                            <span class="price"><em>$</em>30<sup>00</sup><sub>/month</sub></span>
+                                                        </div>
+                                                        <ul>
+                                                            <li><span class="large">&infin;</span> Bandwidth</li>
+                                                            <li><span class="large">&infin;</span> Disk Space</li>
+                                                            <li><span class="large">&infin;</span> Databases</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="price_col_foot">
+                                                    <div class="sign_up"><a href="#" class="btn btn-icon-left"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/pricing box-->
+                            </div>
+                            <div class="example-code">
+                                <pre class="brush: xml">
+                                <div class="pricing_box">
+                                    <ul class="row">
+                                        <li class="col-sm-6 price_col">
+                                            <!--pricing item-->
+                                            <div class="price_item boxed blue">
+                                                <div class="price_col_head">
+                                                    <strong>Business</strong>
+                                                </div>
+                                                <div class="price_col_body">
+                                                    <div class="price_body_inner">
+                                                        <div class="price_body_top">
+                                                            <span class="price">
+                                                                <em>$</em>30<sup>00</sup><sub>/month</sub>
+                                                            </span>
+                                                        </div>
+                                                        <ul>
+                                                            <li><span class="large">&infin;</span> Bandwidth</li>
+                                                            <li><span class="large">&infin;</span> Disk Space</li>
+                                                            <li><span class="large">&infin;</span> Databases</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="price_col_foot">
+                                                    <div class="sign_up">
+                                                        <a href="#" class="btn btn-icon-left"><span>Add to cart</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+                                        ...
+                                        ...
+                                        ...
+                                    </ul>
+                                </div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Pricing List Style 1 -->
+
+                    </div>
+                    <!--/ Pricing List -->
+				</div>
+                <!--/ content -->
+            </div>
+        </div>
+        <!--/ row-->
+    </div>
+    <!--/ container -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.range-slider{margin: 38px 0 18px;}
+.range-slider.styled{margin: 82px 0 101px;}
+
+.jslider { display: block; width: 100%; position: relative;}
+.jslider table { width: 100%; border-collapse: collapse; border: 0; }
+.jslider td, .jslider th { padding: 0; vertical-align: top; text-align: left; border: 0; }
+
+.jslider table,
+.jslider table tr,
+.jslider table tr td { width: 100%; vertical-align: top; padding:0; margin:0}
+
+.jslider .jslider-bg { position: relative; }
+
+.jslider .jslider-bg i {
+    position: absolute;
+    top: 0;
+    height: 12px;
+    font-size: 0;
+    background: #f8f3f0;
+    border: 1px solid #e5d4c2;
+    margin: 0;
+}
+.range-slider.styled .jslider .jslider-bg i {height: 30px;}
+
+.jslider .jslider-bg .l { width: 50%; left: 0; border-right: 0 none;}
+.jslider .jslider-bg .r { width: 50%; left: 50%; border-left: 0 none;}
+.jslider .jslider-bg .v {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 0;
+    z-index: 1;
+    height: 12px;
+    background: #ebc85e;
+    border-top: 1px solid #d3a648;
+    border-bottom: 1px solid #d3a648;
+}
+
+.jslider .jslider-pointer {
+    width: 2px;
+    height: 18px;
+    background: #d3a648;
+    position: absolute;
+    top: -3px;
+    z-index: 2 !important;
+    cursor: pointer;
+    margin-left: -1px;
+}
+.range-slider.styled .jslider .jslider-pointer {
+    height: 38px;
+    top: -4px;
+}
+.jslider .jslider-pointer:before,
+.jslider .jslider-pointer:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top:-7px;
+    left: -3px;
+    width: 8px;
+    height: 8px;
+    border:2px solid #d3a648;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.jslider .jslider-pointer:after{
+    top: auto;
+    bottom: -7px;
+}
+.jslider .jslider-value {
+	font-size: 14px;
+	color:#d3a648;
+	white-space: nowrap;
+	position: absolute;
+	top: -29px;
+    left:0%;
+	z-index: 1;
+}
+.range-slider.styled .jslider .jslider-value {font-size: 16px; top: -31px;}
+.jslider .jslider-value-to {left:80%;}
+
+.jslider .jslider-scale { position: relative; top: -16px;}
+.jslider .jslider-scale span { position: absolute; border-left: none; margin: 0 !important;}
+.jslider .jslider-scale span:first-child {left: 0 !important;}
+.jslider .jslider-scale span:last-child {left: auto !important; right: 0 !important;}
+.jslider .jslider-scale ins { font-size: 12px; text-decoration: none; color: #c9c3bd; margin: 0 !important;}
+
+.jslider-single .jslider-pointer-to,
+.jslider-single .jslider-value-to,
+.jslider-single .jslider-bg .v,
+.jslider-limitless .jslider-label {	display: none; }

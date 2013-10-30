@@ -1,0 +1,51 @@
+/*-----------------------------------*/
+/* Widget Weather */
+/*-----------------------------------*/
+
+.widget-weather{text-align: center;}
+.widget-weather strong{display:inline-block; font-weight: 700;}
+
+.widget-weather .air-temp{
+  background: #54bc75;
+  padding: 37px 10px;
+  margin-bottom: 1px;
+  .border-radius-top(@border-radius - 1);
+}
+.widget-weather .water-temp,
+.widget-weather .wind-speed{
+  background: #f6f0ec;
+  float: left;
+  width: 50%;
+  padding: 15px 10px;
+}
+.widget-weather .water-temp{
+  border-right: 1px solid #fff;
+  -webkit-border-radius: 0 0 0 @border-radius;
+  -moz-border-radius: 0 0 0 @border-radius;
+  border-radius: 0 0 0 @border-radius;
+}
+.widget-weather .wind-speed{
+  -webkit-border-radius: 0 0 @border-radius 0;
+  -moz-border-radius: 0 0 @border-radius 0;
+  border-radius: 0 0 @border-radius 0;
+}
+.widget-weather .air-temp strong{
+  font-size: @font-size * 4;
+  color: #fff;
+  padding-right: 63px;
+  height: 45px;
+  line-height: 45px;
+  background: url(images/icons/weather-air.png) right 0 no-repeat;
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .widget-weather .air-temp strong{font-size: @font-size * 2.77;}
+}
+.widget-weather .water-temp strong,
+.widget-weather .wind-speed strong{
+  width: 42px;
+  font-size: @font-size * 2.16;
+  color: #64584c;
+  padding-bottom: 22px;
+  background: url(images/icons/weather-icons.png) left bottom no-repeat;;
+}
+.widget-weather .wind-speed strong{background-position: right bottom;}

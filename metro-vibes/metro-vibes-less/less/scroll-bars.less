@@ -1,0 +1,129 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+
+.scrollBars {color: #fff !important;}
+.scrollBars .inner{padding: 25px 36px 26px;}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .scrollBars .inner{padding: 25px 0 26px;}
+}
+
+.scrollBars .scrollbar {
+  width: 50px;
+  height: 205px;
+  overflow: auto;
+  float: left;
+}
+.scrollbar .scrollbar-inner {padding-right: 30px;}
+
+.jspContainer{
+  overflow: hidden;
+  position: relative;
+}
+.jspPane{
+  position: absolute;
+}
+.jspVerticalBar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 100%;
+}
+.jspHorizontalBar{display: none;}
+
+.jspCap{height:12px;}
+
+.jspTrack{
+  background: #eee8e1;
+  border: 1px solid #eee8e1;
+  border-left: 1px solid #e9e0d8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  width:9px;
+}
+.jspTrack:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -11px;
+  bottom: -11px;
+  left: -10px;
+  border: 1px solid #f5f1ed;
+  width: 27px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+}
+.jspDrag{
+  background: #fff;
+  width: 9px;
+  position: relative;
+  top: 0;
+  left: -1px;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.jspDrag:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  border:6px solid #63c383;
+  width: 21px;
+  height: 21px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* Yellow Scroll Bar */
+.scrollbar-yellow .jspTrack{background: #edcc68;}
+
+.scrollbar-yellow .jspProgress,
+.scrollbar-red .jspProgress{
+  background: #eee8e1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 7px;
+  height: 5px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+.scrollbar-yellow .jspDrag{
+  background: #edcc68;
+  width: 7px;
+  left: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.scrollbar-yellow .jspDrag:after,
+.scrollbar-blue .jspDrag:after{
+  display: none;
+}
+
+/* Red Scroll Bar */
+.scrollbar-red .jspTrack{background: #ecc1b1;}
+.scrollbar-red .jspDrag{width: 5px; left: 1px;}
+.scrollbar-red .jspDrag:after{border:6px solid #e86943; width: 17px; height: 17px;}
+
+/* Blue Scroll Bar */
+.scrollbar-blue .jspDrag{
+  background: #5e90af;
+  width: 7px;
+  left: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}

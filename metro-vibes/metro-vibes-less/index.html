@@ -1,0 +1,869 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Metro Vibes | Index</title>
+
+<!-- main JS libs -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.10.0.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="style.less" media="screen" rel="stylesheet/less" type="text/css">
+
+<!-- scripts -->
+<script src="js/general.js"></script>
+<!-- custom input -->
+<script src="js/jquery.customInput.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- Placeholders -->
+<script type="text/javascript" src="js/jquery.powerful-placeholder.min.js"></script>
+<!-- Progress Bars -->
+<script src="js/progressbar.js"></script>
+<!-- Calendar -->
+<script src="js/jquery-ui.multidatespicker.js"></script>
+<!-- Graph Builder -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Media', 'GB'],
+            ['Audio', 1100],
+            ['Video', 460],
+            ['Photo', 340],
+            ['Other', 100]
+        ]);
+
+        var options = {
+            pieHole: 0.4,
+            legend: 'none',
+            pieSliceText: 'none',
+            width: 220,
+            height: 220,
+            slices: {0: {color: '#4daf7b'}, 1: {color: '#e6623d'}, 2: {color: '#ebc85e'}, 3: {color: '#f4ede7'}},
+            chartArea:{left:"10px", top:"10px", width:"92%", height:"92%"}
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+
+        var data2 = google.visualization.arrayToDataTable([
+            ['Month', 'Traffic'],
+            ['June',  1100],
+            ['July',  1580],
+            ['August',  1300],
+            ['September',  1430]
+        ]);
+
+        var options2 = {
+            width: 220,
+            height: 220,
+            legend: 'none',
+            colors: ['#4daf7b'],
+            chartArea:{left:0, top:0, width:"100%", height:"100%"},
+            hAxis:{textPosition:"none", gridlines:{color:"#fff"}, baselineColor:"#4daf7b"},
+            vAxis:{textPosition:"none", gridlines:{color:"#fff"}, baselineColor:"#4daf7b"}
+        };
+
+        var chart2 = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+        chart2.draw(data2, options2);
+    }
+</script>
+<!-- range sliders -->
+<script src="js/jquery.slider.bundle.js"></script>
+<script src="js/jquery.slider.js"></script>
+<!-- Video Player -->
+<script src="js/video.js"></script>
+<!-- Audio Player -->
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"<div class='item-song'>He lives in you, he lives in me</div><div class='item-artist'>Elton John, Hans Zimmer</div><img src='images/temp/music-player4.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"<div class='item-song'>I saw you dancing</div><div class='item-artist'>Yaki Da</div><img src='images/temp/music-player5.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<div class='item-song'>Sands of Time</div><div class='item-artist'>Pandora</div><img src='images/temp/music-player6.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+</script>
+
+<!-- Scroll Bars -->
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+	jQuery(function()
+	{
+		jQuery('.scrollbar').jScrollPane({
+			verticalDragMaxHeight: 9,
+			verticalDragMinHeight:9
+		});
+
+		jQuery('.scrollbar.scrollbar-yellow').jScrollPane({
+			verticalDragMaxHeight: 20,
+			verticalDragMinHeight:20
+		});
+
+		jQuery('.scrollbar.scrollbar-red').jScrollPane({
+			verticalDragMaxHeight: 5,
+			verticalDragMinHeight:5
+		});
+
+		jQuery('.scrollbar.scrollbar-blue').jScrollPane({
+			verticalDragMaxHeight: 50,
+			verticalDragMinHeight:50
+		});
+	});
+</script>
+
+<!-- LESS -->
+<script src="js/libs/less.js"></script>
+
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="container container-wide">
+
+<!-- content -->
+<div class="content " role="main">
+<!-- row -->
+<div class="row">
+<div class="col-sm-8">
+<!-- Website Menu -->
+<div id="topmenu">
+    <ul class="dropdown clearfix boxed">
+        <li class="menu-level-0"><a href="#"><i class="icon-menu"></i><span>check in</span><sup class="note">3</sup></a></li>
+        <li class="menu-level-0"><a href="#"><i class="icon-menu icon-menu2"></i><span>events</span></a> </li>
+        <li class="menu-level-0"><a href="#"><i class="icon-menu icon-menu3"></i><span>account</span></a>
+            <ul class="submenu-1">
+                <li class="menu-level-1"><a href="#">Web design</a></li>
+                <li class="menu-level-1"><a href="#">User interface</a></li>
+                <li class="menu-level-1"><a href="#">Social media</a>
+                    <ul class="submenu-2">
+                        <li class="menu-level-2"><a href="#">Gallery images</a></li>
+                        <li class="menu-level-2"><a href="#">Fine Slider</a></li>
+                        <li class="menu-level-2"><a href="#">Video in header</a></li>
+                        <li class="menu-level-2"><a href="#">Video Slider</a>
+                            <ul class="submenu-3">
+                                <li class="menu-level-3"><a href="#">Item 1</a></li>
+                                <li class="menu-level-3"><a href="#">Item 2</a></li>
+                                <li class="menu-level-3"><a href="#">Item 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-level-0"><a href="#"><i class="icon-menu icon-menu4"></i><span>settings</span></a></li>
+    </ul>
+</div>
+<!--/ Website Menu -->
+
+<!-- row level 2 -->
+<div class="row">
+    <div class="col-sm-6">
+        <!-- Widget Trade -->
+        <div class="widget-container widget-trade boxed">
+            <div class="widget-title">
+                <span class="trade-rate trade-rate-up">634. 39</span>
+                <span class="trade-rate-change">+2.18 (3.71%)</span>
+            </div>
+            <div class="inner">
+                <div class="trade-time">Today 2:25 pm</div>
+                <h4 class="trade-location"><a href="#">Salt Lake City, Utah</a></h4>
+                <ul class="trade-shares clearfix">
+                    <li class="traded"><a href="#"><strong>13.5 M</strong><span>Shares Traded</span></a></li>
+                    <li class="capitalization"><a href="#"><strong>28.44 B</strong><span>Market Cap</span></a></li>
+                </ul>
+                <div class="trade-bottom trade-graph">
+                    <h6 class="trade-bottom-title">AAPL</h6>
+                    <div class="trade-bottom-content"><img src="images/trade-graph.png" alt="" /></div>
+                </div>
+                <div class="trade-bottom trade-yearly-change">
+                    <h6 class="trade-bottom-title">Yearly Change</h6>
+                    <div class="trade-bottom-content"><span>+127. 01</span></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--/ Widget Trade -->
+
+        <!-- row level 3 -->
+        <div class="row">
+            <div class="col-sm-4 col-xs-4">
+                <!-- Widget Social Buttons -->
+                <div class="widget-container widget-social boxed">
+                    <ul>
+                        <li><a href="#" class="social-facebook"><span>Facebook</span></a></li>
+                        <li><a href="#" class="social-pinterest"><span>Pinterest</span></a></li>
+                        <li><a href="#" class="social-twitter"><span>Twitter</span></a></li>
+                    </ul>
+                </div>
+                <!--/ Widget Social Buttons -->
+            </div>
+
+            <div class="col-sm-8 col-xs-8">
+                <!-- Widget Weather -->
+                <div class="widget-container widget-weather boxed clearfix">
+                    <div class="air-temp"><strong>26&deg;</strong></div>
+                    <div class="water-temp"><strong>14&deg;</strong></div>
+                    <div class="wind-speed"><strong>13</strong></div>
+                </div>
+                <!--/ Widget Weather -->
+            </div>
+        </div>
+        <!--/ row level 3 -->
+
+        <!-- Widget Audio Player -->
+        <div class="widget-container widget-audio boxed">
+            <div class="inner">
+                <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                <div id="jp_container_1" class="jp-audio">
+                    <div class="inner">
+                        <div class="jp-gui jp-interface">
+                            <div class="jp-controls-wrap">
+                                <div class="song_title"></div>
+                                <div class="jp-current-time"></div>
+                                <div class="jp-duration"></div>
+                                <div class="jp-progress">
+                                    <div class="jp-seek-bar">
+                                        <div class="jp-play-bar"></div>
+                                    </div>
+                                </div>
+                                <ul class="jp-controls clearfix">
+                                    <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                                    <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                                    <li><a href="javascript:;" class="jp-previous disabled" tabindex="1">previous</a></li>
+                                    <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                                    <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                                    <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+                                    <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                                    <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                                    <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+                                    <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+                                    <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+                                    <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+                                    <li><a href="javascript:;" class="jp-playlist-toggle" tabindex="1" title="Toggle PlayList">Toggle PlayList</a></li>
+                                </ul>
+                                <div class="jp-volume-bar">
+                                    <div class="jp-volume-bar-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp-playlist">
+                            <ul class="jp-playlist-inner">
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="jp-no-solution">
+                            <span>Update Required</span>
+                            <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Widget Audio Player -->
+    </div>
+
+    <div class="col-sm-6">
+        <!-- Widget Stats -->
+        <div class="tabs_framed styled widget-stats">
+            <ul class="tabs clearfix">
+                <li class="active"><a href="#diagram" data-toggle="tab">Diagram Stats</a></li>
+                <li><a href="#month" data-toggle="tab">Month Report</a></li>
+            </ul>
+
+            <div class="tab-content boxed clearfix">
+                <div class="tab-pane fade in active" id="diagram">
+                    <h6>Data Transfer</h6>
+                    <div id="donutchart" class="donutchart"></div>
+                    <ul class="stats-data clearfix">
+                        <li><a href="#"><span>audio</span><strong>55%</strong></a></li>
+                        <li class="red"><a href="#"><span>video</span><strong>23%</strong></a></li>
+                        <li class="yellow"><a href="#"><span>photo</span><strong>17%</strong></a></li>
+                    </ul>
+                    <ul class="stats-links clearfix">
+                        <li><a href="#"><i class="stats-icon stats-icon1"></i><br /><span>upload files</span></a></li>
+                        <li><a href="#"><i class="stats-icon stats-icon2"></i><br /><span>share link</span></a></li>
+                        <li><a href="#"><i class="stats-icon stats-icon3"></i><br /><span>back up</span></a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="month">
+                    <h6>Data chart</h6>
+                    <div id="columnchart" class="columnchart"></div>
+                    <ul class="stats-data clearfix">
+                        <li><a href="#"><span>audio</span><strong>50%</strong></a></li>
+                        <li class="red"><a href="#"><span>video</span><strong>26%</strong></a></li>
+                        <li class="yellow"><a href="#"><span>photo</span><strong>18%</strong></a></li>
+                    </ul>
+                    <ul class="stats-links clearfix">
+                        <li><a href="#"><i class="stats-icon stats-icon1"></i><br /><span>upload files</span></a></li>
+                        <li><a href="#"><i class="stats-icon stats-icon2"></i><br /><span>share link</span></a></li>
+                        <li><a href="#"><i class="stats-icon stats-icon3"></i><br /><span>back up</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/ Widget Stats -->
+
+        <!-- widget calendar-->
+        <div class="widget-container widget_calendar boxed styled">
+            <div class="inner">
+                <input type="text" name="date_departure" class="inputField" value="" id="date_departure">
+                <script>
+                    // <![CDATA[
+                    jQuery(document).ready(function($) {
+                        var daysRange = 5;
+
+                        function assignCalendar(id){
+                            $('<div class="calendar" />')
+                                    .insertAfter( $(id) )
+                                    .multiDatesPicker({
+                                        dateFormat: 'yy-mm-dd',
+                                        minDate: new Date(),
+                                        maxDate: '+1y',
+                                        altField: id,
+                                        firstDay: 1,
+                                        showOtherMonths: true
+                                    }).prev().hide();
+                        }
+
+                        assignCalendar('#date_departure');
+                    });
+                    // ]]>
+                </script>
+            </div>
+        </div>
+        <!--/ widget calendar-->
+
+        <!-- Controls -->
+        <div class="controls boxed line-top">
+            <div class="inner clearfix">
+                <div class="input_styled checklist pull-left"><div class="rowCheckbox"><input name="signup" type="checkbox" id="signup" value="signup"><label for="signup"></label></div></div>
+                <div class="input_styled checklist pull-left"><div class="rowCheckbox checkbox-red"><input name="signup2" checked type="checkbox" id="signup2" value="signup2"><label for="signup2"></label></div></div>
+                <div class="input_styled checklist pull-left"><div class="rowCheckbox checkbox-large checkbox-noText"><input name="signup5" type="checkbox" checked id="signup5" value="signup5"><label for="signup5">ON</label></div></div>
+                <div class="clear"></div>
+                <div class="input_styled inlinelist pull-left"><div class="rowRadio"><input type="radio" name="signup3" value="radio_v1" id="radio_v1"><label for="radio_v1"></label></div></div>
+                <div class="input_styled inlinelist pull-left"><div class="rowRadio radio-red"><input type="radio" name="signup3" value="radio_v2" id="radio_v2" checked><label for="radio_v2"></label></div></div>
+                <div class="input_styled checklist pull-left"><div class="rowCheckbox checkbox-large checkbox-noText"><input name="signup6" type="checkbox" id="signup6" value="signup6"><label for="signup6">OFF</label></div></div>
+            </div>
+        </div>
+        <!--/ Controls -->
+    </div>
+</div>
+<!--/ row level 2 -->
+</div>
+
+<div class="col-sm-4">
+    <!-- Avatar Placeholder -->
+    <div class="widget-container widget_avatar boxed">
+        <div class="avatar-image"><img src="images/temp/avatar-image.jpg" alt="" /></div>
+        <div class="inner clearfix">
+            <div class="avatar"><img src="images/temp/avatar.png" alt="" /></div>
+            <h5>John Raymons</h5>
+            <span class="subtitle">Your talent amazes! This is awesome. Excited to see the final product.</span>
+        </div>
+        <div class="post-meta-links">
+            <ul class="clearfix">
+                <li class="post-view"><a href="#"><span><i class="icon-post"></i>172</span></a></li>
+                <li class="post-comm"><a href="#"><span><i class="icon-post"></i>34</span></a></li>
+                <li class="post-like"><a href="#"><span><i class="icon-post"></i>210</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--/ Avatar Placeholder -->
+
+    <!-- Video Player -->
+    <div class="video_player boxed">
+        <div class="inner">
+            <video id="my_video_1" class="video-js" controls loop
+                   preload="auto" poster="images/temp/vjs_poster2.png"
+                   data-setup="{}">
+                <source src="http://test.themefuse.com/artiom/galapagos.mp4" type='video/mp4'>
+            </video>
+            <script>
+                _V_("my_video_1").ready(function(){
+                    var myPlayer = this;
+                    var aspectRatio = 267/640;
+                    var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                    myPlayer.width(width).height( width * aspectRatio );
+
+                    function resizeVideoJS(){
+                        var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                        myPlayer.width(width).height( width * aspectRatio );
+                    }
+                    resizeVideoJS();
+                    window.onresize = resizeVideoJS;
+                });
+            </script>
+        </div>
+    </div>
+    <!--/ Video Player -->
+
+    <!-- search widget -->
+    <div class="widget-container widget_search styled boxed line-left">
+        <div class="inner">
+            <form method="get" id="searchform2" action="#">
+                <div class="clearfix">
+                    <span class="btn"><input type="submit" value="Search" /></span>
+                    <div class="field_text"><input name="search" value="" type="text" placeholder="Type word here" /></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/ search widget -->
+
+    <!-- User Menu -->
+    <div class="user-menu">
+        <ul class="dropdown clearfix boxed">
+            <li class="hover"><a href="#"><i class="icon-menu icon-menu5"></i><span>My Profile</span></a>
+                <ul>
+                    <li><a href="#">Invite friends</a></li>
+                    <li><a href="#">find friends</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="icon-menu icon-menu6"></i><span>Edit Profile</span></a></li>
+        </ul>
+    </div>
+    <!--/ User Menu -->
+
+    <!-- row level 2 -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-6"></div>
+        <div class="col-xs-6 col-sm-8 col-md-6">
+            <!-- Ribbons -->
+            <div class="ribbons boxed">
+                <div class="ribbon"><span><em>Sale</em><strong>20%</strong></span></div>
+                <div class="ribbon ribbon-blue"><span><em>Sale</em><strong>50%</strong></span></div>
+            </div>
+            <!--/ Ribbons -->
+        </div>
+    </div>
+    <!--/ row level 2 -->
+
+    <!-- Image Slider -->
+    <div class="widget-container widget_gallery boxed">
+        <div class="inner">
+            <div id="myCarousel" class="carousel slide" data-interval="20000">
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item"><img src="images/temp/post_img6.jpg" alt="" /><div class="carousel-desc"><span>Wild Deer</span></div></div>
+                    <div class="item"><img src="images/temp/post_img1.jpg" alt="" /><div class="carousel-desc"><span>Change your fate</span></div></div>
+                    <div class="item"><img src="images/temp/post_img3.jpg" alt="" /><div class="carousel-desc"><span>Unstoppable hero</span></div></div>
+                    <div class="item"><img src="images/temp/post_img2.jpg" alt="" /><div class="carousel-desc"><span>Change your fate</span></div></div>
+                    <div class="item"><img src="images/temp/post_img4.jpg" alt="" /><div class="carousel-desc"><span>Unstoppable hero</span></div></div>
+                </div>
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+            </div>
+        </div>
+    </div>
+    <!--/ Image Slider -->
+
+</div>
+</div>
+<!--/ row -->
+
+<!-- row -->
+<div class="row">
+<div class="col-sm-4">
+    <div class="widget-container progressBars boxed">
+        <h3 class="widget-title">Progress Bars</h3>
+        <div class="inner">
+            <!-- Progress Bar -->
+            <div id="progressBar1" class="progressbar">
+                <span class="mark-left">0%</span>
+                <span class="mark-right">100%</span>
+                <div class="percent"></div>
+                <div class="pbar"></div>
+                <div class="elapsed"></div>
+                <div class="remained"></div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#progressBar1').anim_progressbar({
+                        totaltime: 90
+                    });
+                });
+            </script>
+            <!--/ Progress Bar -->
+
+            <!-- Range slider -->
+            <div class="range-slider styled">
+                <input id="price_range" type="text" name="price_range" value="120;720">
+            </div>
+            <script type="text/javascript" >
+                jQuery(document).ready(function($) {
+                    // Price Range Input
+                    $("#price_range").rangeslider({
+                        from: 0,
+                        to: 1000,
+                        limits: false,
+                        scale: ['$0', '$1000'],
+                        heterogeneity: ['50/300'],
+                        step: 10,
+                        smooth: true,
+                        dimension: '$'
+                    });
+                });
+            </script>
+            <!-- Range slider -->
+
+            <!-- Progress Bar with download Bar -->
+            <div id="progressBar2" class="progressbar style2">
+                <span class="mark-left">0%</span>
+                <span class="mark-right">100%</span>
+                <div class="percent"></div>
+                <div class="pbar">
+                    <div id="downloadBar" class="downloadbar">
+                        <div class="pbar"></div>
+                    </div>
+                </div>
+                <div class="elapsed"></div>
+                <div class="remained"></div>
+
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#progressBar2').anim_progressbar({
+                        totaltime: 180
+                    });
+                    $('#downloadBar').anim_progressbar({
+                        totaltime: 120
+                    });
+                });
+            </script>
+            <!--/ Progress Bar with download Bar -->
+        </div>
+    </div>
+
+    <div class="widget-container scrollBars boxed">
+        <h3 class="widget-title">Scroll Bars</h3>
+        <div class="inner clearfix">
+            <!-- ScrollBars -->
+            <div class="scrollbar">
+                <div class="scrollbar-inner">
+                    <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                </div>
+            </div>
+            <div class="scrollbar scrollbar-yellow">
+                <div class="scrollbar-inner">
+                    <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                </div>
+            </div>
+            <div class="scrollbar scrollbar-red">
+                <div class="scrollbar-inner">
+                    <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                </div>
+            </div>
+            <div class="scrollbar scrollbar-blue">
+                <div class="scrollbar-inner">
+                    <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                </div>
+            </div>
+            <!--/ ScrollBars -->
+        </div>
+    </div>
+
+</div>
+
+<div class="col-sm-8">
+<!-- Simple Message Field -->
+<div class="comment-list styled clearfix">
+    <ol>
+        <li class="comment">
+            <div class="comment-body boxed">
+                <div class="comment-arrow"></div>
+                <div class="comment-avatar">
+                    <div class="avatar"><img src="images/temp/avatar6.png" alt="" /></div>
+                </div>
+                <div class="comment-text">
+                    <div class="comment-author clearfix">
+                        <a href="#" class="link-author">Jude Law</a>
+                    </div>
+                    <div class="comment-entry">
+                        He made his film debut with a minor part in Back ti the Future Part II (1989). Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </li>
+    </ol>
+</div>
+<!--/ Simple Message Field -->
+
+<!-- Tabs -->
+<div class="tabs_framed styled">
+    <ul class="tabs clearfix">
+        <li class="active"><a href="#about" data-toggle="tab">About</a></li>
+        <li><a href="#history" data-toggle="tab">History</a></li>
+        <li><a href="#past" data-toggle="tab">Past</a></li>
+    </ul>
+
+    <div class="tab-content boxed clearfix">
+        <div class="tab-pane fade in active" id="about">
+            <div class="inner clearfix">
+                <div class="tab_image pull-left"><img src="images/temp/tabimage8.png" alt=""></div>
+                <h2><a href="#">Michael Ormond</a></h2>
+                <!-- Rating Stars -->
+                <div class="rating">
+                    <span class="star on"><input type="hidden" value="1"></span><!--
+                                    --><span class="star on"><input type="hidden" value="2"></span><!--
+                                    --><span class="star on"><input type="hidden" value="3"></span><!--
+                                    --><span class="star off"><input type="hidden" value="4"></span><!--
+                                    --><span class="star off"><input type="hidden" value="5"></span>
+                </div>
+                <!--/ Rating Stars -->
+                <div class="tab-text"><p>He made his film debut with a minor part in Back to The Future Part II and then he became very popular.</p></div>
+                <div class="buttons">
+                    <a href="#" class="btn"><span>Normal</span></a>
+                    <a href="#" class="btn hover"><span>Hover</span></a>
+                    <a href="#" class="btn active"><span>Pressed</span></a>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-left"><span>&nbsp;&nbsp;Left&nbsp;</span></a>
+                    <a href="#" class="btn btn-green"><span>Change</span></a>
+                    <a href="#" class="btn btn-right"><span>Right&nbsp;</span></a>
+                </div>
+            </div>
+            <div class="bottom clearfix">
+                <div class="tagcloud pull-right">
+                    <a href="#" class="tag-link-1" title="2 topics"><span>Web Design</span></a>
+                    <a href="#" class="tag-link-2" title="3 topics"><span>Illustration</span></a>
+                    <a href="#" class="tag-link-3" title="5 topics"><span>Fashion Style</span></a>
+                    <a href="#" class="tag-link-4" title="8 topics"><span>Typography</span></a>
+                    <a href="#" class="tag-link-5" title="9 topics"><span>Interface</span></a>
+                    <a href="#" class="tag-link-6" title="3 topics"><span>High resolution</span></a>
+                </div>
+                <h3>Tags</h3>
+                <p>He made his film debut with a minor part in Back to The Future Part II</p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="history">
+            <div class="inner clearfix">
+                <div class="tab_image pull-right"><img src="images/temp/tabimage9.png" alt=""></div>
+                <h2><a href="#">Elijah Wood</a></h2>
+                <!-- Rating Stars -->
+                <div class="rating">
+                    <span class="star on"><input type="hidden" value="1"></span><!--
+                                    --><span class="star on"><input type="hidden" value="2"></span><!--
+                                    --><span class="star on"><input type="hidden" value="3"></span><!--
+                                    --><span class="star on"><input type="hidden" value="4"></span><!--
+                                    --><span class="star off"><input type="hidden" value="5"></span>
+                </div>
+                <!--/ Rating Stars -->
+                <div class="tab-text"><p>He made his film debut with a minor part in Back to The Future Part II and then he became very popular.</p></div>
+                <div class="buttons">
+                    <a href="#" class="btn"><span>Normal</span></a>
+                    <a href="#" class="btn hover"><span>Hover</span></a>
+                    <a href="#" class="btn active"><span>Pressed</span></a>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-left"><span>&nbsp;&nbsp;Left&nbsp;</span></a>
+                    <a href="#" class="btn btn-green"><span>Change</span></a>
+                    <a href="#" class="btn btn-right"><span>Right&nbsp;</span></a>
+                </div>
+            </div>
+            <div class="bottom clearfix">
+                <div class="tagcloud pull-left">
+                    <a href="#" class="tag-link-1" title="2 topics"><span>Web Design</span></a>
+                    <a href="#" class="tag-link-2" title="3 topics"><span>Illustration</span></a>
+                    <a href="#" class="tag-link-3" title="5 topics"><span>Fashion Style</span></a>
+                    <a href="#" class="tag-link-4" title="8 topics"><span>Typography</span></a>
+                    <a href="#" class="tag-link-5" title="9 topics"><span>Interface</span></a>
+                    <a href="#" class="tag-link-6" title="3 topics"><span>High resolution</span></a>
+                </div>
+                <h3>Tags</h3>
+                <p>He made his film debut with a minor part in Back to The Future Part II</p>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="past">
+            <div class="inner clearfix">
+                <div class="tab_image pull-left"><img src="images/temp/tabimage10.png" alt=""></div>
+                <h2><a href="#">John Carpenter</a></h2>
+                <!-- Rating Stars -->
+                <div class="rating">
+                    <span class="star on"><input type="hidden" value="1"></span><!--
+                                    --><span class="star on"><input type="hidden" value="2"></span><!--
+                                    --><span class="star on"><input type="hidden" value="3"></span><!--
+                                    --><span class="star on"><input type="hidden" value="4"></span><!--
+                                    --><span class="star off"><input type="hidden" value="5"></span>
+                </div>
+                <!--/ Rating Stars -->
+                <div class="tab-text"><p>He made his film debut with a minor part in Back to The Future Part II and then he became very popular.</p></div>
+                <div class="buttons">
+                    <a href="#" class="btn"><span>Normal</span></a>
+                    <a href="#" class="btn hover"><span>Hover</span></a>
+                    <a href="#" class="btn active"><span>Pressed</span></a>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-left"><span>&nbsp;&nbsp;Left&nbsp;</span></a>
+                    <a href="#" class="btn btn-green"><span>Change</span></a>
+                    <a href="#" class="btn btn-right"><span>Right&nbsp;</span></a>
+                </div>
+            </div>
+            <div class="bottom clearfix">
+                <div class="tagcloud pull-left">
+                    <a href="#" class="tag-link-1" title="2 topics"><span>Web Design</span></a>
+                    <a href="#" class="tag-link-2" title="3 topics"><span>Illustration</span></a>
+                    <a href="#" class="tag-link-3" title="5 topics"><span>Fashion Style</span></a>
+                    <a href="#" class="tag-link-4" title="8 topics"><span>Typography</span></a>
+                    <a href="#" class="tag-link-5" title="9 topics"><span>Interface</span></a>
+                    <a href="#" class="tag-link-6" title="3 topics"><span>High resolution</span></a>
+                </div>
+                <h3>Tags</h3>
+                <p>He made his film debut with a minor part in Back to The Future Part II</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ Tabs -->
+
+<!--pricing box-->
+<div class="pricing_box">
+    <ul class="clearfix">
+        <li class="price_col price_col_blue ">
+            <!--pricing item-->
+            <div class="price_item boxed">
+                <div class="price_col_head">
+                    <span class="badge"></span>
+                    <span class="price"><em>$</em>199<sup>90</sup></span>
+                </div>
+                <div class="price_col_body clearfix">
+                    <div class="price_body_inner">
+                        <div class="price_body_top">
+                            <span>Full Circle</span>
+                            <strong>Basic</strong>
+                            <div class="line"></div>
+                        </div>
+                        <ul>
+                            <li>Unlimited Traffic</li>
+                            <li>20 gb in Cloud</li>
+                            <li>0.5 gbit/sec</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price_col_foot">
+                    <div class="sign_up"><a href="#" class="btn btn-blue btn-small"><span>Buy Now</span></a></div>
+                </div>
+            </div>
+            <!--/ pricing-item -->
+        </li>
+
+        <li class="price_col price_col_red col_active">
+            <div class="price_item boxed">
+                <div class="price_col_head">
+                    <span class="badge"></span>
+                    <span class="price"><em>$</em>299<sup>90</sup></span>
+                </div>
+                <div class="price_col_body clearfix">
+                    <div class="price_body_inner">
+                        <div class="price_body_top">
+                            <span>Full Circle</span>
+                            <strong>Premium</strong>
+                            <div class="line"></div>
+                        </div>
+                        <ul>
+                            <li>Unlimited Traffic</li>
+                            <li>50 gb in Cloud</li>
+                            <li>1 gbit/sec</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price_col_foot">
+                    <div class="sign_up"><a href="#" class="btn btn-red"><span>Buy Now</span></a></div>
+                </div>
+            </div>
+        </li>
+
+        <li class="price_col price_col_green ">
+            <div class="price_item boxed">
+                <div class="price_col_head">
+                    <span class="badge"></span>
+                    <span class="price"><em>$</em>399<sup>90</sup></span>
+                </div>
+                <div class="price_col_body clearfix">
+                    <div class="price_body_inner">
+                        <div class="price_body_top">
+                            <span>Full Circle</span>
+                            <strong>Ultimate</strong>
+                            <div class="line"></div>
+                        </div>
+                        <ul>
+                            <li>Unlimited Traffic</li>
+                            <li>80 gb in Cloud</li>
+                            <li>2 gbit/sec</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="price_col_foot">
+                    <div class="sign_up"><a href="#" class="btn btn-green btn-small"><span>Buy Now</span></a></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--/pricing box-->
+</div>
+</div>
+<!--/ row -->
+
+</div>
+<!--/ content -->
+</div>
+<!--/ container -->
+
+</body>
+</html>

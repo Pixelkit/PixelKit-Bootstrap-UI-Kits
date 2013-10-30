@@ -1,0 +1,178 @@
+/*
+  - General Styles
+  - Clear Floats
+  - Boxes
+  - Header (Kit Name)
+  - Dividers
+  - Layout on Index Page
+*/
+
+
+
+/*-----------------------------------*/
+/* General Styles */
+/*-----------------------------------*/
+
+body {
+  font-family: @font-family;
+  font-weight: 400;
+  color: @font-color;
+  font-size: @font-size;
+  position:relative;
+  background: url(images/bg.png) center top repeat;
+  background-size: 100% 100%;
+}
+::-moz-selection {
+  background: #aba98c;
+  color: #000;
+  text-shadow: none;
+}
+::selection {
+  background: #aba98c;
+  color: #333;
+  text-shadow: none;
+}
+a:hover,
+a:focus {
+  color: @link-color-hover;
+  text-decoration: none;
+}
+a:active{background-color: transparent;}
+
+input, textarea, input[type="submit"]:focus, div {
+  outline: 0 none;
+  font-family: @font-family;
+}
+button, input, select, textarea {vertical-align: top; margin: 0;}
+
+.alpha{margin-left:0 !important;}
+.omega{margin-right:0 !important;}
+
+.no-radius{
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+/*-----------------------------------*/
+/* Clear Floats */
+/*-----------------------------------*/
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*-----------------------------------*/
+/* Boxes */
+/*-----------------------------------*/
+
+@media (min-width: 1200px) {
+  .container.container-wide {
+    max-width: 1070px;
+  }
+}
+
+.content, .sidebar{padding: 50px 0;}
+#middle{position: relative; z-index: 0;}
+#middle.sidebar_left > .container > .row > .col-sm-8{float:right;}
+
+.boxed {
+  background: @white;
+  .border-radius(@border-radius);
+  -webkit-box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+  -moz-box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+  box-shadow: 0 0 12px rgba(58, 51, 46, 0.26);
+  margin-bottom:30px;
+  position: relative;
+  z-index: 0;
+}
+.line-left{border-left: 3px solid #ebc85e;}
+.line-top{border-top: 3px solid #ebc85e;}
+
+/*-----------------------------------*/
+/* Header (Kit Name) */
+/*-----------------------------------*/
+
+.pixelkit-header{padding: 50px 0 5px;}
+
+.pixelkit-header h1, .pixelkit-header h2{
+  text-align: center;
+  font-size: @font-size * 3.24;
+  margin-bottom: 2px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  color:#fff;
+  text-shadow: 1px 1px 0 rgba(124,83,72,0.5);
+}
+.pixelkit-header h2{font-size: @font-size * 1.54;}
+
+/*-----------------------------------*/
+/* Dividers */
+/*-----------------------------------*/
+
+.divider{
+  border-top:1px solid #eeecea;
+  border-bottom:1px solid #eeecea;
+  margin:15px 0;
+}
+.divider.dashed{
+  border-top:0 none;
+  border-bottom:1px dashed #e5d3c2;
+}
+
+/*-------------------------------------------*/
+/* Layout on Index Page */
+/*-------------------------------------------*/
+
+/* Controls */
+
+.controls{
+  .border-radius-bottom(@border-radius);
+}
+.controls .inner{padding: 26px 30px 14px;}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .controls .inner{padding: 26px 20px 14px;}
+}
+
+.controls .checkbox-large.checkbox-noText .custom-checkbox label{
+  font-size: @font-size - 2;
+  font-weight: 700;
+  color: #867f79;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 65px;
+  background-position: right 0;
+  width: 86px;
+  margin-left: 25px;
+}
+.controls .checkbox-large.checkbox-noText .custom-checkbox label.checked {background-position: right -100px;}

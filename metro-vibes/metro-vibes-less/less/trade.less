@@ -1,0 +1,90 @@
+/*-----------------------------------*/
+/* Widget Trade */
+/*-----------------------------------*/
+
+.widget-trade .widget-title{
+  -webkit-box-shadow: none;
+  -mox-box-shadow: none;
+  box-shadow: none;
+  background: url(images/trade-header.png);
+  background-size: 100% 100%;
+  height:160px;
+  padding: 18px;
+}
+.widget-trade .trade-rate,
+.widget-trade .trade-rate-change{
+  display: block;
+  font-size: @font-size + 1;
+  font-weight: 400;
+  color: #b7dfc2;
+  padding-left: 12px;
+}
+.widget-trade .trade-rate{
+  font-size: @font-size * 1.85;
+  color: #fff;
+  background: url(images/trade-dir.png) 0 15px no-repeat;
+}
+.widget-trade .trade-rate-down{background-position: 0 -87px;}
+
+.widget-trade .inner{padding: 33px 20px 38px;}
+
+.widget-trade .trade-time{
+  font-size: @font-size - 1;
+  color: #bfb8b1;
+}
+.widget-trade .trade-location{margin-bottom: 20px;}
+.widget-trade .trade-location a {font-size: @font-size * 1.62; color: @font-color;}
+.widget-trade .trade-location a:hover {font-size: @font-size * 1.62; color: #bfb8b1;}
+
+.widget-trade .trade-shares{margin-bottom: 24px;}
+
+.widget-trade .trade-shares li{
+  float: left;
+  width: 50%;
+  background: #f6f0ec;
+  border-left: 1px solid #fff;
+}
+.widget-trade .trade-shares li a{padding: 20px 0;}
+
+.widget-trade .trade-shares li a,
+.widget-trade .trade-shares li a strong,
+.widget-trade .trade-shares li a span{
+  display: block;
+  font-size: @font-size * 1.39;
+  font-weight: 600;
+  color: @font-color;
+  text-align: center;
+}
+.widget-trade .trade-shares li a span{
+  font-size: @font-size - 1;
+  color: #ad9e8e;
+}
+.widget-trade .trade-shares li a:hover strong,
+.widget-trade .trade-shares li a:hover span{
+  color: #e05033;
+}
+.widget-trade .trade-bottom{float: left;}
+.widget-trade .trade-bottom.trade-graph{width: 53%; padding-right: 10px;}
+.widget-trade .trade-bottom.trade-yearly-change{width: 47%;}
+
+.widget-trade .trade-bottom-title{
+  font-size: @font-size + 1;
+  color: #b4b0aa;
+  margin-bottom: 8px;
+}
+.widget-trade .trade-bottom img{
+  display: block;
+  max-width: 100%;
+  height: 40px;
+}
+.widget-trade .trade-yearly-change .trade-bottom-content{
+  background: #4daf7b;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  height: 40px;
+  line-height: 40px;
+  font-size: @font-size * 1.39;
+  color: #fff;
+  text-align: center;
+}
