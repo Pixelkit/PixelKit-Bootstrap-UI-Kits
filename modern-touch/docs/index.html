@@ -26,17 +26,6 @@
 <script src="../modern-touch-css/js/general.js"></script>
 <script src="js/general.js"></script>
 
-<!-- SyntaxHighlighter -->
-<link rel="stylesheet" href="css/shCore.css">
-<link rel="stylesheet" href="css/shThemeDefault.css">
-<script src="js/shCore.js"></script>
-<script src="js/shBrushXml.js"></script>
-<script src="js/shBrushJScript.js"></script>
-<script>
-    SyntaxHighlighter.defaults['gutter'] = false;
-    SyntaxHighlighter.all();
-</script>
-
 <!-- custom input -->
 <script src="../modern-touch-css/js/jquery.customInput.js"></script>
 
@@ -119,8 +108,9 @@
     });
 </script>
 
-<!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<!-- SyntaxHighlighter -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<link href="css/prettify.css" rel="stylesheet">
 
 <!--[if lt IE 9]><script src="../modern-touch-css/js/respond.min.js"></script><![endif]-->
 <!--[if gte IE 9]>
@@ -207,8 +197,14 @@
                         </li>
 
                         <li>
-                            <a href="#video-player">Widgets</a>
+                            <a href="#pricing">Widgets</a>
                             <ul class="nav">
+                                <li>
+                                    <a href="#pricing">Pricing</a>
+                                    <ul class="nav">
+                                        <li><a href="#pricing-def">Default style</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#video-player">Video Player</a></li>
                                 <li>
                                     <a href="#sliders">Sliders</a>
@@ -226,12 +222,6 @@
                                     </ul>
                                 </li>
                                 <li><a href="#weather-forecast">Weather Forecast</a></li>
-								<li>
-                                    <a href="#pricing">Pricing Items</a>
-                                    <ul class="nav">
-                                        <li><a href="#pricing-def">Default style</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -262,32 +252,32 @@
                         </div>
                         <div class="example">
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        modern-touch
-                                        ├───docs
-                                        │   ├───css
-                                        │   ├───images
-                                        │   └───js
-                                        ├───modern-touch-css
-                                        │   ├───css
-                                        │   ├───fonts
-                                        │   ├───images
-                                        │   │   ├───icons
-                                        │   │   ├───prettyPhoto
-                                        │   │   └───temp
-                                        │   └───js
-                                        │       └───libs
-                                        └───modern-touch-less
-                                            ├───fonts
-                                            ├───images
-                                            │   ├───icons
-                                            │   ├───prettyPhoto
-                                            │   └───temp
-                                            ├───js
-                                            │   └───libs
-                                            └───less
-                                                └───bootstrap
-                                    </pre>
+                                <pre class="prettyprint">
+modern-touch
+├───docs
+│   ├───css
+│   ├───images
+│   └───js
+├───modern-touch-css
+│   ├───css
+│   ├───fonts
+│   ├───images
+│   │   ├───icons
+│   │   ├───prettyPhoto
+│   │   └───temp
+│   └───js
+│       └───libs
+└───modern-touch-less
+    ├───fonts
+    ├───images
+    │   ├───icons
+    │   ├───prettyPhoto
+    │   └───temp
+    ├───js
+    │   └───libs
+    └───less
+        └───bootstrap
+                                </pre>
                             </div>
                         </div>
                         <div class="description">
@@ -358,55 +348,55 @@
                         </div>
                         <div class="example">
                             <div class="example-code">
-                                    <pre class="brush: xml">
-										&lt;!doctype html>
-										<!--[if lt IE 7 ]>&lt;html lang="en" class="no-js ie6"> <![endif]-->
-										<!--[if IE 7 ]>&lt;html lang="en" class="no-js ie7"> <![endif]-->
-										<!--[if IE 8 ]>&lt;html lang="en" class="no-js ie8"> <![endif]-->
-										<!--[if IE 9 ]>&lt;html lang="en" class="no-js ie9"> <![endif]-->
-										<!--[if (gt IE 9)|!(IE)]><!-->&lt;html lang="en" class="no-js"><!--<![endif]-->
-										&lt;head>
-											&lt;meta charset="utf-8">
-											&lt;meta name="author" content="">
-											&lt;meta name="keywords" content="">
-											&lt;meta name="viewport" content="width=device-width,initial-scale=1">
-											<title></title>
+                                <pre class="prettyprint">
+&lt;!doctype html>
+&lt;!--[if lt IE 7 ]>&lt;html lang="en" class="no-js ie6"> &lt;![endif]-->
+&lt;!--[if IE 7 ]>&lt;html lang="en" class="no-js ie7"> &lt;![endif]-->
+&lt;!--[if IE 8 ]>&lt;html lang="en" class="no-js ie8"> &lt;![endif]-->
+&lt;!--[if IE 9 ]>&lt;html lang="en" class="no-js ie9"> &lt;![endif]-->
+&lt;!--[if (gt IE 9)|!(IE)]>&lt;!-->&lt;html lang="en" class="no-js">&lt;!--&lt;![endif]-->
+&lt;head>
+    &lt;meta charset="utf-8">
+    &lt;meta name="author" content="">
+    &lt;meta name="keywords" content="">
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1">
+    &lt;title>&lt;/title>
 
-											<!-- main JS libs -->
-											&lt;script src="js/libs/modernizr.min.js">&lt;/script>
-											&lt;script src="js/libs/jquery-1.10.0.js">&lt;/script>
-											&lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
-											&lt;script src="js/libs/bootstrap.min.js">&lt;/script>
+    &lt;!-- main JS libs -->
+    &lt;script src="js/libs/modernizr.min.js">&lt;/script>
+    &lt;script src="js/libs/jquery-1.10.0.js">&lt;/script>
+    &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+    &lt;script src="js/libs/bootstrap.min.js">&lt;/script>
 
-											<!-- Style CSS -->
-											&lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
-											&lt;link href="style.css" media="screen" rel="stylesheet">
+    &lt;!-- Style CSS -->
+    &lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    &lt;link href="style.css" media="screen" rel="stylesheet">
 
-											<!-- scripts -->
-											&lt;script src="js/general.js">&lt;/script>
+    &lt;!-- scripts -->
+    &lt;script src="js/general.js">&lt;/script>
 
-											<!-- Include all needed stylesheets and scripts here -->
+    &lt;!-- Include all needed stylesheets and scripts here -->
 
-											<!--[if lt IE 9]>&lt;script src="js/respond.min.js">&lt;/script><![endif]-->
-											<!--[if gte IE 9]>
-											<style type="text/css">
-												.gradient {filter: none !important;}
-											</style>
-											<![endif]-->
-										&lt;/head>
+    &lt;!--[if lt IE 9]>&lt;script src="js/respond.min.js">&lt;/script>&lt;![endif]-->
+    &lt;!--[if gte IE 9]>
+    &lt;style type="text/css">
+        .gradient {filter: none !important;}
+    &lt;/style>
+    &lt;![endif]-->
+&lt;/head>
 
-										&lt;body>
-											&lt;div class="body_wrap">
-												&lt;div class="container">
+&lt;body>
+    &lt;div class="body_wrap">
+        &lt;div class="container">
 
-													Start your work here.
+            Start your work here.
 
-												&lt;/div>
-												<!--/ container -->
-											&lt;/div>
-										&lt;/body>
-										&lt;/html>
-                                    </pre>
+        &lt;/div>
+        &lt;!--/ container -->
+    &lt;/div>
+&lt;/body>
+&lt;/html>
+                                </pre>
                             </div>
                         </div>
                     </div>
@@ -436,15 +426,15 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
                             </div>
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        <h1>Example (h1)</h1>
-                                        <h2>Example (h2)</h2>
-                                        <h3>Example (h3)</h3>
-                                        <h4>Example (h4)</h4>
-                                        <h5>Example (h5)</h5>
-                                        <h6>Example (h6)</h6>
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    <pre class="prettyprint">
+&lt;h1>Example (h1)&lt;/h1>
+&lt;h2>Example (h2)&lt;/h2>
+&lt;h3>Example (h3)&lt;/h3>
+&lt;h4>Example (h4)&lt;/h4>
+&lt;h5>Example (h5)&lt;/h5>
+&lt;h6>Example (h6)&lt;/h6>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
                                     </pre>
                             </div>
                         </div>
@@ -473,15 +463,15 @@
                                 <a href="#" class="btn btn-brown"><span>Brown</span></a>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <a href="#" class="btn"><span>Default</span></a>
-                                    <a href="#" class="btn btn-blue"><span>Blue</span></a>
-                                    <a href="#" class="btn btn-green"><span>Green</span></a>
-                                    <a href="#" class="btn btn-red"><span>Red</span></a>
-                                    <a href="#" class="btn btn-yellow"><span>Yellow</span></a>
-                                    <a href="#" class="btn btn-turquoise"><span>Turquoise</span></a>
-                                    <a href="#" class="btn btn-black"><span>Black</span></a>
-                                    <a href="#" class="btn btn-brown"><span>Brown</span></a>
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn">&lt;span>Default&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-blue">&lt;span>Blue&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-green">&lt;span>Green&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-red">&lt;span>Red&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-yellow">&lt;span>Yellow&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-turquoise">&lt;span>Turquoise&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-black">&lt;span>Black&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-brown">&lt;span>Brown&lt;/span>&lt;/a>
                                 </pre>
                             </div>
                         </div>
@@ -506,16 +496,16 @@
                                 <a href="#" class="btn btn-icon-right btn-arrow-down"><span>Down</span></a>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <a href="#" class="btn btn-icon-left"><span>Right</span></a>
-                                    <a href="#" class="btn btn-icon-left btn-arrow-left"><span>Left</span></a>
-                                    <a href="#" class="btn btn-icon-left btn-arrow-up"><span>Up</span></a>
-                                    <a href="#" class="btn btn-icon-left btn-arrow-down"><span>Down</span></a>
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-icon-left">&lt;span>Right&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-icon-left btn-arrow-left">&lt;span>Left&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-icon-left btn-arrow-up">&lt;span>Up&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-icon-left btn-arrow-down">&lt;span>Down&lt;/span>&lt;/a>
 
-                                    <a href="#" class="btn btn-icon-right"><span>Right</span></a>
-                                    <a href="#" class="btn btn-icon-right btn-arrow-left"><span>Left</span></a>
-                                    <a href="#" class="btn btn-icon-right btn-arrow-up"><span>Up</span></a>
-                                    <a href="#" class="btn btn-icon-right btn-arrow-down"><span>Down</span></a>
+&lt;a href="#" class="btn btn-icon-right">&lt;span>Right&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-icon-right btn-arrow-left">&lt;span>Left&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-icon-right btn-arrow-up">&lt;span>Up&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-icon-right btn-arrow-down">&lt;span>Down&lt;/span>&lt;/a>
                                 </pre>
                             </div>
                         </div>
@@ -532,8 +522,8 @@
                                 <span class="btn btn-icon-left"><input type="submit" value="Submit" /></span>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <span class="btn btn-icon-left"><input type="submit" value="Submit" /></span>
+                                <pre class="prettyprint">
+&lt;span class="btn btn-icon-left">&lt;input type="submit" value="Submit" />&lt;/span>
                                 </pre>
                             </div>
                         </div>
@@ -552,9 +542,9 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Attribute <code>name</code> required for <code>input</code> element.</p>
-                                <p>Styled Checkbox require next file to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.customInput.js">&lt;/script>
+                                <p>Styled Checkbox require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -567,18 +557,18 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="input_styled checklist">
-                                        <div class="rowCheckbox">
-                                            <input name="" type="checkbox" id="checkbox-1">
-                                            <label for="checkbox-1">Simple Checkbox</label>
-                                        </div>
+                                <pre class="prettyprint">
+&lt;div class="input_styled checklist">
+    &lt;div class="rowCheckbox">
+        &lt;input name="" type="checkbox" id="checkbox-1">
+        &lt;label for="checkbox-1">Simple Checkbox&lt;/label>
+    &lt;/div>
 
-                                        <div class="rowCheckbox checkbox-large">
-                                            <input name="" type="checkbox" id="checkbox-2">
-                                            <label for="checkbox-2">Switch</label>
-                                        </div>
-                                    &lt;/div>
+    &lt;div class="rowCheckbox checkbox-large">
+        &lt;input name="" type="checkbox" id="checkbox-2">
+        &lt;label for="checkbox-2">Switch&lt;/label>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -591,9 +581,9 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Attribute <code>name</code> required for <code>input</code> element.</p>
-                                <p>Styled Radio Button require next file to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.customInput.js">&lt;/script>
+                                <p>Styled Radio Button require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -606,17 +596,17 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="input_styled inlinelist">
-                                        <div class="rowRadio">
-                                            <input type="radio" name="radio" id="radio-1" checked>
-                                            <label for="radio-1">Checked Radio Button</label>
-                                        </div>
-                                        <div class="rowRadio">
-                                            <input type="radio" name="radio" id="radio-2">
-                                            <label for="radio-2">Unchecked Radio Button</label>
-                                        </div>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div class="input_styled inlinelist">
+    &lt;div class="rowRadio">
+        &lt;input type="radio" name="radio" id="radio-1" checked>
+        &lt;label for="radio-1">Checked Radio Button&lt;/label>
+    &lt;/div>
+    &lt;div class="rowRadio">
+        &lt;input type="radio" name="radio" id="radio-2">
+        &lt;label for="radio-2">Unchecked Radio Button&lt;/label>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -628,9 +618,9 @@
                             <p>All Text inputs are styled.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Text Inputs with <code>placeholders</code> require next file to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                <p>Text Inputs with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -645,14 +635,14 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="field_text">
-                                        <input type="text" name="name" id="name" placeholder="Name">
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="field_text">
+    &lt;input type="text" name="name" id="name" placeholder="Name">
+&lt;/div>
 
-                                    <div class="field_text omega">
-                                        <input type="text" name="email" id="email" placeholder="Email">
-                                    </div>
+&lt;div class="field_text omega">
+    &lt;input type="text" name="email" id="email" placeholder="Email">
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -664,9 +654,9 @@
                             <p>All Textareas are styled similar to Text inputs.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Textareas with <code>placeholders</code> require next file to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                <p>Textareas with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -678,25 +668,25 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="field_text field_textarea">
-                                        <textarea id="message" placeholder="Message"></textarea>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="field_text field_textarea">
+    &lt;textarea id="message" placeholder="Message">&lt;/textarea>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
                         <!--/ TextAreas -->
 
-                        <!-- TextAreas -->
+                        <!-- Selects -->
                         <div class="description">
                             <h3 id="form-select">Selects</h3>
                             <p>All Select elements are styled similar to Text inputs.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Styled Select element require next files to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;link rel="stylesheet" href="css/cusel.css">
-                                    &lt;script src="js/cusel-min.js">&lt;/script>
+                                <p>Styled Select element require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link rel="stylesheet" href="css/cusel.css">
+&lt;script src="js/cusel-min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -714,20 +704,20 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="field_select">
-                                        &lt;select class="select_styled">
-                                            <option value="">Subject</option>
-                                            <option value="Feedback">Feedback</option>
-                                            <option value="Support">Support Question</option>
-                                            <option value="Website">Website Question</option>
-                                            <option value="Other">Other Question or Comment</option>
-                                        &lt;/select>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div class="field_select">
+    &lt;select class="select_styled">
+        &lt;option value="">Subject&lt;/option>
+        &lt;option value="Feedback">Feedback&lt;/option>
+        &lt;option value="Support">Support Question&lt;/option>
+        &lt;option value="Website">Website Question&lt;/option>
+        &lt;option value="Other">Other Question or Comment&lt;/option>
+    &lt;/select>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
-                        <!--/ TextAreas -->
+                        <!--/ Selects -->
                     </div>
                     <!--/ Form Elements -->
 
@@ -777,44 +767,44 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="tf_pagination">
-                                        <div class="inner">
-                                            <a class="page_prev" href="#"><span></span></a>
-                                            <span class="page-numbers page_current">1</span>
-                                            <a href="#" class="page-numbers">2</a>
-                                            <a href="#" class="page-numbers">3</a>
-                                            <a class="page_next" href="#"><span></span></a>
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="tf_pagination">
+    &lt;div class="inner">
+        &lt;a class="page_prev" href="#">&lt;span>&lt;/span>&lt;/a>
+        &lt;span class="page-numbers page_current">1&lt;/span>
+        &lt;a href="#" class="page-numbers">2&lt;/a>
+        &lt;a href="#" class="page-numbers">3&lt;/a>
+        &lt;a class="page_next" href="#">&lt;span>&lt;/span>&lt;/a>
+    &lt;/div>
+&lt;/div>
 
-                                    <div class="tf_pagination style2">
-                                        <div class="inner">
-                                            <a class="page_prev" href="#"><span></span></a>
-                                            <span class="page-numbers page_current">1</span>
-                                            <a href="#" class="page-numbers">2</a>
-                                            <a href="#" class="page-numbers">3</a>
-                                            <a class="page_next" href="#"><span></span></a>
-                                        </div>
-                                    </div>
+&lt;div class="tf_pagination style2">
+    &lt;div class="inner">
+        &lt;a class="page_prev" href="#">&lt;span>&lt;/span>&lt;/a>
+        &lt;span class="page-numbers page_current">1&lt;/span>
+        &lt;a href="#" class="page-numbers">2&lt;/a>
+        &lt;a href="#" class="page-numbers">3&lt;/a>
+        &lt;a class="page_next" href="#">&lt;span>&lt;/span>&lt;/a>
+    &lt;/div>
+&lt;/div>
 
-                                    <div class="tf_pagination style3">
-                                        <div class="inner">
-                                            <a class="page_prev" href="#"><span>&lsaquo;</span></a>
-                                            <span class="page-numbers page_current">1</span>
-                                            <a href="#" class="page-numbers">2</a>
-                                            <a href="#" class="page-numbers">3</a>
-                                            <a class="page_next" href="#"><span>&rsaquo;</span></a>
-                                        </div>
-                                    </div>
+&lt;div class="tf_pagination style3">
+    &lt;div class="inner">
+        &lt;a class="page_prev" href="#">&lt;span>&lsaquo;&lt;/span>&lt;/a>
+        &lt;span class="page-numbers page_current">1&lt;/span>
+        &lt;a href="#" class="page-numbers">2&lt;/a>
+        &lt;a href="#" class="page-numbers">3&lt;/a>
+        &lt;a class="page_next" href="#">&lt;span>&rsaquo;&lt;/span>&lt;/a>
+    &lt;/div>
+&lt;/div>
 
-                                    <div class="tf_pagination style3 small">
-                                        <div class="inner">
-                                            <a class="page_prev" href="#"><span>&lsaquo;</span></a>
-                                            <a class="page-numbers" href="#"></a>
-                                            <a class="page_next" href="#"><span>&rsaquo;</span></a>
-                                        </div>
-                                    </div>
+&lt;div class="tf_pagination style3 small">
+    &lt;div class="inner">
+        &lt;a class="page_prev" href="#">&lt;span>&lsaquo;&lt;/span>&lt;/a>
+        &lt;a class="page-numbers" href="#">&lt;/a>
+        &lt;a class="page_next" href="#">&lt;span>&rsaquo;&lt;/span>&lt;/a>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -829,10 +819,10 @@
                             <p>Use any of the available classes to quickly create a styled Scroll Bar for your site.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Styled Scroll Bar require next files to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.mousewheel.js">&lt;/script>
-                                    &lt;script src="js/jquery.jscrollpane.min.js">&lt;/script>
+                                <p>Styled Scroll Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.mousewheel.js">&lt;/script>
+&lt;script src="js/jquery.jscrollpane.min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -863,59 +853,59 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="scrollbar">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div class="scrollbar">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
 
-                                    &lt;div class="scrollbar style2">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
+&lt;div class="scrollbar style2">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
 
-                                    &lt;div class="scrollbar style3">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
+&lt;div class="scrollbar style3">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
 
-                                    &lt;div class="scrollbar style4">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
+&lt;div class="scrollbar style4">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Scroll Bars via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        jQuery(function()
-                                        {
-                                            jQuery('.scrollbar').jScrollPane({
-                                                verticalDragMaxHeight: 18,
-                                                verticalDragMinHeight:18
-                                            });
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    jQuery(function()
+    {
+        jQuery('.scrollbar').jScrollPane({
+            verticalDragMaxHeight: 18,
+            verticalDragMinHeight:18
+        });
 
-                                            jQuery('.scrollbar.style2').jScrollPane({
-                                                verticalDragMaxHeight: 28,
-                                                verticalDragMinHeight:28
-                                            });
+        jQuery('.scrollbar.style2').jScrollPane({
+            verticalDragMaxHeight: 28,
+            verticalDragMinHeight:28
+        });
 
-                                            jQuery('.scrollbar.style3').jScrollPane({
-                                                verticalDragMaxHeight: 38,
-                                                verticalDragMinHeight:38
-                                            });
+        jQuery('.scrollbar.style3').jScrollPane({
+            verticalDragMaxHeight: 38,
+            verticalDragMinHeight:38
+        });
 
-                                            jQuery('.scrollbar.style4').jScrollPane({
-                                                verticalDragMaxHeight: 38,
-                                                verticalDragMinHeight:38
-                                            });
-                                        });
-                                    &lt;/script>
+        jQuery('.scrollbar.style4').jScrollPane({
+            verticalDragMaxHeight: 38,
+            verticalDragMinHeight:38
+        });
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -930,10 +920,10 @@
                             <p>Use any of the available classes to quickly create a styled Progress Bar for your site.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Styled Progress Bar require next files to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery-ui.min.js">&lt;/script>
-                                    &lt;script src="js/progressbar.js">&lt;/script>
+                                <p>Styled Progress Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/progressbar.js">&lt;/script>
                                 </pre>
                             </div>
 
@@ -978,40 +968,40 @@
                                 <!--/ Progress Bar Style 2 -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div id="progressBar1" class="progressbar">
-                                        <span class="mark-left">0%</span>
-                                        <span class="mark-right">100%</span>
-                                        <div class="percent"></div>
-                                        <div class="pbar"></div>
-                                        <div class="elapsed"></div>
-                                        <div class="remained"></div>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div id="progressBar1" class="progressbar">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="pbar">&lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+&lt;/div>
 
-                                    &lt;div id="progressBar2" class="progressbar style2">
-                                        <span class="mark-left">0%</span>
-                                        <span class="mark-right">100%</span>
-                                        <div class="percent"></div>
-                                        <div class="pbar"></div>
-                                        <div class="elapsed"></div>
-                                        <div class="remained"></div>
-                                    &lt;/div>
+&lt;div id="progressBar2" class="progressbar style2">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="pbar">&lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Progress Bars via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        $(document).ready(function() {
-                                            $('#progressBar1').anim_progressbar({
-                                                totaltime: 800
-                                            });
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(document).ready(function() {
+        $('#progressBar1').anim_progressbar({
+            totaltime: 800
+        });
 
-                                            $('#progressBar2').anim_progressbar({
-                                                totaltime: 600
-                                            });
-                                        });
-                                    &lt;/script>
+        $('#progressBar2').anim_progressbar({
+            totaltime: 600
+        });
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -1026,12 +1016,12 @@
                             <p>Range Slider allow users to select a value from a numerical range by simply dragging a slider.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Range Slider require next files to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery-ui.min.js">&lt;/script>
-                                    &lt;script src="js/jquery.slider.bundle.js">&lt;/script>
-                                    &lt;script src="js/jquery.slider.js">&lt;/script>
-                                    &lt;link rel="stylesheet" href="css/jslider.css">
+                                <p>Range Slider require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery.slider.bundle.js">&lt;/script>
+&lt;script src="js/jquery.slider.js">&lt;/script>
+&lt;link rel="stylesheet" href="css/jslider.css">
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -1060,29 +1050,29 @@
                                 <!-- Range slider -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="range-slider">
-                                        &lt;input id="price_range" type="text" value="120;720">
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="range-slider">
+    &lt;input id="price_range" type="text" value="120;720">
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Price Range via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        jQuery(document).ready(function($) {
-                                            $("#price_range").rangeslider({
-                                                from: 0,
-                                                to: 1000,
-                                                limits: false,
-                                                scale: ['$0', '$1000'],
-                                                heterogeneity: ['50/300'],
-                                                step: 10,
-                                                smooth: true,
-                                                dimension: '$'
-                                            });
-                                        });
-                                    &lt;/script>
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $("#price_range").rangeslider({
+            from: 0,
+            to: 1000,
+            limits: false,
+            scale: ['$0', '$1000'],
+            heterogeneity: ['50/300'],
+            step: 10,
+            smooth: true,
+            dimension: '$'
+        });
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -1131,33 +1121,33 @@
                                 <!--/ Website Menu -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div id="topmenu">
-                                        <ul class="dropdown clearfix boxed boxed-blue">
-                                            <li class="link-more"><a href="#"><i></i></a></li>
-                                            <li><a href="#"><span>Home</span></a></li>
-                                            <li><a href="#"><span>Services</span></a>
-                                                <ul>
-                                                    <li><a href="#">Link 1</a></li>
-                                                    <li><a href="#">Link 2</a></li>
-                                                    <li><a href="#">Link 3</a>
-                                                        <ul>
-                                                            <li><a href="#">Link 4</a></li>
-                                                            <li><a href="#">Link 5</a></li>
-                                                            <li><a href="#">Link 6</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#"><span>About</span></a></li>
-                                            <li class="menu-search">
-                                                <form id="searchForm" class="menu-search-form" method="post">
-                                                    <input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website" />
-                                                    <input type="submit" value="" class="btn menu-search-submit" name="search-send" />
-                                                </form>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div id="topmenu">
+    &lt;ul class="dropdown clearfix boxed boxed-blue">
+        &lt;li class="link-more">&lt;a href="#">&lt;i>&lt;/i>&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">&lt;span>Home&lt;/span>&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">&lt;span>Services&lt;/span>&lt;/a>
+            &lt;ul>
+                &lt;li>&lt;a href="#">Link 1&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Link 3&lt;/a>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Link 5&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Link 6&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/li>
+            &lt;/ul>
+        &lt;/li>
+        &lt;li>&lt;a href="#">&lt;span>About&lt;/span>&lt;/a>&lt;/li>
+        &lt;li class="menu-search">
+            &lt;form id="searchForm" class="menu-search-form" method="post">
+                &lt;input type="text" name="search" value="" class="menu-search-field" placeholder="Search the website" />
+                &lt;input type="submit" value="" class="btn menu-search-submit" name="search-send" />
+            &lt;/form>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1212,52 +1202,52 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <ul class="dropdown dropdown-icons clearfix boxed boxed-green">
-                                        <li>
-                                            <a href="#">
-                                                <span><i class="icon-menu"></i></span>
-                                            </a>
-                                            <ul>
-                                                <li><a href="#">Submenu 1</a></li>
-                                                <li><a href="#">Submenu 2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span><i class="icon-menu icon-menu-2"></i></span>
-                                            </a>
-                                            <ul>
-                                                <li><a href="#">Submenu 1</a></li>
-                                                <li><a href="#">Submenu 2</a></li>
-                                                <li><a href="#">Submenu 3</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span><i class="icon-menu icon-menu-3"></i></span>
-                                            </a>
-                                            <ul>
-                                                <li><a href="#">Submenu 1</a></li>
-                                                <li><a href="#">Submenu 2</a></li>
-                                                <li><a href="#">Submenu 3</a>
-                                                    <ul>
-                                                        <li><a href="#">Submenu 1</a></li>
-                                                        <li><a href="#">Submenu 2</a></li>
-                                                        <li><a href="#">Submenu 3</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span><i class="icon-menu icon-menu-4"></i></span>
-                                            </a>
-                                            <ul>
-                                                <li><a href="#">Submenu 1</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <pre class="prettyprint">
+&lt;ul class="dropdown dropdown-icons clearfix boxed boxed-green">
+    &lt;li>
+        &lt;a href="#">
+            &lt;span>&lt;i class="icon-menu">&lt;/i>&lt;/span>
+        &lt;/a>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Submenu 1&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Submenu 2&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">
+            &lt;span>&lt;i class="icon-menu icon-menu-2">&lt;/i>&lt;/span>
+        &lt;/a>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Submenu 1&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Submenu 2&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Submenu 3&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">
+            &lt;span>&lt;i class="icon-menu icon-menu-3">&lt;/i>&lt;/span>
+        &lt;/a>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Submenu 1&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Submenu 2&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Submenu 3&lt;/a>
+                &lt;ul>
+                    &lt;li>&lt;a href="#">Submenu 1&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Submenu 2&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Submenu 3&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">
+            &lt;span>&lt;i class="icon-menu icon-menu-4">&lt;/i>&lt;/span>
+        &lt;/a>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Submenu 1&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/li>
+&lt;/ul>
                                 </pre>
                             </div>
                         </div>
@@ -1282,24 +1272,24 @@
                                 <!--/ Vertical Menu -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <ul class="menu-vertical boxed boxed-green">
-                                        <li class="active">
-                                            <a href="#"><span><i class="icon-menu"></i></span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span><i class="icon-menu icon-menu-2"></i></span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span><i class="icon-menu icon-menu-3"></i></span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span><i class="icon-menu icon-menu-4"></i></span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span><i class="icon-menu icon-menu-5"></i></span></a>
-                                        </li>
-                                    </ul>
+                                <pre class="prettyprint">
+&lt;ul class="menu-vertical boxed boxed-green">
+    &lt;li class="active">
+        &lt;a href="#">&lt;span>&lt;i class="icon-menu">&lt;/i>&lt;/span>&lt;/a>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">&lt;span>&lt;i class="icon-menu icon-menu-2">&lt;/i>&lt;/span>&lt;/a>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">&lt;span>&lt;i class="icon-menu icon-menu-3">&lt;/i>&lt;/span>&lt;/a>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">&lt;span>&lt;i class="icon-menu icon-menu-4">&lt;/i>&lt;/span>&lt;/a>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">&lt;span>&lt;i class="icon-menu icon-menu-5">&lt;/i>&lt;/span>&lt;/a>
+    &lt;/li>
+&lt;/ul>
                                 </pre>
                             </div>
                         </div>
@@ -1329,15 +1319,15 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="dropdownMenu">
-                                        <a id="drop" href="#" class="dropdown-toggle" data-toggle="dropdown">Sort by filter</a>
-                                        <ul class="dropdown-menu" aria-labelledby="drop">
-                                            <li><a href="#">Date</a></li>
-                                            <li><a href="#">Popularity</a></li>
-                                            <li><a href="#">Price</a></li>
-                                        </ul>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="dropdownMenu">
+    &lt;a id="drop" href="#" class="dropdown-toggle" data-toggle="dropdown">Sort by filter&lt;/a>
+    &lt;ul class="dropdown-menu" aria-labelledby="drop">
+        &lt;li>&lt;a href="#">Date&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">Popularity&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">Price&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1364,33 +1354,148 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-									<div class="grid-menu clearfix">
-										<div class="grid-box">
-											<a href="#" class="boxed boxed-red">
-												<strong><i class="icon-grid"></i></strong>
-												<span>Games</span>
-											</a>
-										</div>
-										<div class="grid-box">
-											<a href="#" class="boxed boxed-turquoise">
-												<strong><i class="icon-grid icon-grid-2"></i></strong>
-												<span>Contact</span>
-											</a>
-										</div>
-										<div class="grid-box grid-box-large">
-											<a href="#" class="boxed boxed-yellow">
-												<strong><i class="icon-grid icon-grid-3"></i></strong>
-												<span>Portfolio</span>
-											</a>
-										</div>
-									</div>	
+                                <pre class="prettyprint">
+&lt;div class="grid-menu clearfix">
+    &lt;div class="grid-box">
+        &lt;a href="#" class="boxed boxed-red">
+            &lt;strong>&lt;i class="icon-grid">&lt;/i>&lt;/strong>
+            &lt;span>Games&lt;/span>
+        &lt;/a>
+    &lt;/div>
+    &lt;div class="grid-box">
+        &lt;a href="#" class="boxed boxed-turquoise">
+            &lt;strong>&lt;i class="icon-grid icon-grid-2">&lt;/i>&lt;/strong>
+            &lt;span>Contact&lt;/span>
+        &lt;/a>
+    &lt;/div>
+    &lt;div class="grid-box grid-box-large">
+        &lt;a href="#" class="boxed boxed-yellow">
+            &lt;strong>&lt;i class="icon-grid icon-grid-3">&lt;/i>&lt;/strong>
+            &lt;span>Portfolio&lt;/span>
+        &lt;/a>
+    &lt;/div>
+&lt;/div>	
                                 </pre>
                             </div>
                         </div>
                         <!-- Grid Menu -->
                     </div>
                     <!--/ Navigation -->
+
+                    <!-- Pricing List -->
+                    <div class="section-demo">
+                    <h2 id="pricing">Pricing</h2>
+
+                    <!-- Pricing List Style 1 -->
+                    <div class="description">
+                        <p>
+                            Use pricing items to announce prices for your services. Two different pricing styles available. Add color class to <code>price_item</code> class to change item color.
+                            <br />Available color classes are the next: <code>blue</code>, <code>green</code>, <code>red</code>, <code>yellow</code>, <code>turquoise</code>, <code>black</code>, <code>brown</code>.
+                        </p>
+                        <h3 id="pricing-def">Pricing Items default style</h3>
+                        <h4>Example</h4>
+                    </div>
+                    <div class="example">
+                        <div class="example-item alt-color">
+                            <!--pricing box-->
+                            <div class="pricing_box">
+                                <ul class="row">
+                                    <li class="col-sm-6 price_col">
+                                        <!--pricing item-->
+                                        <div class="price_item boxed">
+                                            <div class="price_col_head">
+                                                <strong>Premium</strong>
+                                            </div>
+                                            <div class="price_col_body">
+                                                <div class="price_body_inner">
+                                                    <div class="price_body_top">
+                                                        <span class="price"><em>$</em>19<sup>00</sup><sub>/month</sub></span>
+                                                    </div>
+                                                    <ul>
+                                                        <li><span class="large">&infin;</span> Bandwidth</li>
+                                                        <li><span class="large">&infin;</span> Disk Space</li>
+                                                        <li><span>25</span> Databases</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="price_col_foot">
+                                                <div class="sign_up"><a href="#" class="btn btn-icon-left"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <!--/ pricing-item -->
+                                    </li>
+
+                                    <li class="col-sm-6 price_col">
+                                        <!--pricing item-->
+                                        <div class="price_item boxed blue">
+                                            <div class="price_col_head">
+                                                <strong>Business</strong>
+                                            </div>
+                                            <div class="price_col_body">
+                                                <div class="price_body_inner">
+                                                    <div class="price_body_top">
+                                                        <span class="price"><em>$</em>30<sup>00</sup><sub>/month</sub></span>
+                                                    </div>
+                                                    <ul>
+                                                        <li><span class="large">&infin;</span> Bandwidth</li>
+                                                        <li><span class="large">&infin;</span> Disk Space</li>
+                                                        <li><span class="large">&infin;</span> Databases</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="price_col_foot">
+                                                <div class="sign_up"><a href="#" class="btn btn-icon-left"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <!--/ pricing-item -->
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/pricing box-->
+                        </div>
+                        <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="pricing_box">
+    &lt;ul class="row">
+        &lt;li class="col-sm-6 price_col">
+            &lt;!--pricing item-->
+            &lt;div class="price_item boxed blue">
+                &lt;div class="price_col_head">
+                    &lt;strong>Business&lt;/strong>
+                &lt;/div>
+                &lt;div class="price_col_body">
+                    &lt;div class="price_body_inner">
+                        &lt;div class="price_body_top">
+                            &lt;span class="price">
+                                &lt;em>$&lt;/em>30&lt;sup>00&lt;/sup>&lt;sub>/month&lt;/sub>
+                            &lt;/span>
+                        &lt;/div>
+                        &lt;ul>
+                            &lt;li>&lt;span class="large">&infin;&lt;/span> Bandwidth&lt;/li>
+                            &lt;li>&lt;span class="large">&infin;&lt;/span> Disk Space&lt;/li>
+                            &lt;li>&lt;span class="large">&infin;&lt;/span> Databases&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="price_col_foot">
+                    &lt;div class="sign_up">
+                        &lt;a href="#" class="btn btn-icon-left">&lt;span>Add to cart&lt;/span>&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;!--/ pricing-item -->
+        &lt;/li>
+        ...
+        ...
+        ...
+    &lt;/ul>
+&lt;/div>
+                                </pre>
+                        </div>
+                    </div>
+                    <!-- Pricing List Style 1 -->
+                    </div>
+                    <!--/ Pricing List -->
 
                     <!-- Video Player -->
                     <div class="section-demo">
@@ -1400,10 +1505,10 @@
                             <p>Use Video.js player to play video content.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Video Player require next files to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;link href="css/video-js.css" rel="stylesheet">
-                                    &lt;script src="js/video.js">&lt;/script>
+                                <p>Video Player require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link href="css/video-js.css" rel="stylesheet">
+&lt;script src="js/video.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -1442,36 +1547,36 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="video-player boxed">
-                                        <div class="inner">
-                                            &lt;video id="my_video_1" class="video-js" controls loop
-                                            preload="auto" poster="images/temp/vjs-poster2.jpg"
-                                            data-setup="{}">
-                                            &lt;source src="http://path-to-video/video.mp4" type='video/mp4'>
-                                            &lt;/video>
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="video-player boxed">
+    &lt;div class="inner">
+        &lt;video id="my_video_1" class="video-js" controls loop
+        preload="auto" poster="images/temp/vjs-poster2.jpg"
+        data-setup="{}">
+        &lt;source src="http://path-to-video/video.mp4" type='video/mp4'>
+        &lt;/video>
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Video Player via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script>
-                                        _V_("my_video_1").ready(function(){
-                                            var myPlayer = this;
-                                            var aspectRatio = 330/512;
-                                            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
-                                            myPlayer.width(width).height( width * aspectRatio );
+                                <pre class="prettyprint">
+&lt;script>
+    _V_("my_video_1").ready(function(){
+        var myPlayer = this;
+        var aspectRatio = 330/512;
+        var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+        myPlayer.width(width).height( width * aspectRatio );
 
-                                            function resizeVideoJS(){
-                                                var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
-                                                myPlayer.width(width).height( width * aspectRatio );
-                                            }
-                                            resizeVideoJS();
-                                            window.onresize = resizeVideoJS;
-                                        });
-                                    &lt;/script>
+        function resizeVideoJS(){
+            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+            myPlayer.width(width).height( width * aspectRatio );
+        }
+        resizeVideoJS();
+        window.onresize = resizeVideoJS;
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -1480,176 +1585,176 @@
 
                     <!-- Sliders -->
                     <div class="section-demo">
-                        <h2 id="sliders">Sliders</h2>
+                    <h2 id="sliders">Sliders</h2>
 
-                        <!-- Image Slider -->
-                        <div class="description">
-                            <h3 id="image-slider">Image Slider</h3>
-                            <p>The slideshow is based on Bootstrap's carousel.js</p>
-                            <div class="callout">
-                                <h5>Element specific usage</h5>
-                                <p>Image Slider require next files to be included into <code>head</code> section of the page:</p>
-                                    <pre class="brush: xml">
-                                        &lt;link href="css/prettyPhoto.css" rel="stylesheet">
-                                        &lt;script src="js/jquery.prettyPhoto.js">&lt;/script>
-                                    </pre>
-                            </div>
-                            <h4>Example</h4>
+                    <!-- Image Slider -->
+                    <div class="description">
+                        <h3 id="image-slider">Image Slider</h3>
+                        <p>The slideshow is based on Bootstrap's carousel.js</p>
+                        <div class="callout">
+                            <h5>Element specific usage</h5>
+                            <p>Image Slider require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link href="css/prettyPhoto.css" rel="stylesheet">
+&lt;script src="js/jquery.prettyPhoto.js">&lt;/script>
+                                </pre>
                         </div>
-                        <div class="example">
-                            <div class="example-item alt-color">
-                                <!-- Image Slider -->
-                                <div class="widget-container widget-gallery boxed">
-                                    <div class="inner">
-                                        <div id="myCarousel2" class="carousel slide" data-interval="20000">
-                                            <!-- Carousel items -->
-                                            <div class="carousel-inner">
-                                                <div class="active item"><a href="../modern-touch-css/images/temp/post_img7.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img7.jpg" alt="" /></a></div>
-                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img1.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img1.jpg" alt="" /></a></div>
-                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img2.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img2.jpg" alt="" /></a></div>
-                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img4.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img4.jpg" alt="" /></a></div>
-                                                <div class="item"><a href="../modern-touch-css/images/temp/post_img6.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img6.jpg" alt="" /></a></div>
-                                            </div>
-                                            <div class="carousel-controls">
-                                                <!-- Carousel indicators -->
-                                                <ol class="carousel-indicators">
-                                                    <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
-                                                    <li data-target="#myCarousel2" data-slide-to="1"></li>
-                                                    <li data-target="#myCarousel2" data-slide-to="2"></li>
-                                                    <li data-target="#myCarousel2" data-slide-to="3"></li>
-                                                    <li data-target="#myCarousel2" data-slide-to="4"></li>
-                                                </ol>
-                                                <!-- Carousel nav -->
-                                                <a class="carousel-control left" href="#myCarousel2" data-slide="prev"></a>
-                                                <a class="carousel-control right" href="#myCarousel2" data-slide="next"></a>
-                                            </div>
+                        <h4>Example</h4>
+                    </div>
+                    <div class="example">
+                        <div class="example-item alt-color">
+                            <!-- Image Slider -->
+                            <div class="widget-container widget-gallery boxed">
+                                <div class="inner">
+                                    <div id="myCarousel2" class="carousel slide" data-interval="20000">
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="active item"><a href="../modern-touch-css/images/temp/post_img7.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img7.jpg" alt="" /></a></div>
+                                            <div class="item"><a href="../modern-touch-css/images/temp/post_img1.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img1.jpg" alt="" /></a></div>
+                                            <div class="item"><a href="../modern-touch-css/images/temp/post_img2.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img2.jpg" alt="" /></a></div>
+                                            <div class="item"><a href="../modern-touch-css/images/temp/post_img4.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img4.jpg" alt="" /></a></div>
+                                            <div class="item"><a href="../modern-touch-css/images/temp/post_img6.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="Post Image"><img src="../modern-touch-css/images/temp/post_img6.jpg" alt="" /></a></div>
+                                        </div>
+                                        <div class="carousel-controls">
+                                            <!-- Carousel indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+                                                <li data-target="#myCarousel2" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel2" data-slide-to="2"></li>
+                                                <li data-target="#myCarousel2" data-slide-to="3"></li>
+                                                <li data-target="#myCarousel2" data-slide-to="4"></li>
+                                            </ol>
+                                            <!-- Carousel nav -->
+                                            <a class="carousel-control left" href="#myCarousel2" data-slide="prev"></a>
+                                            <a class="carousel-control right" href="#myCarousel2" data-slide="next"></a>
                                         </div>
                                     </div>
                                 </div>
-                                <!--/ Image Slider -->
                             </div>
-                            <div class="example-code">
-                                    <pre class="brush: xml">
-                                        <div class="widget-container widget-gallery boxed">
-                                            <div class="inner">
-                                                &lt;div id="myCarousel" class="carousel slide" data-interval="20000">
-                                                <!-- Carousel items -->
-                                                &lt;div class="carousel-inner">
-                                                <div class="item">
-                                                    &lt;a href="images/temp/post_img7.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="">
-                                                    &lt;img src="images/temp/post_img7.jpg" alt="" />
-                                                    &lt;/a>
-                                                </div>
-                                                ...
-                                                ...
-                                                ...
-                                                &lt;/div>
-
-                                                &lt;div class="carousel-controls">
-                                                <!-- Carousel indicators -->
-                                                <ol class="carousel-indicators">
-                                                    <li data-target="#myCarousel" data-slide-to="0"></li>
-                                                    ...
-                                                    ...
-                                                    ...
-                                                </ol>
-                                                <!-- Carousel nav -->
-                                                <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
-                                                <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
-                                                &lt;/div>
-                                                &lt;/div>
-                                            </div>
-                                        </div>
-                                    </pre>
-                            </div>
+                            <!--/ Image Slider -->
                         </div>
-                        <!--/ Image Slider -->
+                        <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-gallery boxed">
+    &lt;div class="inner">
+        &lt;div id="myCarousel" class="carousel slide" data-interval="20000">
+        &lt;!-- Carousel items -->
+        &lt;div class="carousel-inner">
+        &lt;div class="item">
+            &lt;a href="images/temp/post_img7.jpg" class="prettyPhoto" data-rel="prettyPhoto" title="">
+            &lt;img src="images/temp/post_img7.jpg" alt="" />
+            &lt;/a>
+        &lt;/div>
+        ...
+        ...
+        ...
+        &lt;/div>
 
-                        <!-- Image Carousel -->
-                        <div class="description">
-                            <h3 id="image-carousel">Image Carousel</h3>
-                            <p></p>
-                            <div class="callout">
-                                <h5>Element specific usage</h5>
-                                <p>Image Carousel require next files to be included into <code>head</code> section of the page:</p>
-                                    <pre class="brush: xml">
-                                        &lt;script src="js/jquery.carouFredSel-6.2.1-packed.js">&lt;/script>
-                                        &lt;link href="css/prettyPhoto.css" rel="stylesheet">
-                                        &lt;script src="js/jquery.prettyPhoto.js">&lt;/script>
-                                    </pre>
-                            </div>
-                            <h4>Example</h4>
+        &lt;div class="carousel-controls">
+        &lt;!-- Carousel indicators -->
+        &lt;ol class="carousel-indicators">
+            &lt;li data-target="#myCarousel" data-slide-to="0">&lt;/li>
+            ...
+            ...
+            ...
+        &lt;/ol>
+        &lt;!-- Carousel nav -->
+        &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev">&lt;/a>
+        &lt;a class="carousel-control right" href="#myCarousel" data-slide="next">&lt;/a>
+        &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
                         </div>
-                        <div class="example">
-                            <div class="example-item alt-color">
-                                <!-- Carousel -->
-                                <div class="carouFredsel">
-                                    <div class="inner">
-                                        <ul id="carouFredsel-1">
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
-                                            <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
-                                        </ul>
-                                        <a id="carousel-prev-1" class="prev" href="#">&lsaquo;</a>
-                                        <a id="carousel-next-1" class="next" href="#">&rsaquo;</a>
-                                    </div>
+                    </div>
+                    <!--/ Image Slider -->
+
+                    <!-- Image Carousel -->
+                    <div class="description">
+                        <h3 id="image-carousel">Image Carousel</h3>
+                        <p></p>
+                        <div class="callout">
+                            <h5>Element specific usage</h5>
+                            <p>Image Carousel require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.carouFredSel-6.2.1-packed.js">&lt;/script>
+&lt;link href="css/prettyPhoto.css" rel="stylesheet">
+&lt;script src="js/jquery.prettyPhoto.js">&lt;/script>
+                                </pre>
+                        </div>
+                        <h4>Example</h4>
+                    </div>
+                    <div class="example">
+                        <div class="example-item alt-color">
+                            <!-- Carousel -->
+                            <div class="carouFredsel">
+                                <div class="inner">
+                                    <ul id="carouFredsel-1">
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-1.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-1.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-2.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-2.png" alt="" /></a></div></li>
+                                        <li><div class="carousel-image"><a href="../modern-touch-css/images/temp/carousel-3.png" data-rel="prettyPhoto" title="Brave"><img src="../modern-touch-css/images/temp/carousel-3.png" alt="" /></a></div></li>
+                                    </ul>
+                                    <a id="carousel-prev-1" class="prev" href="#">&lsaquo;</a>
+                                    <a id="carousel-next-1" class="next" href="#">&rsaquo;</a>
                                 </div>
-                                <!--/ Carousel -->
                             </div>
-                            <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="carouFredsel">
-                                        <div class="inner">
-                                            &lt;ul id="carouFredsel-1">
-                                            <li>
-                                                <div class="carousel-image">
-                                                    <a href="images/temp/carousel-1.png" data-rel="prettyPhoto" title="">
-                                                        &lt;img src="images/temp/carousel-1.png" alt="" />
-                                                    </a>
-                                                </div>
-                                            </li>
-                                            ...
-                                            ...
-                                            ...
-                                            &lt;/ul>
-                                            <a id="carousel-prev-1" class="prev" href="#">&lsaquo;</a>
-                                            <a id="carousel-next-1" class="next" href="#">&rsaquo;</a>
-                                        </div>
-                                    &lt;/div>
-                                </pre>
-
-                                <div class="fire-js">Enable Carousel via JS:</div>
-
-                                <pre class="brush: js">
-                                    &lt;script>
-                                        jQuery(document).ready(function($) {
-                                            $('#carouFredsel-1').carouFredSel({
-                                                next : "#carousel-next-1",
-                                                prev : "#carousel-prev-1",
-                                                auto: false,
-                                                scroll: {items : 1}
-                                            });
-
-                                            $(window).resize(function() {
-                                                $('#carouFredsel-1').carouFredSel({
-                                                    next : "#carousel-next-1",
-                                                    prev : "#carousel-prev-1",
-                                                    auto: false,
-                                                    scroll: {items : 1}
-                                                });
-                                            })
-                                        });
-                                    &lt;/script>
-                                </pre>
-                            </div>
+                            <!--/ Carousel -->
                         </div>
-                        <!-- Image Carousel -->
+                        <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="carouFredsel">
+    &lt;div class="inner">
+        &lt;ul id="carouFredsel-1">
+        &lt;li>
+            &lt;div class="carousel-image">
+                &lt;a href="images/temp/carousel-1.png" data-rel="prettyPhoto" title="">
+                    &lt;img src="images/temp/carousel-1.png" alt="" />
+                &lt;/a>
+            &lt;/div>
+        &lt;/li>
+        ...
+        ...
+        ...
+        &lt;/ul>
+        &lt;a id="carousel-prev-1" class="prev" href="#">&lsaquo;&lt;/a>
+        &lt;a id="carousel-next-1" class="next" href="#">&rsaquo;&lt;/a>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                            <div class="fire-js">Enable Carousel via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    jQuery(document).ready(function($) {
+        $('#carouFredsel-1').carouFredSel({
+            next : "#carousel-next-1",
+            prev : "#carousel-prev-1",
+            auto: false,
+            scroll: {items : 1}
+        });
+
+        $(window).resize(function() {
+            $('#carouFredsel-1').carouFredSel({
+                next : "#carousel-next-1",
+                prev : "#carousel-prev-1",
+                auto: false,
+                scroll: {items : 1}
+            });
+        })
+    });
+&lt;/script>
+                                </pre>
+                        </div>
+                    </div>
+                    <!-- Image Carousel -->
                     </div>
                     <!--/ Sliders -->
 
@@ -1661,10 +1766,10 @@
                             <p>Calendar allow users to select multiple dates.</p>
                             <div class="callout">
                                 <h5>Element specific usage</h5>
-                                <p>Calendar require next files to be included into <code>head</code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
-                                    &lt;script src="js/jquery-ui.multidatespicker.js">&lt;/script>
+                                <p>Calendar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery-ui.multidatespicker.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -1706,39 +1811,39 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="widget-container widget_calendar boxed boxed-red">
-                                        <div class="inner">
-                                            &lt;input type="text" name="date_departure" class="inputField" id="date_departure">
-                                        </div>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget_calendar boxed boxed-red">
+    &lt;div class="inner">
+        &lt;input type="text" name="date_departure" class="inputField" id="date_departure">
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Calendar via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script>
-                                        // <![CDATA[
-                                        jQuery(document).ready(function($) {
-                                            var daysRange = 5;
+                                <pre class="prettyprint">
+&lt;script>
+    // &lt;![CDATA[
+    jQuery(document).ready(function($) {
+        var daysRange = 5;
 
-                                            function assignCalendar(id){
-                                                $('<div class="calendar" />')
-                                                        .insertAfter( $(id) )
-                                                        .multiDatesPicker({
-                                                            dateFormat: 'yy-mm-dd',
-                                                            minDate: new Date(),
-                                                            maxDate: '+1y',
-                                                            altField: id,
-                                                            firstDay: 1,
-                                                            showOtherMonths: true
-                                                        }).prev().hide();
-                                            }
+        function assignCalendar(id){
+            $('&lt;div class="calendar" />')
+                    .insertAfter( $(id) )
+                    .multiDatesPicker({
+                        dateFormat: 'yy-mm-dd',
+                        minDate: new Date(),
+                        maxDate: '+1y',
+                        altField: id,
+                        firstDay: 1,
+                        showOtherMonths: true
+                    }).prev().hide();
+        }
 
-                                            assignCalendar('#date_departure');
-                                        });
-                                        // ]]>
-                                    &lt;/script>
+        assignCalendar('#date_departure');
+    });
+    // ]]>
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -1772,24 +1877,24 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container boxed">
-                                        <div class="widget-container widget-avatar boxed boxed-yellow">
-                                            <div class="inner">
-                                                <h5>Jack Daniels</h5>
-                                                <span class="subtitle">Antepreneur</span>
-                                                <div class="avatar">
-                                                    &lt;img src="images/temp/avatar.png" alt="" />
-                                                </div>
-                                                <div class="followers">
-                                                    <span class="counter">125</span> followers
-                                                </div>
-                                                <a href="#" class="btn btn-brown btn-follow">
-                                                    <span><i></i>Follow</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container boxed">
+    &lt;div class="widget-container widget-avatar boxed boxed-yellow">
+        &lt;div class="inner">
+            &lt;h5>Jack Daniels&lt;/h5>
+            &lt;span class="subtitle">Antepreneur&lt;/span>
+            &lt;div class="avatar">
+                &lt;img src="images/temp/avatar.png" alt="" />
+            &lt;/div>
+            &lt;div class="followers">
+                &lt;span class="counter">125&lt;/span> followers
+            &lt;/div>
+            &lt;a href="#" class="btn btn-brown btn-follow">
+                &lt;span>&lt;i>&lt;/i>Follow&lt;/span>
+            &lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1822,17 +1927,17 @@
                                 <!--/ Widget Social Buttons -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget-social">
-                                        <ul class="clearfix">
-                                            <li class="social-facebook"><a href="#"><i>Facebook</i></a></li>
-                                            <li class="social-twitter"><a href="#"><i>Twitter</i></a></li>
-                                            <li class="social-dribble"><a href="#"><i>Dribble</i></a></li>
-                                            <li class="social-deviantart"><a href="#"><i>DeviantArt</i></a></li>
-                                            <li class="social-google"><a href="#"><i>Google+</i></a></li>
-                                            <li class="social-vimeo"><a href="#"><i>Vimeo</i></a></li>
-                                        </ul>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-social">
+    &lt;ul class="clearfix">
+        &lt;li class="social-facebook">&lt;a href="#">&lt;i>Facebook&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="social-twitter">&lt;a href="#">&lt;i>Twitter&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="social-dribble">&lt;a href="#">&lt;i>Dribble&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="social-deviantart">&lt;a href="#">&lt;i>DeviantArt&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="social-google">&lt;a href="#">&lt;i>Google+&lt;/i>&lt;/a>&lt;/li>
+        &lt;li class="social-vimeo">&lt;a href="#">&lt;i>Vimeo&lt;/i>&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1885,167 +1990,52 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget-weather boxed boxed-turquoise">
-                                        <div class="weather-highlighted">
-                                            <div class="weather-item clearfix su">
-                                                <i class="icon-weather icon-weather-1"></i>
-                                                <div class="inner">
-                                                    <strong>31&deg;</strong>
-                                                    <span>Mostly Sunny</span>
-                                                    <span>31&deg;/18&deg;</span>
-                                                </div>
-                                            </div>
-                                            ...
-                                            ...
-                                            ...
-                                        </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-weather boxed boxed-turquoise">
+    &lt;div class="weather-highlighted">
+        &lt;div class="weather-item clearfix su">
+            &lt;i class="icon-weather icon-weather-1">&lt;/i>
+            &lt;div class="inner">
+                &lt;strong>31&deg;&lt;/strong>
+                &lt;span>Mostly Sunny&lt;/span>
+                &lt;span>31&deg;/18&deg;&lt;/span>
+            &lt;/div>
+        &lt;/div>
+        ...
+        ...
+        ...
+    &lt;/div>
 
-                                        <div class="weather-location clearfix">
-                                            <strong>Bucharest</strong>
-                                            <form id="searchForm" class="weather-search-form" method="post">
-                                                <input type="text" name="search" class="weather-search-field" />
-                                                <input type="submit" class="btn weather-search-submit" name="search-send" />
-                                            </form>
-                                        </div>
+    &lt;div class="weather-location clearfix">
+        &lt;strong>Bucharest&lt;/strong>
+        &lt;form id="searchForm" class="weather-search-form" method="post">
+            &lt;input type="text" name="search" class="weather-search-field" />
+            &lt;input type="submit" class="btn weather-search-submit" name="search-send" />
+        &lt;/form>
+    &lt;/div>
 
-                                        <ul class="weather-forecast clearfix">
-                                            <li>
-                                                <a href="javascript:;" id="su">
-                                                    <strong>su</strong>
-                                                    <span>
-                                                        <i class="icon-weather icon-weather-1"></i>
-                                                    </span>
-                                                    <span>31&deg;</span>
-                                                </a>
-                                            </li>
-                                            ...
-                                            ...
-                                            ...
-                                        </ul>
-                                    </div>
+    &lt;ul class="weather-forecast clearfix">
+        &lt;li>
+            &lt;a href="javascript:;" id="su">
+                &lt;strong>su&lt;/strong>
+                &lt;span>
+                    &lt;i class="icon-weather icon-weather-1">&lt;/i>
+                &lt;/span>
+                &lt;span>31&deg;&lt;/span>
+            &lt;/a>
+        &lt;/li>
+        ...
+        ...
+        ...
+    &lt;/ul>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
                     </div>
                     <!--/ Weather -->
-                
-					<!-- Pricing List -->
-                    <div class="section-demo">
-                        <h2 id="pricing">Pricing Items</h2>
 
-                        <!-- Pricing List Style 1 -->
-                        <div class="description">
-                            <p>
-                                Use pricing items to announce prices for your services. Add color class to <code>price_item</code> class to change item color.
-                                <br />Available color classes are the next: <code>blue</code>, <code>green</code>, <code>red</code>, <code>yellow</code>, <code>turquoise</code>, <code>black</code>, <code>brown</code>.
-                            </p>
-                            <h3 id="pricing-def">Pricing Items default style</h3>
-                            <h4>Example</h4>
-                        </div>
-                        <div class="example">
-                            <div class="example-item alt-color">
-                                <!--pricing box-->
-                                <div class="pricing_box">
-                                    <ul class="row">
-                                        <li class="col-sm-6 price_col">
-                                            <!--pricing item-->
-                                            <div class="price_item boxed">
-                                                <div class="price_col_head">
-                                                    <strong>Premium</strong>
-                                                </div>
-                                                <div class="price_col_body">
-                                                    <div class="price_body_inner">
-                                                        <div class="price_body_top">
-                                                            <span class="price"><em>$</em>19<sup>00</sup><sub>/month</sub></span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span class="large">&infin;</span> Bandwidth</li>
-                                                            <li><span class="large">&infin;</span> Disk Space</li>
-                                                            <li><span>25</span> Databases</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="price_col_foot">
-                                                    <div class="sign_up"><a href="#" class="btn btn-icon-left"><span>Add to cart</span></a></div>
-                                                </div>
-                                            </div>
-                                            <!--/ pricing-item -->
-                                        </li>
-
-                                        <li class="col-sm-6 price_col">
-                                            <!--pricing item-->
-                                            <div class="price_item boxed blue">
-                                                <div class="price_col_head">
-                                                    <strong>Business</strong>
-                                                </div>
-                                                <div class="price_col_body">
-                                                    <div class="price_body_inner">
-                                                        <div class="price_body_top">
-                                                            <span class="price"><em>$</em>30<sup>00</sup><sub>/month</sub></span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span class="large">&infin;</span> Bandwidth</li>
-                                                            <li><span class="large">&infin;</span> Disk Space</li>
-                                                            <li><span class="large">&infin;</span> Databases</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="price_col_foot">
-                                                    <div class="sign_up"><a href="#" class="btn btn-icon-left"><span>Add to cart</span></a></div>
-                                                </div>
-                                            </div>
-                                            <!--/ pricing-item -->
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--/pricing box-->
-                            </div>
-                            <div class="example-code">
-                                <pre class="brush: xml">
-                                <div class="pricing_box">
-                                    <ul class="row">
-                                        <li class="col-sm-6 price_col">
-                                            <!--pricing item-->
-                                            <div class="price_item boxed blue">
-                                                <div class="price_col_head">
-                                                    <strong>Business</strong>
-                                                </div>
-                                                <div class="price_col_body">
-                                                    <div class="price_body_inner">
-                                                        <div class="price_body_top">
-                                                            <span class="price">
-                                                                <em>$</em>30<sup>00</sup><sub>/month</sub>
-                                                            </span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span class="large">&infin;</span> Bandwidth</li>
-                                                            <li><span class="large">&infin;</span> Disk Space</li>
-                                                            <li><span class="large">&infin;</span> Databases</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="price_col_foot">
-                                                    <div class="sign_up">
-                                                        <a href="#" class="btn btn-icon-left"><span>Add to cart</span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--/ pricing-item -->
-                                        </li>
-                                        ...
-                                        ...
-                                        ...
-                                    </ul>
-                                </div>
-                                </pre>
-                            </div>
-                        </div>
-                        <!-- Pricing List Style 1 -->
-
-                    </div>
-                    <!--/ Pricing List -->
-				</div>
+                </div>
                 <!--/ content -->
             </div>
         </div>
@@ -2054,5 +2044,6 @@
     <!--/ container -->
 
 </div>
+
 </body>
 </html>

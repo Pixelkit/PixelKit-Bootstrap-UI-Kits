@@ -1,0 +1,105 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+
+.scrollbars{margin-bottom: 50px;}
+.scrollbars p{color: rgb(235, 228, 221); color: rgba(235, 238, 221, 0); text-shadow: none;}
+.scrollbars p::selection{background: transparent; color: rgba(210, 200, 190, 0);}
+
+.scrollbar {
+  width: 40px;
+  height: 205px;
+  overflow: auto;
+  float: left;
+}
+.scrollbar .inner {padding-right: 5px;}
+
+.jspContainer{
+  overflow: hidden;
+  position: relative;
+}
+.jspPane{
+  position: absolute;
+}
+.jspVerticalBar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 100%;
+}
+.jspHorizontalBar{display: none;}
+
+.jspTrack{
+  background: rgb(113,90,65);
+  background: rgba(113,90,65,0.2);
+  border: 1px solid rgba(100,77,55,0.2);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  width:8px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.scrollbar.style2 .jspTrack,
+.scrollbar.style3 .jspTrack,
+.scrollbar.style4 .jspTrack{
+  background: rgba(113,90,65,0.1);
+}
+.scrollbar.style2 .jspTrack{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width:4px;
+}
+
+.jspDrag{
+  background: #f3f3f3;
+  width: 6px;
+  position: relative;
+  top: 0;
+  left: 1px;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 2px rgba(75, 52, 23, 0.26);
+  -moz-box-shadow: 0 1px 2px rgba(75, 52, 23, 0.26);
+  box-shadow: 0 1px 2px rgba(75, 52, 23, 0.26);
+}
+.scrollbar.style2 .jspDrag{
+  background: url(images/scrollbar.png) 0 0 no-repeat;
+  width: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  left: -3px;
+  -webkit-box-shadow: 0 1px 4px rgba(75, 52, 23, 0.5);
+  -moz-box-shadow: 0 1px 4px rgba(75, 52, 23, 0.5);
+  box-shadow: 0 1px 4px rgba(75, 52, 23, 0.5);
+}
+.scrollbar.style3 .jspDrag{
+  background: url(images/scrollbar.png) -10px 0 no-repeat;
+  width: 14px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  left: -3px;
+  -webkit-box-shadow: 0 1px 3px rgba(75, 52, 23, 0.6);
+  -moz-box-shadow: 0 1px 3px rgba(75, 52, 23, 0.6);
+  box-shadow: 0 1px 3px rgba(75, 52, 23, 0.6);
+}
+.scrollbar.style4 .jspDrag{
+  background: #e8cb8e;
+  width: 10px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  left:-1px;
+  -webkit-box-shadow: 0 1px 2px rgba(75, 52, 23, 0.72);
+  -moz-box-shadow: 0 1px 2px rgba(75, 52, 23, 0.72);
+  box-shadow: 0 1px 2px rgba(75, 52, 23, 0.72);
+}

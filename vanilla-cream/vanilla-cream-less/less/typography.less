@@ -1,0 +1,69 @@
+/*-----------------------------------*/
+/* Typography */
+/*-----------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3E362B;
+  font-weight: 600;
+  line-height:1.2em;
+  margin-bottom:.7em;
+  text-shadow: 0 1px 1px #FFF;
+}
+h1{font-size: @font-size * 2.24;}
+h2{font-size: @font-size * 1.93;}
+h3{font-size: @font-size * 1.77;}
+h4{font-size: @font-size * 1.47;}
+h5{font-size: @font-size * 1.31;}
+h6{font-size: @font-size + 2;}
+
+em{font-style: italic;}
+strong{font-weight: 700;}
+small{font-size: 85%;}
+
+i{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  font-style: normal;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+}
+p{
+  line-height: 21px;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 0 rgba(255,255,255,0.5);
+}
+.margin-30{margin-bottom:30px;}
+
+h6.foo{
+  font-size: @font-size - 3;
+  color:#807367;
+  text-shadow:none;
+  margin:20px 0;
+}
+
+/*-----------------------------------*/
+/* Pull Quotes */
+/*-----------------------------------*/
+
+.typography {margin-bottom: 30px;}
+.typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {margin-top:30px;}
+
+.quote_right, .quote_left {
+  font-size: @font-size * 1.62;
+  line-height: 29px;
+  font-weight: 600;
+  font-style: italic;
+  color:#a2731f;
+  width: 238px;
+  margin-top: 6px;
+  margin-bottom:15px;
+}
+.quote_left{float: left; margin-right:40px;}
+.quote_right{float: right; margin-left:40px;}
+
+.block_quotes{margin-bottom: 50px;}
+.block_quotes h2{font-size: @font-size * 2.24;}

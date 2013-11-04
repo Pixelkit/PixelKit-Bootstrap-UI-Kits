@@ -1,0 +1,48 @@
+/*-----------------------------------*/
+/* Custom checkboxes, radios */
+/*-----------------------------------*/
+
+.custom-checkbox,.custom-radio {position:relative;}
+.custom-checkbox label::selection, .custom-radio label::selection {background: transparent; color: inherit;}
+.custom-checkbox input, .custom-radio input {position:absolute; top:3px; left:13px; margin:0; border:none; width:1px; height:1px; display:none;}
+.custom-checkbox input {left:4px;}
+.checkbox-middle .custom-checkbox input {left:13px; top:2px;}
+.checkbox-large .custom-checkbox input {left:13px; top:3px;}
+.ie8 .custom-checkbox input, .ie8 .custom-radio input {display:block;}
+.custom-checkbox label.focus,.custom-radio label.focus {outline: 0;}
+
+.custom-checkbox label,.custom-radio label {
+  display:block;
+  position:relative;
+  height:28px;
+  line-height:24px;
+  padding-left:36px;
+  margin-bottom:6px;
+  cursor:pointer;
+  color:#6b6049;
+  font-weight: 600;
+  background-repeat:no-repeat;
+  background-position:0 0;
+  background-image: url(images/styled_checkbox.png);
+}
+.custom-radio label {
+  height:29px;
+  line-height:25px;
+  margin-bottom:4px;
+  background-image: url(images/styled_radiobutton.png);
+}
+.custom-checkbox label.checked,.custom-radio label.checked {
+  background-position:0 -100px;
+}
+.checkbox-middle .custom-checkbox label {
+  height: 27px;
+  line-height: 23px;
+  padding-left:60px;
+  background-image: url(images/styled_checkbox_middle.png);
+}
+.checkbox-large .custom-checkbox label {
+  height: 27px;
+  line-height: 23px;
+  padding-left:80px;
+  background-image: url(images/styled_checkbox_large.png);
+}

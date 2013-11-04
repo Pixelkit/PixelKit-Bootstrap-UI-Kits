@@ -1,0 +1,90 @@
+/*-----------------------------------*/
+/* Progress Bars */
+/*-----------------------------------*/
+
+.progressbar{
+  margin: 60px 0 50px 12px;
+  position: relative;
+}
+.progressbar .pbar::selection{background: transparent;}
+.progressbar .ui-widget-header{border: 0 none !important;}
+
+.progressbar .mark-left,
+.progressbar .mark-right,
+.progressbar .elapsed,
+.progressbar .remained{
+  position: absolute;
+  top:-20px;
+  font-size: @font-size - 3;
+  color: #807367;
+}
+.progressbar .mark-left, .progressbar .remained{left:-11px;}
+.progressbar .mark-right, .progressbar .elapsed{right:-3px;}
+
+.progressbar .elapsed,
+.progressbar .remained,
+.progressbar .mark-left,
+.progressbar .mark-right{
+  display: none;
+}
+.progressbar .percent{
+  background: url(images/jslider.png) 0 -45px no-repeat;
+  font-size: @font-size - 3;
+  color: #807367;
+  line-height: 18px;
+  white-space: nowrap;
+  text-align: center;
+  width: 39px;
+  height: 26px;
+  position: absolute;
+  top: -26px;
+  left: 0%;
+  z-index: 1;
+  margin-left: -30px;
+}
+
+.progressbar .ui-progressbar-value {
+  display: block !important;
+}
+.progressbar .ui-progressbar {
+  height: 10px;
+  overflow: visible !important;
+  position: relative;
+  z-index: 0;
+}
+.progressbar .ui-widget-content {
+  border: 0 none;
+  height: 23px;
+  padding: 3px 4px 0;
+  background: url(images/jslider.png);
+  position: relative;
+  margin-right: 9px;
+  margin-left: -12px;
+}
+.progressbar .ui-widget-content:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top:0;
+  right: -11px;
+  width: 11px;
+  height: 26px;
+  background: url(images/jslider.png) right 0;
+}
+.progressbar .ui-progressbar .ui-progressbar-value {
+  margin: 0;
+  height: 28px;
+  position: relative;
+  background: url(images/jslider.png) left -71px no-repeat;
+  min-width: 8px !important;
+}
+.progressbar .ui-progressbar .ui-progressbar-value:after{
+  content: '';
+  display: block;
+  position: absolute;
+  right:-11px;
+  z-index: 1;
+  width: 11px;
+  height: 28px;
+  background:url(images/jslider.png) right -71px no-repeat;
+}

@@ -1,0 +1,55 @@
+/*-----------------------------------*/
+/* Avatar Placeholder */
+/*-----------------------------------*/
+
+.widget_avatar {
+  margin-bottom: 50px;
+  width: 290px;
+  .border-radius(@border-radius * 0.625);
+}
+.widget_avatar .inner{padding: 10px 12px 12px;}
+
+.widget_avatar .avatar{
+  width: 77px;
+  height: 77px;
+  border: 1px solid #b2ab9e;
+  -webkit-box-shadow: 0 0 5px #888;
+  -moz-box-shadow: 0 0 5px #888;
+  box-shadow: 0 0 5px #888;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 2px;
+  margin-right: 19px;
+  float: left;
+}
+.widget_avatar .avatar img{
+  display: block;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.widget_avatar h5{
+  font-size: @font-size * 1.24;
+  font-weight: 400;
+  text-shadow: none;
+  color: #5f513f;
+  /*margin-top: -2px;*/
+  margin-bottom: 4px;
+}
+.widget_avatar .subtitle{
+  display: block;
+  margin-bottom: 18px;
+  font-size: @font-size - 3;
+  color: #837963;
+}
+.widget_avatar .followers{
+  display: inline-block;
+  font-size: @font-size - 4;
+  color: #837963;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.widget_avatar .followers span{display: block;}
+.widget_avatar .counter{font-size: @font-size - 1; color: #5f513f;}

@@ -29,17 +29,6 @@
 <!-- datepicker -->
 <link href="../metro-vibes-css/css/jquery-ui-1.8.20.custom.css" rel="stylesheet">
 
-<!-- SyntaxHighlighter -->
-<link rel="stylesheet" href="css/shCore.css">
-<link rel="stylesheet" href="css/shThemeDefault.css">
-<script src="js/shCore.js"></script>
-<script src="js/shBrushXml.js"></script>
-<script src="js/shBrushJScript.js"></script>
-<script>
-    SyntaxHighlighter.defaults['gutter'] = false;
-    SyntaxHighlighter.all();
-</script>
-
 <!-- custom input -->
 <script src="../metro-vibes-css/js/jquery.customInput.js"></script>
 <script type="text/javascript" src="../metro-vibes-css/js/custom.js"></script>
@@ -178,6 +167,10 @@
     }
 </script>
 
+<!-- SyntaxHighlighter -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<link href="css/prettify.css" rel="stylesheet">
+
 <!--[if lt IE 9]><script src="../metro-vibes-css/js/respond.min.js"></script><![endif]-->
 <!--[if gte IE 9]>
 <style type="text/css">
@@ -287,7 +280,6 @@
                                     <a href="#user-profile">User Profile</a>
                                     <ul class="nav">
                                         <li><a href="#user-def">Default style</a></li>
-                                        <li><a href="#user-alt">Alternative style</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#social-buttons">Social Buttons</a></li>
@@ -324,31 +316,31 @@
                         </div>
                         <div class="example">
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        metro-vibes
-                                        ├───docs
-                                        │   ├───css
-                                        │   ├───images
-                                        │   └───js
-                                        ├───metro-vibes-css
-                                        │   ├───css
-                                        │   ├───fonts
-                                        │   ├───images
-                                        │   │   ├───icons
-                                        │   │   ├───prettyPhoto
-                                        │   │   └───temp
-                                        │   └───js
-                                        │       └───libs
-                                        └───metro-vibes-less
-                                            ├───fonts
-                                            ├───images
-                                            │   ├───icons
-                                            │   ├───prettyPhoto
-                                            │   └───temp
-                                            ├───js
-                                            │   └───libs
-                                            └───less
-                                                └───bootstrap
+                                    <pre class="prettyprint">
+metro-vibes
+├───docs
+│   ├───css
+│   ├───images
+│   └───js
+├───metro-vibes-css
+│   ├───css
+│   ├───fonts
+│   ├───images
+│   │   ├───icons
+│   │   ├───prettyPhoto
+│   │   └───temp
+│   └───js
+│       └───libs
+└───metro-vibes-less
+├───fonts
+├───images
+│   ├───icons
+│   ├───prettyPhoto
+│   └───temp
+├───js
+│   └───libs
+└───less
+    └───bootstrap
                                     </pre>
                             </div>
                         </div>
@@ -420,54 +412,54 @@
                         </div>
                         <div class="example">
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        &lt;!doctype html>
-                                        <!--[if lt IE 7 ]>&lt;html lang="en" class="no-js ie6"> <![endif]-->
-                                        <!--[if IE 7 ]>&lt;html lang="en" class="no-js ie7"> <![endif]-->
-                                        <!--[if IE 8 ]>&lt;html lang="en" class="no-js ie8"> <![endif]-->
-                                        <!--[if IE 9 ]>&lt;html lang="en" class="no-js ie9"> <![endif]-->
-                                        <!--[if (gt IE 9)|!(IE)]><!-->&lt;html lang="en" class="no-js"><!--<![endif]-->
-                                        &lt;head>
-                                            &lt;meta charset="utf-8">
-                                            &lt;meta name="author" content="">
-                                            &lt;meta name="keywords" content="">
-                                            &lt;meta name="viewport" content="width=device-width,initial-scale=1">
-                                            <title></title>
+                                <pre class="prettyprint">
+&lt;!doctype html>
+&lt;!--[if lt IE 7 ]>&lt;html lang="en" class="no-js ie6"> &lt;![endif]-->
+&lt;!--[if IE 7 ]>&lt;html lang="en" class="no-js ie7"> &lt;![endif]-->
+&lt;!--[if IE 8 ]>&lt;html lang="en" class="no-js ie8"> &lt;![endif]-->
+&lt;!--[if IE 9 ]>&lt;html lang="en" class="no-js ie9"> &lt;![endif]-->
+&lt;!--[if (gt IE 9)|!(IE)]>&lt;!-->&lt;html lang="en" class="no-js">&lt;!--&lt;![endif]-->
+&lt;head>
+    &lt;meta charset="utf-8">
+    &lt;meta name="author" content="">
+    &lt;meta name="keywords" content="">
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1">
+    &lt;title>&lt;/title>
 
-                                            <!-- main JS libs -->
-                                            &lt;script src="js/libs/modernizr.min.js">&lt;/script>
-                                            &lt;script src="js/libs/jquery-1.10.0.js">&lt;/script>
-                                            &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
-                                            &lt;script src="js/libs/bootstrap.min.js">&lt;/script>
+    &lt;!-- main JS libs -->
+    &lt;script src="js/libs/modernizr.min.js">&lt;/script>
+    &lt;script src="js/libs/jquery-1.10.0.js">&lt;/script>
+    &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+    &lt;script src="js/libs/bootstrap.min.js">&lt;/script>
 
-                                            <!-- Style CSS -->
-                                            &lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
-                                            &lt;link href="style.css" media="screen" rel="stylesheet">
+    &lt;!-- Style CSS -->
+    &lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    &lt;link href="style.css" media="screen" rel="stylesheet">
 
-                                            <!-- scripts -->
-                                            &lt;script src="js/general.js">&lt;/script>
+    &lt;!-- scripts -->
+    &lt;script src="js/general.js">&lt;/script>
 
-                                            <!-- Include all needed stylesheets and scripts here -->
+    &lt;!-- Include all needed stylesheets and scripts here -->
 
-                                            <!--[if lt IE 9]>&lt;script src="js/respond.min.js">&lt;/script><![endif]-->
-                                            <!--[if gte IE 9]>
-                                            <style type="text/css">
-                                                .gradient {filter: none !important;}
-                                            </style>
-                                            <![endif]-->
-                                        &lt;/head>
+    &lt;!--[if lt IE 9]>&lt;script src="js/respond.min.js">&lt;/script>&lt;![endif]-->
+    &lt;!--[if gte IE 9]>
+    &lt;style type="text/css">
+        .gradient {filter: none !important;}
+    &lt;/style>
+    &lt;![endif]-->
+&lt;/head>
 
-                                        &lt;body>
-                                            <!-- container -->
-                                            &lt;div class="container">
+&lt;body>
+    &lt;!-- container -->
+    &lt;div class="container">
 
-                                                Start your work here.
+        Start your work here.
 
-                                            &lt;/div>
-                                            <!--/ container -->
-                                        &lt;/body>
-                                        &lt;/html>
-                                    </pre>
+    &lt;/div>
+    &lt;!--/ container -->
+&lt;/body>
+&lt;/html>
+                                </pre>
                             </div>
                         </div>
                     </div>
@@ -497,15 +489,15 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
                             </div>
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        <h1>Example (h1)</h1>
-                                        <h2>Example (h2)</h2>
-                                        <h3>Example (h3)</h3>
-                                        <h4>Example (h4)</h4>
-                                        <h5>Example (h5)</h5>
-                                        <h6>Example (h6)</h6>
-                                        <p>Lorem ipsum dolor sit amet.</p>
-                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    <pre class="prettyprint">
+&lt;h1>Example (h1)&lt;/h1>
+&lt;h2>Example (h2)&lt;/h2>
+&lt;h3>Example (h3)&lt;/h3>
+&lt;h4>Example (h4)&lt;/h4>
+&lt;h5>Example (h5)&lt;/h5>
+&lt;h6>Example (h6)&lt;/h6>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
                                     </pre>
                             </div>
                         </div>
@@ -533,14 +525,14 @@
                                 <a href="#" class="btn btn-brown"><span>Brown</span></a>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;a href="#" class="btn"><span>Default</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-blue"><span>Blue</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-green"><span>Green</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-lime"><span>Lime</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-yellow"><span>Yellow</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-pink"><span>Pink</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-brown"><span>Brown</span>&lt;/a>
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn">&lt;span>Default&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-blue">&lt;span>Blue&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-green">&lt;span>Green&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-lime">&lt;span>Lime&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-yellow">&lt;span>Yellow&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-pink">&lt;span>Pink&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-brown">&lt;span>Brown&lt;/span>&lt;/a>
                                 </pre>
                             </div>
                         </div>
@@ -559,10 +551,10 @@
                                 <a href="#" class="btn btn-large"><span>Large Button</span></a>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;a href="#" class="btn btn-small"><span>Small Button</span>&lt;/a>
-                                    &lt;a href="#" class="btn"><span>Default Button</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-large"><span>Large Button</span>&lt;/a>
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-small">&lt;span>Small Button&lt;/span>&lt;/a>
+&lt;a href="#" class="btn">&lt;span>Default Button&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-large">&lt;span>Large Button&lt;/span>&lt;/a>
                                 </pre>
                             </div>
                         </div>
@@ -580,9 +572,9 @@
                                 <a href="#" class="btn btn-right"><span>Right</span></a>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;a href="#" class="btn btn-left"><span>Left</span>&lt;/a>
-                                    &lt;a href="#" class="btn btn-right"><span>Right</span>&lt;/a>
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-left">&lt;span>Left&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right">&lt;span>Right&lt;/span>&lt;/a>
                                 </pre>
                             </div>
                         </div>
@@ -599,8 +591,8 @@
                                 <span class="btn btn-blue"><input type="submit" value="Submit" /></span>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <span class="btn btn-blue">&lt;input type="submit" value="Submit" /></span>
+                                <pre class="prettyprint">
+&lt;span class="btn btn-blue">&lt;input type="submit" value="Submit" />&lt;/span>
                                 </pre>
                             </div>
                         </div>
@@ -622,20 +614,20 @@
                                 <div class="ribbon ribbon-blue"><span><em>Sale</em><strong>50%</strong></span></div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="ribbon">
-                                        <span>
-                                            <em>Sale</em>
-                                            <strong>20%</strong>
-                                        </span>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="ribbon">
+    &lt;span>
+        &lt;em>Sale&lt;/em>
+        &lt;strong>20%&lt;/strong>
+    &lt;/span>
+&lt;/div>
 
-                                    <div class="ribbon ribbon-blue">
-                                        <span>
-                                            <em>Sale</em>
-                                            <strong>50%</strong>
-                                        </span>
-                                    </div>
+&lt;div class="ribbon ribbon-blue">
+    &lt;span>
+        &lt;em>Sale&lt;/em>
+        &lt;strong>50%&lt;/strong>
+    &lt;/span>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -656,9 +648,9 @@
                                 <span class="badge badge-large"></span>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <span class="badge"></span>
-                                    <span class="badge badge-large"></span>
+                                <pre class="prettyprint">
+&lt;span class="badge">&lt;/span>
+&lt;span class="badge badge-large">&lt;/span>
                                 </pre>
                             </div>
                         </div>
@@ -686,14 +678,14 @@
                                 <!--/ Rating Stars -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="rating">
-                                        <span class="star on">&lt;input type="hidden" value="1"></span><!--
-                                        --><span class="star on">&lt;input type="hidden" value="2"></span><!--
-                                        --><span class="star on">&lt;input type="hidden" value="3"></span><!--
-                                        --><span class="star off">&lt;input type="hidden" value="4"></span><!--
-                                        --><span class="star off">&lt;input type="hidden" value="5"></span>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="rating">
+    &lt;span class="star on">&lt;input type="hidden" value="1">&lt;/span>&lt;!--
+    -->&lt;span class="star on">&lt;input type="hidden" value="2">&lt;/span>&lt;!--
+    -->&lt;span class="star on">&lt;input type="hidden" value="3">&lt;/span>&lt;!--
+    -->&lt;span class="star off">&lt;input type="hidden" value="4">&lt;/span>&lt;!--
+    -->&lt;span class="star off">&lt;input type="hidden" value="5">&lt;/span>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -712,8 +704,8 @@
                                 <h5>Element specific usage</h5>
                                 <p>Attribute <code>name</code> required for <code>input</code> element.</p>
                                 <p>Styled Checkbox require next file to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.customInput.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -731,33 +723,33 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="input_styled checklist">
-                                        <div class="rowCheckbox">
-                                            &lt;input name="signup" type="checkbox" id="signup" value="signup">
-                                            &lt;label for="signup">Default Checkbox&lt;/label>
-                                        </div>
-                                        <div class="rowCheckbox checkbox-red">
-                                            &lt;input name="signup2" type="checkbox" id="signup2" value="signup2">
-                                            &lt;label for="signup2">Red Checkbox&lt;/label>
-                                        </div>
-                                        <div class="rowCheckbox checkbox-filled">
-                                            &lt;input name="signup3" type="checkbox" id="signup3" value="signup3">
-                                            &lt;label for="signup3">White background&lt;/label>
-                                        </div>
-                                        <div class="rowCheckbox checkbox-large">
-                                            &lt;input name="signup4" type="checkbox" id="signup4" value="signup4">
-                                            &lt;label for="signup4">Switch&lt;/label>
-                                        </div>
-                                        <div class="rowCheckbox checkbox-large checkbox-white">
-                                            &lt;input name="signup5" type="checkbox" id="signup5" value="signup5">
-                                            &lt;label for="signup5">White background switch&lt;/label>
-                                        </div>
-                                        <div class="rowCheckbox checkbox-large checkbox-noText">
-                                            &lt;input name="signup6" type="checkbox" id="signup6" value="signup6">
-                                            &lt;label for="signup6">Switch without text&lt;/label>
-                                        </div>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div class="input_styled checklist">
+    &lt;div class="rowCheckbox">
+        &lt;input name="signup" type="checkbox" id="signup" value="signup">
+        &lt;label for="signup">Default Checkbox&lt;/label>
+    &lt;/div>
+    &lt;div class="rowCheckbox checkbox-red">
+        &lt;input name="signup2" type="checkbox" id="signup2" value="signup2">
+        &lt;label for="signup2">Red Checkbox&lt;/label>
+    &lt;/div>
+    &lt;div class="rowCheckbox checkbox-filled">
+        &lt;input name="signup3" type="checkbox" id="signup3" value="signup3">
+        &lt;label for="signup3">White background&lt;/label>
+    &lt;/div>
+    &lt;div class="rowCheckbox checkbox-large">
+        &lt;input name="signup4" type="checkbox" id="signup4" value="signup4">
+        &lt;label for="signup4">Switch&lt;/label>
+    &lt;/div>
+    &lt;div class="rowCheckbox checkbox-large checkbox-white">
+        &lt;input name="signup5" type="checkbox" id="signup5" value="signup5">
+        &lt;label for="signup5">White background switch&lt;/label>
+    &lt;/div>
+    &lt;div class="rowCheckbox checkbox-large checkbox-noText">
+        &lt;input name="signup6" type="checkbox" id="signup6" value="signup6">
+        &lt;label for="signup6">Switch without text&lt;/label>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -771,8 +763,8 @@
                                 <h5>Element specific usage</h5>
                                 <p>Attribute <code>name</code> required for <code>input</code> element.</p>
                                 <p>Styled Radio Button require next file to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.customInput.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -786,21 +778,21 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="input_styled inlinelist">
-                                        <div class="rowRadio">
-                                            &lt;input type="radio" name="survey" value="radio_v1" id="radio_v1" checked>
-                                            &lt;label for="radio_v1">Default Button&lt;/label>
-                                        </div>
-                                        <div class="rowRadio radio-red">
-                                            &lt;input type="radio" name="survey" value="radio_v2" id="radio_v2">
-                                            &lt;label for="radio_v2">Red Button&lt;/label>
-                                        </div>
-                                        <div class="rowRadio radio-filled">
-                                            &lt;input type="radio" name="survey" value="radio_v3" id="radio_v3">
-                                            &lt;label for="radio_v3">White background&lt;/label>
-                                        </div>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div class="input_styled inlinelist">
+    &lt;div class="rowRadio">
+        &lt;input type="radio" name="survey" value="radio_v1" id="radio_v1" checked>
+        &lt;label for="radio_v1">Default Button&lt;/label>
+    &lt;/div>
+    &lt;div class="rowRadio radio-red">
+        &lt;input type="radio" name="survey" value="radio_v2" id="radio_v2">
+        &lt;label for="radio_v2">Red Button&lt;/label>
+    &lt;/div>
+    &lt;div class="rowRadio radio-filled">
+        &lt;input type="radio" name="survey" value="radio_v3" id="radio_v3">
+        &lt;label for="radio_v3">White background&lt;/label>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -813,8 +805,8 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Text Inputs with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -829,14 +821,14 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="field_text">
-                                        &lt;input type="text" name="name" id="name" placeholder="Name">
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="field_text">
+    &lt;input type="text" name="name" id="name" placeholder="Name">
+&lt;/div>
 
-                                    <div class="field_text omega">
-                                        &lt;input type="text" name="email" id="email" placeholder="Email">
-                                    </div>
+&lt;div class="field_text omega">
+    &lt;input type="text" name="email" id="email" placeholder="Email">
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -849,8 +841,8 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Textareas with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -862,10 +854,10 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="field_text field_textarea">
-                                        &lt;textarea id="message" placeholder="Message">&lt;/textarea>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="field_text field_textarea">
+    &lt;textarea id="message" placeholder="Message">&lt;/textarea>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -882,9 +874,9 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Styled Scroll Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery.mousewheel.js">&lt;/script>
-                                    &lt;script src="js/jquery.jscrollpane.min.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.mousewheel.js">&lt;/script>
+&lt;script src="js/jquery.jscrollpane.min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -917,60 +909,59 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
+                                <pre class="prettyprint">
+&lt;div class="scrollbar">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
 
-                                    &lt;div class="scrollbar">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
+&lt;div class="scrollbar scrollbar-yellow">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
 
-                                    &lt;div class="scrollbar scrollbar-yellow">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
+&lt;div class="scrollbar scrollbar-red">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
 
-                                    &lt;div class="scrollbar scrollbar-red">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
-
-                                    &lt;div class="scrollbar scrollbar-blue">
-                                        <div class="scrollbar-inner">
-                                            <!--place your content here-->
-                                        </div>
-                                    &lt;/div>
+&lt;div class="scrollbar scrollbar-blue">
+    &lt;div class="scrollbar-inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Scroll Bars via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        jQuery(function()
-                                        {
-                                            jQuery('.scrollbar').jScrollPane({
-                                                verticalDragMaxHeight: 9,
-                                                verticalDragMinHeight:9
-                                            });
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    jQuery(function()
+    {
+        jQuery('.scrollbar').jScrollPane({
+            verticalDragMaxHeight: 9,
+            verticalDragMinHeight:9
+        });
 
-                                            jQuery('.scrollbar.scrollbar-yellow').jScrollPane({
-                                                verticalDragMaxHeight: 20,
-                                                verticalDragMinHeight:20
-                                            });
+        jQuery('.scrollbar.scrollbar-yellow').jScrollPane({
+            verticalDragMaxHeight: 20,
+            verticalDragMinHeight:20
+        });
 
-                                            jQuery('.scrollbar.scrollbar-red').jScrollPane({
-                                                verticalDragMaxHeight: 5,
-                                                verticalDragMinHeight:5
-                                            });
+        jQuery('.scrollbar.scrollbar-red').jScrollPane({
+            verticalDragMaxHeight: 5,
+            verticalDragMinHeight:5
+        });
 
-                                            jQuery('.scrollbar.scrollbar-blue').jScrollPane({
-                                                verticalDragMaxHeight: 50,
-                                                verticalDragMinHeight:50
-                                            });
-                                        });
-                                    &lt;/script>
+        jQuery('.scrollbar.scrollbar-blue').jScrollPane({
+            verticalDragMaxHeight: 50,
+            verticalDragMinHeight:50
+        });
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -986,9 +977,9 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Styled Progress Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery-ui.min.js">&lt;/script>
-                                    &lt;script src="js/progressbar.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/progressbar.js">&lt;/script>
                                 </pre>
                             </div>
 
@@ -1040,47 +1031,47 @@
                                 <!--/ Progress Bar with download Bar -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div id="progressBar1" class="progressbar">
-                                        <span class="mark-left">0%</span>
-                                        <span class="mark-right">100%</span>
-                                        <div class="percent"></div>
-                                        <div class="pbar"></div>
-                                        <div class="elapsed"></div>
-                                        <div class="remained"></div>
-                                    &lt;/div>
+                                <pre class="prettyprint">
+&lt;div id="progressBar1" class="progressbar">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="pbar">&lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+&lt;/div>
 
-                                    &lt;div id="progressBar2" class="progressbar style2">
-                                        <span class="mark-left">0%</span>
-                                        <span class="mark-right">100%</span>
-                                        <div class="percent"></div>
-                                        <div class="pbar">
-                                            <div id="downloadBar2" class="downloadbar">
-                                                <div class="pbar"></div>
-                                            </div>
-                                        </div>
-                                        <div class="elapsed"></div>
-                                        <div class="remained"></div>
-                                    &lt;/div>
+&lt;div id="progressBar2" class="progressbar style2">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="pbar">
+        &lt;div id="downloadBar2" class="downloadbar">
+            &lt;div class="pbar">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Progress Bars via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        $(document).ready(function() {
-                                            $('#progressBar1').anim_progressbar({
-                                                totaltime: 800
-                                            });
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(document).ready(function() {
+        $('#progressBar1').anim_progressbar({
+            totaltime: 800
+        });
 
-                                            $('#progressBar2').anim_progressbar({
-                                                totaltime: 900
-                                            });
-                                            $('#downloadBar2').anim_progressbar({
-                                                totaltime: 600
-                                            });
-                                        });
-                                    &lt;/script>
+        $('#progressBar2').anim_progressbar({
+            totaltime: 900
+        });
+        $('#downloadBar2').anim_progressbar({
+            totaltime: 600
+        });
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -1096,11 +1087,11 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Range Slider require next files to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/jquery-ui.min.js">&lt;/script>
-                                    &lt;script src="js/jquery.slider.bundle.js">&lt;/script>
-                                    &lt;script src="js/jquery.slider.js">&lt;/script>
-                                    &lt;link rel="stylesheet" href="css/jslider.css">
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery.slider.bundle.js">&lt;/script>
+&lt;script src="js/jquery.slider.js">&lt;/script>
+&lt;link rel="stylesheet" href="css/jslider.css">
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -1150,44 +1141,44 @@
                                 <!-- Range slider -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="range-slider">
-                                        &lt;input id="price_range" type="text" value="120;720">
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="range-slider">
+    &lt;input id="price_range" type="text" value="120;720">
+&lt;/div>
 
-                                    <div class="range-slider styled">
-                                        &lt;input id="price_range2" type="text" value="80;860">
-                                    </div>
+&lt;div class="range-slider styled">
+    &lt;input id="price_range2" type="text" value="80;860">
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Price Range via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        jQuery(document).ready(function($) {
-                                            $("#price_range").rangeslider({
-                                                from: 0,
-                                                to: 1000,
-                                                limits: false,
-                                                scale: ['$0', '$1000'],
-                                                heterogeneity: ['50/300'],
-                                                step: 10,
-                                                smooth: true,
-                                                dimension: '$'
-                                            });
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $("#price_range").rangeslider({
+            from: 0,
+            to: 1000,
+            limits: false,
+            scale: ['$0', '$1000'],
+            heterogeneity: ['50/300'],
+            step: 10,
+            smooth: true,
+            dimension: '$'
+        });
 
-                                            $("#price_range2").rangeslider({
-                                                from: 0,
-                                                to: 1000,
-                                                limits: false,
-                                                scale: ['$0', '$1000'],
-                                                heterogeneity: ['50/300'],
-                                                step: 10,
-                                                smooth: true,
-                                                dimension: '$'
-                                            });
-                                        });
-                                    &lt;/script>
+        $("#price_range2").rangeslider({
+            from: 0,
+            to: 1000,
+            limits: false,
+            scale: ['$0', '$1000'],
+            heterogeneity: ['50/300'],
+            step: 10,
+            smooth: true,
+            dimension: '$'
+        });
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -1231,48 +1222,48 @@
                                 <!--/ Website Menu -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div id="topmenu">
-                                        <ul class="dropdown clearfix boxed">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="icon-menu"></i>
-                                                    <span>check in</span>
-                                                    <sup class="note">3</sup>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="icon-menu icon-menu2"></i>
-                                                    <span>events</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="icon-menu icon-menu3"></i>
-                                                    <span>account</span>
-                                                </a>
-                                                <ul>
-                                                    <li><a href="#">Web design</a></li>
-                                                    <li><a href="#">User interface</a></li>
-                                                    <li><a href="#">Social media</a>
-                                                        <ul>
-                                                            <li><a href="#">Gallery images</a></li>
-                                                            <li><a href="#">Fine Slider</a></li>
-                                                            <li><a href="#">Video in header</a></li>
-                                                            <li><a href="#">Video Slider</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="icon-menu icon-menu4"></i>
-                                                    <span>settings</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div id="topmenu">
+    &lt;ul class="dropdown clearfix boxed">
+        &lt;li>
+            &lt;a href="#">
+                &lt;i class="icon-menu">&lt;/i>
+                &lt;span>check in&lt;/span>
+                &lt;sup class="note">3&lt;/sup>
+            &lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#">
+                &lt;i class="icon-menu icon-menu2">&lt;/i>
+                &lt;span>events&lt;/span>
+            &lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#">
+                &lt;i class="icon-menu icon-menu3">&lt;/i>
+                &lt;span>account&lt;/span>
+            &lt;/a>
+            &lt;ul>
+                &lt;li>&lt;a href="#">Web design&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">User interface&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Social media&lt;/a>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">Gallery images&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Fine Slider&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Video in header&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Video Slider&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/li>
+            &lt;/ul>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#">
+                &lt;i class="icon-menu icon-menu4">&lt;/i>
+                &lt;span>settings&lt;/span>
+            &lt;/a>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1287,7 +1278,7 @@
                         <div class="example">
                             <div class="example-item alt-color">
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-7">
                                         <!-- User Menu -->
                                         <div class="user-menu">
                                             <ul class="dropdown clearfix boxed">
@@ -1306,28 +1297,28 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="user-menu">
-                                        <ul class="dropdown clearfix boxed">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="icon-menu icon-menu5"></i>
-                                                    <span>My Profile</span>
-                                                </a>
-                                                <ul>
-                                                    <li><a href="#">Invite friends</a></li>
-                                                    <li><a href="#">find friends</a></li>
-                                                    <li><a href="#">Log out</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="icon-menu icon-menu6"></i>
-                                                    <span>Edit Profile</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="user-menu">
+    &lt;ul class="dropdown clearfix boxed">
+        &lt;li>
+            &lt;a href="#">
+                &lt;i class="icon-menu icon-menu5">&lt;/i>
+                &lt;span>My Profile&lt;/span>
+            &lt;/a>
+            &lt;ul>
+                &lt;li>&lt;a href="#">Invite friends&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">find friends&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Log out&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#">
+                &lt;i class="icon-menu icon-menu6">&lt;/i>
+                &lt;span>Edit Profile&lt;/span>
+            &lt;/a>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1374,24 +1365,24 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="tabs_framed">
-                                        <div class="inner">
-                                            &lt;ul class="tabs clearfix">
-                                                <li><a href="#recent" data-toggle="tab">Recent</a></li>
-                                                <li class="active"><a href="#popular" data-toggle="tab">Popular</a></li>
-                                            &lt;/ul>
+                                <pre class="prettyprint">
+&lt;div class="tabs_framed">
+    &lt;div class="inner">
+        &lt;ul class="tabs clearfix">
+            &lt;li>&lt;a href="#recent" data-toggle="tab">Recent&lt;/a>&lt;/li>
+            &lt;li class="active">&lt;a href="#popular" data-toggle="tab">Popular&lt;/a>&lt;/li>
+        &lt;/ul>
 
-                                            &lt;div class="tab-content boxed clearfix">
-                                                &lt;div class="tab-pane fade" id="recent">
-                                                    <!--place your content here-->
-                                                &lt;/div>
-                                                &lt;div class="tab-pane fade in active" id="popular">
-                                                    <!--place your content here-->
-                                                &lt;/div>
-                                            &lt;/div>
-                                        </div>
-                                    </div>
+        &lt;div class="tab-content boxed clearfix">
+            &lt;div class="tab-pane fade" id="recent">
+                &lt;!--place your content here-->
+            &lt;/div>
+            &lt;div class="tab-pane fade in active" id="popular">
+                &lt;!--place your content here-->
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1474,70 +1465,70 @@
                                 <!--/pricing box-->
                             </div>
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        <div class="pricing_box">
-                                            <ul class="clearfix">
+                                    <pre class="prettyprint">
+&lt;div class="pricing_box">
+    &lt;ul class="clearfix">
 
-                                                <li class="price_col price_col_blue col_active">
-                                                    <!--pricing item-->
-                                                    <div class="price_item boxed">
-                                                        <div class="price_col_head">
-                                                            <span class="badge"></span>
-                                                            <span class="price"><em>$</em>199<sup>90</sup></span>
-                                                        </div>
-                                                        <div class="price_col_body clearfix">
-                                                            <div class="price_body_inner">
-                                                                <div class="price_body_top">
-                                                                    <span>Full Circle</span>
-                                                                    <strong>Basic</strong>
-                                                                    <div class="line"></div>
-                                                                </div>
-                                                                <ul>
-                                                                    <li>Unlimited Traffic</li>
-                                                                    <li>20 gb in Cloud</li>
-                                                                    <li>0.5 gbit/sec</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="price_col_foot">
-                                                            <div class="sign_up">
-                                                                &lt;a href="#" class="btn btn-blue btn-small"><span>Buy Now</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!--/ pricing-item -->
-                                                </li>
+        &lt;li class="price_col price_col_blue col_active">
+            &lt;!--pricing item-->
+            &lt;div class="price_item boxed">
+                &lt;div class="price_col_head">
+                    &lt;span class="badge">&lt;/span>
+                    &lt;span class="price">&lt;em>$&lt;/em>199&lt;sup>90&lt;/sup>&lt;/span>
+                &lt;/div>
+                &lt;div class="price_col_body clearfix">
+                    &lt;div class="price_body_inner">
+                        &lt;div class="price_body_top">
+                            &lt;span>Full Circle&lt;/span>
+                            &lt;strong>Basic&lt;/strong>
+                            &lt;div class="line">&lt;/div>
+                        &lt;/div>
+                        &lt;ul>
+                            &lt;li>Unlimited Traffic&lt;/li>
+                            &lt;li>20 gb in Cloud&lt;/li>
+                            &lt;li>0.5 gbit/sec&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="price_col_foot">
+                    &lt;div class="sign_up">
+                        &lt;a href="#" class="btn btn-blue btn-small">&lt;span>Buy Now&lt;/span>&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;!--/ pricing-item -->
+        &lt;/li>
 
-                                                <li class="price_col price_col_yellow">
-                                                    <div class="price_item boxed">
-                                                        <div class="price_col_head">
-                                                            <span class="badge"></span>
-                                                            <span class="price">free</span>
-                                                        </div>
-                                                        <div class="price_col_body clearfix">
-                                                            <div class="price_body_inner">
-                                                                <div class="price_body_top">
-                                                                    <span>Full Circle</span>
-                                                                    <strong>Free</strong>
-                                                                    <div class="line"></div>
-                                                                </div>
-                                                                <ul>
-                                                                    <li>Unlimited Traffic</li>
-                                                                    <li>80 gb in Cloud</li>
-                                                                    <li>2 gbit/sec</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="price_col_foot">
-                                                            <div class="sign_up">
-                                                                &lt;a href="#" class="btn btn-yellow btn-small"><span>Buy Now</span></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
+        &lt;li class="price_col price_col_yellow">
+            &lt;div class="price_item boxed">
+                &lt;div class="price_col_head">
+                    &lt;span class="badge">&lt;/span>
+                    &lt;span class="price">free&lt;/span>
+                &lt;/div>
+                &lt;div class="price_col_body clearfix">
+                    &lt;div class="price_body_inner">
+                        &lt;div class="price_body_top">
+                            &lt;span>Full Circle&lt;/span>
+                            &lt;strong>Free&lt;/strong>
+                            &lt;div class="line">&lt;/div>
+                        &lt;/div>
+                        &lt;ul>
+                            &lt;li>Unlimited Traffic&lt;/li>
+                            &lt;li>80 gb in Cloud&lt;/li>
+                            &lt;li>2 gbit/sec&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="price_col_foot">
+                    &lt;div class="sign_up">
+                        &lt;a href="#" class="btn btn-yellow btn-small">&lt;span>Buy Now&lt;/span>&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/li>
 
-                                            </ul>
-                                        </div>
+    &lt;/ul>
+&lt;/div>
                                     </pre>
                             </div>
                         </div>
@@ -1616,68 +1607,68 @@
                                 <!--/ pricing list style2 -->
                             </div>
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        <div class="pricing_box price_style2">
-                                            <ul class="clearfix">
+                                    <pre class="prettyprint">
+&lt;div class="pricing_box price_style2">
+    &lt;ul class="clearfix">
 
-                                                <li class="price_col price_col_blue col_active">
-                                                    <div class="price_item boxed">
-                                                        <div class="price_col_head">
-                                                            <span class="badge badge-large"></span>
-                                                            <span class="price"><em>$</em>199<sup>90</sup></span>
-                                                        </div>
-                                                        <div class="price_col_body clearfix">
-                                                            <div class="price_body_inner">
-                                                                <div class="price_body_top">
-                                                                    <span>Full Circle</span>
-                                                                    <strong>Basic</strong>
-                                                                    <div class="line"></div>
-                                                                </div>
-                                                                <ul>
-                                                                    <li>Unlimited Traffic</li>
-                                                                    <li>20 gb in Cloud</li>
-                                                                    <li>0.5 gbit/sec</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="price_col_foot">
-                                                            <div class="sign_up">
-                                                                &lt;a href="#" class="btn btn-blue"><span>Buy Now</span>&lt;/a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
+        &lt;li class="price_col price_col_blue col_active">
+            &lt;div class="price_item boxed">
+                &lt;div class="price_col_head">
+                    &lt;span class="badge badge-large">&lt;/span>
+                    &lt;span class="price">&lt;em>$&lt;/em>199&lt;sup>90&lt;/sup>&lt;/span>
+                &lt;/div>
+                &lt;div class="price_col_body clearfix">
+                    &lt;div class="price_body_inner">
+                        &lt;div class="price_body_top">
+                            &lt;span>Full Circle&lt;/span>
+                            &lt;strong>Basic&lt;/strong>
+                            &lt;div class="line">&lt;/div>
+                        &lt;/div>
+                        &lt;ul>
+                            &lt;li>Unlimited Traffic&lt;/li>
+                            &lt;li>20 gb in Cloud&lt;/li>
+                            &lt;li>0.5 gbit/sec&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="price_col_foot">
+                    &lt;div class="sign_up">
+                        &lt;a href="#" class="btn btn-blue">&lt;span>Buy Now&lt;/span>&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/li>
 
-                                                <li class="price_col price_col_red">
-                                                    <div class="price_item boxed">
-                                                        <div class="price_col_head">
-                                                            <span class="badge badge-large"></span>
-                                                            <span class="price"><em>$</em>299<sup>90</sup></span>
-                                                        </div>
-                                                        <div class="price_col_body clearfix">
-                                                            <div class="price_body_inner">
-                                                                <div class="price_body_top">
-                                                                    <span>Full Circle</span>
-                                                                    <strong>Premium</strong>
-                                                                    <div class="line"></div>
-                                                                </div>
-                                                                <ul>
-                                                                    <li>Unlimited Traffic</li>
-                                                                    <li>50 gb in Cloud</li>
-                                                                    <li>1 gbit/sec</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="price_col_foot">
-                                                            <div class="sign_up">
-                                                                &lt;a href="#" class="btn btn-red btn-large"><span>Buy Now</span>&lt;/a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
+        &lt;li class="price_col price_col_red">
+            &lt;div class="price_item boxed">
+                &lt;div class="price_col_head">
+                    &lt;span class="badge badge-large">&lt;/span>
+                    &lt;span class="price">&lt;em>$&lt;/em>299&lt;sup>90&lt;/sup>&lt;/span>
+                &lt;/div>
+                &lt;div class="price_col_body clearfix">
+                    &lt;div class="price_body_inner">
+                        &lt;div class="price_body_top">
+                            &lt;span>Full Circle&lt;/span>
+                            &lt;strong>Premium&lt;/strong>
+                            &lt;div class="line">&lt;/div>
+                        &lt;/div>
+                        &lt;ul>
+                            &lt;li>Unlimited Traffic&lt;/li>
+                            &lt;li>50 gb in Cloud&lt;/li>
+                            &lt;li>1 gbit/sec&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="price_col_foot">
+                    &lt;div class="sign_up">
+                        &lt;a href="#" class="btn btn-red btn-large">&lt;span>Buy Now&lt;/span>&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/li>
 
-                                            </ul>
-                                        </div>
+    &lt;/ul>
+&lt;/div>
                                     </pre>
                             </div>
                         </div>
@@ -1707,13 +1698,13 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container boxed">
-                                        <h3 class="widget-title">Widget Title</h3>
-                                        <div class="inner">
-                                            <!-- place your content here -->
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container boxed">
+    &lt;h3 class="widget-title">Widget Title&lt;/h3>
+    &lt;div class="inner">
+        &lt;!-- place your content here -->
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1755,30 +1746,30 @@
                                 <!--/ Simple Message Field -->
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="comment-list styled clearfix">
-                                        <ol>
-                                            <li class="comment">
-                                                <div class="comment-body boxed">
-                                                    <div class="comment-arrow"></div>
-                                                    <div class="comment-avatar">
-                                                        <div class="avatar">
-                                                            &lt;img src="images/temp/avatar6.png" alt="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <div class="comment-author clearfix">
-                                                            <a href="#" class="link-author">Jude Law</a>
-                                                        </div>
-                                                        <div class="comment-entry">
-                                                            He made his film debut with a minor part in Back ti the Future Part II (1989). Many desktop publishing packages and web page editors now use Lorem Ipsum.
-                                                        </div>
-                                                    </div>
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </li>
-                                        </ol>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="comment-list styled clearfix">
+    &lt;ol>
+        &lt;li class="comment">
+            &lt;div class="comment-body boxed">
+                &lt;div class="comment-arrow">&lt;/div>
+                &lt;div class="comment-avatar">
+                    &lt;div class="avatar">
+                        &lt;img src="images/temp/avatar6.png" alt="" />
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="comment-text">
+                    &lt;div class="comment-author clearfix">
+                        &lt;a href="#" class="link-author">Jude Law&lt;/a>
+                    &lt;/div>
+                    &lt;div class="comment-entry">
+                        He made his film debut with a minor part in Back ti the Future Part II (1989). Many desktop publishing packages and web page editors now use Lorem Ipsum.
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="clear">&lt;/div>
+            &lt;/div>
+        &lt;/li>
+    &lt;/ol>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -1794,9 +1785,9 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Video Player require next files to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;link href="css/video-js.css" rel="stylesheet">
-                                    &lt;script src="js/video.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;link href="css/video-js.css" rel="stylesheet">
+&lt;script src="js/video.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -1835,36 +1826,36 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="video_player boxed">
-                                        <div class="inner">
-                                            &lt;video id="my_video_1" class="video-js" controls loop
-                                                   preload="auto" poster="images/temp/vjs_poster2.png"
-                                                   data-setup="{}">
-                                                &lt;source src="http://path-to-video/video.mp4" type='video/mp4'>
-                                            &lt;/video>
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="video_player boxed">
+    &lt;div class="inner">
+        &lt;video id="my_video_1" class="video-js" controls loop
+               preload="auto" poster="images/temp/vjs_poster2.png"
+               data-setup="{}">
+            &lt;source src="http://path-to-video/video.mp4" type='video/mp4'>
+        &lt;/video>
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Video Player via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script>
-                                        _V_("my_video_1").ready(function(){
-                                            var myPlayer = this;
-                                            var aspectRatio = 267/640;
-                                            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
-                                            myPlayer.width(width).height( width * aspectRatio );
+                                <pre class="prettyprint">
+&lt;script>
+    _V_("my_video_1").ready(function(){
+        var myPlayer = this;
+        var aspectRatio = 267/640;
+        var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+        myPlayer.width(width).height( width * aspectRatio );
 
-                                            function resizeVideoJS(){
-                                                var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
-                                                myPlayer.width(width).height( width * aspectRatio );
-                                            }
-                                            resizeVideoJS();
-                                            window.onresize = resizeVideoJS;
-                                        });
-                                    &lt;/script>
+        function resizeVideoJS(){
+            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+            myPlayer.width(width).height( width * aspectRatio );
+        }
+        resizeVideoJS();
+        window.onresize = resizeVideoJS;
+    });
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -1880,10 +1871,10 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Audio Player require next files to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;link href="css/jplayer.css" rel="stylesheet">
-                                    &lt;script src="js/jquery.jplayer.min.js">&lt;/script>
-                                    &lt;script src="js/jplayer.playlist.min.js">&lt;/script>
+                                <pre class="prettyprint">
+&lt;link href="css/jplayer.css" rel="stylesheet">
+&lt;script src="js/jquery.jplayer.min.js">&lt;/script>
+&lt;script src="js/jplayer.playlist.min.js">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -1946,95 +1937,95 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget-audio boxed">
-                                        <div class="inner">
-                                            &lt;div id="jquery_jplayer_1" class="jp-jplayer">&lt;/div>
-                                            &lt;div id="jp_container_1" class="jp-audio">
-                                                <div class="inner">
-                                                    <div class="jp-gui jp-interface">
-                                                        <div class="jp-controls-wrap">
-                                                            <div class="song_title"></div>
-                                                            <div class="jp-current-time"></div>
-                                                            <div class="jp-duration"></div>
-                                                            <div class="jp-progress">
-                                                                <div class="jp-seek-bar">
-                                                                    <div class="jp-play-bar"></div>
-                                                                </div>
-                                                            </div>
-                                                            <ul class="jp-controls clearfix">
-                                                                <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-                                                                <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-                                                                <li><a href="javascript:;" class="jp-previous disabled" tabindex="1">previous</a></li>
-                                                                <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-                                                                <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-                                                                <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
-                                                                <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-                                                                <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
-                                                                <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
-                                                                <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-                                                                <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
-                                                                <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
-                                                                <li><a href="javascript:;" class="jp-playlist-toggle" tabindex="1" title="Toggle PlayList">Toggle PlayList</a></li>
-                                                            </ul>
-                                                            <div class="jp-volume-bar">
-                                                                <div class="jp-volume-bar-value"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="jp-playlist">
-                                                        <ul class="jp-playlist-inner">
-                                                            <li></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="jp-no-solution">
-                                                        <span>Update Required</span>
-                                                        <a href="http://get.adobe.com/flashplayer/" target="_blank">
-                                                            Flash plugin
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            &lt;/div>
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-audio boxed">
+    &lt;div class="inner">
+        &lt;div id="jquery_jplayer_1" class="jp-jplayer">&lt;/div>
+        &lt;div id="jp_container_1" class="jp-audio">
+            &lt;div class="inner">
+                &lt;div class="jp-gui jp-interface">
+                    &lt;div class="jp-controls-wrap">
+                        &lt;div class="song_title">&lt;/div>
+                        &lt;div class="jp-current-time">&lt;/div>
+                        &lt;div class="jp-duration">&lt;/div>
+                        &lt;div class="jp-progress">
+                            &lt;div class="jp-seek-bar">
+                                &lt;div class="jp-play-bar">&lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;ul class="jp-controls clearfix">
+                            &lt;li>&lt;a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-previous disabled" tabindex="1">previous&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-play" tabindex="1">play&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-pause" tabindex="1">pause&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-next" tabindex="1">next&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-stop" tabindex="1">stop&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="javascript:;" class="jp-playlist-toggle" tabindex="1" title="Toggle PlayList">Toggle PlayList&lt;/a>&lt;/li>
+                        &lt;/ul>
+                        &lt;div class="jp-volume-bar">
+                            &lt;div class="jp-volume-bar-value">&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="jp-playlist">
+                    &lt;ul class="jp-playlist-inner">
+                        &lt;li>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div class="jp-no-solution">
+                    &lt;span>Update Required&lt;/span>
+                    &lt;a href="http://get.adobe.com/flashplayer/" target="_blank">
+                        Flash plugin
+                    &lt;/a>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Audio Player via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        //<![CDATA[
-                                        $(document).ready(function(){
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    //&lt;![CDATA[
+    $(document).ready(function(){
 
-                                            new jPlayerPlaylist({
-                                                jPlayer: "#jquery_jplayer_1",
-                                                cssSelectorAncestor: "#jp_container_1"
-                                            }, [
-                                                {
-                                                    title:"&lt;div class='item-song'>He lives in you, he lives in me&lt;/div>&lt;div class='item-artist'>Elton John, Hans Zimmer&lt;/div>&lt;img src='images/temp/music-player4.jpg' alt='' />",
-                                                    mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
-                                                    oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
-                                                },
-                                                {
-                                                    title:"&lt;div class='item-song'>I saw you dancing&lt;/div>&lt;div class='item-artist'>Yaki Da&lt;/div>&lt;img src='images/temp/music-player5.jpg' alt='' />",
-                                                    mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
-                                                    oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
-                                                },
-                                                {
-                                                    title:"&lt;div class='item-song'>Sands of Time&lt;/div>&lt;div class='item-artist'>Pandora&lt;/div>&lt;img src='images/temp/music-player6.jpg' alt='' />",
-                                                    mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
-                                                    oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-                                                }
-                                            ], {
-                                                swfPath: "js",
-                                                supplied: "oga, mp3",
-                                                wmode: "window",
-                                                smoothPlayBar: false,
-                                                keyEnabled: false
-                                            });
-                                        });
-                                        //]]>
-                                    &lt;/script>
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"&lt;div class='item-song'>He lives in you, he lives in me&lt;/div>&lt;div class='item-artist'>Elton John, Hans Zimmer&lt;/div>&lt;img src='images/temp/music-player4.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"&lt;div class='item-song'>I saw you dancing&lt;/div>&lt;div class='item-artist'>Yaki Da&lt;/div>&lt;img src='images/temp/music-player5.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"&lt;div class='item-song'>Sands of Time&lt;/div>&lt;div class='item-artist'>Pandora&lt;/div>&lt;img src='images/temp/music-player6.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]&gt;
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -2086,33 +2077,33 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                    <pre class="brush: xml">
-                                        <div class="widget-container widget_gallery boxed">
-                                            <div class="inner">
-                                                &lt;div id="myCarousel2" class="carousel slide" data-interval="20000">
-                                                    <!-- Carousel items -->
-                                                    &lt;div class="carousel-inner">
-                                                        <div class="item">
-                                                            &lt;img src="images/temp/post_img6.jpg" alt="" />
-                                                            <div class="carousel-desc"><span>Wild Deer</span></div>
-                                                        </div>
-                                                        ...
-                                                        ...
-                                                        ...
-                                                    &lt;/div>
-                                                    <!-- Carousel indicators -->
-                                                    <ol class="carousel-indicators">
-                                                        <li data-target="#myCarousel2" data-slide-to="0"></li>
-                                                        ...
-                                                        ...
-                                                        ...
-                                                    </ol>
-                                                    <!-- Carousel nav -->
-                                                    &lt;a class="carousel-control left" href="#myCarousel2" data-slide="prev">&lt;/a>
-                                                    &lt;a class="carousel-control right" href="#myCarousel2" data-slide="next">&lt;/a>
-                                                &lt;/div>
-                                            </div>
-                                        </div>
+                                    <pre class="prettyprint">
+&lt;div class="widget-container widget_gallery boxed">
+    &lt;div class="inner">
+        &lt;div id="myCarousel2" class="carousel slide" data-interval="20000">
+            &lt;!-- Carousel items -->
+            &lt;div class="carousel-inner">
+                &lt;div class="item">
+                    &lt;img src="images/temp/post_img6.jpg" alt="" />
+                    &lt;div class="carousel-desc">&lt;span>Wild Deer&lt;/span>&lt;/div>
+                &lt;/div>
+                ...
+                ...
+                ...
+            &lt;/div>
+            &lt;!-- Carousel indicators -->
+            &lt;ol class="carousel-indicators">
+                &lt;li data-target="#myCarousel2" data-slide-to="0">&lt;/li>
+                ...
+                ...
+                ...
+            &lt;/ol>
+            &lt;!-- Carousel nav -->
+            &lt;a class="carousel-control left" href="#myCarousel2" data-slide="prev">&lt;/a>
+            &lt;a class="carousel-control right" href="#myCarousel2" data-slide="next">&lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
                                     </pre>
                             </div>
                         </div>
@@ -2129,10 +2120,10 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>Calendar require next files to be included into <code>&lt;head></code> section of the page:</p>
-                                <pre class="brush: xml">
-                                    &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
-                                    &lt;script src="js/jquery-ui.multidatespicker.js">&lt;/script>
-                                    &lt;link href="css/jquery-ui-1.8.20.custom.css" rel="stylesheet">
+                                <pre class="prettyprint">
+&lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery-ui.multidatespicker.js">&lt;/script>
+&lt;link href="css/jquery-ui-1.8.20.custom.css" rel="stylesheet">
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -2205,60 +2196,60 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget_calendar boxed styled">
-                                        &lt;div class="inner">
-                                            &lt;input type="text" name="date_departure" class="inputField" value="" id="date_departure">
-                                        &lt;/div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget_calendar boxed styled">
+    &lt;div class="inner">
+        &lt;input type="text" name="date_departure" class="inputField" value="" id="date_departure">
+    &lt;/div>
+&lt;/div>
 
-                                    <div class="widget-container widget_calendar boxed">
-                                        &lt;div class="inner">
-                                            &lt;input type="text" name="date_departure2" class="inputField" value="" id="date_departure2">
-                                        &lt;/div>
-                                    </div>
+&lt;div class="widget-container widget_calendar boxed">
+    &lt;div class="inner">
+        &lt;input type="text" name="date_departure2" class="inputField" value="" id="date_departure2">
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Calendar via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script>
-                                        // <![CDATA[
-                                        jQuery(document).ready(function($) {
+                                <pre class="prettyprint">
+&lt;script>
+    // &lt;![CDATA[
+    jQuery(document).ready(function($) {
 
-                                            // First Calendar
-                                            function assignCalendar(id){
-                                                $('&lt;div class="calendar" /&gt;')
-                                                        .insertAfter( $(id) )
-                                                        .multiDatesPicker({
-                                                            dateFormat: 'yy-mm-dd',
-                                                            minDate: new Date(),
-                                                            maxDate: '+1y',
-                                                            altField: id,
-                                                            firstDay: 1,
-                                                            showOtherMonths: true
-                                                        }).prev().hide();
-                                            }
-                                            assignCalendar('#date_departure');
+        // First Calendar
+        function assignCalendar(id){
+            $('&lt;div class="calendar" /&gt;')
+                    .insertAfter( $(id) )
+                    .multiDatesPicker({
+                        dateFormat: 'yy-mm-dd',
+                        minDate: new Date(),
+                        maxDate: '+1y',
+                        altField: id,
+                        firstDay: 1,
+                        showOtherMonths: true
+                    }).prev().hide();
+        }
+        assignCalendar('#date_departure');
 
-                                            // Second Calendar
-                                            function assignCalendar(id){
-                                                $('&lt;div class="calendar" /&gt;')
-                                                        .insertAfter( $(id) )
-                                                        .multiDatesPicker({
-                                                            dateFormat: 'yy-mm-dd',
-                                                            minDate: new Date(),
-                                                            maxDate: '+1y',
-                                                            altField: id,
-                                                            firstDay: 1,
-                                                            showOtherMonths: true
-                                                        }).prev().hide();
-                                            }
-                                            assignCalendar('#date_departure2');
+        // Second Calendar
+        function assignCalendar(id){
+            $('&lt;div class="calendar" /&gt;')
+                    .insertAfter( $(id) )
+                    .multiDatesPicker({
+                        dateFormat: 'yy-mm-dd',
+                        minDate: new Date(),
+                        maxDate: '+1y',
+                        altField: id,
+                        firstDay: 1,
+                        showOtherMonths: true
+                    }).prev().hide();
+        }
+        assignCalendar('#date_departure2');
 
-                                        });
-                                        // ]]>
-                                    &lt;/script>
+    });
+    // ]]&gt;
+&lt;/script>
                                 </pre>
                             </div>
                         </div>
@@ -2299,106 +2290,34 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget_avatar boxed">
-                                        <div class="avatar-image">
-                                            &lt;img src="images/temp/avatar-image.jpg" alt="" />
-                                        </div>
-                                        <div class="inner clearfix">
-                                            <div class="avatar">
-                                                &lt;img src="images/temp/avatar.png" alt="" />
-                                            </div>
-                                            <h5>John Raymons</h5>
-                                            <span class="subtitle">
-                                                Your talent amazes! This is awesome. Excited to see the final product.
-                                            </span>
-                                        </div>
-                                        <div class="post-meta-links">
-                                            <ul class="clearfix">
-                                                <li class="post-view">
-                                                    <a href="#"><span><i class="icon-post"></i>172</span></a>
-                                                </li>
-                                                <li class="post-comm">
-                                                    <a href="#"><span><i class="icon-post"></i>34</span></a>
-                                                </li>
-                                                <li class="post-like">
-                                                    <a href="#"><span><i class="icon-post"></i>210</span></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </pre>
-                            </div>
-                        </div>
-
-                        <div class="description">
-                            <h3 id="user-alt">Alternative User Profile</h3>
-                            <p>Display information about user in a styled box.</p>
-                            <h4>Example</h4>
-                        </div>
-                        <div class="example">
-                            <div class="example-item alt-color">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <!-- Widget Profile -->
-                                        <div class="widget-container widget_profile widget_categories boxed">
-                                            <div class="widget-title">
-                                                <div class="avatar"><img src="../metro-vibes-css/images/temp/avatar5.png" alt="" /></div>
-                                                <h5>Courtney<br />Timmons</h5>
-                                                <span class="subtitle">15,323 followers</span>
-                                            </div>
-                                            <div class="inner">
-                                                <ul>
-                                                    <li><a href="#"><i class="ico-cat ico-cat1"></i><span>Edit user</span></a></li>
-                                                    <li class="current-menu-item"><a href="#"><i class="ico-cat ico-cat2"></i><span>Web statistics</span></a></li>
-                                                    <li><a href="#"><i class="ico-cat ico-cat3"></i><span>Upload settings</span></a></li>
-                                                    <li><a href="#"><i class="ico-cat ico-cat4"></i><span>Events</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--/ Widget Profile -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget_profile widget_categories boxed">
-                                        <div class="widget-title">
-                                            <div class="avatar">
-                                                &lt;img src="images/temp/avatar5.png" alt="" />
-                                            </div>
-                                            <h5>Courtney<br />Timmons</h5>
-                                            <span class="subtitle">15,323 followers</span>
-                                        </div>
-                                        <div class="inner">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="ico-cat ico-cat1"></i>
-                                                        <span>Edit user</span>
-                                                    </a>
-                                                </li>
-                                                <li class="current-menu-item">
-                                                    <a href="#">
-                                                        <i class="ico-cat ico-cat2"></i>
-                                                        <span>Web statistics</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="ico-cat ico-cat3"></i>
-                                                        <span>Upload settings</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <i class="ico-cat ico-cat4"></i>
-                                                        <span>Events</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget_avatar boxed">
+    &lt;div class="avatar-image">
+        &lt;img src="images/temp/avatar-image.jpg" alt="" />
+    &lt;/div>
+    &lt;div class="inner clearfix">
+        &lt;div class="avatar">
+            &lt;img src="images/temp/avatar.png" alt="" />
+        &lt;/div>
+        &lt;h5>John Raymons&lt;/h5>
+        &lt;span class="subtitle">
+            Your talent amazes! This is awesome. Excited to see the final product.
+        &lt;/span>
+    &lt;/div>
+    &lt;div class="post-meta-links">
+        &lt;ul class="clearfix">
+            &lt;li class="post-view">
+                &lt;a href="#">&lt;span>&lt;i class="icon-post">&lt;/i>172&lt;/span>&lt;/a>
+            &lt;/li>
+            &lt;li class="post-comm">
+                &lt;a href="#">&lt;span>&lt;i class="icon-post">&lt;/i>34&lt;/span>&lt;/a>
+            &lt;/li>
+            &lt;li class="post-like">
+                &lt;a href="#">&lt;span>&lt;i class="icon-post">&lt;/i>210&lt;/span>&lt;/a>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -2430,20 +2349,20 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget-social boxed">
-                                        <ul>
-                                            <li>
-                                                <a href="#" class="social-facebook"><span>Facebook</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="social-pinterest"><span>Pinterest</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="social-twitter"><span>Twitter</span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-social boxed">
+    &lt;ul>
+        &lt;li>
+            &lt;a href="#" class="social-facebook">&lt;span>Facebook&lt;/span>&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#" class="social-pinterest">&lt;span>Pinterest&lt;/span>&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#" class="social-twitter">&lt;span>Twitter&lt;/span>&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -2473,12 +2392,12 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget-weather boxed clearfix">
-                                        <div class="air-temp"><strong>26&deg;</strong></div>
-                                        <div class="water-temp"><strong>14&deg;</strong></div>
-                                        <div class="wind-speed"><strong>13</strong></div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-weather boxed clearfix">
+    &lt;div class="air-temp">&lt;strong>26&deg;&lt;/strong>&lt;/div>
+    &lt;div class="water-temp">&lt;strong>14&deg;&lt;/strong>&lt;/div>
+    &lt;div class="wind-speed">&lt;strong>13&lt;/strong>&lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -2526,46 +2445,46 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    <div class="widget-container widget-trade boxed">
-                                        <div class="widget-title">
-                                            <span class="trade-rate trade-rate-up">634. 39</span>
-                                            <span class="trade-rate-change">+2.18 (3.71%)</span>
-                                        </div>
-                                        <div class="inner">
-                                            <div class="trade-time">Today 2:25 pm</div>
-                                            <h4 class="trade-location">
-                                                <a href="#">Salt Lake City, Utah</a>
-                                            </h4>
-                                            <ul class="trade-shares clearfix">
-                                                <li class="traded">
-                                                    <a href="#">
-                                                        <strong>13.5 M</strong>
-                                                        <span>Shares Traded</span>
-                                                    </a>
-                                                </li>
-                                                <li class="capitalization">
-                                                    <a href="#">
-                                                        <strong>28.44 B</strong>
-                                                        <span>Market Cap</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <div class="trade-bottom trade-graph">
-                                                <h6 class="trade-bottom-title">AAPL</h6>
-                                                <div class="trade-bottom-content">
-                                                    &lt;img src="images/trade-graph.png" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="trade-bottom trade-yearly-change">
-                                                <h6 class="trade-bottom-title">Yearly Change</h6>
-                                                <div class="trade-bottom-content">
-                                                    <span>+127. 01</span>
-                                                </div>
-                                            </div>
-                                            <div class="clear"></div>
-                                        </div>
-                                    </div>
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-trade boxed">
+    &lt;div class="widget-title">
+        &lt;span class="trade-rate trade-rate-up">634. 39&lt;/span>
+        &lt;span class="trade-rate-change">+2.18 (3.71%)&lt;/span>
+    &lt;/div>
+    &lt;div class="inner">
+        &lt;div class="trade-time">Today 2:25 pm&lt;/div>
+        &lt;h4 class="trade-location">
+            &lt;a href="#">Salt Lake City, Utah&lt;/a>
+        &lt;/h4>
+        &lt;ul class="trade-shares clearfix">
+            &lt;li class="traded">
+                &lt;a href="#">
+                    &lt;strong>13.5 M&lt;/strong>
+                    &lt;span>Shares Traded&lt;/span>
+                &lt;/a>
+            &lt;/li>
+            &lt;li class="capitalization">
+                &lt;a href="#">
+                    &lt;strong>28.44 B&lt;/strong>
+                    &lt;span>Market Cap&lt;/span>
+                &lt;/a>
+            &lt;/li>
+        &lt;/ul>
+        &lt;div class="trade-bottom trade-graph">
+            &lt;h6 class="trade-bottom-title">AAPL&lt;/h6>
+            &lt;div class="trade-bottom-content">
+                &lt;img src="images/trade-graph.png" alt="" />
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="trade-bottom trade-yearly-change">
+            &lt;h6 class="trade-bottom-title">Yearly Change&lt;/h6>
+            &lt;div class="trade-bottom-content">
+                &lt;span>+127. 01&lt;/span>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="clear">&lt;/div>
+    &lt;/div>
+&lt;/div>
                                 </pre>
                             </div>
                         </div>
@@ -2581,8 +2500,8 @@
                             <div class="callout">
                                 <h5>Element specific usage</h5>
                                 <p>This widget require Google Charts:</p>
-                                <pre class="brush: xml">
-                                    &lt;script type="text/javascript" src="https://www.google.com/jsapi">&lt;/script>
+                                <pre class="prettyprint">
+&lt;script type="text/javascript" src="https://www.google.com/jsapi">&lt;/script>
                                 </pre>
                             </div>
                             <h4>Example</h4>
@@ -2634,148 +2553,148 @@
                                 </div>
                             </div>
                             <div class="example-code">
-                                <pre class="brush: xml">
-                                    &lt;div class="tabs_framed styled widget-stats">
-                                        &lt;ul class="tabs clearfix">
-                                            <li class="active">
-                                                &lt;a href="#diagram" data-toggle="tab">Diagram Stats&lt;/a>
-                                            </li>
-                                            <li>
-                                                &lt;a href="#month" data-toggle="tab">Month Report&lt;/a>
-                                            </li>
-                                        &lt;/ul>
+                                <pre class="prettyprint">
+&lt;div class="tabs_framed styled widget-stats">
+    &lt;ul class="tabs clearfix">
+        &lt;li class="active">
+            &lt;a href="#diagram" data-toggle="tab">Diagram Stats&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#month" data-toggle="tab">Month Report&lt;/a>
+        &lt;/li>
+    &lt;/ul>
 
-                                        &lt;div class="tab-content boxed clearfix">
-                                            <div class="tab-pane fade in active" id="diagram">
-                                                <h6>Data Transfer</h6>
-                                                <div id="donutchart" class="donutchart"></div>
-                                                <ul class="stats-data clearfix">
-                                                    <li>
-                                                        <a href="#"><span>audio</span><strong>55%</strong></a>
-                                                    </li>
-                                                    <li class="red">
-                                                        <a href="#"><span>video</span><strong>23%</strong></a>
-                                                    </li>
-                                                    <li class="yellow">
-                                                        <a href="#"><span>photo</span><strong>17%</strong></a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="stats-links clearfix">
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="stats-icon stats-icon1"></i>
-                                                            <br />
-                                                            <span>upload files</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="stats-icon stats-icon2"></i>
-                                                            <br />
-                                                            <span>share link</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="stats-icon stats-icon3"></i>
-                                                            <br />
-                                                            <span>back up</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="tab-pane fade" id="month">
-                                                <h6>Data chart</h6>
-                                                <div id="columnchart" class="columnchart"></div>
-                                                <ul class="stats-data clearfix">
-                                                    <li>
-                                                        <a href="#"><span>audio</span><strong>50%</strong></a>
-                                                    </li>
-                                                    <li class="red">
-                                                        <a href="#"><span>video</span><strong>26%</strong></a>
-                                                    </li>
-                                                    <li class="yellow">
-                                                        <a href="#"><span>photo</span><strong>18%</strong></a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="stats-links clearfix">
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="stats-icon stats-icon1"></i>
-                                                            <br />
-                                                            <span>upload files</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="stats-icon stats-icon2"></i>
-                                                            <br />
-                                                            <span>share link</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <i class="stats-icon stats-icon3"></i>
-                                                            <br />
-                                                            <span>back up</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        &lt;/div>
-                                    &lt;/div>
+    &lt;div class="tab-content boxed clearfix">
+        &lt;div class="tab-pane fade in active" id="diagram">
+            &lt;h6>Data Transfer&lt;/h6>
+            &lt;div id="donutchart" class="donutchart">&lt;/div>
+            &lt;ul class="stats-data clearfix">
+                &lt;li>
+                    &lt;a href="#">&lt;span>audio&lt;/span>&lt;strong>55%&lt;/strong>&lt;/a>
+                &lt;/li>
+                &lt;li class="red">
+                    &lt;a href="#">&lt;span>video&lt;/span>&lt;strong>23%&lt;/strong>&lt;/a>
+                &lt;/li>
+                &lt;li class="yellow">
+                    &lt;a href="#">&lt;span>photo&lt;/span>&lt;strong>17%&lt;/strong>&lt;/a>
+                &lt;/li>
+            &lt;/ul>
+            &lt;ul class="stats-links clearfix">
+                &lt;li>
+                    &lt;a href="#">
+                        &lt;i class="stats-icon stats-icon1">&lt;/i>
+                        &lt;br />
+                        &lt;span>upload files&lt;/span>
+                    &lt;/a>
+                &lt;/li>
+                &lt;li>
+                    &lt;a href="#">
+                        &lt;i class="stats-icon stats-icon2">&lt;/i>
+                        &lt;br />
+                        &lt;span>share link&lt;/span>
+                    &lt;/a>
+                &lt;/li>
+                &lt;li>
+                    &lt;a href="#">
+                        &lt;i class="stats-icon stats-icon3">&lt;/i>
+                        &lt;br />
+                        &lt;span>back up&lt;/span>
+                    &lt;/a>
+                &lt;/li>
+            &lt;/ul>
+        &lt;/div>
+        &lt;div class="tab-pane fade" id="month">
+            &lt;h6>Data chart&lt;/h6>
+            &lt;div id="columnchart" class="columnchart">&lt;/div>
+            &lt;ul class="stats-data clearfix">
+                &lt;li>
+                    &lt;a href="#">&lt;span>audio&lt;/span>&lt;strong>50%&lt;/strong>&lt;/a>
+                &lt;/li>
+                &lt;li class="red">
+                    &lt;a href="#">&lt;span>video&lt;/span>&lt;strong>26%&lt;/strong>&lt;/a>
+                &lt;/li>
+                &lt;li class="yellow">
+                    &lt;a href="#">&lt;span>photo&lt;/span>&lt;strong>18%&lt;/strong>&lt;/a>
+                &lt;/li>
+            &lt;/ul>
+            &lt;ul class="stats-links clearfix">
+                &lt;li>
+                    &lt;a href="#">
+                        &lt;i class="stats-icon stats-icon1">&lt;/i>
+                        &lt;br />
+                        &lt;span>upload files&lt;/span>
+                    &lt;/a>
+                &lt;/li>
+                &lt;li>
+                    &lt;a href="#">
+                        &lt;i class="stats-icon stats-icon2">&lt;/i>
+                        &lt;br />
+                        &lt;span>share link&lt;/span>
+                    &lt;/a>
+                &lt;/li>
+                &lt;li>
+                    &lt;a href="#">
+                        &lt;i class="stats-icon stats-icon3">&lt;/i>
+                        &lt;br />
+                        &lt;span>back up&lt;/span>
+                    &lt;/a>
+                &lt;/li>
+            &lt;/ul>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
                                 </pre>
 
                                 <div class="fire-js">Enable Google Charts via JS:</div>
 
-                                <pre class="brush: js">
-                                    &lt;script type="text/javascript">
-                                        google.load("visualization", "1", {packages:["corechart"]});
-                                        google.setOnLoadCallback(drawChart);
-                                        function drawChart() {
-                                            var data = google.visualization.arrayToDataTable([
-                                                ['Media', 'GB'],
-                                                ['Audio', 1100],
-                                                ['Video', 460],
-                                                ['Photo', 340],
-                                                ['Other', 100]
-                                            ]);
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Media', 'GB'],
+            ['Audio', 1100],
+            ['Video', 460],
+            ['Photo', 340],
+            ['Other', 100]
+        ]);
 
-                                            var options = {
-                                                pieHole: 0.4,
-                                                legend: 'none',
-                                                pieSliceText: 'none',
-                                                width: 220,
-                                                height: 220,
-                                                slices: {0: {color: '#4daf7b'}, 1: {color: '#e6623d'}, 2: {color: '#ebc85e'}, 3: {color: '#f4ede7'}},
-                                                chartArea:{left:"10px", top:"10px", width:"92%", height:"92%"}
-                                            };
+        var options = {
+            pieHole: 0.4,
+            legend: 'none',
+            pieSliceText: 'none',
+            width: 220,
+            height: 220,
+            slices: {0: {color: '#4daf7b'}, 1: {color: '#e6623d'}, 2: {color: '#ebc85e'}, 3: {color: '#f4ede7'}},
+            chartArea:{left:"10px", top:"10px", width:"92%", height:"92%"}
+        };
 
-                                            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-                                            chart.draw(data, options);
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
 
-                                            var data2 = google.visualization.arrayToDataTable([
-                                                ['Month', 'Traffic'],
-                                                ['June',  1100],
-                                                ['July',  1580],
-                                                ['August',  1300],
-                                                ['September',  1430]
-                                            ]);
+        var data2 = google.visualization.arrayToDataTable([
+            ['Month', 'Traffic'],
+            ['June',  1100],
+            ['July',  1580],
+            ['August',  1300],
+            ['September',  1430]
+        ]);
 
-                                            var options2 = {
-                                                width: 220,
-                                                height: 220,
-                                                legend: 'none',
-                                                colors: ['#4daf7b'],
-                                                chartArea:{left:0, top:0, width:"100%", height:"100%"},
-                                                hAxis:{textPosition:"none", gridlines:{color:"#fff"}, baselineColor:"#4daf7b"},
-                                                vAxis:{textPosition:"none", gridlines:{color:"#fff"}, baselineColor:"#4daf7b"}
-                                            };
+        var options2 = {
+            width: 220,
+            height: 220,
+            legend: 'none',
+            colors: ['#4daf7b'],
+            chartArea:{left:0, top:0, width:"100%", height:"100%"},
+            hAxis:{textPosition:"none", gridlines:{color:"#fff"}, baselineColor:"#4daf7b"},
+            vAxis:{textPosition:"none", gridlines:{color:"#fff"}, baselineColor:"#4daf7b"}
+        };
 
-                                            var chart2 = new google.visualization.ColumnChart(document.getElementById('columnchart'));
-                                            chart2.draw(data2, options2);
-                                        }
-                                    &lt;/script>
+        var chart2 = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+        chart2.draw(data2, options2);
+    }
+&lt;/script>
                                 </pre>
                             </div>
                         </div>

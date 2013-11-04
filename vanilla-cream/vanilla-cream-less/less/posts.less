@@ -1,0 +1,53 @@
+/*-----------------------------------*/
+/* Post Items */
+/*-----------------------------------*/
+
+/*
+- Post Items
+    - Post Images
+*/
+
+
+
+/* Post Images */
+
+.carousel-inner {
+  height: 300px;
+  .border-radius(@border-radius * 0.625);
+}
+.carousel-inner > .item {
+  height: 300px;
+  overflow:hidden;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: auto;
+  max-width: none;
+}
+.carousel-control {
+  position: absolute;
+  top: 143px;
+  left: -25px;
+  width: 9px;
+  height: 16px;
+  margin-top: 0;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  opacity: 1;
+}
+.carousel-control.left,
+.carousel-control.right{
+  background-image:url(images/post_image_controls.png);
+  background-position: -70px 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  filter:none;
+}
+.carousel-control.right {
+  right: -25px;
+  left: auto;
+  background-position: -70px -16px;
+}
+.carousel-indicators {display: none;}

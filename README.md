@@ -1,3 +1,15 @@
+## Vanilla Cream
+
+![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/05/The-Basics.jpg)
+
+To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/vanilla-cream/> The complete Bootstrap UI kit that contains tons of additional elements spread across 6 categories is available on PixelKit.com <http://pixelkit.com/kits/light-ui-kit/>
+
+## Links
+
++ [Demo page](http://pixelkit.com/free-ui-kits/vanilla-cream/)
++ [Documentation page](http://pixelkit.com/free-ui-kits/vanilla-cream/docs/)
++ [Premium Version of this UI Kit](http://pixelkit.com/kits/light-ui-kit/)
+
 ## Metro Vibes
 
 ![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/10/metro-vibes.jpg)
@@ -7,7 +19,7 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 ## Links
 
 + [Demo page](http://pixelkit.com/free-ui-kits/metro-vibes/)
-+ [Documentation page](http://pixelkit.com/free-ui-kits/metro-vibes/docs)
++ [Documentation page](http://pixelkit.com/free-ui-kits/metro-vibes/docs/)
 + [Premium Version of this UI Kit](http://pixelkit.com/kits/metro-ui-kit/)
 
 ## Modern Touch
@@ -24,6 +36,7 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 
 ## Changelog
 
++ 1.2 Added new kit Vanilla Cream.
 + 1.1 Added new kit Metro Vibes.
 + 1.0 First Release.
  

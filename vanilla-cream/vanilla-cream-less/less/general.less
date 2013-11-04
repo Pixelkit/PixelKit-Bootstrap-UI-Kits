@@ -1,0 +1,149 @@
+/*
+  - General Styles
+  - Clear Floats
+  - Boxes
+  - Header (Kit Name)
+  - Layout on Index Page
+*/
+
+
+
+/*-----------------------------------*/
+/* General Styles */
+/*-----------------------------------*/
+
+body {
+  font-family: @font-family;
+  font-weight: 400;
+  color:#605647;
+  font-size: @font-size;
+  position:relative;
+  background: url(images/bg.jpg) center top repeat;
+}
+::-moz-selection {
+  background: #aba98c;
+  color: #000;
+  text-shadow: none;
+}
+::selection {
+  background: #aba98c;
+  color: #333;
+  text-shadow: none;
+}
+a:hover,
+a:focus {
+  color: @link-color-hover;
+  text-decoration: none;
+}
+a:active{background-color: transparent;}
+
+input, textarea, input[type="submit"]:focus, div {
+  outline: 0 none;
+  font-family: @font-family;
+}
+button, input, select, textarea {vertical-align: top; margin: 0;}
+
+.alpha{margin-left:0 !important;}
+.omega{margin-right:0 !important;}
+
+/*-----------------------------------*/
+/* Clear Floats */
+/*-----------------------------------*/
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*-----------------------------------*/
+/* Boxes */
+/*-----------------------------------*/
+
+.content, .sidebar{padding-top: 20px; padding-bottom: 30px;}
+#middle{position: relative; z-index: 0;}
+#middle.sidebar_left > .container > .row > .col-sm-8{float:right;}
+
+.boxed {
+  background: rgb(253,253,251);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmRmYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZjhmNmYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjJlYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top,  rgba(253,253,251,1) 0%, rgba(248,246,241,1) 1%, rgba(245,242,235,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(253,253,251,1)), color-stop(1%,rgba(248,246,241,1)), color-stop(100%,rgba(245,242,235,1)));
+  background: -webkit-linear-gradient(top,  rgba(253,253,251,1) 0%,rgba(248,246,241,1) 1%,rgba(245,242,235,1) 100%);
+  background: -o-linear-gradient(top,  rgba(253,253,251,1) 0%,rgba(248,246,241,1) 1%,rgba(245,242,235,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(253,253,251,1) 0%,rgba(248,246,241,1) 1%,rgba(245,242,235,1) 100%);
+  background: linear-gradient(to bottom,  rgba(253,253,251,1) 0%,rgba(248,246,241,1) 1%,rgba(245,242,235,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfb', endColorstr='#f5f2eb',GradientType=0 );
+  .border-radius(@border-radius);
+  -webkit-box-shadow: 1px 3px 5px #B5ADA2;
+  -moz-box-shadow: 1px 3px 5px #B5ADA2;
+  box-shadow: 1px 3px 5px #B5ADA2;
+  margin-bottom:50px;
+  position: relative;
+  z-index: 0;
+}
+.boxed.boxed-cream {
+  border-top: 1px solid #f6f6f6;
+  background: rgb(244,241,235);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjFlYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZWRlOWUwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U0ZGZkMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  background: -moz-linear-gradient(top,  rgba(244,241,235,1) 0%, rgba(237,233,224,1) 1%, rgba(228,223,210,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,241,235,1)), color-stop(1%,rgba(237,233,224,1)), color-stop(100%,rgba(228,223,210,1)));
+  background: -webkit-linear-gradient(top,  rgba(244,241,235,1) 0%,rgba(237,233,224,1) 1%,rgba(228,223,210,1) 100%);
+  background: -o-linear-gradient(top,  rgba(244,241,235,1) 0%,rgba(237,233,224,1) 1%,rgba(228,223,210,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(244,241,235,1) 0%,rgba(237,233,224,1) 1%,rgba(228,223,210,1) 100%);
+  background: linear-gradient(to bottom,  rgba(244,241,235,1) 0%,rgba(237,233,224,1) 1%,rgba(228,223,210,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f1eb', endColorstr='#e4dfd2',GradientType=0 );
+}
+
+/*-----------------------------------*/
+/* Header (Kit Name) */
+/*-----------------------------------*/
+
+.pixelkit-header{padding: 50px 0 5px;}
+
+.pixelkit-header h1, .pixelkit-header h2{
+  text-align: center;
+  font-size: @font-size * 3.24;
+  margin-bottom: 2px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:#F6F2E4;
+  text-shadow: 0 2px 3px rgba(175,169,160,0.75);
+}
+.pixelkit-header h2{font-size: @font-size * 1.54;}
+
+/*-------------------------------------------*/
+/* Layout on Index Page */
+/*-------------------------------------------*/
+
+.badges2{margin-bottom: 50px;}
+.badges2 .badge.style2 {margin-right: -6px;}
+.ribbons{background: url(images/ribbons-shadow.png) 4px 0 no-repeat; padding-top: 32px; margin-top: -32px;}
+.ribbons .ribbon{margin-bottom: 17px;}

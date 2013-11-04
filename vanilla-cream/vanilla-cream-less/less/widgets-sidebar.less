@@ -1,0 +1,84 @@
+/*-----------------------------------*/
+/* Sidebar widgets */
+/*-----------------------------------*/
+
+/*
+  - Widget Tags
+  - Widget Calendar
+*/
+
+
+
+.widget-container{margin-bottom: 30px;}
+.widget-container .widget-title{
+  font-size: @font-size * 1.54;
+  margin-bottom:13px;
+}
+
+/* Widget Tags */
+
+.widget_tag_cloud .inner{padding: 22px 25px 27px;}
+.widget_tag_cloud .widget-title {margin-bottom: 17px;}
+
+.tagcloud a{
+  display:inline-block;
+  font-size: @font-size - 1;
+  text-align: center;
+  white-space:nowrap;
+  background-image:url(images/tag.png);
+  background-repeat:no-repeat;
+  background-position:right -29px;
+  height: 29px;
+  line-height: 28px;
+  padding-right:16px;
+  color:#3e362b;
+  text-shadow:0 1px 0 #fff;
+  margin:5px 3px;
+}
+.tagcloud a:hover{color:#8D8569;}
+
+.tagcloud a span{
+  display:block;
+  background-image:url(images/tag.png);
+  background-repeat:no-repeat;
+  background-position:left 0;
+  padding-left:26px;
+  height: 29px;
+  line-height: 28px;
+}
+.tagcloud.style2 a{
+  background-position:right -87px;
+  font-size: @font-size - 2;
+  color:#436315;
+  text-shadow:1px 1px 1px rgba(255, 255, 255, 0.75);
+  margin:5px 0;
+  padding-right:20px;
+}
+.tagcloud.style2 a:hover{color:#8D8569;}
+
+.tagcloud.style2 a span{
+  background-position:left -58px;
+  line-height: 23px;
+  padding-left:27px;
+}
+
+.tagcloud.style3 a{
+  background-position:right -140px;
+  font-size: @font-size - 2;
+  color:#8d8273;
+  text-shadow:1px 1px 1px rgba(255, 255, 255, 0.75);
+  padding-right:20px;
+}
+.tagcloud.style3 a:hover{color:#8D8569;}
+
+.tagcloud.style3 a span{
+  background-position:left -116px;
+  line-height: 21px;
+  padding-left:27px;
+}
+
+/* Widget Calendar */
+
+.widget_calendar.boxed-cream{border-top: 0 none;}
+.widget_calendar .inner{padding: 0 15px 15px;}
+.ie8 #date_departure {display: none !important;}

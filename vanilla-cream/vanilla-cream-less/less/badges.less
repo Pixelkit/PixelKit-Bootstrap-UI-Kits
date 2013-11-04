@@ -1,0 +1,34 @@
+/*-----------------------------------*/
+/* Badges */
+/*-----------------------------------*/
+
+.badge:empty {display: inline-block;}
+
+.badge{
+  position: relative;
+  width:83px;
+  height:83px;
+  background-image:url(images/badges_text.png);
+  background-repeat: no-repeat;
+  background-position: 0 -83px;
+  padding: 0;
+  background-color: transparent;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius: 0;
+}
+.badge.badge-try{background-position:0 0;}
+.badge.badge-popular{background-position:-83px 0;}
+.badge.badge-discount{background-position:-166px 0;}
+.badge.badge-fresh{background-position:-83px -83px;}
+.badge.badge-sale{background-position:-166px -83px;}
+
+.badge.style2{
+  width:100px;
+  height:98px;
+  background-position: 0 -166px;
+}
+.badge.style2.badge-green{background-position:-100px -166px;}
+.badge.style2.badge-brown{background-position:-200px -166px;}
+
+.badges .badge.style2 {margin-right: -34px;}
