@@ -1,0 +1,55 @@
+.jslider .jslider-bg i,
+.jslider .jslider-pointer,
+.jslider .jslider-value{ background: url(images/jslider.png) no-repeat 0 0; }
+
+.jslider { display: block; width: 100%; height: 1em; position: relative; top: 0.6em;}
+.jslider table { width: 100%; border-collapse: collapse; border: 0; }
+.jslider td, .jslider th { padding: 0; vertical-align: top; text-align: left; border: 0; }
+
+.jslider table,
+.jslider table tr,
+.jslider table tr td { width: 100%; vertical-align: top; padding:0; margin:0}
+
+.jslider .jslider-bg { position: relative; }
+.jslider .jslider-bg i { height: 19px; position: absolute; font-size: 0; top: 0; }
+.jslider .jslider-bg .l { width: 50%; background-position: 0 0; left: 0; }
+.jslider .jslider-bg .r { width: 50%; left: 50%; background-position: right 0; }
+.jslider .jslider-bg .v { position: absolute; width: 60%; left: 20%; top: 4px; height: 13px; background-position: center -19px; }
+
+.jslider .jslider-pointer {width: 14px; height: 34px; background-position: 0 -32px; position: absolute; left: 0; top: -3px; margin-left: -4px; cursor: pointer; cursor: pointer; }
+.jslider .jslider-pointer-to { left: 80%; }
+
+.jslider .jslider-label { font-size: @font-size - 4; line-height: 12px; color:#333333; opacity: 0.8; white-space: nowrap; padding: 0 2px; position: absolute; top: -23px; left: 0; }
+.jslider .jslider-label-to { left: auto; right: 0; }
+
+.jslider .jslider-value {
+  font-size: @font-size - 4;
+  color:#8498a9;
+  line-height: 19px;
+  white-space: nowrap;
+  text-align: center;
+  width: 48px;
+  height: 26px;
+  position: absolute;
+  top: -36px;
+  left: 20%;
+  z-index: 1;
+  background-position: -14px -32px;
+  margin-left: -23px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.jslider .jslider-value-to { left: 80%; }
+
+.jslider .jslider-label small,
+.jslider .jslider-value small { position: relative; top: -0.4em; }
+
+.jslider .jslider-scale { position: relative; top: -14px; }
+.jslider .jslider-scale span { position: absolute; height: 4px; border-left: none; font-size: 0; }
+.jslider .jslider-scale span {margin-left: -27px;}
+.jslider .jslider-scale span:first-child {margin-left: 0;}
+.jslider .jslider-scale ins { font-size: @font-size - 3; text-decoration: none; position: absolute; left: 0; top: 0; color: #8498a9; text-shadow: 1px 1px 1px rgba(0,0,0,0.5); margin-left:-4px !important; }
+
+.jslider-single .jslider-pointer-to,
+.jslider-single .jslider-value-to,
+.jslider-single .jslider-bg .v,
+.jslider-limitless .jslider-label {	display: none; }

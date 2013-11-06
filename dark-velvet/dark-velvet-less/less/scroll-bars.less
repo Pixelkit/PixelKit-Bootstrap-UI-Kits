@@ -1,0 +1,134 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+
+.scrollbars{padding-top: 26px;}
+.scrollbars p{color: #13171d; color: rgba(37, 42, 48, 0);}
+.scrollbars p::selection{background: transparent; color: #13171d; color: rgba(37, 42, 48, 0);}
+
+.scrollbar {
+  width: 32px;
+  height: 180px;
+  overflow: auto;
+  float: left;
+  margin-right: 27px;
+  color:#e6e6e5;
+}
+.scrollbar.style2 {height: 182px;}
+
+.jspContainer{
+  overflow: hidden;
+  position: relative;
+}
+.jspPane{
+  position: absolute;
+}
+.jspVerticalBar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 100%;
+}
+.jspHorizontalBar{display: none;}
+
+.widget_categories .jspVerticalBar{right: 7px;}
+
+.jspCap{
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-image: url(images/scrollbar.png);
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.jspCap.jspCapTop{
+  background-position: 0 0;
+  top: 0;
+}
+
+.jspCap.jspCapBottom{
+  background-position: 0 -2px;
+  bottom: 0;
+}
+.widget_categories .jspCap{
+  width: 18px;
+  height: 3px;
+}
+.widget_categories .jspCap.jspCapTop, .post-audio .jspCap.jspCapTop{background-position: -54px 0; top: 0; right: 2px;}
+.widget_categories .jspCap.jspCapBottom, .post-audio .jspCap.jspCapBottom{background-position: -54px -3px; bottom: 0; right: 2px;}
+
+.jspHorizontalBar .jspCap{display: none;}
+
+.jspTrack{
+  background-image: url(images/scrollbar.png);
+  background-position: -18px 0;
+  background-repeat: repeat-y;
+  position: relative;
+  width:18px;
+}
+.widget_categories .jspTrack,
+.post-audio .jspTrack{
+  background-position: -72px 0;
+  width:18px;
+}
+.scrollbar.style2 .jspTrack{
+  background-position: -148px 0;
+  left: -5px;
+}
+.scrollbar.style2 .jspCap{
+  width: 18px;
+  height: 9px;
+}
+.scrollbar.style2 .jspCap.jspCapTop{background-position: -180px 0; left: -5px;}
+.scrollbar.style2 .jspCap.jspCapBottom{background-position: -180px -9px; left: -5px;}
+
+.scrollbar.style2 .jspProgress {
+  background: #121416;
+  position: absolute;
+  top: -2px;
+  left: 6px;
+  z-index: 1;
+  width: 4px;
+  height: 5px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.jspDrag{
+  background-image: url(images/scrollbar.png);
+  background-repeat: no-repeat;
+  background-position: -42px 0;
+  position: relative;
+  top: 0;
+  left: 6px;
+  z-index: 2;
+  cursor: pointer;
+  width: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+.widget_categories .jspDrag,
+.post-audio .jspDrag{
+  left: 3px;
+  -webkit-box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.scrollbar.style2 .jspDrag{
+  background-position: -114px 0;
+  width: 20px;
+  left: -2px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}

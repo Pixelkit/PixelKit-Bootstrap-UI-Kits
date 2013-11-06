@@ -1,0 +1,128 @@
+/*-----------------------------------*/
+/* Progress Bars */
+/*-----------------------------------*/
+
+.progressbar{
+  margin: 50px 9px 50px 0;
+  position: relative;
+}
+.progressbar .pbar::selection{background: transparent;}
+.progressbar .pbar{
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.progressbar .ui-widget-header{border: 0 none !important;}
+
+.progressbar span,
+.progressbar .elapsed,
+.progressbar .remained{
+  position: absolute;
+  top:-20px;
+  font-size: @font-size - 4;
+  color: #ababab;
+}
+.progressbar span.mark-left, .progressbar .remained{left:0;}
+.progressbar span.mark-right, .progressbar .elapsed{right: -8px;}
+
+.progressbar .percent,
+.progressbar .elapsed,
+.progressbar .remained{
+  display: none;
+}
+.progressbar.style2 .percent,
+.progressbar.style2 .mark-left,
+.progressbar.style2 .mark-right{
+  display: none;
+}
+.progressbar.style2 .elapsed,
+.progressbar.style2 .remained{
+  display: block;
+}
+
+.progressbar .ui-progressbar-value {
+  display: block !important;
+}
+.progressbar .ui-progressbar {
+  height: 10px;
+  overflow: visible !important;
+  position: relative;
+  z-index: 0;
+}
+.progressbar .ui-widget-content {
+  border: 0 none;
+  height: 15px;
+  padding: 4px 1px 0 4px;
+  background: url(images/progressbars.png);
+  position: relative;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.progressbar .ui-widget-content:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top:0;
+  right: -9px;
+  width: 9px;
+  height: 19px;
+  background: url(images/progressbars.png) right 0;
+}
+.progressbar .ui-progressbar .ui-progressbar-value {
+  margin: 0;
+  height: 13px;
+  position: relative;
+  background: url(images/progressbars.png) left -19px no-repeat;
+  min-width: 5px !important;
+  z-index: 2;
+}
+.progressbar .ui-progressbar .ui-progressbar-value:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top:-6px;
+  right:-16px;
+  z-index: 1;
+  width: 33px;
+  height: 33px;
+  background:url(images/progressbars.png) 0 -45px no-repeat;
+}
+
+/* Progress Bars style 2 */
+
+.progressbar.style2{z-index: 2;}
+
+.progressbar.style2 .ui-progressbar .ui-progressbar-value:after{
+  background:url(images/progressbars.png) right -19px no-repeat;
+  width: 6px;
+  height: 13px;
+  top:0;
+  right:-6px;
+}
+.progressbar.style2 .downloadbar{
+  position: absolute;
+  width: 100%;
+  height: 13px;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+.progressbar.style2 .downloadbar .ui-widget-content {
+  border: 0 none;
+  background: none;
+}
+.progressbar.style2 .downloadbar .ui-widget-content:after {background: none;}
+
+.progressbar.style2 .downloadbar .ui-progressbar .ui-progressbar-value {
+  position: relative;
+  background:url(images/progressbars.png) left -32px no-repeat;
+}
+.progressbar.style2 .downloadbar .ui-progressbar .ui-progressbar-value:after{
+  background:url(images/progressbars.png) right -32px no-repeat;
+  width: 5px;
+  height: 13px;
+  top:0;
+  right:-5px;
+}

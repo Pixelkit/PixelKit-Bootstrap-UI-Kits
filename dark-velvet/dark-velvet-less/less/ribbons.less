@@ -1,0 +1,31 @@
+/*-----------------------------------*/
+/* Ribbons */
+/*-----------------------------------*/
+
+.ribbon{
+  height:50px;
+  padding-right:30px;
+  display: inline-block;
+  background-image:url(images/ribbons.png);
+  background-repeat: no-repeat;
+  background-position: right -50px;
+}
+.ribbon span{
+  display:block;
+  height:50px;
+  min-width: 120px;
+  line-height: 36px;
+  padding-left:50px;
+  background-image:url(images/ribbons.png);
+  background-repeat: no-repeat;
+  background-position: left 0;
+  font-weight:700;
+  color:#fff;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.ribbon.ribbon-red span{background-position:left -100px;}
+.ribbon.ribbon-red{background-position:right -150px;}
+.ribbon.ribbon-blue span{background-position:left -200px;}
+.ribbon.ribbon-blue{background-position:right -250px;}

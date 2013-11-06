@@ -1,0 +1,172 @@
+/*-----------------------------------*/
+/* Buttons */
+/*-----------------------------------*/
+
+.buttons-wrap{margin-bottom: 50px;}
+.buttons .btn{margin-right:20px; margin-bottom:20px;}
+
+.btn:hover, .btn:focus {
+  -webkit-transition: background-position .0s linear;
+  -moz-transition: background-position .0s linear;
+  -o-transition: background-position .0s linear;
+  transition: background-position .0s linear;
+}
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+  background-color: transparent;
+}
+.btn.active, .btn:active,
+.btn.btn-black.active, .btn.btn-black:active,
+.btn.btn-large.active, .btn.btn-large:active,
+.btn.btn-small.active, .btn.btn-small:active,
+.btn.btn-follow.active, .btn.btn-follow:active{
+  background-image:url(images/buttons.png);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn{
+  display:inline-block;
+  background-image:url(images/buttons.png);
+  background-repeat:no-repeat;
+  background-color: transparent;
+  background-position:right -37px;
+  height: 37px;
+  line-height: 37px;
+  padding: 0;
+  padding-right:25px;
+  border: 0 none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-shadow: 0 15px 12px -16px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 15px 12px -16px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 15px 12px -16px rgba(0, 0, 0, 0.8);
+}
+.btn span,
+.btn input{
+  display:block;
+  background-image:url(images/buttons.png);
+  background-repeat:no-repeat;
+  background-position:left 0;
+  background-color: transparent;
+  padding: 0;
+  padding-left:25px;
+  line-height:37px;
+  height: 37px;
+  border:none;
+  outline:none;
+  text-transform: uppercase;
+  color: #fefae5;
+  text-shadow:0 1px 1px rgba(161,75,39,0.9);
+  font-weight: 600;
+}
+.btn.btn-black, .btn.btn-large{
+  box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.8);
+}
+.btn.btn-black span,
+.btn.btn-black input{
+  color: #7e888e;
+  text-shadow:0 1px 1px rgba(0,0,0,0.36);
+}
+.btn:hover, .btn:focus{
+  background-position:right -37px;
+  background-image:url(images/buttons.png);
+  background-color: transparent;
+  color: #fefae5;
+}
+.btn.btn-large{
+  height: 49px;
+  line-height: 47px;
+  padding-right:35px;
+}
+.btn.btn-large span,
+.btn.btn-large input{
+  font-size: @font-size + 1;
+  padding-left:35px;
+  height: 49px;
+  line-height: 47px;
+  color: #fff;
+}
+.btn.btn-small{
+  height: 31px;
+  line-height: 29px;
+  padding-right:17px;
+  -webkit-box-shadow: 4px 4px 6px -3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 4px 6px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 6px -3px rgba(0, 0, 0, 0.5);
+}
+.btn.btn-small span,
+.btn.btn-small input{
+  font-size: @font-size - 1;
+  padding-left:17px;
+  height: 31px;
+  line-height: 29px;
+}
+.btn.btn-follow{
+  height: 29px;
+  line-height: 29px;
+  padding-right:18px;
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.5);
+}
+.btn.btn-follow span,
+.btn.btn-follow input{
+  font-size: @font-size - 2;
+  padding-left:39px;
+  height: 29px;
+  line-height: 29px;
+  text-transform: none;
+  text-shadow: 0 1px 1px rgba(36,42,50,0.75);
+}
+.btn.btn-large.btn-black{
+  height: 45px;
+  line-height: 43px;
+  padding-right:40px;
+}
+.btn.btn-large.btn-black span,
+.btn.btn-large.btn-black input{
+  padding-left:40px;
+  height: 45px;
+  line-height: 43px;
+  color: #fff;
+  text-shadow:0 1px 1px rgba(188,83,39,0.75);
+}
+
+/* Button Shape */
+.btn.btn-black span, .btn.btn-black input{background-position:left -74px;}
+.btn.btn-black{background-position:right -111px;}
+
+.btn.btn-round span, .btn.btn-round input{background-position:left -518px;}
+.btn.btn-round{background-position:right -555px;}
+.btn.btn-round:hover span, .btn.btn-round:hover input, .btn.btn-round.hover span, .btn.btn-round.hover input{background-position:left -592px;}
+.btn.btn-round:hover, .btn.btn-round.hover{background-position:right -629px;}
+.btn.btn-round:active span, .btn.btn-round:active input, .btn.btn-round.active span, .btn.btn-round.active input{background-position:left -666px;}
+.btn.btn-round:active, .btn.btn-round.active{background-position:right -703px;}
+
+.btn.btn-left span, .btn.btn-left input{background-position:left -148px; padding-left: 28px;}
+.btn.btn-left{background-position:right -185px;}
+.btn.btn-right span, .btn.btn-right input{background-position:left -222px;}
+.btn.btn-right{background-position:right -259px; padding-right: 28px;}
+
+.btn.btn-acute span, .btn.btn-acute input{background-position:left -296px;}
+.btn.btn-acute{background-position:right -333px;}
+.btn.btn-left.btn-acute span, .btn.btn-left.btn-acute input{background-position:left -370px; padding-left: 28px;}
+.btn.btn-left.btn-acute{background-position:right -407px;}
+.btn.btn-right.btn-acute span, .btn.btn-right.btn-acute input{background-position:left -444px;}
+.btn.btn-right.btn-acute{background-position:right -481px; padding-right: 28px;}
+
+.btn.btn-large span, .btn.btn-large input{background-position:left -814px;}
+.btn.btn-large{background-position:right -863px;}
+.btn-large.btn-black span, .btn-large.btn-black input{background-position:left -912px;}
+.btn-large.btn-black{background-position:right -957px;}
+
+.btn.btn-small span, .btn.btn-small input{background-position:left -1002px;}
+.btn.btn-small{background-position:right -1033px;}
+
+.btn.btn-send span, .btn.btn-send input{background-position:left -740px; padding-left: 45px;}
+.btn.btn-send {background-position:right -777px; padding-right: 15px;}
+
+.btn.btn-follow span, .btn.btn-follow input{background-position:left -1064px;}
+.btn.btn-follow {background-position:right -1093px;}

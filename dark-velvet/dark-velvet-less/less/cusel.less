@@ -1,0 +1,208 @@
+/*
+	styles for select
+*/
+.cusel,
+.cusel .cusel-scroll-wrap,
+.cusel .jScrollPaneContainer,
+.cusel .cusel-scroll-pane {
+	width: 100% !important;
+}
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+  background-image:url(images/selects1.png);
+  background-repeat:  no-repeat;
+}
+.cusel {
+  width: 100% !important;
+  height: 39px;
+  background-position: left top;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+.cuselFrameRight {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 32px;
+  background-position: 0 0;
+}
+.cusel:hover .cuselFrameRight, .cuselFocus .cuselFrameRight {
+  background-position: -50px 0;
+}
+.cuselText {
+  height: 34px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height:37px;
+  text-shadow:none;
+  color:#b8c0c8;
+  font-size: @font-size - 2;
+}
+.cusel span {
+  display: block;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 11px 20px 11px 18px;
+  zoom: 1;
+  position: relative;
+  font-size: @font-size - 1;
+  color: #b8c0c8;
+  text-shadow: 1px 1px 1px rgba(45,51,58,0.43);
+  background: url(images/cusel-bg-1.png) left top repeat-x;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width:479px){
+	.cusel span {
+		font-size:12px; 
+		font-weight:400; 
+		text-transform:none;
+		padding-left:10px;
+		padding-right:5px;
+	}
+}
+
+.cusel span:hover,
+.cusel span.cuselActive{
+  color: #aeb5bd;
+  background: url(images/cusel-bg-2.png) left top repeat-x;
+}
+.cusel span.cuselActive {cursor: default;}
+
+.cuselOpen {z-index: 999;}
+
+/* 	styles for scrollbar */
+.cusel .cusel-scroll-wrap {
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  min-width: 100%;
+  width: auto;
+  z-index:200;
+  text-align:left;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.cusel .jScrollPaneContainer {
+  position: relative;
+  overflow: hidden;
+  .border-radius-bottom(@border-radius-input);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  background: #464D56;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.cusel .jScrollPaneTrack {
+  height: 100%;
+  width: 7px !important;
+  background: #999;
+  position: absolute;
+  top: 0;
+  right: 4px;
+}
+.cusel .jScrollPaneDrag {
+  position: absolute;
+  background-position: -40px -38px;
+  cursor: pointer;
+  width: 15px !important;
+  height: 27px !important;
+  right: -4px;
+}
+
+.cusel .jScrollPaneDragTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.cusel .jScrollArrowUp {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  width: 13px !important;
+  height: 12px;
+  cursor: pointer;
+  background-position: 0 -34px;
+  background-color:#595959;
+  overflow: hidden;
+}
+.cusel .jScrollArrowDown {
+  width: 13px !important;
+  height: 12px;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  right: 1px;
+  cursor: pointer;
+  background-position: -13px -34px;
+  background-color:#595959;
+  overflow: hidden;
+}
+
+
+/* 	Select Orange */
+
+.select_styled_orange.cusel,
+.select_styled_orange .cuselFrameRight{
+  background-image:url(images/selects2.png);
+  background-repeat:  no-repeat;
+}
+.select_styled_orange.cusel{
+  background-position: 0 0;
+  height: 37px;
+  border: 0 none;
+  -webkit-box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 10px -3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+}
+.select_styled_orange.cusel:hover, .select_styled_orange.cusel.cuselFocus{background-position: 0 -37px;}
+
+.select_styled_orange .cuselFrameRight {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 40px;
+  background-position: right -74px;
+}
+.select_styled_orange.cusel:hover .cuselFrameRight, .select_styled_orange.cuselFocus .cuselFrameRight {
+  background-position: right -111px;
+}
+.select_styled_orange .cuselText {
+  height: 40px;
+  line-height:38px;
+  text-shadow:0 1px 1px rgba(138,27,15,0.41);
+  color:#fff;
+  font-size: @font-size - 1;
+}
+.select_styled_orange.cusel span {color:#d3d4d5;}
+
+.select_styled_orange.cusel span.first{border-top: 0 none;}
+
+.select_styled_orange.cusel .cusel-scroll-wrap {left:0;}
+
+.select_styled_orange.cusel .jScrollPaneContainer {
+  position: relative;
+  overflow: hidden;
+  border-top: 0 none;
+}

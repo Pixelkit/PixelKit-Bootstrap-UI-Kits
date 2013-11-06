@@ -1,0 +1,32 @@
+/*-----------------------------------*/
+/* Custom checkboxes, radios */
+/*-----------------------------------*/
+
+.custom-checkbox,.custom-radio {position:relative;}
+.custom-checkbox label::selection, .custom-radio label::selection {background: transparent; color: inherit;}
+
+/* input, label positioning */
+.custom-checkbox input, .custom-radio input {position:absolute; left:0; top:0; margin:0; border:none; width:0; height:0; display: none;}
+.custom-checkbox input {left:6px; top:7px}
+.ie8 .custom-checkbox input, .ie8 .custom-radio input {display:block;}
+
+.custom-checkbox label, .custom-radio label {display:block; position:relative; height:26px; line-height:26px; padding-left:36px; margin-bottom:8px; cursor:pointer; color:#b8c0c8;}
+.custom-radio label {height:28px; line-height:28px; margin-bottom:4px;}
+
+.custom-checkbox label img,
+.custom-radio label img {
+  vertical-align: middle;
+  top:-5px;
+  position:relative;
+}
+/* states */
+.custom-checkbox label {background:url(images/styled_checkbox.png) no-repeat;}
+.custom-radio label {background:url(images/styled_radiobutton.png) no-repeat;}
+.custom-checkbox label, .custom-radio label {background-position:0 0;}
+.custom-checkbox label.checked, .custom-radio label.checked {background-position:0 -100px;}
+.checkbox-red .custom-checkbox label.checked, .radio-red .custom-radio label.checked {background-position:0 -200px;}
+.custom-checkbox label.focus, .custom-radio label.focus {outline:0;}
+
+.checkbox-large .custom-checkbox label {background:url(images/styled_checkbox_large.png) no-repeat; height: 34px; line-height: 24px; padding-left:95px;}
+.checkbox-large .custom-checkbox label {background-position:0 0;}
+.checkbox-large .custom-checkbox label.checked {background-position:0 -100px;}

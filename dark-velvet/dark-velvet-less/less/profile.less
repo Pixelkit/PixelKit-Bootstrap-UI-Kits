@@ -1,0 +1,88 @@
+/*-----------------------------------*/
+/* Profile */
+/*-----------------------------------*/
+
+.widget_profile .inner{padding:0;}
+.widget_profile_top{padding: 16px 10px 10px 20px;}
+
+.widget_profile .avatar{
+  width: 80px;
+  height: 80px;
+  .border-radius(@border-radius);
+  overflow: hidden;
+  border:2px solid #293038;
+  float: left;
+  margin-right: 12px;
+}
+.widget_profile .avatar img{
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  .border-radius(@border-radius);
+}
+.widget_profile h5{
+  font-size: @font-size * 1.29;
+  color: #d3d4d5;
+  margin-bottom: 0;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.45);
+}
+.widget_profile .subtitle{
+  display: block;
+  margin-bottom: 16px;
+  font-size: @font-size - 1;
+  color: #cc7b4c;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.45);
+}
+
+.widget_profile .counters{
+  background: url(images/profile-bg.png) repeat-x;
+  .border-radius-bottom(@border-radius);
+  padding-top: 1px;
+}
+.widget_profile .counters li{
+  float: left;
+  width: 33.33%;
+}
+.widget_profile .counters a{
+  display: block;
+  border-bottom: 1px solid transparent;
+  border-left:1px solid #3d444b;
+  border-right:1px solid #1c2026;
+  padding: 20px 3px 18px;
+}
+.widget_profile .counters li.first a{
+  -webkit-border-radius: 0 0 0 @border-radius - 1;
+  -moz-border-radius: 0 0 0 @border-radius - 1;
+  border-radius: 0 0 0 @border-radius - 1;
+  border-left: 0 none;
+}
+.widget_profile .counters li.last a{
+  -webkit-border-radius: 0 0 @border-radius - 1 0;
+  -moz-border-radius: 0 0 @border-radius - 1 0;
+  border-radius: 0 0 @border-radius - 1 0;
+  border-right: 0 none;
+}
+.widget_profile .counters a p{
+  font-size: @font-size * 1.72;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #d3d4d5;
+  margin-bottom: 6px;
+}
+.widget_profile .counters a span{
+  display: block;
+  font-size: @font-size - 4;
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #7b8e9f;
+}
+.widget_profile .counters a:hover{
+  background: rgba(122, 132, 148, 0.26);
+  border-bottom: 1px solid #526072;
+}
+.widget_profile .counters a:hover p,
+.widget_profile .counters a:hover span{
+  color: #fff;
+}

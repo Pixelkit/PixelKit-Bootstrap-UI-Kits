@@ -1,0 +1,2949 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dark Velvet | Documentation</title>
+ 
+<!-- main JS libs -->
+<script src="../dark-velvet-css/js/libs/modernizr.min.js"></script>
+<script src="../dark-velvet-css/js/libs/jquery-1.10.0.js"></script>
+<script src="../dark-velvet-css/js/libs/jquery-ui.min.js"></script>
+<script src="../dark-velvet-css/js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="../dark-velvet-css/css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="../dark-velvet-css/style.css" media="screen" rel="stylesheet">
+<link href="css/docs.css" media="screen" rel="stylesheet">
+
+<!-- scripts -->
+<script src="../dark-velvet-css/js/general.js"></script>
+<script src="js/general.js"></script>
+
+<!-- datepicker -->
+<link href="../dark-velvet-css/css/jquery-ui-1.8.20.custom.css" rel="stylesheet">
+
+<!-- custom input -->
+<script src="../dark-velvet-css/js/jquery.customInput.js"></script>
+<script type="text/javascript" src="../dark-velvet-css/js/custom.js"></script>
+
+<!-- Placeholders -->
+<script type="text/javascript" src="../dark-velvet-css/js/jquery.powerful-placeholder.min.js"></script>
+
+<!-- styled select -->
+<link rel="stylesheet" href="../dark-velvet-css/css/cusel.css">
+<script src="../dark-velvet-css/js/cusel-min.js"></script>
+
+<!-- Multiselect -->
+<link rel="stylesheet" href="../dark-velvet-css/css/chosen.css">
+<script src="../dark-velvet-css/js/jquery.chosen.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#contact_name').chosen({ width: "100%" });
+    });
+</script>
+    
+<!-- Scroll Bars -->
+<script src="../dark-velvet-css/js/jquery.mousewheel.js"></script>
+<script src="../dark-velvet-css/js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+    // ScrollBars
+    jQuery(function()
+    {
+        jQuery('.scrollbar').jScrollPane({
+            verticalDragMaxHeight: 39,
+            verticalDragMinHeight: 39
+        });
+
+        jQuery('.scrollbar.style2').jScrollPane({
+            verticalDragMaxHeight: 36,
+            verticalDragMinHeight: 36
+        });
+
+    });
+
+    // Categories ScrollBar
+    jQuery(function()
+    {
+        jQuery('.widget_categories ul').jScrollPane({
+            verticalDragMaxHeight: 39,
+            verticalDragMinHeight: 39
+        });
+        $(window).resize(function() {
+            jQuery('.widget_categories ul').jScrollPane({
+                verticalDragMaxHeight: 39,
+                verticalDragMinHeight: 39
+            });
+        });
+    });
+</script>
+
+<!-- Progress Bars -->
+<script src="../dark-velvet-css/js/progressbar.js"></script>
+
+<!-- range sliders -->
+<script src="../dark-velvet-css/js/jquery.slider.bundle.js"></script>
+<script src="../dark-velvet-css/js/jquery.slider.js"></script>
+<link rel="stylesheet" href="../dark-velvet-css/css/jslider.css">
+
+<!-- Volume, Balance -->
+<script type="text/javascript" src="../dark-velvet-css/js/knobRot-0.2.2.js"></script>
+
+<!-- Video Player -->
+<link href="../dark-velvet-css/css/video-js.css" rel="stylesheet">
+<script src="../dark-velvet-css/js/video.js"></script>
+
+<!-- Audio Player -->
+<link href="../dark-velvet-css/css/jplayer.css" rel="stylesheet">
+<script src="../dark-velvet-css/js/jquery.jplayer.min.js"></script>
+<script src="../dark-velvet-css/js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"<img src='../dark-velvet-css/images/temp/music-player1.png' alt='' /><ul><li class='item-artist'><span>01.</span>Rudimental</li><li class='item-song'>Waiting All Night (feat. Ella Eyre)</li><li class='item-album'>Folllow Your Heart | 2013</li></ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"<img src='../dark-velvet-css/images/temp/music-player2.png' alt='' /><ul><li class='item-artist'><span>02.</span>Daft Punk</li><li class='item-song'>Get Lucky (ft. Pharell Williams)</li><li class='item-album'>Tron Legacy | 2013</li></ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<img src='../dark-velvet-css/images/temp/music-player3.png' alt='' /><ul><li class='item-artist'><span>03.</span>Justin Timberlake</li><li class='item-song'>Mirrors</li><li class='item-album'>20/20 Experience | 2013</li></ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+</script>
+
+<!-- Calendar -->
+<script src="../dark-velvet-css/js/jquery-ui.multidatespicker.js"></script>
+
+<!-- Visual Text Editor -->
+<script src="../dark-velvet-css/js/nicEdit.js"></script>
+    
+<!-- Graph Builder -->
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../dark-velvet-css/js/excanvas.min.js"></script><![endif]-->
+<script type="text/javascript" src="../dark-velvet-css/js/jquery.flot.js"></script>
+<script type="text/javascript" src="../dark-velvet-css/js/jquery.flot.resize.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var graphwidth = $('.widget_graph .inner').width();
+        $('.widget_graph .graph').css('height', parseInt(graphwidth/1.7));
+        $(window).resize(function() {
+            graphwidth = $('.widget_graph .inner').width();
+            $('.widget_graph .graph').css('height', parseInt(graphwidth/1.7));
+        });
+
+        var d1 = [[0, 9], [1, 23], [1.8, 7], [2.2, 24], [2.8, 18], [4, 36]];
+        var graphholder = $("#graph");
+        var plot = $.plot(graphholder, [d1], {
+            colors: ["#c06030", "#afd8f8", "#cb4b4b", "#4da74d", "#9440ed"],
+            xaxis: {
+                min: null,
+                max: null
+            },
+            yaxis: {
+                autoscaleMargin: 0.02
+            },
+            series: {
+                lines: {
+                    show: true,
+                    lineWidth: 5,
+                    fill: true,
+                    fillColor: "rgba(69,144,161,0.1)"
+                },
+                points: {
+                    show: true,
+                    radius: 5,
+                    lineWidth: 3,
+                    fillColor: "#f3d4a4"
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true,
+                margin: 12,
+                color: "#79889a",
+                borderColor: "#79889a"
+            }
+        });
+
+        function showTooltip(x, y, contents) {
+            $("<div id='graph-tooltip'>" + contents + "</div>").css({top: y - 40, left: x - 22}).appendTo("body").fadeIn(200);
+        };
+
+        var previousPoint = null;
+        $("#graph").bind("plothover", function (event, pos, item) {
+
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+
+                    previousPoint = item.dataIndex;
+
+                    $("#graph-tooltip").remove();
+                    var x = item.datapoint[0].toFixed(2),
+                            y = item.datapoint[1].toFixed(2);
+
+                    showTooltip(item.pageX, item.pageY, '$' + y*100);
+                }
+            } else {
+                $("#graph-tooltip").remove();
+                previousPoint = null;
+            }
+        });
+    });
+</script>
+
+<!-- SyntaxHighlighter -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<link href="css/prettify.css" rel="stylesheet">
+
+<!--[if lt IE 9]><script src="../dark-velvet-css/js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div class="body_wrap">
+
+    <header class="header-demo">
+        <div class="inner gradient">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="logo"><img src="images/logo.png" alt="" /></div>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <h1>Dark Velvet UI Kit</h1>
+                        <span>Version: 1.0</span>
+                        <span>Last update: 04.11.2013</span>
+                    </div>
+                </div>
+                <!--/ row-->
+            </div>
+            <!--/ container -->
+        </div>
+    </header>
+
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="sidebar-demo hidden-print" role="complementary" data-spy="affix" data-offset-top="200">
+                    <ul class="nav">
+						<li><a href="#about">What is Dark Velvet</a></li>
+						<li><a href="#what-included">What is included</a></li>
+						<li><a href="#browser">Browser support</a></li>
+						<li><a href="#getting-started">Getting Started</a></li>
+						<li><a href="#template">Basic Template</a></li>
+						<li><a href="#typography">Typography</a></li>
+                        <li>
+                            <a href="#buttons">Components</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#buttons">Buttons</a>
+                                    <ul class="nav">
+                                        <li><a href="#buttons-simple">Simple Buttons</a></li>
+                                        <li><a href="#buttons-hovered">Hovered Button</a></li>
+                                        <li><a href="#buttons-shaped">Shaped Buttons</a></li>
+                                        <li><a href="#buttons-special">Special Buttons</a></li>
+                                        <li><a href="#buttons-input">Buttoned Input</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#ribbons">Ribbons</a></li>
+                                <li><a href="#badges">Badges</a></li>
+                                <li><a href="#rating-stars">Rating Stars</a></li>
+                                <li>
+                                    <a href="#form">Form Elements</a>
+                                    <ul class="nav">
+                                        <li><a href="#form-checkboxes">Checkboxes</a></li>
+                                        <li><a href="#form-radios">Radio Buttons</a></li>
+                                        <li><a href="#form-inputs">Text Inputs</a></li>
+                                        <li><a href="#form-textarea">Textareas</a></li>
+                                        <li><a href="#form-select">Selects</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#scroll-bars">Scroll Bars</a></li>
+                                <li><a href="#progress-bars">Progress bars</a></li>
+                                <li><a href="#range-slider">Range Slider</a></li>
+                                <li><a href="#knobs">Volume Knob</a></li>
+                                <li><a href="#navigation">Navigation</a></li>
+                                <li><a href="#tabs">Tabs</a></li>
+                                <li><a href="#dividers">Dividers</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#forms">Widgets</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#forms">Forms</a>
+                                    <ul class="nav">
+                                        <li><a href="#forms-contact">Contact Form</a></li>
+                                        <li><a href="#forms-search">Search Form</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#pricing">Pricing</a>
+                                    <ul class="nav">
+                                        <li><a href="#pricing-def">Default style</a></li>
+                                        <li><a href="#pricing-alt">Alternative style</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#content-box">Content Box</a></li>
+                                <li><a href="#message-field">Message Field</a></li>
+                                <li><a href="#video-player">Video Player</a></li>
+                                <li><a href="#audio-player">Audio Player</a></li>
+                                <li>
+                                    <a href="#sliders">Sliders</a>
+                                    <ul class="nav">
+                                        <li><a href="#sliders-image">Image Slider</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#widget-calendar">Calendar</a></li>
+                                <li><a href="#user-profile">User Profile</a></li>
+                                <li><a href="#flot-graph">Graph</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <!-- content -->
+                <div class="content-demo" role="main">
+
+                    <!-- What is this -->
+                    <div class="section-demo">
+                        <h2 id="about">What is Dark Velvet UI Kit</h2>
+
+                        <div class="description">
+                            <p><a href="http://pixelkit.com/previews/dark-ui-kit/" target="_blank">Dark Velvet UI Kit</a> is a number of useful user interface components built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework. We did not modify any line of Bootstrap, so you can safely use Dark Velvet UI Kit in your ongoing project.</p>
+                        </div>
+
+                    </div>
+                    <!--/ What is this -->
+
+                    <!-- What's included -->
+                    <div class="section-demo">
+                        <h2 id="what-included">What is included</h2>
+
+                        <div class="description">
+                            <p>Once purchased, unzip the compressed folder to see the directory structure of Dark Velvet UI Kit. You'll see something like this:</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+dark-velvet
+├───docs
+│   ├───css
+│   ├───images
+│   └───js
+├───dark-velvet-css
+│   ├───css
+│   ├───fonts
+│   ├───images
+│   │   ├───icons
+│   │   ├───prettyPhoto
+│   │   └───temp
+│   └───js
+│       └───libs
+└───dark-velvet-less
+├───fonts
+├───images
+│   ├───icons
+│   ├───prettyPhoto
+│   └───temp
+├───js
+│   └───libs
+└───less
+    └───bootstrap
+                                    </pre>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <dl class="clearfix">
+                                <dt class="parent">docs/</dt><dd>contains this documentation.</dd>
+                                <dt class="parent">dark-velvet-css/</dt><dd>contains Dark Velvet UI Kit in simple CSS format. Use it to easily start your project.</dd>
+                                <dt>css/</dt><dd>contains all the stylesheets for CSS version of the kit.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for CSS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for CSS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for CSS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for CSS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for CSS version of the kit.</dd>
+
+                                <dt class="parent">dark-velvet-less/</dt><dd>contains Dark Velvet UI Kit in LESS format. Use it to modify this kit in your project.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for LESS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for LESS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for LESS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for LESS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for LESS version of the kit.</dd>
+                                <dt>less/</dt><dd>contains all the stylesheets for LESS version of the kit.</dd>
+                            </dl>
+
+                            <p><em>Note:</em> The folders <code>dark-velvet-css</code> and <code>dark-velvet-less</code> is fully independent from each other, including all the images and JS files. You can use the version you prefer without pulling images or JS files from the other version of the kit.</p>
+                        </div>
+                    </div>
+                    <!--/ What's included -->
+
+                    <!-- Browser support -->
+                    <div class="section-demo">
+                        <h2 id="browser">Browser support</h2>
+
+                        <div class="description">
+                            <p>Since <a href="http://pixelkit.com/previews/dark-ui-kit/" target="_blank">Dark Velvet UI Kit</a> is built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework, it supports the same <a href="http://getbootstrap.com/getting-started/#browsers" target="_blank">browsers</a> as Bootstrap.</p>
+                        </div>
+
+                    </div>
+                    <!--/ Browser support -->
+
+                    <!-- Getting Started -->
+                    <div class="section-demo">
+                        <h2 id="getting-started">Getting Started</h2>
+
+                        <div class="description">
+                            <p>To start working with <a href="http://pixelkit.com/previews/dark-ui-kit/" target="_blank">Dark Velvet UI Kit</a> you can use a basic <code>template.html</code>, or take the completely functional pages included in this package. Since it is built on Bootstrap, you can also use it on your project with Bootstrap 3.
+                                <br />
+                                We provide you both CSS and LESS standalone versions which are completely identical in design and functions.
+                            </p>
+                            <p>
+                                <em>CSS Version:</em> You can use CSS version by dropping contents of <code>dark-velvet-css</code> folder to your project folder and including <code>style.css</code> file in your HTML page: <code>&lt;link href="style.css" media="screen" rel="stylesheet"></code>
+                            </p>
+                            <p>
+                                <em>LESS Version:</em> You can find it in <code>dark-velvet-less</code> folder. Use LESS if you want to modify Dark Velvet UI Kit. We built it Bootstrap way so you won't find big difference. Use <code>less/variables.less</code> to modify different styles, use <code>style.less</code> to remove needless components.
+                            </p>
+                            <p>
+                                If you want to start from scratch, the best way is to use <a href="#template">our template</a> where all startup files are already included and ready to be used. You can find <code>template.html</code> file both for CSS and LESS version in their respective folders.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- Getting Started -->
+
+                    <!-- Basic Template -->
+                    <div class="section-demo">
+                        <h2 id="template">Basic Template</h2>
+
+                        <div class="description">
+                            <p>You can use a basic <a href="../dark-velvet-css/template.html" target="_blank">HTML template</a> to write your code, or take completely functional pages included in this package. Basic template as well as completely functional pages are available both for CSS and LESS versions of the Dark Velvet UI Kit.</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!doctype html>
+&lt;!--[if lt IE 7 ]>&lt;html lang="en" class="no-js ie6"> &lt;![endif]-->
+&lt;!--[if IE 7 ]>&lt;html lang="en" class="no-js ie7"> &lt;![endif]-->
+&lt;!--[if IE 8 ]>&lt;html lang="en" class="no-js ie8"> &lt;![endif]-->
+&lt;!--[if IE 9 ]>&lt;html lang="en" class="no-js ie9"> &lt;![endif]-->
+&lt;!--[if (gt IE 9)|!(IE)]>&lt;!-->&lt;html lang="en" class="no-js">&lt;!--&lt;![endif]-->
+&lt;head>
+    &lt;meta charset="utf-8">
+    &lt;meta name="author" content="">
+    &lt;meta name="keywords" content="">
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1">
+    &lt;title>&lt;/title>
+
+    &lt;!-- main JS libs -->
+    &lt;script src="js/libs/modernizr.min.js">&lt;/script>
+    &lt;script src="js/libs/jquery-1.10.0.js">&lt;/script>
+    &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+    &lt;script src="js/libs/bootstrap.min.js">&lt;/script>
+
+    &lt;!-- Style CSS -->
+    &lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    &lt;link href="style.css" media="screen" rel="stylesheet">
+
+    &lt;!-- scripts -->
+    &lt;script src="js/general.js">&lt;/script>
+
+    &lt;!-- Include all needed stylesheets and scripts here -->
+
+    &lt;!--[if lt IE 9]>&lt;script src="js/respond.min.js">&lt;/script>&lt;![endif]-->
+    &lt;!--[if gte IE 9]>
+    &lt;style type="text/css">
+        .gradient {filter: none !important;}
+    &lt;/style>
+    &lt;![endif]-->
+&lt;/head>
+
+&lt;body>
+    &lt;!-- container -->
+    &lt;div class="container">
+
+        Start your work here.
+
+    &lt;/div>
+    &lt;!--/ container -->
+&lt;/body>
+&lt;/html>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Basic Template -->
+
+                    <!-- Typography -->
+                    <div class="section-demo">
+                        <h2 id="typography">Typography</h2>
+
+                        <div class="description">
+                            <p>
+                                Dark Velvet UI Kit uses free <a href="http://www.google.com/fonts#UsePlace:use/Collection:Cabin" target="_blank">Cabin</a> webfont available at the <a href="http://www.google.com/fonts" target="_blank">Google Fonts</a>. The global default font-size is 14px, with a font-weight of 600. This is applied to the <code>&lt;body></code>. In addition, all <code>&lt;p></code> (paragraphs) receive a font-weight of 400 and bottom margin of 16px.
+                                <br />
+                                Also, all headings, <code>&lt;h1></code> through <code>&lt;h6></code> are available.
+                            </p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <h1>Example (h1)</h1>
+                                <h2>Example (h2)</h2>
+                                <h3>Example (h3)</h3>
+                                <h4>Example (h4)</h4>
+                                <h5>Example (h5)</h5>
+                                <h6>Example (h6)</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;h1>Example (h1)&lt;/h1>
+&lt;h2>Example (h2)&lt;/h2>
+&lt;h3>Example (h3)&lt;/h3>
+&lt;h4>Example (h4)&lt;/h4>
+&lt;h5>Example (h5)&lt;/h5>
+&lt;h6>Example (h6)&lt;/h6>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Typography -->
+
+                    <!-- Buttons -->
+                    <div class="section-demo">
+                        <h2 id="buttons">Buttons</h2>
+
+                        <!--/ Simple Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-simple">Simple Buttons</h3>
+                            <p>Use any of the available button classes to quickly create a simple button.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn btn-small"><span>Read more</span></a>
+                                <a href="#" class="btn"><span>Read more</span></a>
+                                <a href="#" class="btn btn-large"><span>Read more</span></a>
+                                <br />
+                                <a href="#" class="btn btn-black"><span>Read more</span></a>
+                                <a href="#" class="btn btn-black btn-large"><span>Read more</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-small">&lt;span>Read more&lt;/span>&lt;/a>
+&lt;a href="#" class="btn">&lt;span>Read more&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-large">&lt;span>Read more&lt;/span>&lt;/a>
+
+&lt;a href="#" class="btn btn-black">&lt;span>Read more&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-black btn-large">&lt;span>Read more&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Simple Buttons -->
+
+                        <!-- Hovered Button -->
+                        <div class="description">
+                            <h3 id="buttons-hovered">Rounded Button with hover effect</h3>
+                            <p>Button with hover and active states.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn btn-round"><span>Normal</span></a>
+                                <a href="#" class="btn btn-round hover"><span>Hover</span></a>
+                                <a href="#" class="btn btn-round active"><span>Pressed</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-round">&lt;span>Normal&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-round hover">&lt;span>Hover&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-round active">&lt;span>Pressed&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Hovered Button -->
+
+                        <!--/ Shaped Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-shaped">Shaped Buttons</h3>
+                            <p>Buttons with left and right pointers.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn btn-left"><span>Read more</span></a>
+                                <a href="#" class="btn"><span>Read more</span></a>
+                                <a href="#" class="btn btn-right"><span>Read more</span></a>
+                                <br />
+                                <a href="#" class="btn btn-left btn-acute"><span>Read more</span></a>
+                                <a href="#" class="btn btn-acute"><span>Read more</span></a>
+                                <a href="#" class="btn btn-right btn-acute"><span>Read more</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-left">&lt;span>Read more&lt;/span>&lt;/a>
+&lt;a href="#" class="btn">&lt;span>Read more&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right">&lt;span>Read more&lt;/span>&lt;/a>
+
+&lt;a href="#" class="btn btn-left btn-acute">&lt;span>Read more&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-acute">&lt;span>Read more&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right btn-acute">&lt;span>Read more&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Shaped Buttons -->
+
+                        <!--/ Special Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-special">Special Buttons</h3>
+                            <p>Buttons for different purposes.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <span class="btn btn-send"><input type="submit" value="Send Message" /></span>
+                                <a href="#" class="btn btn-follow"><span>Follow</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;span class="btn btn-send">&lt;input type="submit" value="Send Message" />&lt;/span>
+&lt;a href="#" class="btn btn-follow">&lt;span>Follow&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Special Buttons -->
+
+                        <!-- Buttoned Input -->
+                        <div class="description">
+                            <h3 id="buttons-input">Buttoned Input</h3>
+                            <p>Wrap <code>input type="submit"</code> into <code>span</code> and use available button classes to create a styled Input.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <span class="btn btn-send"><input type="submit" value="Send Message" /></span>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;span class="btn btn-send">&lt;input type="submit" value="Send Message" />&lt;/span>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Buttoned Input -->
+                    </div>
+                    <!--/ Buttons -->
+
+                    <!-- Ribbons -->
+                    <div class="section-demo">
+                        <h2 id="ribbons">Ribbons</h2>
+
+                        <div class="description">
+                            <p>Easily highlight items with Ribbons.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-ribbons">
+                                <div class="ribbon"><span>MEET OUR PARTNERS &amp; FRIENDS</span></div>
+                                <br />
+                                <div class="ribbon ribbon-red"><span>MEET OUR PARTNERS &amp; FRIENDS</span></div>
+                                <br />
+                                <div class="ribbon ribbon-blue"><span>MEET OUR PARTNERS &amp; FRIENDS</span></div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="ribbon">&lt;span>MEET OUR PARTNERS &amp; FRIENDS&lt;/span>&lt;/div>
+&lt;div class="ribbon ribbon-red">&lt;span>MEET OUR PARTNERS &amp; FRIENDS&lt;/span>&lt;/div>
+&lt;div class="ribbon ribbon-blue">&lt;span>MEET OUR PARTNERS &amp; FRIENDS&lt;/span>&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Ribbons -->
+
+                    <!-- Badges -->
+                    <div class="section-demo">
+                        <h2 id="badges">Badges</h2>
+
+                        <div class="description">
+                            <p>Easily highlight items with Badges.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-ribbons">
+                                <div class="badge"></div>
+                                <div class="badge badge-new"></div>
+                                <div class="badge badge-try"></div>
+                                <div class="badge badge-popular"></div>
+                                <div class="badge badge-outlet"></div>
+                                <br />
+                                <div class="badge style2"></div>
+                                <div class="badge style2 badge-try"></div>
+                                <div class="badge style2 badge-popular"></div>
+                                <div class="badge style2 badge-discount"></div>
+                                <div class="badge style2 badge-new"></div>
+                                <div class="badge style2 badge-fresh"></div>
+                                <div class="badge style2 badge-sale"></div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="badge">&lt;/div>
+&lt;div class="badge badge-new">&lt;/div>
+&lt;div class="badge badge-try">&lt;/div>
+&lt;div class="badge badge-popular">&lt;/div>
+&lt;div class="badge badge-outlet">&lt;/div>
+                                    
+&lt;div class="badge style2">&lt;/div>
+&lt;div class="badge style2 badge-try">&lt;/div>
+&lt;div class="badge style2 badge-popular">&lt;/div>
+&lt;div class="badge style2 badge-discount">&lt;/div>
+&lt;div class="badge style2 badge-new">&lt;/div>
+&lt;div class="badge style2 badge-fresh">&lt;/div>
+&lt;div class="badge style2 badge-sale">&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Badges -->
+
+                    <!-- Rating Stars -->
+                    <div class="section-demo">
+                        <h2 id="rating-stars">Rating Stars</h2>
+
+                        <div class="description">
+                            <p>Use rating stars for voting.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- Rating Stars -->
+                                <div class="rating">
+                                    <span class="star on"><input type="hidden" value="1"></span><!--
+                                    --><span class="star on"><input type="hidden" value="2"></span><!--
+                                    --><span class="star on"><input type="hidden" value="3"></span><!--
+                                    --><span class="star off"><input type="hidden" value="4"></span><!--
+                                    --><span class="star off"><input type="hidden" value="5"></span>
+                                </div>
+                                <!--/ Rating Stars -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="rating">
+    &lt;span class="star on">&lt;input type="hidden" value="1">&lt;/span>&lt;!--
+    -->&lt;span class="star on">&lt;input type="hidden" value="2">&lt;/span>&lt;!--
+    -->&lt;span class="star on">&lt;input type="hidden" value="3">&lt;/span>&lt;!--
+    -->&lt;span class="star off">&lt;input type="hidden" value="4">&lt;/span>&lt;!--
+    -->&lt;span class="star off">&lt;input type="hidden" value="5">&lt;/span>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Rating Stars -->
+
+                    <!-- Form Elements -->
+                    <div class="section-demo">
+                        <h2 id="form">Form Elements</h2>
+
+                        <!-- CheckBoxes -->
+                        <div class="description">
+                            <h3 id="form-checkboxes">Checkboxes</h3>
+                            <p>Use styled checkboxes instead of the usual ones.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Attribute <code>name</code> required for <code>input</code> element.</p>
+                                <p>Styled Checkbox require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-checkbox">
+                                <div class="input_styled checklist">
+                                    <div class="rowCheckbox"><input name="signup" type="checkbox" checked id="signup" value="signup"><label for="signup">Default Checkbox</label></div>
+                                    <div class="rowCheckbox checkbox-red"><input name="signup2" type="checkbox" checked id="signup2" value="signup2"><label for="signup2">Red Checkbox</label></div>
+                                    <div class="rowCheckbox checkbox-large"><input name="signup3" type="checkbox" checked id="signup3" value="signup3"><label for="signup3">Switch</label></div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="rowCheckbox">
+    &lt;input name="signup" type="checkbox" checked id="signup" value="signup">
+    &lt;label for="signup">Default Checkbox&lt;/label>
+&lt;/div>
+
+&lt;div class="rowCheckbox checkbox-red">
+    &lt;input name="signup2" type="checkbox" checked id="signup2" value="signup2">
+    &lt;label for="signup2">Red Checkbox&lt;/label>
+&lt;/div>
+
+&lt;div class="rowCheckbox checkbox-large">
+    &lt;input name="signup3" type="checkbox" checked id="signup3" value="signup3">
+    &lt;label for="signup3">Switch&lt;/label>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ CheckBoxes -->
+
+                        <!-- Radios -->
+                        <div class="description">
+                            <h3 id="form-radios">Radio Buttons</h3>
+                            <p>Use styled radio buttons instead of the usual ones.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Attribute <code>name</code> required for <code>input</code> element.</p>
+                                <p>Styled Radio Button require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-checkbox">
+                                <div class="input_styled inlinelist">
+                                    <div class="rowRadio"><input type="radio" name="survey" value="radio_v3" id="radio_v3" checked><label for="radio_v3">Default Radio Button</label></div>
+                                    <div class="rowRadio radio-red"><input type="radio" name="survey" value="radio_v4" id="radio_v4"><label for="radio_v4">Red Radio Button</label></div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="rowRadio">
+    &lt;input type="radio" name="survey" value="radio_v3" id="radio_v3" checked>
+    &lt;label for="radio_v3">Default Radio Button&lt;/label>
+&lt;/div>
+&lt;div class="rowRadio radio-red">
+    &lt;input type="radio" name="survey" value="radio_v4" id="radio_v4">
+    &lt;label for="radio_v4">Red Radio Button&lt;/label>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Radios -->
+
+                        <!-- Text Inputs -->
+                        <div class="description">
+                            <h3 id="form-inputs">Text Inputs</h3>
+                            <p>All Text inputs are styled.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Text Inputs with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_text">
+                                    <input type="text" name="name" id="name" placeholder="Name">
+                                </div>
+                                <div class="field_text omega">
+                                    <input type="text" name="email2" id="email2" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="field_text">
+    &lt;input type="text" name="name" id="name" placeholder="Name">
+&lt;/div>
+
+&lt;div class="field_text omega">
+    &lt;input type="text" name="email" id="email" placeholder="Email">
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Text Inputs -->
+
+                        <!-- TextAreas -->
+                        <div class="description">
+                            <h3 id="form-textarea">Textareas</h3>
+                            <p>All Textareas are styled similar to Text inputs.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Textareas with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_text field_textarea">
+                                    <textarea id="message" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="field_text field_textarea">
+    &lt;textarea id="message" placeholder="Message">&lt;/textarea>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ TextAreas -->
+
+                        <!-- Selects -->
+                        <div class="description">
+                            <h3 id="form-select">Selects</h3>
+                            <p>All Select elements are styled similar to Text inputs. The alternative red style available.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Select element require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link rel="stylesheet" href="css/cusel.css">
+&lt;script src="js/cusel-min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_select">
+                                    <select class="select_styled">
+                                        <option value="">Subject</option>
+                                        <option value="Feedback">Feedback</option>
+                                        <option value="Support Question">Support Question</option>
+                                        <option value="Website Question">Website Question</option>
+                                        <option value="Other Question or Comment">Other Question or Comment</option>
+                                    </select>
+                                </div>
+                                <div class="field_select omega">
+                                    <select class="select_styled select_styled_orange">
+                                        <option value="">Stage Select</option>
+                                        <option value="">Parking</option>
+                                        <option value="">Bar &amp; Restaurant</option>
+                                        <option value="">Residence</option>
+                                        <option value="">Parking</option>
+                                        <option value="">Bar &amp; Restaurant</option>
+                                        <option value="">Residence</option>
+                                        <option value="">House</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!--Default Select style-->
+&lt;div class="field_select">
+    &lt;select class="select_styled">
+        &lt;option value="">Subject&lt;/option>
+        &lt;option value="Feedback">Feedback&lt;/option>
+        &lt;option value="Support Question">Support Question&lt;/option>
+        &lt;option value="Website Question">Website Question&lt;/option>
+        &lt;option value="Other Question or Comment">Other Question or Comment&lt;/option>
+    &lt;/select>
+&lt;/div>
+
+&lt;!--Alternative Select style-->
+&lt;div class="field_select">
+    &lt;select class="select_styled select_styled_orange">
+        &lt;option value="">Stage Select&lt;/option>
+        &lt;option value="">Parking&lt;/option>
+        &lt;option value="">Bar &amp; Restaurant&lt;/option>
+        &lt;option value="">Residence&lt;/option>
+        &lt;option value="">Parking&lt;/option>
+        &lt;option value="">Bar &amp; Restaurant&lt;/option>
+        &lt;option value="">Residence&lt;/option>
+        &lt;option value="">House&lt;/option>
+    &lt;/select>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Selects -->
+                    </div>
+                    <!--/ Form Elements -->
+
+                    <!-- Scroll Bars -->
+                    <div class="section-demo">
+                        <h2 id="scroll-bars">Scroll Bars</h2>
+
+                        <div class="description">
+                            <p>Use any of the available classes to quickly create a styled Scroll Bar for your site.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Scroll Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.mousewheel.js">&lt;/script>
+&lt;script src="js/jquery.jscrollpane.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="scrollbars clearfix">
+                                    <!-- ScrollBars -->
+                                    <div class="scrollbar">
+                                        <div class="inner">
+                                            <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="scrollbar style2">
+                                        <div class="inner">
+                                            <p>These examples show very basic functionality and exist so that I can test that any changes to jScrollPane work cross browser and don't cause any new problems. Note that these examples aren't meant to look pretty, they merely highlight different bits of functionaity which are available. If you want examples of jScrollPane looking good then check out the themes.</p>
+                                        </div>
+                                    </div>
+                                    <!--/ ScrollBars -->
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="scrollbar">
+    &lt;div class="inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="scrollbar style2">
+    &lt;div class="inner">
+        &lt;!--place your content here-->
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Scroll Bars via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    jQuery(function()
+    {
+        jQuery('.scrollbar').jScrollPane({
+            verticalDragMaxHeight: 39,
+            verticalDragMinHeight: 39
+        });
+
+        jQuery('.scrollbar.style2').jScrollPane({
+            verticalDragMaxHeight: 36,
+            verticalDragMinHeight: 36
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Scroll Bars -->
+
+                    <!-- Progress Bars -->
+                    <div class="section-demo">
+                        <h2 id="progress-bars">Progress Bars</h2>
+
+                        <div class="description">
+                            <p>Use styled Progress Bars on your site.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Progress Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/progressbar.js">&lt;/script>
+                                </pre>
+                            </div>
+
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <!-- Progress Bar -->
+                                <div id="progressBar1" class="progressbar">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="pbar"></div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar1').anim_progressbar({
+                                            totaltime: 600
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar -->
+
+                                <!-- Progress Bar with download Bar -->
+                                <div id="progressBar2" class="progressbar style2">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="pbar">
+                                        <div id="downloadBar2" class="downloadbar">
+                                            <div class="pbar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar2').anim_progressbar({
+                                            totaltime: 800
+                                        });
+                                        $('#downloadBar2').anim_progressbar({
+                                            totaltime: 500
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar with download Bar -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!-- Default Progress Bar -->
+&lt;div id="progressBar1" class="progressbar">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="pbar">&lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+&lt;/div>
+
+&lt;!-- Progress Bar with download Bar -->
+&lt;div id="progressBar2" class="progressbar style2">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="pbar">
+        &lt;div id="downloadBar2" class="downloadbar">
+            &lt;div class="pbar">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Progress Bars via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(document).ready(function() {
+
+        // Default Progress Bar
+        $('#progressBar1').anim_progressbar({
+            totaltime: 600
+        });
+
+        // Progress Bar with download Bar
+        $('#progressBar2').anim_progressbar({
+            totaltime: 800
+        });
+        $('#downloadBar2').anim_progressbar({
+            totaltime: 500
+        });
+
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Progress Bars -->
+
+                    <!-- Price Range -->
+                    <div class="section-demo">
+                        <h2 id="range-slider">Range Slider</h2>
+
+                        <div class="description">
+                            <p>Range Slider allow users to select a value from a numerical range by simply dragging a slider.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Range Slider require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery.slider.bundle.js">&lt;/script>
+&lt;script src="js/jquery.slider.js">&lt;/script>
+&lt;link rel="stylesheet" href="css/jslider.css">
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <!-- Range slider -->
+                                <div class="range-slider">
+                                    <input id="price_range" type="text" name="price_range" value="270;800">
+                                </div>
+                                <script type="text/javascript" >
+                                    jQuery(document).ready(function($) {
+                                        // Price Range Input
+                                        $("#price_range").rangeslider({
+                                            from: 50,
+                                            to: 1000,
+                                            limits: false,
+                                            scale: ['$50', '$1000'],
+                                            heterogeneity: ['50/500'],
+                                            step: 10,
+                                            smooth: true,
+                                            dimension: '$'
+                                        });
+                                    });
+                                </script>
+                                <!-- Range slider -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="range-slider">
+    &lt;input id="price_range" type="text" name="price_range" value="270;800">
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Price Range via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript" >
+    jQuery(document).ready(function($) {
+        $("#price_range").rangeslider({
+            from: 50,
+            to: 1000,
+            limits: false,
+            scale: ['$50', '$1000'],
+            heterogeneity: ['50/500'],
+            step: 10,
+            smooth: true,
+            dimension: '$'
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Price Range -->
+
+                    <!-- Knobs -->
+                    <div class="section-demo">
+                        <h2 id="knobs">Volume Knob</h2>
+
+                        <!-- Volume Knob -->
+                        <div class="description">
+                            <p>Adjust volume with this element.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Knob elements require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script type="text/javascript" src="js/knobRot-0.2.2.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Volume control -->
+                                <div class="widget-knob widget-volume">
+                                    <input type="text" value="77"  autocomplete="off" id="volume" />
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $('#volume').knobRot({
+                                                'classes': ['volume'],
+                                                'dragVertical': false,
+                                                'frameCount': 49,
+                                                'frameWidth': 149,
+                                                'frameHeight': 149,
+                                                'detent': true,
+                                                'detentThreshold': 5,
+                                                'minimumValue': 0,
+                                                'maximumValue': 100,
+                                                'hideInput': true
+                                            });
+                                        });
+                                    </script>
+                                </div>
+                                <!--/ Volume control -->    
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-knob widget-volume">
+    &lt;input type="text" value="77"  autocomplete="off" id="volume" />
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Volume via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(document).ready(function() {
+        $('#volume').knobRot({
+            'classes': ['volume'],
+            'dragVertical': false,
+            'frameCount': 49,
+            'frameWidth': 149,
+            'frameHeight': 149,
+            'detent': true,
+            'detentThreshold': 5,
+            'minimumValue': 0,
+            'maximumValue': 100,
+            'hideInput': true
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Volume Knob -->
+                    </div>
+                    <!--/ Knobs -->
+
+                    <!-- Navigation -->
+                    <div class="section-demo">
+                        <h2 id="navigation">Navigation</h2>
+
+                        <!-- Website Menu -->
+                        <div class="description">
+                            <p>Website menu with dropdown submenu.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Website Menu -->
+                                <div class="dropdown-wrap boxed-velvet">
+                                    <ul class="dropdown inner clearfix">
+                                        <li class="menu-level-0"><a href="#"><span>Account</span></a></li>
+                                        <li class="menu-level-0"><a href="#"><span>About Us</span></a>
+                                            <ul class="submenu-1">
+                                                <li><a href="#">Portfolio</a></li>
+                                                <li><a href="#">Testimonials</a></li>
+                                                <li><a href="#">Contacts</a>
+                                                    <ul class="submenu-2">
+                                                        <li><a href="#">Gallery images</a></li>
+                                                        <li><a href="#">OneByOne Slider</a></li>
+                                                        <li><a href="#">Video in header</a></li>
+                                                        <li><a href="#">Image &amp; Video Slider</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-level-0"><a href="#"><span>Settings</span></a>
+                                            <ul class="submenu-1">
+                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#">Copyright</a></li>
+                                                <li><a href="#">Terms of Service</a>
+                                                    <ul class="submenu-2">
+                                                        <li><a href="#">Gallery images</a></li>
+                                                        <li><a href="#">OneByOne Slider</a></li>
+                                                        <li><a href="#">Video in header</a></li>
+                                                        <li><a href="#">Image &amp; Video Slider</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-level-0"><a href="#"><span>Log Out</span></a></li>
+                                    </ul>
+                                </div>
+                                <!--/ Website Menu -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="dropdown-wrap boxed-velvet">
+    &lt;ul class="dropdown inner clearfix">
+        &lt;li>&lt;a href="#">&lt;span>Account&lt;/span>&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#">&lt;span>About Us&lt;/span>&lt;/a>
+            &lt;ul>
+                &lt;li>&lt;a href="#">Portfolio&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Testimonials&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Contacts&lt;/a>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">Gallery images&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">OneByOne Slider&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Video in header&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Image &amp; Video Slider&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/li>
+            &lt;/ul>
+        &lt;/li>
+        &lt;li>&lt;a href="#">&lt;span>Settings&lt;/span>&lt;/a>
+            &lt;ul>
+                &lt;li>&lt;a href="#">Privacy Policy&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Copyright&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="#">Terms of Service&lt;/a>
+                    &lt;ul class="submenu-2">
+                        &lt;li>&lt;a href="#">Gallery images&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">OneByOne Slider&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Video in header&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Image &amp; Video Slider&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/li>
+            &lt;/ul>
+        &lt;/li>
+        &lt;li>&lt;a href="#">&lt;span>Log Out&lt;/span>&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Website Menu -->
+                    </div>
+                    <!--/ Navigation -->
+
+                    <!-- Tabs -->
+                    <div class="section-demo">
+                        <h2 id="tabs">Tabs</h2>
+
+                        <div class="description">
+                            <p>Add quick, dynamic tab functionality to transition through panes of local content. Two different Tab styles available.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- Tabs -->
+                                        <div class="tabs_framed">
+                                            <div class="inner">
+                                                <ul class="tabs clearfix active_bookmark1">
+                                                    <li><a href="#recent2" data-toggle="tab">Recent</a></li>
+                                                    <li class="active"><a href="#popular2" data-toggle="tab">Popular</a></li>
+                                                </ul>
+
+                                                <div class="tab-content clearfix">
+                                                    <div class="tab-pane fade" id="recent2">
+                                                        <h4>Be different, but better!</h4>
+                                                        <div class="tab_image"><img src="../dark-velvet-css/images/temp/tabimage1.png" alt="" /></div>
+                                                        <p>Intrepid Jonathan Trappe, 38, took off just like the 78-year-old character Carl Frederickson.</p>
+                                                    </div>
+                                                    <div class="tab-pane fade in active" id="popular2">
+                                                        <h4>It’s all about a smile</h4>
+                                                        <div class="tab_image pull-left"><img src="../dark-velvet-css/images/temp/tabimage2.png" alt="" /></div>
+                                                        <p>A cluster balloonist who became the first person to fly the English Channel has Intrepid Jonathan Trappe, 38, took off just like the 78-year-old character Carl Frederickson.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bottom"></div>
+                                        </div>
+                                        <!--/ Tabs -->
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <!-- Tabs -->
+                                        <div class="tabs_framed styled">
+                                            <div class="inner">
+                                                <ul class="tabs clearfix active_bookmark1">
+                                                    <li class="active"><a href="#events" data-toggle="tab">Events</a></li>
+                                                    <li><a href="#reminders" data-toggle="tab"><sup class="note">3</sup>Reminders</a></li>
+                                                    <li><a href="#starred" data-toggle="tab">Starred</a></li>
+                                                    <li><a href="#archive" data-toggle="tab">Archive</a></li>
+                                                </ul>
+
+                                                <div class="tab-content clearfix">
+                                                    <div class="tab-pane clearfix fade in active" id="events">
+                                                        <div class="tab_image"><img src="../dark-velvet-css/images/temp/tabimage5.png" alt="" /></div>
+                                                        <h4>10 august 2012</h4>
+                                                        <p>He made his film debut with a mirror part in Black to the Future Part II</p>
+                                                        <a href="#" class="see-more"><span>Read More</span></a>
+                                                    </div>
+                                                    <div class="tab-pane clearfix fade" id="reminders">
+                                                        <div class="tab_image"><img src="../dark-velvet-css/images/temp/tabimage6.png" alt="" /></div>
+                                                        <h4>5 November 2012</h4>
+                                                        <p>He made his film debut with a mirror part in Black to the Future Part II</p>
+                                                        <a href="#" class="see-more"><span>Read More</span></a>
+                                                    </div>
+                                                    <div class="tab-pane clearfix fade" id="starred">
+                                                        <div class="tab_image"><img src="../dark-velvet-css/images/temp/tabimage7.png" alt="" /></div>
+                                                        <h4>11 October 2012</h4>
+                                                        <p>He made his film debut with a mirror part in Black to the Future Part II</p>
+                                                        <a href="#" class="see-more"><span>Read More</span></a>
+                                                    </div>
+                                                    <div class="tab-pane clearfix fade" id="archive">
+                                                        <div class="tab_image"><img src="../dark-velvet-css/images/temp/tabimage8.png" alt="" /></div>
+                                                        <h4>14 September 2012</h4>
+                                                        <p>He made his film debut with a mirror part in Black to the Future Part II</p>
+                                                        <a href="#" class="see-more"><span>Read More</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ Tabs -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!--Tabs default style-->
+&lt;div class="tabs_framed">
+    &lt;div class="inner">
+        &lt;ul class="tabs clearfix">
+            &lt;li>&lt;a href="#recent" data-toggle="tab">Recent&lt;/a>&lt;/li>
+            &lt;li class="active">&lt;a href="#popular" data-toggle="tab">Popular&lt;/a>&lt;/li>
+        &lt;/ul>
+
+        &lt;div class="tab-content boxed clearfix">
+            &lt;div class="tab-pane fade" id="recent">
+                &lt;!--place your content here-->
+            &lt;/div>
+            &lt;div class="tab-pane fade in active" id="popular">
+                &lt;!--place your content here-->
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;!--Tabs alternative style-->
+&lt;div class="tabs_framed styled">
+    &lt;div class="inner">
+        &lt;ul class="tabs clearfix active_bookmark1">
+            &lt;li class="active">&lt;a href="#events" data-toggle="tab">Events&lt;/a>&lt;/li>
+            &lt;li>
+                &lt;a href="#reminders" data-toggle="tab">
+                    &lt;sup class="note">3&lt;/sup>Reminders
+                &lt;/a>
+            &lt;/li>
+            &lt;li>&lt;a href="#starred" data-toggle="tab">Starred&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#archive" data-toggle="tab">Archive&lt;/a>&lt;/li>
+        &lt;/ul>
+
+        &lt;div class="tab-content clearfix">
+            &lt;div class="tab-pane clearfix fade in active" id="events">
+                &lt;!--place your content here-->
+            &lt;/div>
+            &lt;div class="tab-pane clearfix fade" id="reminders">
+                &lt;!--place your content here-->
+            &lt;/div>
+            &lt;div class="tab-pane clearfix fade" id="starred">
+                &lt;!--place your content here-->
+            &lt;/div>
+            &lt;div class="tab-pane clearfix fade" id="archive">
+                &lt;!--place your content here-->
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Tabs -->
+
+                    <!-- Dividers -->
+                    <div class="section-demo">
+                        <h2 id="dividers">Dividers</h2>
+
+                        <div class="description">
+                            <p>Separate content with dividers.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-12"><div class="divider"></div></div>
+                                    <div class="col-sm-6"><div class="divider"></div></div>
+                                    <div class="col-sm-6"><div class="divider"></div></div>
+                                    <div class="col-sm-4"><div class="divider"></div></div>
+                                    <div class="col-sm-4"><div class="divider"></div></div>
+                                    <div class="col-sm-4"><div class="divider"></div></div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-sm-12"><div class="divider dashed"></div></div>
+                                    <div class="col-sm-6"><div class="divider dashed"></div></div>
+                                    <div class="col-sm-6"><div class="divider dashed"></div></div>
+                                    <div class="col-sm-4"><div class="divider dashed"></div></div>
+                                    <div class="col-sm-4"><div class="divider dashed"></div></div>
+                                    <div class="col-sm-4"><div class="divider dashed"></div></div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="divider">&lt;/div>
+                                    
+&lt;div class="divider dashed">&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Dividers -->
+
+                    <!-- Forms -->
+                    <div class="section-demo">
+                        <h2 id="forms">Forms</h2>
+
+                        <div class="description">
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>All the forms require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="description">
+                            <h3 id="forms-contact">Contact Form</h3>
+                            <p></p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Contact Form require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link rel="stylesheet" href="css/chosen.css">
+&lt;script src="js/jquery.chosen.min.js" type="text/javascript">&lt;/script>
+&lt;script src="js/nicEdit.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- comment form -->
+                                        <div class="add-comment add-comment-velvet styled" id="addcomments">
+                                            <div class="add-comment-title"><h3>New Message</h3></div>
+                                            <div class="comment-form">
+                                                <script type="text/javascript">
+                                                    bkLib.onDomLoaded(function() {
+                                                        var myNicEditor = new nicEditor({
+                                                            buttonList : [
+                                                                'bold',
+                                                                'italic',
+                                                                'underline',
+                                                                'forecolor',
+                                                                'left',
+                                                                'center',
+                                                                'right',
+                                                                'justify'
+                                                            ]
+                                                        });
+                                                        myNicEditor.setPanel('edit_buttons');
+                                                        myNicEditor.addInstance('styled_message');
+                                                    });
+                                                    setTimeout(function () {
+                                                        var nic_width = $('.nicEdit-panel').width();
+                                                        $('.nicEdit-container').css('width', nic_width);
+                                                        $('.nicEdit-main').css('width', nic_width-24);
+                                                    }, 2000);
+                                                    $(window).resize(function() {
+                                                        var nic_width = $('.nicEdit-panel').width();
+                                                        $('.nicEdit-container').css('width', nic_width);
+                                                        $('.nicEdit-main').css('width', nic_width-24);
+                                                    });
+                                                </script>
+                                                <form action="#" method="post" id="commentForm" class="ajax_form">
+
+                                                    <div class="email-styled"><input type="text" name="email" id="email" value="" placeholder="Black@gmail.com" class="inputtext input_middle required" /></div>
+
+                                                    <div class="form-inner">
+                                                        <div class="field_select">
+                                                            <label for="contact_name" class="label_title">Name:</label>
+                                                            <select name="contact_name" id="contact_name" multiple data-placeholder="Your Selection">
+                                                                <option value='example1@gmail.com'>Black Sabbath</option>
+                                                                <option value='example2@gmail.com'>Lana Ray</option>
+                                                                <option value='example3@gmail.com'>Toby Lightman</option>
+                                                                <option value='example4@gmail.com'>Lene Marlin</option>
+                                                                <option value='example5@gmail.com'>Deep Purple</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="field_text">
+                                                            <label for="subject" class="label_title">Subject:</label>
+                                                            <input type="text" name="subject" id="subject" value="" placeholder="Hello, Mike!" class="inputtext input_middle required" />
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                        <div class="field_text field_textarea">
+                                                            <div id="edit_buttons" class="edit_buttons"></div>
+                                                            <label for="styled_message" class="label_title">Message:</label>
+                                                            <textarea cols="30" rows="10" name="styled_message" id="styled_message" class="textarea textarea_middle"></textarea>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+
+                                                    <div class="rowSubmit">
+                                                        <a onclick="document.getElementById('commentForm').reset();return false" href="#" class="link-reset btn btn-black"><span>Discard</span></a>
+                                                        <span class="btn btn-send"><input type="submit" id="send" value="Send Message" /></span>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--/ comment form -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="add-comment styled boxed boxed-cream" id="addcomments">
+    &lt;span class="add-comment-close">&times;&lt;/span>
+    &lt;div class="add-comment-title gradient">&lt;h3>Write a message&lt;/h3>&lt;/div>
+    &lt;div class="comment-form">
+        &lt;form action="#" method="post" id="commentForm" class="ajax_form">
+            &lt;div class="form-inner">
+                &lt;div class="field_select">
+                    &lt;label for="contact_name" class="label_title">Name:&lt;/label>
+                    &lt;select name="contact_name" id="contact_name" multiple data-placeholder="Your Selection">
+                        &lt;option value='example1@gmail.com'>Mike Charley&lt;/option>
+                        &lt;option value='example2@gmail.com'>Andy Lurs&lt;/option>
+                        &lt;option value='example3@gmail.com'>Toby Lightman&lt;/option>
+                        &lt;option value='example4@gmail.com'>Lene Marlin&lt;/option>
+                        &lt;option value='example5@gmail.com'>Deep Purple&lt;/option>
+                    &lt;/select>
+                &lt;/div>
+                &lt;div class="field_text">
+                    &lt;label for="subject" class="label_title">Subject:&lt;/label>
+                    &lt;input type="text" name="subject" id="subject" value="" placeholder="ex. Happy New Year!" class="inputtext input_middle required" />
+                &lt;/div>
+                &lt;div class="clear">&lt;/div>
+                &lt;div class="field_text field_textarea">
+                    &lt;div id="edit_buttons" class="edit_buttons gradient">&lt;/div>
+                    &lt;label for="styled_message" class="label_title">Message:&lt;/label>
+                    &lt;textarea cols="30" rows="10" name="styled_message" id="styled_message" class="textarea textarea_middle">&lt;/textarea>
+                &lt;/div>
+                &lt;div class="clear">&lt;/div>
+            &lt;/div>
+
+            &lt;div class="rowSubmit">
+                &lt;a onclick="document.getElementById('commentForm').reset();return false" href="#" class="link-reset btn btn-white">&lt;span>Discard&lt;/span>&lt;/a>
+                &lt;span class="btn">&lt;input type="submit" id="send" value="Send" />&lt;/span>
+            &lt;/div>
+        &lt;/form>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Contact Form via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+
+    // Multiselect
+    jQuery(document).ready(function() {
+        jQuery('#contact_name').chosen({ width: "100%" });
+    });
+
+    // Text Editor
+    bkLib.onDomLoaded(function() {
+        var myNicEditor = new nicEditor({
+            buttonList : [
+                'bold',
+                'italic',
+                'underline',
+                'forecolor',
+                'left',
+                'center',
+                'right',
+                'justify'
+            ]
+        });
+        myNicEditor.setPanel('edit_buttons');
+        myNicEditor.addInstance('styled_message');
+    });
+    setTimeout(function () {
+        var nic_width = $('.nicEdit-panel').width();
+        $('.nicEdit-container').css('width', nic_width);
+        $('.nicEdit-main').css('width', nic_width-24);
+    }, 2000);
+    $(window).resize(function() {
+        var nic_width = $('.nicEdit-panel').width();
+        $('.nicEdit-container').css('width', nic_width);
+        $('.nicEdit-main').css('width', nic_width-24);
+    });
+
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Contact Form -->
+
+                        <!-- Search Form -->
+                        <div class="description">
+                            <h3 id="forms-search">Search Form</h3>
+                            <p>Two different search fields available.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- search widget -->
+                                        <div class="widget-container widget_search boxed">
+                                            <div class="inner">
+                                                <form method="get" id="searchform2" action="#">
+                                                    <div class="clearfix">
+                                                        <span class="btn btn-small">
+                                                            <input type="submit" id="searchsubmit2" value="Search" />
+                                                        </span>
+                                                        <div class="input_wrap">
+                                                            <span class="input_icon"></span>
+                                                            <input class="inputField" name="search3" type="text" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--/ search widget -->
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <!-- search widget -->
+                                        <div class="widget-container widget_search styled boxed-velvet">
+                                            <div class="inner">
+                                                <form method="get" id="searchform3" action="#">
+                                                    <div class="clearfix">
+                                                        <span class="btn btn-small">
+                                                            <input type="submit" id="searchsubmit3" value="Search" />
+                                                        </span>
+                                                        <div class="input_wrap">
+                                                            <input class="inputField" name="search3" placeholder="Search..."  type="text" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--/ search widget -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!-- Search form default style -->
+&lt;div class="widget-container widget_search boxed">
+    &lt;div class="inner">
+        &lt;form method="get" id="searchform2" action="#">
+            &lt;div class="clearfix">
+                &lt;span class="btn btn-small">
+                    &lt;input type="submit" id="searchsubmit2" value="Search" />
+                &lt;/span>
+                &lt;div class="input_wrap">
+                    &lt;span class="input_icon">&lt;/span>
+                    &lt;input class="inputField" name="search3" type="text" />
+                &lt;/div>
+            &lt;/div>
+        &lt;/form>
+    &lt;/div>
+&lt;/div>
+
+&lt;!-- Search form alternative style -->
+&lt;div class="widget-container widget_search styled boxed-velvet">
+    &lt;div class="inner">
+        &lt;form method="get" id="searchform3" action="#">
+            &lt;div class="clearfix">
+                &lt;span class="btn btn-small">
+                    &lt;input type="submit" id="searchsubmit3" value="Search" />
+                &lt;/span>
+                &lt;div class="input_wrap">
+                    &lt;input class="inputField" name="search3" placeholder="Search..."  type="text" />
+                &lt;/div>
+            &lt;/div>
+        &lt;/form>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Search Form -->
+                    </div>
+                    <!--/ Forms -->
+
+                    <!-- Pricing List -->
+                    <div class="section-demo">
+                        <h2 id="pricing">Pricing</h2>
+
+                        <!-- Pricing List Style 1 -->
+                        <div class="description">
+                            <p>
+                                Use pricing items to announce prices for your services. Two different pricing styles available. Add class <code>col_active</code> to <code>price_col</code> to highlight pricing item. Add color class to <code>price_col</code> class to change item color.
+                                <br />Available color classes are the next: <code>price_col_red</code>, <code>price_col_blue</code>.
+                            </p>
+                            <h3 id="pricing-def">Pricing Items default style</h3>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- pricing1-->
+                                <div class="pricing_box price_style1 clearfix">
+                                    <ul>
+
+                                        <li class="price_col">
+                                            <!--pricing item-->
+                                            <div class="price_item">
+                                                <div class="inner">
+                                                    <div class="badge"></div>
+                                                    <div class="price_col_head">
+                                                        <span class="price"><em>$ 59</em><span>per month</span></span>
+                                                    </div>
+                                                    <div class="price_col_body clearfix">
+                                                        <div class="price_body_inner">
+                                                            <div class="price_body_top">
+                                                                <strong>Basic</strong>
+                                                                <span>Lots of clients &amp; users</span>
+                                                            </div>
+                                                            <ul>
+                                                                <li>250 SKU’s</li>
+                                                                <li>1 GB Storage</li>
+                                                                <li>3,5% transaction fee</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_col_foot">
+                                                        <div class="sign_up"><a href="#" class="btn btn-large btn-black"><span>Try Now</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+
+                                        <li class="price_col price_col_red col_active">
+                                            <!--pricing item-->
+                                            <div class="price_item">
+                                                <div class="inner">
+                                                    <div class="badge"></div>
+                                                    <div class="price_col_head">
+                                                        <span class="price"><em>$ 299</em><span>per month</span></span>
+                                                    </div>
+                                                    <div class="price_col_body clearfix">
+                                                        <div class="price_body_inner">
+                                                            <div class="price_body_top">
+                                                                <strong>Premium</strong>
+                                                                <span>Lots of clients  & users</span>
+                                                            </div>
+                                                            <ul>
+                                                                <li>2,500 SKU’s</li>
+                                                                <li>5 GB Storage</li>
+                                                                <li>1,5% transaction fee</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_col_foot">
+                                                        <div class="sign_up"><a href="#" class="btn btn-red btn-large"><span>Subscribe</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+
+                                        <li class="price_col price_col_blue">
+                                            <!--pricing item-->
+                                            <div class="price_item">
+                                                <div class="badge"></div>
+                                                <div class="inner">
+                                                    <div class="price_col_head">
+                                                        <span class="price"><em>$ 499</em><span>per month</span></span>
+                                                    </div>
+                                                    <div class="price_col_body clearfix">
+                                                        <div class="price_body_inner">
+                                                            <div class="price_body_top">
+                                                                <strong>Unlimited</strong>
+                                                                <span>Lots of clients &amp; users</span>
+                                                            </div>
+                                                            <ul>
+                                                                <li>Unlimited SKU’s</li>
+                                                                <li>20 GB Storage</li>
+                                                                <li>1% transaction fee</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_col_foot">
+                                                        <div class="sign_up"><a href="#" class="btn btn-large btn-black"><span>Try Now</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!--/ pricing1-->
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;div class="pricing_box price_style1 clearfix">
+    &lt;ul>
+
+        &lt;li class="price_col">
+            &lt;!--pricing item-->
+            &lt;div class="price_item">
+                &lt;div class="inner">
+                    &lt;div class="badge">&lt;/div>
+                    &lt;div class="price_col_head">
+                        &lt;span class="price">&lt;em>$ 59&lt;/em>&lt;span>per month&lt;/span>&lt;/span>
+                    &lt;/div>
+                    &lt;div class="price_col_body clearfix">
+                        &lt;div class="price_body_inner">
+                            &lt;div class="price_body_top">
+                                &lt;strong>Basic&lt;/strong>
+                                &lt;span>Lots of clients &amp; users&lt;/span>
+                            &lt;/div>
+                            &lt;ul>
+                                &lt;li>250 SKU’s&lt;/li>
+                                &lt;li>1 GB Storage&lt;/li>
+                                &lt;li>3,5% transaction fee&lt;/li>
+                            &lt;/ul>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="price_col_foot">
+                        &lt;div class="sign_up">
+                            &lt;a href="#" class="btn btn-large btn-black">&lt;span>Try Now&lt;/span>&lt;/a>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;!--/ pricing-item -->
+        &lt;/li>
+
+        &lt;li class="price_col price_col_red col_active">
+            &lt;!--pricing item-->
+            &lt;div class="price_item">
+                &lt;div class="inner">
+                    &lt;div class="badge">&lt;/div>
+                    &lt;div class="price_col_head">
+                        &lt;span class="price">&lt;em>$ 299&lt;/em>&lt;span>per month&lt;/span>&lt;/span>
+                    &lt;/div>
+                    &lt;div class="price_col_body clearfix">
+                        &lt;div class="price_body_inner">
+                            &lt;div class="price_body_top">
+                                &lt;strong>Premium&lt;/strong>
+                                &lt;span>Lots of clients  & users&lt;/span>
+                            &lt;/div>
+                            &lt;ul>
+                                &lt;li>2,500 SKU’s&lt;/li>
+                                &lt;li>5 GB Storage&lt;/li>
+                                &lt;li>1,5% transaction fee&lt;/li>
+                            &lt;/ul>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="price_col_foot">
+                        &lt;div class="sign_up">
+                            &lt;a href="#" class="btn btn-red btn-large">&lt;span>Subscribe&lt;/span>&lt;/a>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;!--/ pricing-item -->
+        &lt;/li>
+
+        &lt;li class="price_col price_col_blue">
+            &lt;!--pricing item-->
+            &lt;div class="price_item">
+                &lt;div class="badge">&lt;/div>
+                &lt;div class="inner">
+                    &lt;div class="price_col_head">
+                        &lt;span class="price">&lt;em>$ 499&lt;/em>&lt;span>per month&lt;/span>&lt;/span>
+                    &lt;/div>
+                    &lt;div class="price_col_body clearfix">
+                        &lt;div class="price_body_inner">
+                            &lt;div class="price_body_top">
+                                &lt;strong>Unlimited&lt;/strong>
+                                &lt;span>Lots of clients &amp; users&lt;/span>
+                            &lt;/div>
+                            &lt;ul>
+                                &lt;li>Unlimited SKU’s&lt;/li>
+                                &lt;li>20 GB Storage&lt;/li>
+                                &lt;li>1% transaction fee&lt;/li>
+                            &lt;/ul>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="price_col_foot">
+                        &lt;div class="sign_up">
+                            &lt;a href="#" class="btn btn-large btn-black">&lt;span>Try Now&lt;/span>&lt;/a>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;!--/ pricing-item -->
+        &lt;/li>
+
+    &lt;/ul>
+&lt;/div>
+                                    </pre>
+                            </div>
+                        </div>
+                        <!-- Pricing List Style 1 -->
+
+                        <!-- Pricing List Style 2 -->
+                        <div class="description">
+                            <h3 id="pricing-alt">Pricing Items alternative style</h3>
+                            <p>To switch to alternative pricing style just replace <code>price_style1</code> with <code>price_style2</code> class in <code>pricing_box</code>.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- pricing2-->
+                                <div class="pricing_box price_style2 row clearfix">
+                                    <ul>
+
+                                        <li class="price_col col-sm-6">
+                                            <!--pricing item-->
+                                            <div class="price_item">
+                                                <div class="badge"></div>
+                                                <div class="inner">
+                                                    <div class="price_col_head">
+                                                        <span class="price"><em>$ 59</em><span>per month</span></span>
+                                                    </div>
+                                                    <div class="price_col_body clearfix">
+                                                        <div class="price_body_inner">
+                                                            <div class="price_body_top">
+                                                                <strong>Basic</strong>
+                                                                <span>Lots of clients &amp; users</span>
+                                                            </div>
+                                                            <ul>
+                                                                <li>2,500 SKU’s</li>
+                                                                <li>5 GB Storage</li>
+                                                                <li>1,5% transaction fee</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_col_foot">
+                                                        <div class="sign_up"><a href="#" class="btn btn-large btn-black"><span>Try Now</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+
+                                        <li class="price_col price_col_red col-sm-6 col_active">
+                                            <!--pricing item-->
+                                            <div class="price_item">
+                                                <div class="badge"></div>
+                                                <div class="inner">
+                                                    <div class="price_col_head">
+                                                        <span class="price"><em>$ 299</em><span>per month</span></span>
+                                                    </div>
+                                                    <div class="price_col_body clearfix">
+                                                        <div class="price_body_inner">
+                                                            <div class="price_body_top">
+                                                                <strong>Premium</strong>
+                                                                <span>Lots of clients  & users</span>
+                                                            </div>
+                                                            <ul>
+                                                                <li>2,500 SKU’s</li>
+                                                                <li>5 GB Storage</li>
+                                                                <li>1,5% transaction fee</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="price_col_foot">
+                                                        <div class="sign_up"><a href="#" class="btn btn-large"><span>Subscribe</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <!--/ pricing2-->
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;div class="pricing_box price_style2 row clearfix">
+    &lt;ul>
+
+        &lt;li class="price_col col-sm-4">
+            &lt;!--pricing item-->
+            &lt;div class="price_item">
+                &lt;div class="badge">&lt;/div>
+                &lt;div class="inner">
+                    &lt;div class="price_col_head">
+                        &lt;span class="price">&lt;em>$ 59&lt;/em>&lt;span>per month&lt;/span>&lt;/span>
+                    &lt;/div>
+                    &lt;div class="price_col_body clearfix">
+                        &lt;div class="price_body_inner">
+                            &lt;div class="price_body_top">
+                                &lt;strong>Basic&lt;/strong>
+                                &lt;span>Lots of clients &amp; users&lt;/span>
+                            &lt;/div>
+                            &lt;ul>
+                                &lt;li>2,500 SKU’s&lt;/li>
+                                &lt;li>5 GB Storage&lt;/li>
+                                &lt;li>1,5% transaction fee&lt;/li>
+                            &lt;/ul>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="price_col_foot">
+                        &lt;div class="sign_up">
+                            &lt;a href="#" class="btn btn-large btn-black">
+                                &lt;span>Try Now&lt;/span>
+                            &lt;/a>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;!--/ pricing-item -->
+        &lt;/li>
+        ...
+        ...
+        ...
+    &lt;/ul>
+&lt;/div>
+                                    </pre>
+                            </div>
+                        </div>
+                        <!-- Pricing List Style 2 -->
+                    </div>
+                    <!--/ Pricing List -->
+
+                    <!-- Content Box -->
+                    <div class="section-demo">
+                        <h2 id="content-box">Content Box</h2>
+
+                        <div class="description">
+                            <p>Use titled box to display different content.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color content-box-demo">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- widget -->
+                                        <div class="widget-container boxed">
+                                            <div class="inner">
+                                                <h3 class="widget-title">Widget Title</h3>
+
+                                            </div>
+                                        </div>
+                                        <!-- /widget -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container boxed">
+    &lt;div class="inner">
+        &lt;h3 class="widget-title">Widget Title&lt;/h3>
+        &lt;!-- place your content here -->
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Content Box -->
+
+                    <!-- Message Field -->
+                    <div class="section-demo">
+                        <h2 id="message-field">Message Field</h2>
+
+                        <div class="description">
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- post comments -->
+                                <div class="comment-list clearfix" id="comments">
+                                    <ol>
+                                        <li class="comment">
+                                            <div class="comment-body">
+                                                <div class="inner">
+                                                    <div class="comment-arrow"></div>
+                                                    <div class="comment-avatar">
+                                                        <div class="avatar"><img src="../dark-velvet-css/images/temp/avatar1.png" alt="" /></div>
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <div class="comment-author clearfix">
+                                                            <a href="#" class="link-author">Justin Timberlake</a> <span class="comment-date">June 26, 2013</span> | <a href="#addcomments" class="link-reply anchor">Reply</a>
+                                                        </div>
+                                                        <div class="comment-entry">
+                                                            He made his film debut with a minor part in Back to the Future Part II (1989), then landed a succession.
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!--/ post comments -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="comment-list clearfix" id="comments">
+    &lt;ol>
+        &lt;li class="comment">
+            &lt;div class="comment-body">
+                &lt;div class="inner">
+                    &lt;div class="comment-arrow">&lt;/div>
+                    &lt;div class="comment-avatar">
+                        &lt;div class="avatar">
+                            &lt;img src="images/temp/avatar1.png" alt="" />
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="comment-text">
+                        &lt;div class="comment-author clearfix">
+                            &lt;a href="#" class="link-author">Justin Timberlake&lt;/a>
+                            &lt;span class="comment-date">June 26, 2013&lt;/span> | 
+                            &lt;a href="#addcomments" class="link-reply anchor">Reply&lt;/a>
+                        &lt;/div>
+                        &lt;div class="comment-entry">
+                            He made his film debut with a minor part in Back to the Future Part II (1989), then landed a succession.
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/li>
+    &lt;/ol>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Message Field -->
+
+                    <!-- Video Player -->
+                    <div class="section-demo">
+                        <h2 id="video-player">Video Player</h2>
+
+                        <div class="description">
+                            <p>Use Video.js player to play video content.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Video Player require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link href="css/video-js.css" rel="stylesheet">
+&lt;script src="js/video.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-10 col-sm-offset-1">
+                                        <!-- Video Player -->
+                                        <div class="video_player">
+                                            <div class="inner">
+                                                <video id="my_video_1" class="video-js vjs-default-skin" controls loop
+                                                       preload="auto" poster="../dark-velvet-css/images/temp/vjs_poster2.png"
+                                                       data-setup="{}">
+                                                    <source src="http://test.themefuse.com/artiom/galapagos.mp4" type='video/mp4'>
+                                                </video>
+                                                <script>
+                                                    _V_("my_video_1").ready(function(){
+                                                        var myPlayer = this;
+                                                        var aspectRatio = 192/380;
+                                                        var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                                                        myPlayer.width(width).height( width * aspectRatio );
+
+                                                        function resizeVideoJS(){
+                                                            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+                                                            myPlayer.width(width).height( width * aspectRatio );
+                                                        }
+                                                        resizeVideoJS();
+                                                        window.onresize = resizeVideoJS;
+                                                    });
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <!--/ Video Player -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="video_player">
+    &lt;div class="inner">
+        &lt;video id="my_video_1" class="video-js vjs-default-skin" controls loop
+               preload="auto" poster="images/temp/vjs_poster2.png"
+               data-setup="{}">
+            &lt;source src="http://path-to-video/video.mp4" type='video/mp4'>
+        &lt;/video>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Video Player via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    _V_("my_video_1").ready(function(){
+        var myPlayer = this;
+        var aspectRatio = 192/380;
+        var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+        myPlayer.width(width).height( width * aspectRatio );
+
+        function resizeVideoJS(){
+            var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+            myPlayer.width(width).height( width * aspectRatio );
+        }
+        resizeVideoJS();
+        window.onresize = resizeVideoJS;
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Video Player -->
+
+                    <!-- Audio Player -->
+                    <div class="section-demo">
+                        <h2 id="audio-player">Audio Player</h2>
+
+                        <div class="description">
+                            <p>Use jPlayer to play audio content.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Audio Player require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link href="css/jplayer.css" rel="stylesheet">
+&lt;script src="js/jquery.jplayer.min.js">&lt;/script>
+&lt;script src="js/jplayer.playlist.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Widget Audio Player -->
+                                        <div class="widget-container widget-audio">
+                                            <div class="inner">
+                                                <!-- jplayer-->
+                                                <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                                                <div id="jp_container_1" class="jp-audio">
+                                                    <div class="jp-type-playlist">
+                                                        <div class="jp-playlist">
+                                                            <ul class="jp-playlist-inner">
+                                                                <li></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="jp-gui jp-interface">
+                                                            <div class="song_title_wrap">
+                                                                <div class="song_title"></div>
+                                                            </div>
+                                                            <div class="jp-controls-wrap">
+                                                                <div class="jp-progress">
+                                                                    <div class="jp-seek-bar">
+                                                                        <div class="jp-play-bar"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <ul class="jp-controls">
+                                                                    <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-previous disabled" tabindex="1">previous</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li><!--
+                                                        --><li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+                                                                </ul>
+                                                                <div class="jp-volume-bar">
+                                                                    <div class="jp-volume-bar-value"></div>
+                                                                </div>
+                                                                <div class="jp-current-time"></div>
+                                                                <div class="jp-duration"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="jp-no-solution">
+                                                            <span>Update Required</span>
+                                                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/ jplayer-->
+                                            </div>
+                                        </div>
+                                        <!-- Widget Audio Player -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    //&lt;![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"&lt;img src='images/temp/music-player1.png' alt='' />&lt;ul>&lt;li class='item-artist'>&lt;span>01.&lt;/span>Rudimental&lt;/li>&lt;li class='item-song'>Waiting All Night (feat. Ella Eyre)&lt;/li>&lt;li class='item-album'>Folllow Your Heart | 2013&lt;/li>&lt;/ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"&lt;img src='images/temp/music-player2.png' alt='' />&lt;ul>&lt;li class='item-artist'>&lt;span>02.&lt;/span>Daft Punk&lt;/li>&lt;li class='item-song'>Get Lucky (ft. Pharell Williams)&lt;/li>&lt;li class='item-album'>Tron Legacy | 2013&lt;/li>&lt;/ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"&lt;img src='images/temp/music-player3.png' alt='' />&lt;ul>&lt;li class='item-artist'>&lt;span>03.&lt;/span>Justin Timberlake&lt;/li>&lt;li class='item-song'>Mirrors&lt;/li>&lt;li class='item-album'>20/20 Experience | 2013&lt;/li>&lt;/ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+&lt;/script>
+                                </pre>
+
+                                <div class="fire-js">Enable Audio Player via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    //&lt;![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"&lt;ul>&lt;li class='item-artist'>3 Doors Down&#160;&#8211;&#160;&lt;/li>&lt;li class='item-song'>Superman&lt;/li>&lt;/ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"&lt;ul>&lt;li class='item-artist'>Daft Punk&#160;&#8211;&#160;&lt;/li>&lt;li class='item-song'>Get Lucky&lt;/li>&lt;/ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"&lt;ul>&lt;li class='item-artist'>Justin Timberlake&#160;&#8211;&#160;&lt;/li>&lt;li class='item-song'>Mirrors&lt;/li>&lt;/ul>",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Audio Player -->
+
+                    <!-- Sliders -->
+                    <div class="section-demo">
+                        <h2 id="sliders">Sliders</h2>
+
+                        <!-- Image Slider -->
+                        <div class="description">
+                            <h3 id="sliders-image">Image Slider</h3>
+                            <p>This slideshow is based on Bootstrap's <code>carousel.js</code></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <!-- Image Slider -->
+                                        <div class="widget-container widget_gallery">
+                                            <div class="inner">
+                                                <div id="myCarousel" class="carousel slide" data-interval="20000">
+                                                    <!-- Carousel items -->
+                                                    <div class="carousel-inner">
+                                                        <div class="active item">
+                                                            <img src="../dark-velvet-css/images/temp/main-slider-2.jpg" alt="" />
+                                                            <div class="carousel-title"><h6>Brave animated series</h6><p>Disney Pixar</p></div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="../dark-velvet-css/images/temp/top-slider-2.jpg" alt="" />
+                                                            <div class="carousel-title"><h6>Horton</h6><p>Change your fate</p></div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="../dark-velvet-css/images/temp/top-slider-3.jpg" alt="" />
+                                                            <div class="carousel-title"><h6>Surf up</h6><p>Change your fate</p></div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="../dark-velvet-css/images/temp/top-slider-4.jpg" alt="" />
+                                                            <div class="carousel-title"><h6>Wall-e</h6><p>Disney Pixar</p></div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <img src="../dark-velvet-css/images/temp/top-slider-1.jpg" alt="" />
+                                                            <div class="carousel-title"><h6>Ice Age</h6><p>Change your fate</p></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Carousel indicators -->
+                                                    <ol class="carousel-indicators">
+                                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                                                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                                                    </ol>
+                                                    <!-- Carousel nav -->
+                                                    <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+                                                    <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ Image Slider -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;div class="widget-container widget_gallery boxed boxed-cream">
+    &lt;div class="inner">
+        &lt;div id="myCarousel" class="carousel slide" data-interval="20000">
+            &lt;!-- Carousel items -->
+            &lt;div class="carousel-inner">
+                &lt;div class="active item">
+                    &lt;img src="images/temp/top-slider-1.jpg" alt="" />
+                    &lt;div class="carousel-title">
+                        &lt;h6>Ratatouille&lt;/h6>
+                        &lt;p>The latest unstoppable hero&lt;/p>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="item">
+                    &lt;img src="images/temp/top-slider-2.jpg" alt="" />
+                    &lt;div class="carousel-title">
+                        &lt;h6>Horton&lt;/h6>
+                        &lt;p>Change your fate&lt;/p>
+                    &lt;/div>
+                &lt;/div>
+                ...
+                ...
+                ...
+            &lt;/div>
+            &lt;!-- Carousel indicators -->
+            &lt;ol class="carousel-indicators">
+                &lt;li data-target="#myCarousel" data-slide-to="0" class="active">&lt;/li>
+                &lt;li data-target="#myCarousel" data-slide-to="1">&lt;/li>
+                ...
+                ...
+                ...
+            &lt;/ol>
+            &lt;!-- Carousel nav -->
+            &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev">&lt;/a>
+            &lt;a class="carousel-control right" href="#myCarousel" data-slide="next">&lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                    </pre>
+                            </div>
+                        </div>
+                        <!--/ Image Slider -->
+                    </div>
+                    <!--/ Sliders -->
+
+                    <!-- Calendar -->
+                    <div class="section-demo">
+                        <h2 id="widget-calendar">Calendar</h2>
+
+                        <div class="description">
+                            <p>Calendar allow users to select multiple dates.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Calendar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery-ui.multidatespicker.js">&lt;/script>
+&lt;link href="css/jquery-ui-1.8.20.custom.css" rel="stylesheet">
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- widget calendar-->
+                                        <div class="widget-container widget_calendar boxed-velvet">
+                                            <div class="inner">
+                                                <input type="text" name="date_departure" class="inputField" value="" id="date_departure">
+                                                <script>
+                                                    // <![CDATA[
+                                                    jQuery(document).ready(function($) {
+                                                        var daysRange = 5;
+
+                                                        function assignCalendar(id){
+                                                            $('<div class="calendar" />')
+                                                                    .insertAfter( $(id) )
+                                                                    .multiDatesPicker({
+                                                                        dateFormat: 'yy-mm-dd',
+                                                                        minDate: new Date(),
+                                                                        maxDate: '+1y',
+                                                                        altField: id,
+                                                                        firstDay: 1,
+                                                                        showOtherMonths: true
+                                                                    }).prev().hide();
+                                                        }
+
+                                                        assignCalendar('#date_departure');
+                                                    });
+                                                    // ]]>
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <!--/ widget calendar-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget_calendar boxed-velvet">
+    &lt;div class="inner">
+        &lt;input type="text" name="date_departure" class="inputField" id="date_departure">
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Calendar via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    // &lt;![CDATA[
+    jQuery(document).ready(function($) {
+        var daysRange = 5;
+
+        function assignCalendar(id){
+            $('&lt;div class="calendar" />')
+                    .insertAfter( $(id) )
+                    .multiDatesPicker({
+                        dateFormat: 'yy-mm-dd',
+                        minDate: new Date(),
+                        maxDate: '+1y',
+                        altField: id,
+                        firstDay: 1,
+                        showOtherMonths: true
+                    }).prev().hide();
+        }
+
+        assignCalendar('#date_departure');
+    });
+    // ]]>
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Calendar -->
+
+                    <!-- User Profile -->
+                    <div class="section-demo">
+                        <div class="description">
+                            <h2 id="user-profile">User Profile</h2>
+                            <p>Display information about user in a styled box.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Profile -->
+                                        <div class="widget-container widget_profile boxed-velvet">
+                                            <div class="inner">
+                                                <div class="widget_profile_top clearfix">
+                                                    <div class="avatar"><img src="../dark-velvet-css/images/temp/avatar.png" alt="" /></div>
+                                                    <h5>Victoria Lachetti</h5>
+                                                    <span class="subtitle">Top model</span>
+                                                    <div class="follow"><a href="#" class="btn btn-follow"><span>Follow</span></a></div>
+                                                </div>
+                                                <ul class="counters clearfix">
+                                                    <li class="first"><a href="#"><p>530</p><span>Tweets</span></a></li>
+                                                    <li><a href="#"><p>1450</p><span>Following</span></a></li>
+                                                    <li class="last"><a href="#"><p>980</p><span>Followers</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--/ Profile -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget_profile boxed-velvet">
+    &lt;div class="inner">
+        &lt;div class="widget_profile_top clearfix">
+            &lt;div class="avatar">&lt;img src="images/temp/avatar.png" alt="" />&lt;/div>
+            &lt;h5>Victoria Lachetti&lt;/h5>
+            &lt;span class="subtitle">Top model&lt;/span>
+            &lt;div class="follow">
+                &lt;a href="#" class="btn btn-follow">&lt;span>Follow&lt;/span>&lt;/a>
+            &lt;/div>
+        &lt;/div>
+        &lt;ul class="counters clearfix">
+            &lt;li class="first">&lt;a href="#">&lt;p>530&lt;/p>&lt;span>Tweets&lt;/span>&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">&lt;p>1450&lt;/p>&lt;span>Following&lt;/span>&lt;/a>&lt;/li>
+            &lt;li class="last">&lt;a href="#">&lt;p>980&lt;/p>&lt;span>Followers&lt;/span>&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ User Profile -->
+
+                    <!-- Simple Graph -->
+                    <div class="section-demo">
+                        <h2 id="flot-graph">Simple Graph</h2>
+
+                        <div class="description">
+                            <p>Build graphs with Flot - attractive JavaScript plotting for jQuery.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Flot require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;!--[if lte IE 8]>
+    &lt;script type="text/javascript" src="js/excanvas.min.js">&lt;/script>
+&lt;![endif]-->
+&lt;script type="text/javascript" src="js/jquery.flot.js">&lt;/script>
+&lt;script type="text/javascript" src="js/jquery.flot.resize.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Simple Graph -->
+                                        <div class="widget-container widget_graph boxed-velvet">
+                                            <div class="inner">
+                                                <div id="graph" class="graph"></div>
+                                            </div>
+                                        </div>
+                                        <!--/ Simple Graph -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget_graph boxed-velvet">
+    &lt;div class="inner">
+        &lt;div id="graph" class="graph">&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Graph via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(function() {
+        var graphwidth = $('.widget_graph .inner').width();
+        $('.widget_graph .graph').css('height', parseInt(graphwidth/1.7));
+        $(window).resize(function() {
+            graphwidth = $('.widget_graph .inner').width();
+            $('.widget_graph .graph').css('height', parseInt(graphwidth/1.7));
+        });
+
+        var d1 = [[0, 9], [1, 23], [1.8, 7], [2.2, 24], [2.8, 18], [4, 36]];
+        var graphholder = $("#graph");
+        var plot = $.plot(graphholder, [d1], {
+            colors: ["#c06030", "#afd8f8", "#cb4b4b", "#4da74d", "#9440ed"],
+            xaxis: {
+                min: null,
+                max: null
+            },
+            yaxis: {
+                autoscaleMargin: 0.02
+            },
+            series: {
+                lines: {
+                    show: true,
+                    lineWidth: 5,
+                    fill: true,
+                    fillColor: "rgba(69,144,161,0.1)"
+                },
+                points: {
+                    show: true,
+                    radius: 5,
+                    lineWidth: 3,
+                    fillColor: "#f3d4a4"
+                }
+            },
+            grid: {
+                hoverable: true,
+                clickable: true,
+                margin: 12,
+                color: "#79889a",
+                borderColor: "#79889a"
+            }
+        });
+
+        function showTooltip(x, y, contents) {
+            $("&lt;div id='graph-tooltip'>" + contents + "&lt;/div>").css({top: y - 40, left: x - 22}).appendTo("body").fadeIn(200);
+        };
+
+        var previousPoint = null;
+        $("#graph").bind("plothover", function (event, pos, item) {
+
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+
+                    previousPoint = item.dataIndex;
+
+                    $("#graph-tooltip").remove();
+                    var x = item.datapoint[0].toFixed(2),
+                            y = item.datapoint[1].toFixed(2);
+
+                    showTooltip(item.pageX, item.pageY, '$' + y*100);
+                }
+            } else {
+                $("#graph-tooltip").remove();
+                previousPoint = null;
+            }
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Simple Graph -->
+
+                </div>
+                <!--/ content -->
+            </div>
+        </div>
+        <!--/ row-->
+    </div>
+    <!--/ container -->
+
+</div>
+</body>
+</html>
