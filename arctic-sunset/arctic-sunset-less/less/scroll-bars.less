@@ -1,0 +1,92 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+
+.scrollbars{padding-left: 20px;}
+
+.scrollbar {
+  width: 36px;
+  height: 165px;
+  overflow: auto;
+  float: left;
+  margin-right: 18px;
+  color:#e6e6e5;
+}
+.scrollbar.style4 {
+  height: 150px;
+  margin-top: 6px;
+  margin-right: 0;
+}
+
+.jspContainer{
+  overflow: hidden;
+  position: relative;
+}
+.jspPane{
+  position: absolute;
+}
+.jspVerticalBar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 100%;
+  background: #f4f4f4;
+}
+
+.jspCap{
+  display: block;
+  width: 27px;
+  height: 12px;
+  background-image: url(images/scrollbar.png);
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.jspCap.jspCapTop{
+  background-position: 0 0;
+  top: 6px;
+}
+.jspCap.jspCapBottom{
+  background-position: 0 -12px;
+  bottom: 6px;
+}
+.scrollbar.style4 .jspCap{
+  width: 8px;
+  height: 4px;
+}
+.scrollbar.style4 .jspCap.jspCapTop{
+  background-position: -140px 0;
+  top: 2px;
+}
+.scrollbar.style4 .jspCap.jspCapBottom{
+  background-position: -140px -4px;
+  bottom: 2px;
+}
+.jspHorizontalBar .jspCap{display: none;}
+
+.jspTrack{
+  background-image: url(images/scrollbar.png);
+  background-position: -27px 0;
+  background-repeat: repeat-y;
+  position: relative;
+  width:36px;
+}
+.scrollbar.style4 .jspTrack{
+  background-position: -148px 0;
+  width:8px;
+}
+.jspDrag{
+  background-image: url(images/scrollbar.png);
+  background-repeat: no-repeat;
+  background-position: -65px 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 35px;
+}
+.scrollbar.style2 .jspDrag{background-position: -100px 0; width: 21px; margin-left: 7px;}
+.scrollbar.style3 .jspDrag{background-position: -122px 0; width: 17px; margin-left: 9px;}
+.scrollbar.style4 .jspDrag{background-position: -160px 0; width: 11px;}

@@ -1,0 +1,115 @@
+/*
+  - General Styles
+  - Clear Floats
+  - Boxes
+  - Layout on Index Page
+*/
+
+
+
+/*-----------------------------------*/
+/* General Styles */
+/*-----------------------------------*/
+
+body {
+  font-family: @font-family;
+  font-weight: 700;
+  color: @font-color;
+  font-size: @font-size;
+  position:relative;
+  background: url(images/bg.png);
+}
+::-moz-selection {
+  background: #888;
+  color: #000;
+  text-shadow: none;
+}
+::selection {
+  background: #888;
+  color: #000;
+  text-shadow: none;
+}
+a:hover,
+a:focus {
+  color: @link-color-hover;
+  text-decoration: none;
+}
+a:active{background-color: transparent;}
+
+input, textarea, div {
+  outline: 0 none;
+  font-family: @font-family;
+}
+input[type="submit"]:focus {
+  outline: 0 none;
+  font-family: Arial;
+}
+button, input, select, textarea {vertical-align: top;}
+
+.alpha{margin-left:0 !important;}
+.omega{margin-right:0 !important;}
+
+/*-----------------------------------*/
+/* Clear Floats */
+/*-----------------------------------*/
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*-----------------------------------*/
+/* Boxes */
+/*-----------------------------------*/
+
+.content, .sidebar{padding-top: 20px; padding-bottom: 30px;}
+#middle{position: relative; z-index: 0;}
+#middle.sidebar_left > .container > .row > .col-sm-8{float:right;}
+
+.boxed {
+  background: url(images/box_bg_bot.jpg) bottom repeat-x #fafafa;
+  .border-radius(@border-radius);
+  -webkit-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.13);
+  margin-bottom:20px;
+  position: relative;
+  z-index: 0;
+}
+
+/*-------------------------------------------*/
+/* Layout on Index Page */
+/*-------------------------------------------*/
+
+.checkbox-controls{margin-bottom: 30px;}
+.progressbars{padding: 20px 40px 0;}
+.badges .badge{margin-right: -12px;}
+.ribbons{background: url(images/ribbons-shadow.png) 4px 0 no-repeat; padding-top: 45px; height: 250px;}
+.ribbons .ribbon{margin-bottom: 4px; display: block;}

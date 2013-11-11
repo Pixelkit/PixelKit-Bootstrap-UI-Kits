@@ -1,0 +1,63 @@
+/*-----------------------------------*/
+/* Sidebar widgets */
+/*-----------------------------------*/
+
+/*
+    - Widget Tags
+    - Widget Calendar
+*/
+
+.widget-container{margin-bottom: 25px;}
+.widget-container .widget-title{
+  font-size: @font-size * 1.43;
+  margin-bottom:13px;
+}
+
+/* Widget Tags */
+
+.widget_tag_cloud .inner{padding: 22px 26px 27px;}
+.widget_tag_cloud .widget-title {margin-bottom: 17px;}
+
+.tagcloud a{
+  display:inline-block;
+  font-family: Arial;
+  font-size: @font-size - 2;
+  font-weight: 700;
+  text-align: center;
+  white-space:nowrap;
+  background-image:url(images/tag.png);
+  background-repeat:no-repeat;
+  background-position:right -28px;
+  height: 28px;
+  line-height: 28px;
+  padding-right:15px;
+  color:#6f6f6f;
+  text-shadow:0 1px 1px #fff;
+  margin:5px;
+}
+.tagcloud a:hover{color: @link-color-hover;}
+
+.tagcloud a span{
+  display:inline-block;
+  background-image:url(images/tag.png);
+  background-repeat:no-repeat;
+  background-position:left 0;
+  padding-left:21px;
+  line-height:inherit;
+}
+
+/* Widget Calendar */
+
+.widget_calendar{
+  border: 5px solid #ddd;
+}
+.widget_calendar .inner{
+  padding: 0 20px 20px;
+}
+.widget_calendar.boxed {
+  background: url(images/box_bg_bot.jpg) bottom repeat-x #fafafa;
+  .border-radius(@border-radius * 1.5);
+}
+.ie8 #date_departure {
+  display: none !important;
+}

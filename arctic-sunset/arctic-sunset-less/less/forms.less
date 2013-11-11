@@ -1,0 +1,278 @@
+/*-----------------------------------*/
+/* Forms */
+/*-----------------------------------*/
+
+/*
+- Comment Form, Contact Form
+- Search Form
+- Contact Form styled
+*/
+
+
+
+/*-----------------------------------*/
+/* Comment Form, Contact Form */
+/*-----------------------------------*/
+
+input::-webkit-input-placeholder {font-size: @font-size - 1; font-weight:700; color:#292929;}
+input:-moz-placeholder {font-size: @font-size - 1; font-weight:700; color:#292929;}
+textarea::-webkit-input-placeholder {font-size: @font-size - 1; font-weight:700; color:#292929;}
+textarea:-moz-placeholder {font-size: @font-size - 1; font-weight:700; color:#292929;}
+
+label, input, button, select, textarea {
+  font-size: inherit;
+  line-height: normal;
+}
+.input_icon{
+  display: block;
+  position: absolute;
+  top: 31px;
+  right: 6px;
+  z-index: 1;
+}
+.add-comment{
+  margin-bottom: 30px;
+}
+.comment-form .form-inner{padding:8px 37px 0;}
+.contact-form .form-inner{padding:0;}
+
+.add-comment-title h3{
+  line-height: 26px;
+  border-bottom: 1px solid #dfdfdf;
+  padding: 20px 34px;
+}
+.field_text,
+.field_select{
+  float:left;
+  margin-right: 3%;
+  margin-bottom: 9px;
+  width: 47%;
+}
+.field_text.omega,
+.field_select.omega{
+  float:right;
+}
+.contact-form .field_text, .contact-form .field_select{
+  margin-right: 3%;
+  margin-bottom: 12px;
+}
+.field_text.field_textarea{width: 100%;}
+
+.label_title{
+  display: block;
+  padding-bottom:8px;
+  color: #5c5c5c;
+  font-weight: 700;
+  cursor: default;
+  margin-bottom: 0;
+}
+.field_select .label_title, .rowSubmit .label_title, .sidebar .label_title{background: none;}
+
+input[type="text"],
+input[type="password"],
+textarea,
+.select_styled{
+  border:none;
+  border-top:1px solid #b2b2b2;
+  border-left:1px solid #b2b2b2;
+  background: #dfdfdf;
+  background: linear-gradient(top, #d1d1d1, #e7e7e7);
+  background: -webkit-linear-gradient(top, #d1d1d1, #e7e7e7);
+  background: -moz-linear-gradient(top, #d1d1d1, #e7e7e7);
+  background: -ms-linear-gradient(top, #d1d1d1, #e7e7e7);
+  .border-radius(@border-radius-input);
+  padding:0 16px;
+  font-size: @font-size * 1.22;
+  *padding:0;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  box-shadow: none;
+}
+textarea {padding:10px 16px;}
+
+input[type="text"],
+input[type="password"]{
+  width:100%;
+  height:36px;
+  margin: 0;
+  outline: none;
+}
+.ie8 input[type="text"],
+.ie8 input[type="password"]{
+    line-height:36px;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus{
+  border-color: #B2B2B2;
+  box-shadow: none;
+}
+.comment-form textarea{
+  width:100%;
+  height:102px;
+  padding:5px 15px;
+  resize: vertical;
+  overflow: auto;
+  color:#3a3a3a;
+}
+.comment-form .rowSubmit {
+  height: 68px;
+  padding: 0 30px;
+}
+.contact-form.boxed .comment-form .rowSubmit {height: 50px;}
+.comment-form .link-submit{float: left;}
+.comment-form .link-reset{float: right;}
+
+.contact-form .checklist{
+  padding: 0 0 0 4px;
+}
+.comment-form .error {
+  overflow: hidden;
+  border: 1px solid #F00!important;
+}
+.contact-form.boxed .btn{
+  position: absolute;
+  right: 31px;
+  top: 10px;
+}
+.contact-form.boxed .form-inner{padding: 10px 36px 0px;}
+
+.contact-form.boxed .comment-form textarea {
+  height: 102px;
+}
+
+/*-----------------------------------*/
+/* Search Form */
+/*-----------------------------------*/
+
+.widget_search .inner{padding: 15px 16px 9px;}
+.widget_search .input_wrap{margin-right: 90px; position: relative;}
+.widget_search .btn{
+  float:right;
+  margin:-4px -6px 0 0;
+}
+.widget_search .input_wrap input{height:33px; padding-left: 30px;}
+.widget_search input::-webkit-input-placeholder {color:#a4a4a4;}
+.widget_search input:-moz-placeholder {color:#a4a4a4;}
+.widget_search .input_icon{
+  background: url(images/icons/search.png);
+  width: 16px;
+  height: 16px;
+  left: 10px;
+  top: 9px;
+  right: auto;
+}
+
+/*-----------------------------------*/
+/* Contact Form styled */
+/*-----------------------------------*/
+
+.add-comment input::-webkit-input-placeholder {font:bold 12px Arial; font-size: @font-size - 2; color:#a4a4a4;}
+.add-comment input:-moz-placeholder {font:bold 12px Arial; font-size: @font-size - 2; color:#a4a4a4;}
+
+.add-comment.styled .add-comment-title{display: none;}
+.add-comment.styled .comment-form .link-reset {float: none;}
+.add-comment.styled .comment-form{padding:30px 30px 25px 90px;}
+.add-comment.styled .comment-form textarea {height:50px;}
+
+
+.add-comment.styled .comment-form .form-inner,
+.add-comment.styled .comment-form .rowSubmit {
+  height: auto;
+  padding: 0;
+}
+
+.add-comment.styled .field_text,
+.add-comment.styled .field_select{
+  float: none;
+  margin-right: 0;
+  margin-bottom: 17px;
+  width: 100%;
+  position: relative;
+}
+.add-comment.styled .field_text.field_textarea{margin-bottom: 10px;}
+
+.add-comment.styled label{
+  display: inline-block;
+  width: 65px;
+  text-align: right;
+  position: absolute;
+  top:10px;
+  left:-80px;
+  font:bold 12px Arial;
+  font-size: @font-size - 2;
+  color: #6f6f6f;
+}
+.add-comment.styled .btn{margin: 0;}
+
+/* Text editor for contact form */
+
+.edit_buttons{
+  background: rgb(202,202,202);
+  background: -moz-linear-gradient(top,  rgba(202,202,202,1) 0%, rgba(160,160,160,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(202,202,202,1)), color-stop(100%,rgba(160,160,160,1)));
+  background: -webkit-linear-gradient(top,  rgba(202,202,202,1) 0%,rgba(160,160,160,1) 100%);
+  background: -o-linear-gradient(top,  rgba(202,202,202,1) 0%,rgba(160,160,160,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(202,202,202,1) 0%,rgba(160,160,160,1) 100%);
+  background: linear-gradient(to bottom,  rgba(202,202,202,1) 0%,rgba(160,160,160,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cacaca', endColorstr='#a0a0a0',GradientType=0 );
+  .border-radius-top(@border-radius-input);
+  border:1px solid #929292;
+  border-top:1px solid #afafaf;
+  border-right:0 none;
+  width: 100%;
+}
+.nicEdit-container{
+  border:none;
+  border-left:1px solid #b2b2b2;
+  border-top: 1px solid #c4c4c4;
+  background: #dfdfdf;
+  background: linear-gradient(top, #d1d1d1, #e7e7e7);
+  background: -webkit-linear-gradient(top, #d1d1d1, #e7e7e7);
+  background: -moz-linear-gradient(top, #d1d1d1, #e7e7e7);
+  background: -ms-linear-gradient(top, #d1d1d1, #e7e7e7);
+  .border-radius-bottom(@border-radius-input);
+  padding:0;
+  box-shadow: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.nicEdit-panel > div:first-child .nicEdit-button-undefined{
+  -webkit-border-radius: @border-radius-input 0 0 0;
+  -moz-border-radius: @border-radius-input 0 0 0;
+  border-radius: @border-radius-input 0 0 0;
+}
+
+.nicEdit-container{font-weight: 400;}
+.nicEdit-container i{font-style: italic !important;}
+.nicEdit-container b{font-weight: 700 !important;}
+
+.nicEdit-container .nicEdit-main{
+  font-size: @font-size + 1;
+  color: #292929;
+}
+.nicEdit-main p, .nicEdit-main div {line-height: normal; margin-bottom: 0;}
+.nicEdit-button{margin:0 auto;}
+
+/* Responsive */
+@media (max-width:479px){
+  .add-comment-title h3,
+  .add-comment.boxed .form-inner,
+  .add-comment.boxed .rowSubmit{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .label_title {font-size: 12px;}
+  .contact-form.boxed .btn {right: 0;}
+  .add-comment.styled .comment-form {
+    padding: 20px 0px 15px 72px !important;
+  }
+  .payment-form .field_text,
+  .payment-form .field_select{
+    float: none !important;
+    width: 100% !important;
+  }
+}

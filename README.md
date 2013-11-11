@@ -1,3 +1,15 @@
+## Arctic Sunset
+
+![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/04/The-Basics.jpg)
+
+To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/arctic-sunset/> The complete Bootstrap UI kit that contains tons of additional elements spread across 6 categories is available on PixelKit.com <http://pixelkit.com/kits/clean-ui-kit/>
+
+## Links
+
++ [Demo page](http://pixelkit.com/free-ui-kits/arctic-sunset/)
++ [Documentation page](http://pixelkit.com/free-ui-kits/arctic-sunset/docs/)
++ [Premium Version of this UI Kit](http://pixelkit.com/kits/clean-ui-kit/)
+
 ## Dark Velvet
 
 ![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/05/01.Basics1.jpg)
@@ -48,6 +60,7 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 
 ## Changelog
 
++ 1.4 Added new kit Arctic Sunset.
 + 1.3 Added new kit Dark Velvet.
 + 1.2 Added new kit Vanilla Cream.
 + 1.1 Added new kit Metro Vibes.

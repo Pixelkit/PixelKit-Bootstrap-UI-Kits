@@ -1,0 +1,230 @@
+/*
+	styles for select
+*/
+.cusel,
+.cusel .cusel-scroll-wrap,
+.cusel .jScrollPaneContainer,
+.cusel .cusel-scroll-pane {
+	width: 100% !important;
+}
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown {
+	background-image:url(../images/selects1.png);
+	background-repeat:  no-repeat;
+}
+.add-comment.no-bg .cusel, .add-comment.no-bg .cuselFrameRight{background-color: #e6e6e5;}
+.cusel {
+	width: 100% !important;
+	height: 37px;
+	background-position: left top;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	z-index: 2;
+}
+.cuselFrameRight {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 32px;
+	background-position: 0 0;
+}
+.cusel:hover .cuselFrameRight, .cuselFocus .cuselFrameRight {
+    background-position: -50px 0;
+}
+.cuselText {
+	height: 34px;
+	cursor: pointer;
+	overflow: hidden;
+	line-height:37px;
+	text-shadow:none;
+	color:#292929;
+    font-size: 13px;
+    font-weight: 700;
+}
+.cusel span {
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 8px 20px 8px 18px;
+	zoom: 1;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #c0c0c0;
+	position: relative;
+    font-size: 14px;
+    font-weight: 700;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@media (max-width:479px){
+	.cusel span {
+		font-size:12px; 
+		font-weight:400; 
+		text-transform:none;
+		padding-left:10px;
+		padding-right:5px;
+	}
+}
+
+.cusel span.last {border-bottom:0 none;}
+.cusel span:hover{
+	color: #ea5535;
+}
+.cusel .cuselActive {
+	cursor: default;
+    color: #EA5535;
+}
+
+.cuselOpen {
+	z-index: 999;
+}
+
+/* 	styles for scrollbar */
+.cusel .cusel-scroll-wrap {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	left: -1px;
+	top: 90%;
+	color:#292929;
+	min-width: 100%;
+	width: auto;
+	z-index:200;
+	text-align:left;
+}
+.cusel .jScrollPaneContainer {
+	position: relative;
+	overflow: hidden;
+    background: #e5e5e5;
+    background: linear-gradient(top, #e5e5e5, #ececec);
+    background: -webkit-linear-gradient(top, #e5e5e5, #ececec);
+    background: -moz-linear-gradient(top, #e5e5e5, #ececec);
+    background: -ms-linear-gradient(top, #e5e5e5, #ececec);
+	border: 1px solid #d3d3d3;
+    border-top: 1px solid #c0c0c0;
+    border-left: 1px solid #B2B2B2;
+    border-bottom: 1px solid #B2B2B2;
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+}
+.cusel .jScrollPaneTrack {
+	height: 100%;
+	width: 7px !important;
+	background: #999;
+	position: absolute;
+	top: 0;
+	right: 4px;
+}
+.cusel .jScrollPaneDrag {
+	position: absolute;
+	background-position: -40px -38px;
+	cursor: pointer;
+	width: 15px !important;
+	height: 27px !important;
+	right: -4px;
+}
+
+.cusel .jScrollPaneDragTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollPaneDragBottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+.cusel .jScrollArrowUp {
+	position: absolute;
+	top: 0;
+	right: 1px;
+	width: 13px !important;
+	height: 12px;
+	cursor: pointer;
+	background-position: 0 -34px;
+	background-color:#595959;
+	overflow: hidden;
+}
+.cusel .jScrollArrowDown {
+	width: 13px !important;
+	height: 12px;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	right: 1px;
+	cursor: pointer;
+	background-position: -13px -34px;
+	background-color:#595959;
+	overflow: hidden;
+}
+
+
+/* 	Select Red */
+
+.select_styled_red.cusel,
+.select_styled_red .cuselFrameRight{
+    background-image:url(../images/selects2.png);
+    background-repeat:  no-repeat;
+}
+.select_styled_red.cusel{
+    background-position: 0 0;
+    height: 42px;
+    border: 0 none;
+}
+.select_styled_red .cuselFrameRight {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -2px;
+    height: 100%;
+    width: 44px;
+    background-position: right -42px;
+}
+.select_styled_red.cusel:hover .cuselFrameRight, .select_styled_red.cuselFocus .cuselFrameRight {
+    background-position: right -84px;
+}
+.select_styled_red .cuselText {
+    height: 40px;
+    line-height:38px;
+    text-shadow:0 1px 1px rgba(138,27,15,0.41);
+    color:#fff;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 700;
+}
+.select_styled_red.cusel span {
+    color:#666;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 700;
+}
+.select_styled_red.cusel span.first{border-top: 0 none;}
+
+.select_styled_red.cusel span:hover{
+    background: rgb(250,250,250);
+    background: -moz-linear-gradient(top,  rgba(250,250,250,1) 1%, rgba(235,235,235,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(250,250,250,1)), color-stop(100%,rgba(235,235,235,1)));
+    background: -webkit-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(235,235,235,1) 100%);
+    background: -o-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(235,235,235,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(235,235,235,1) 100%);
+    background: linear-gradient(to bottom,  rgba(250,250,250,1) 1%,rgba(235,235,235,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ebebeb',GradientType=0 );
+    color: #262626;
+}
+.select_styled_red.cusel .cuselActive{color: #ea5535 !important;}
+.select_styled_red.cusel .cusel-scroll-wrap {left:0;}
+
+.select_styled_red.cusel .jScrollPaneContainer {
+    position: relative;
+    overflow: hidden;
+    background: #ededed;
+    border: 1px solid #dbdbdb;
+    border-top: 0 none;
+}

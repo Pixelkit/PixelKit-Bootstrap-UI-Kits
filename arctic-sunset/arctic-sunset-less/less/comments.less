@@ -1,0 +1,108 @@
+/*-----------------------------------*/
+/* Comments */
+/*-----------------------------------*/
+
+.comment-list {
+  position: relative;
+  margin-bottom: 26px;
+}
+.comment-list h2 {
+  font-size: @font-size * 1.65;
+  color: @link-color;
+  margin-bottom: 30px;
+}
+.link-add-comment {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  color: #e23e29;
+  font-size: @font-size;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.comment-list li.comment {
+  padding-left: 80px;
+  position: relative;
+}
+.comment-list .children li.comment:before {
+  content:'';
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top:7px;
+  left:-28px;
+}
+.comment-body {
+  padding: 26px 20px 22px;
+  background: url(images/comment_bg_bot.jpg) bottom repeat-x #FBFBFB;
+  .border-radius(@border-radius * 0.625);
+  -webkit-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom:22px;
+}
+.comment-avatar {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 65px;
+  height: 65px;
+  background: #fbfbfb;
+  .border-radius(@border-radius * 0.625);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.comment-avatar img {
+  display: block;
+  width: 57px;
+  height: 57px;
+  margin: 4px;
+}
+.comment-arrow{
+  width: 7px;
+  height: 12px;
+  position: absolute;
+  top:14px;
+  left:-7px;
+  z-index: 2;
+  background: url(images/comment_arrow.png) no-repeat;
+}
+.comment-author {
+  margin-bottom: 5px;
+  text-align: right;
+  color: #b3b3b3;
+  font-size: @font-size - 2;
+}
+.link-author {
+  font-size: @font-size * 1.29;
+  font-weight: 700;
+  text-decoration: none;
+  float: left;
+  color: #292929;
+  position: relative;
+  top:-6px;
+}
+.link-reply {
+  color: #b3b3b3;
+  padding-right: 15px;
+}
+
+.comment-entry {
+  font-family: Arial;
+  font-size: @font-size - 1;
+  font-weight: 400;
+  line-height:20px;
+}
+
+/* Responsive */
+@media (max-width:479px){
+  .link-add-comment {
+    top: 30px;
+    left: 0;
+    right: auto;
+  }
+  .comment-body {
+    padding-left:10px;
+    padding-right:10px;
+  }
+}

@@ -809,19 +809,21 @@ dark-velvet
                             </div>
                             <div class="example-code">
                                 <pre class="prettyprint">
-&lt;div class="rowCheckbox">
-    &lt;input name="signup" type="checkbox" checked id="signup" value="signup">
-    &lt;label for="signup">Default Checkbox&lt;/label>
-&lt;/div>
+&lt;div class="input_styled checklist">								
+	&lt;div class="rowCheckbox">
+		&lt;input name="signup" type="checkbox" checked id="signup" value="signup">
+		&lt;label for="signup">Default Checkbox&lt;/label>
+	&lt;/div>
 
-&lt;div class="rowCheckbox checkbox-red">
-    &lt;input name="signup2" type="checkbox" checked id="signup2" value="signup2">
-    &lt;label for="signup2">Red Checkbox&lt;/label>
-&lt;/div>
+	&lt;div class="rowCheckbox checkbox-red">
+		&lt;input name="signup2" type="checkbox" checked id="signup2" value="signup2">
+		&lt;label for="signup2">Red Checkbox&lt;/label>
+	&lt;/div>
 
-&lt;div class="rowCheckbox checkbox-large">
-    &lt;input name="signup3" type="checkbox" checked id="signup3" value="signup3">
-    &lt;label for="signup3">Switch&lt;/label>
+	&lt;div class="rowCheckbox checkbox-large">
+		&lt;input name="signup3" type="checkbox" checked id="signup3" value="signup3">
+		&lt;label for="signup3">Switch&lt;/label>
+	&lt;/div>
 &lt;/div>
                                 </pre>
                             </div>
@@ -851,13 +853,15 @@ dark-velvet
                             </div>
                             <div class="example-code">
                                 <pre class="prettyprint">
-&lt;div class="rowRadio">
-    &lt;input type="radio" name="survey" value="radio_v3" id="radio_v3" checked>
-    &lt;label for="radio_v3">Default Radio Button&lt;/label>
-&lt;/div>
-&lt;div class="rowRadio radio-red">
-    &lt;input type="radio" name="survey" value="radio_v4" id="radio_v4">
-    &lt;label for="radio_v4">Red Radio Button&lt;/label>
+&lt;div class="input_styled inlinelist">								
+	&lt;div class="rowRadio">
+		&lt;input type="radio" name="survey" value="radio_v3" id="radio_v3" checked>
+		&lt;label for="radio_v3">Default Radio Button&lt;/label>
+	&lt;/div>
+	&lt;div class="rowRadio radio-red">
+		&lt;input type="radio" name="survey" value="radio_v4" id="radio_v4">
+		&lt;label for="radio_v4">Red Radio Button&lt;/label>
+	&lt;/div>
 &lt;/div>
                                 </pre>
                             </div>
@@ -2486,6 +2490,60 @@ dark-velvet
                             </div>
                             <div class="example-code">
                                 <pre class="prettyprint">
+&lt;div class="widget-container widget-audio">
+    &lt;div class="inner">
+        &lt;div id="jquery_jplayer_1" class="jp-jplayer">&lt;/div>
+        &lt;div id="jp_container_1" class="jp-audio">
+            &lt;div class="jp-type-playlist">
+                &lt;div class="jp-playlist">
+                    &lt;ul class="jp-playlist-inner">
+                        &lt;li>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div class="jp-gui jp-interface">
+                    &lt;div class="song_title_wrap">
+                        &lt;div class="song_title">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="jp-controls-wrap">
+                        &lt;div class="jp-progress">
+                            &lt;div class="jp-seek-bar">
+                                &lt;div class="jp-play-bar">&lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;ul class="jp-controls">
+                            &lt;li>&lt;a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-previous disabled" tabindex="1">previous&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-play" tabindex="1">play&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-pause" tabindex="1">pause&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-next" tabindex="1">next&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-stop" tabindex="1">stop&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle&lt;/a>&lt;/li>&lt;!--
+                            -->&lt;li>&lt;a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off&lt;/a>&lt;/li>
+                        &lt;/ul>
+                        &lt;div class="jp-volume-bar">
+                            &lt;div class="jp-volume-bar-value">&lt;/div>
+                        &lt;/div>
+                        &lt;div class="jp-current-time">&lt;/div>
+                        &lt;div class="jp-duration">&lt;/div>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="jp-no-solution">
+                    &lt;span>Update Required&lt;/span>
+                    &lt;a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin&lt;/a>.
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Audio Player via JS:</div>
+
+                                <pre class="prettyprint">
 &lt;script type="text/javascript">
     //&lt;![CDATA[
     $(document).ready(function(){
@@ -2506,44 +2564,6 @@ dark-velvet
             },
             {
                 title:"&lt;img src='images/temp/music-player3.png' alt='' />&lt;ul>&lt;li class='item-artist'>&lt;span>03.&lt;/span>Justin Timberlake&lt;/li>&lt;li class='item-song'>Mirrors&lt;/li>&lt;li class='item-album'>20/20 Experience | 2013&lt;/li>&lt;/ul>",
-                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
-                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-            }
-        ], {
-            swfPath: "js",
-            supplied: "oga, mp3",
-            wmode: "window",
-            smoothPlayBar: false,
-            keyEnabled: false
-        });
-    });
-    //]]>
-&lt;/script>
-                                </pre>
-
-                                <div class="fire-js">Enable Audio Player via JS:</div>
-
-                                <pre class="prettyprint">
-&lt;script type="text/javascript">
-    //&lt;![CDATA[
-    $(document).ready(function(){
-
-        new jPlayerPlaylist({
-            jPlayer: "#jquery_jplayer_1",
-            cssSelectorAncestor: "#jp_container_1"
-        }, [
-            {
-                title:"&lt;ul>&lt;li class='item-artist'>3 Doors Down&#160;&#8211;&#160;&lt;/li>&lt;li class='item-song'>Superman&lt;/li>&lt;/ul>",
-                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
-                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
-            },
-            {
-                title:"&lt;ul>&lt;li class='item-artist'>Daft Punk&#160;&#8211;&#160;&lt;/li>&lt;li class='item-song'>Get Lucky&lt;/li>&lt;/ul>",
-                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
-                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
-            },
-            {
-                title:"&lt;ul>&lt;li class='item-artist'>Justin Timberlake&#160;&#8211;&#160;&lt;/li>&lt;li class='item-song'>Mirrors&lt;/li>&lt;/ul>",
                 mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
                 oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
             }

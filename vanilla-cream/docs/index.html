@@ -679,11 +679,11 @@ vanilla-cream
                         </div>
                         <div class="example">
                             <div class="example-item example-buttons">
-                                <a href="#" class="btn btn-hover"><span>Submit</span></a>
+                                <span class="btn btn-hover"><input type="submit" value="Submit" /></span>
                             </div>
                             <div class="example-code">
                                 <pre class="prettyprint">
-&lt;a href="#" class="btn btn-hover">&lt;span>Submit&lt;/span>&lt;/a>
+&lt;span class="btn btn-hover">&lt;input type="submit" value="Submit" />&lt;/span>
                                 </pre>
                             </div>
                         </div>
@@ -872,19 +872,21 @@ vanilla-cream
                             </div>
                             <div class="example-code">
                                 <pre class="prettyprint">
-&lt;div class="rowCheckbox">
-    &lt;input name="signup" type="checkbox" checked id="signup" value="signup">
-    &lt;label for="signup">Simple Checkbox&lt;/label>
-&lt;/div>
+&lt;div class="input_styled checklist">
+	&lt;div class="rowCheckbox">
+		&lt;input name="signup" type="checkbox" checked id="signup" value="signup">
+		&lt;label for="signup">Simple Checkbox&lt;/label>
+	&lt;/div>
 
-&lt;div class="rowCheckbox checkbox-middle">
-    &lt;input name="signup2" type="checkbox" checked id="signup2" value="signup2">
-    &lt;label for="signup2">Switch&lt;/label>
-&lt;/div>
+	&lt;div class="rowCheckbox checkbox-middle">
+		&lt;input name="signup2" type="checkbox" checked id="signup2" value="signup2">
+		&lt;label for="signup2">Switch&lt;/label>
+	&lt;/div>
 
-&lt;div class="rowCheckbox checkbox-large">
-    &lt;input name="signup3" type="checkbox" checked id="signup3" value="signup3">
-    &lt;label for="signup3">Large Switch&lt;/label>
+	&lt;div class="rowCheckbox checkbox-large">
+		&lt;input name="signup3" type="checkbox" checked id="signup3" value="signup3">
+		&lt;label for="signup3">Large Switch&lt;/label>
+	&lt;/div>
 &lt;/div>
                                 </pre>
                             </div>
@@ -914,13 +916,15 @@ vanilla-cream
                             </div>
                             <div class="example-code">
                                 <pre class="prettyprint">
-&lt;div class="rowRadio">
-    &lt;input type="radio" name="survey" value="radio_v3" id="radio_v3" checked>
-    &lt;label for="radio_v3">Checked&lt;/label>
-&lt;/div>
-&lt;div class="rowRadio">
-    &lt;input type="radio" name="survey" value="radio_v4" id="radio_v4">
-    &lt;label for="radio_v4">Unchecked&lt;/label>
+&lt;div class="input_styled inlinelist">			
+	&lt;div class="rowRadio">
+		&lt;input type="radio" name="survey" value="radio_v3" id="radio_v3" checked>
+		&lt;label for="radio_v3">Checked&lt;/label>
+	&lt;/div>
+	&lt;div class="rowRadio">
+		&lt;input type="radio" name="survey" value="radio_v4" id="radio_v4">
+		&lt;label for="radio_v4">Unchecked&lt;/label>
+	&lt;/div>
 &lt;/div>
                                 </pre>
                             </div>
