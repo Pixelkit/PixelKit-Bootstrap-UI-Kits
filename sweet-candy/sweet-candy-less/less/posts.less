@@ -1,0 +1,68 @@
+/* Post Images */
+
+.carousel {margin-bottom: 20px;}
+
+.carousel-inner {
+  height: 237px;
+  .border-radius(@border-radius);
+  box-shadow:inset 0 0 13px rgba(0,0,0,0.45);
+  -webkit-box-shadow:inset 0 0 13px rgba(0,0,0,0.45);
+  -moz-box-shadow:inset 0 0 13px rgba(0,0,0,0.45);
+}
+.carousel-inner > .item {z-index: -1;}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width:100%;
+  min-height: 237px !important;
+}
+.carousel-control {
+  position: absolute;
+  top: 105px;
+  left: -13px;
+  width: 26px;
+  height: 26px;
+  margin-top: 0;
+  background-position: 0 0;
+  background-color: transparent;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  opacity: 1;
+  filter: none !important;
+}
+.carousel-control.right {
+  right: -13px;
+  left: auto;
+  background-position: 0 -26px;
+}
+.carousel-indicators {
+  text-align: center;
+  padding:21px 10px 10px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  margin: 0;
+}
+.carousel-indicators li {
+  display: inline-block;
+  float: none;
+  width: 9px;
+  height: 9px;
+  margin: 0 5px;
+  background-position: 0 -52px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0 none;
+  border-radius: 0;
+}
+.carousel-indicators li.active {
+  background-position: 0 -61px;
+  width: 9px;
+  height: 9px;
+  margin: 0 5px;
+  background-color: transparent;
+}

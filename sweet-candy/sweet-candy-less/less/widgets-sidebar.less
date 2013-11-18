@@ -1,0 +1,65 @@
+/* Widget Tags */
+
+.widget_tag_cloud .widget-title {
+  padding: 35px 25px 13px 28px;
+}
+.tagcloud{
+  text-align: center;
+  padding: 0px 30px 1px;
+}
+.tagcloud a{
+  display:inline-block;
+  font-size: @font-size - 1;
+  white-space:nowrap;
+  background-image:url(images/tag.png);
+  background-repeat:no-repeat;
+  background-position:right -32px;
+  height: 32px;
+  line-height: 32px;
+  padding-right:15px;
+  color:#6f6f6f;
+  text-shadow:0 1px 1px #fff;
+  margin:4px;
+}
+.tagcloud a:hover{color: @link-color-hover;}
+
+.tagcloud a span{
+  display:inline-block;
+  background-image:url(images/tag.png);
+  background-repeat:no-repeat;
+  background-position:left 0px;
+  padding-left:20px;
+  line-height:inherit;
+}
+.widget_tag_cloud{
+  width:278px;
+  margin-left:10px;
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+  background: #f7f7f7;
+}
+.widget_tag_cloud .inner,
+.widget_tag_cloud .widget-bottom{
+  width:300px;
+  margin-left:-11px;
+  background-repeat: no-repeat;
+}
+.widget_tag_cloud .inner{
+  min-height: 236px;
+  background-position:left top;
+}
+.widget_tag_cloud .widget-bottom{
+  height: 31px;
+  background-position:right top;
+}
+
+/* Widget Calendar */
+
+.widget_calendar{
+  background: url(images/calendar.png) center top no-repeat;
+  width: 300px;
+  height:276px;
+}
+.ie8 #date_departure {
+  display: none !important;
+}

@@ -1,0 +1,34 @@
+/*-----------------------------------*/
+/* Custom checkboxes, radios */
+/*-----------------------------------*/
+
+.custom-checkbox,.custom-radio { position:relative;}
+
+/* input, label positioning */
+.custom-checkbox input, .custom-radio input {position:absolute; left:7px; top:8px; margin:0; border:none; width:1px; height:1px; display: none;}
+.custom-checkbox input {left:6px; top:7px}
+.ie8 .custom-checkbox input, .ie8 .custom-radio input {display:block;}
+.custom-checkbox label, .custom-radio label {display:block; position:relative; height:25px; line-height:25px; padding:0 0 0 30px; margin:0 0 10px 0; cursor:pointer; color:#6f6f6f;}
+.checkbox-large .custom-checkbox label, .switch .custom-checkbox label {height:27px; line-height:27px; padding:0 0 0 90px; margin:0 0 8px 0;}
+.checkbox-small .custom-checkbox label, .radio-small .custom-radio label {height:20px; line-height:20px; padding:0 0 0 30px; margin:0 0 11px 0;}
+
+/* states */
+.custom-checkbox label { background:url(images/styled_checkbox.png) no-repeat; }
+.rowCheckbox-blue .custom-checkbox label { background:url(images/styled_checkbox_blue.png) no-repeat; }
+.rowCheckbox-purple .custom-checkbox label { background:url(images/styled_checkbox_purple.png) no-repeat; }
+.rowCheckbox-yellow .custom-checkbox label { background:url(images/styled_checkbox_yellow.png) no-repeat; }
+.checkbox-large .custom-checkbox label { background:url(images/styled_checkbox_large.png) no-repeat; }
+.switch .custom-checkbox label { background:url(images/switch-yellow.png) no-repeat; }
+.switch-blue .custom-checkbox label { background:url(images/switch-blue.png) no-repeat; }
+.switch-green .custom-checkbox label { background:url(images/switch-green.png) no-repeat; }
+.switch-purple .custom-checkbox label { background:url(images/switch-purple.png) no-repeat; }
+.checkbox-small .custom-checkbox label { background:url(images/styled_checkbox_small.png) no-repeat; }
+.custom-radio label { background:url(images/styled_radiobutton.png) no-repeat;}
+.rowRadio-blue .custom-radio label { background:url(images/styled_radiobutton_blue.png) no-repeat;}
+.rowRadio-purple .custom-radio label { background:url(images/styled_radiobutton_purple.png) no-repeat;}
+.rowRadio-yellow .custom-radio label { background:url(images/styled_radiobutton_yellow.png) no-repeat;}
+.radio-small .custom-radio label { background:url(images/styled_radiobutton_small.png) no-repeat; }
+.custom-checkbox label, .custom-radio label { background-position:0 0;}
+.custom-checkbox label.checked, .custom-radio label.checked { background-position:0 -200px;}
+.custom-checkbox label.focus, .custom-radio label.focus { outline:0; }
+.custom-checkbox label:hover, .custom-radio label:hover{color: @link-color-hover;}
