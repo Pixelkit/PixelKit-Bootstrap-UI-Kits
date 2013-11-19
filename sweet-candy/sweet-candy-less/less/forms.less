@@ -1,0 +1,261 @@
+/*-----------------------------------*/
+/* Forms */
+/*-----------------------------------*/
+
+/*
+    - Comment Form, Contact Form
+    - Search Form
+    - Contact Form styled
+    - Search Form styled
+*/
+
+
+
+/*-----------------------------------*/
+/* Comment Form, Contact Form */
+/*-----------------------------------*/
+
+input::-webkit-input-placeholder {color:#292929;}
+input:-moz-placeholder {color:#292929;}
+textarea::-webkit-input-placeholder {color:#292929;}
+textarea:-moz-placeholder {color:#292929;}
+
+label, input, button, select, textarea {
+  font-size: inherit;
+  line-height: normal;
+}
+
+.input_icon{
+  display: block;
+  position: absolute;
+  top: 31px;
+  right: 6px;
+  z-index: 1;
+}
+
+.add-comment{
+  margin-bottom: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.comment-form .form-inner{
+  padding:33px 34px 0;
+  min-height: 260px;
+}
+.add-comment-title h3{margin: 11px 0 31px;}
+
+.comment-form .btn,
+.widget_search .btn input,
+.newsletterBox .btn input,
+.widget_login .btn input{
+  text-transform: uppercase;
+}
+.comment-form span.btn{
+  padding-right: 16px;
+}
+.comment-form .btn input{
+  text-transform: uppercase;
+  padding-left: 12px;
+}
+.field_text,
+.field_select{
+  float:left;
+  margin-right: 18px;
+  margin-bottom: 27px;
+  width: 267px;
+}
+.contact-form .field_text, .contact-form .field_select{
+  margin-right: 18px;
+  margin-bottom: 12px;
+}
+.field_text.field_textarea{width: 100%;}
+
+.label_title{
+  display: block;
+  padding-bottom:7px;
+  color: #646464;
+  background: url(images/comment-form-label.png) 15px bottom no-repeat;
+  position: relative;
+  top:1px;
+  cursor: default;
+  margin-bottom: 0;
+}
+.field_select .label_title{z-index: 1000;}
+.rowSubmit .label_title, .sidebar .label_title{background: none;}
+
+input[type="text"],
+input[type="password"],
+textarea{
+  border:none;
+  border-top:1px solid #b2b2b2;
+  background: #ededed;
+  .border-radius(@border-radius-input);
+  padding:0 16px;
+  font-size: @font-size * 1.22;
+  *padding:0;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+textarea {padding:10px 16px;}
+
+input[type="text"],
+input[type="password"]{
+  width:100%;
+  height:36px;
+  margin: 0;
+  outline: none;
+}
+.ie8 input[type="text"],
+.ie8 input[type="password"]{
+  line-height:36px;
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus{
+  border-color: #B2B2B2;
+  box-shadow: none;
+}
+.comment-form textarea{
+  width:100%;
+  height:76px;
+  padding:5px 15px;
+  resize: vertical;
+  overflow: auto;
+  color:#3a3a3a;
+  margin-bottom: 10px;
+}
+.comment-form .rowSubmit {
+  height: 68px;
+  padding: 16px 30px 0;
+}
+.contact-form .checklist{
+  padding: 9px 0 0 7px;
+  width: 300px;
+}
+.comment-form .error {
+  overflow: hidden;
+  border: 1px solid #F00!important;
+}
+
+/*-----------------------------------*/
+/* Search Form */
+/*-----------------------------------*/
+
+.widget_search .inner{
+  background: #fdfdfd;
+  border: 1px solid #cecece;
+  border-top: none;
+  border-radius:0 0 4px 4px;
+  -webkit-border-radius:0 0 4px 4px;
+  -moz-border-radius:0 0 4px 4px;
+  padding: 15px 16px 12px;
+  padding: 15px 16px 12px;
+}
+.widget_search .btn{padding-right: 20px; position: relative; top: -1px;}
+.widget_search .btn input{padding-left: 15px;}
+.widget_search .inputField{width: 180px;}
+
+/*-----------------------------------*/
+/* Contact Form styled */
+/*-----------------------------------*/
+
+.add-comment.styled{
+  width:384px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  margin-left:10px;
+  background: #fefefe;
+}
+.add-comment.styled .comment-form{
+  width:406px;
+  margin-left:-11px;
+}
+.add-comment.styled .form-inner{
+  background:url(images/contact_form_styled.png) left top no-repeat;
+  min-height: 250px;
+  position: relative;
+  z-index: 0;
+  padding: 19px 40px 0 35px;
+}
+.add-comment.styled .rowSubmit{
+  background:url(images/contact_form_styled.png) right bottom no-repeat;
+  height: 70px;
+  position: relative;
+  top: 2px;
+  padding:10px 25px 0;
+}
+.add-comment.styled .field_text, .add-comment.styled .field_select {
+  float: none;
+  margin-right: 0;
+  margin-bottom: 13px;
+  width: 100%;
+  position: relative;
+}
+.add-comment.styled .field_select .label_title {
+  background: url(images/comment-form-label.png) 15px bottom no-repeat;
+  z-index: 1;
+}
+
+/* Text editor for contact form */
+
+.edit_buttons{
+  position: absolute;
+  top:-5px;
+  right:10px;
+  z-index: 2;
+}
+.nicEdit-panelContain{
+  border: 0 none !important;
+  background: none !important;
+}
+.nicEdit-button-undefined{
+  background: none !important;
+}
+
+.nicEdit-container{
+  border: none;
+  border-top: 1px solid #B2B2B2;
+  background: #EDEDED;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  box-shadow: none;
+}
+.nicEdit-container i{font-style: italic !important;}
+.nicEdit-container b{font-weight: 700 !important;}
+
+.nicEdit-container .nicEdit-main{
+  font-size: 17px;
+  color: #292929;
+}
+.nicEdit-main p, .nicEdit-main div {line-height: normal; margin-bottom: 0;}
+
+/*-----------------------------------*/
+/* Search Form styled */
+/*-----------------------------------*/
+
+.widget_search.styled{width: 406px;}
+.widget_search.styled .inner{
+  padding: 13px 16px 14px;
+  position: relative;
+}
+.widget_search.styled .inputField{
+  width: 227px;
+  margin:0 24px 0 10px;
+  padding-right: 40px;
+}
+.widget_search.styled .input_icon{
+  background:url(images/icons/search.png);
+  width: 18px;
+  height: 20px;
+  left: 224px;
+  top:24px;
+}

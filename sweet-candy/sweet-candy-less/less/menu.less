@@ -1,0 +1,176 @@
+/*-----------------------------------*/
+/* Main Menu */
+/*-----------------------------------*/
+
+/*-----------------------------------*/
+/* Main Menu Style 1 */
+/*-----------------------------------*/
+
+.dropdown-wrap{
+  position: relative;
+  background: url(images/menu1_bg.png) right -52px no-repeat;
+  padding-right: 30px;
+}
+.dropdown-icon{
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background-image: url(images/icons/menu_icon.png);
+  background-repeat: no-repeat;
+  background-position: center -80px;
+  position: absolute;
+  top:16px;
+  left:28px;
+  z-index: 1;
+}
+.dropdown-icon.dropdown-icon2{background-position: center 0;}
+
+.dropdown{
+  background: url(images/menu1_bg.png) left 0 no-repeat;
+  padding-top: 10px;
+  padding-left: 70px;
+}
+.dropdown > li {
+  float:left;
+  position: relative;
+}
+.dropdown > li a {
+  display: block;
+  font-size: @font-size * 1.15;
+  padding: 0 15px 0 0;
+  color: #9c5801;
+  text-shadow: 0 1px 1px rgba(255, 238, 183, 0.73);
+  text-transform: uppercase;
+}
+.dropdown > li a span {
+  display: block;
+  height:41px;
+  line-height:40px;
+  padding: 0 0 0 15px;
+}
+.dropdown > li.parent a{padding: 0 30px 0 0;}
+.dropdown > li.parent a span{	padding: 0 0 0 10px;}
+
+.dropdown > li:hover > a{background: url(images/menu1_bg.png) right -145px no-repeat;}
+.dropdown > li.parent:hover > a{background: url(images/menu1_bg.png) right -186px no-repeat;}
+.dropdown > li:hover > a span{background: url(images/menu1_bg.png) left -104px no-repeat;}
+.dropdown > li:hover > ul{
+  top:41px;
+  left:0;
+}
+.dropdown ul{
+  position: absolute;
+  top:-9999px;
+  left:-9999px;
+  z-index: 9999;
+  width:196px;
+}
+.dropdown ul li{
+  position: relative;
+  zoom: 1;
+  border: 1px solid #d3d3d3;
+  border-top: 1px solid #fff;
+}
+.dropdown ul li a{
+  padding:0 10px 0 20px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dropdown ul li.first{
+  border-top: 1px solid #d3d3d3;
+  border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+}
+.dropdown ul li.first > a{
+  border-radius: 3px 3px 0 0;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+}
+.dropdown ul li.last, .dropdown ul li.last > a{
+  border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+}
+.dropdown > li > ul > li.first, .dropdown > li > ul > li.first a{
+  border-top: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+.dropdown ul a{
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: @font-size;
+  text-transform: none;
+  color: #666;
+  text-shadow: none;
+  border-right:4px solid transparent;
+  padding: 0 20px 0 20px;
+}
+.dropdown ul a:hover{
+  border-right:4px solid #666;
+  color: #999;
+  position: relative;
+}
+.dropdown ul li:hover > ul{
+  position: absolute;
+  top:-1px;
+  left:194px;
+  width:196px;
+  padding-left: 4px;
+  background-color: rgba(255,255,255,0);
+}
+.dropdown ul li.parent > a{
+  background-image: url(images/menu1_bg.png);
+  background-position: -2px -191px;
+  background-repeat: no-repeat;
+}
+
+/*-----------------------------------*/
+/* Main Menu Style 2 */
+/*-----------------------------------*/
+
+.dropdown-wrap.styled .dropdown > li {float: none;}
+.dropdown-wrap.styled .dropdown-icon{display: none;}
+.dropdown-wrap.styled .dropdown ul li{width:130px;}
+.dropdown-wrap.styled .dropdown ul li.parent > a {background:none;}
+.dropdown-wrap.styled .dropdown ul a:hover {left: 0;}
+.dropdown-wrap.styled .dropdown ul li:hover > ul {left: 130px;}
+.dropdown-wrap.styled .dropdown ul li a {padding: 0 5px !important;}
+.dropdown-wrap.styled {
+  width: 136px;
+  background: none;
+  padding-right: 0;
+}
+.dropdown-wrap.styled .dropdown {
+  background: url(images/menu2_bg.png) left 0 no-repeat;
+  padding-top: 0;
+  padding-left: 0;
+}
+.dropdown-wrap.styled .dropdown > li:hover > a,
+.dropdown-wrap.styled .dropdown > li.parent:hover > a{
+  background: url(images/menu2_bg.png) left -53px no-repeat;
+}
+.dropdown-wrap.styled .dropdown > li a,
+.dropdown-wrap.styled .dropdown > li.parent a{
+  padding: 0 20px 0 0;
+}
+.dropdown-wrap.styled .dropdown > li a span,
+.dropdown-wrap.styled .dropdown > li.parent a span{
+  display: block;
+  height: 53px;
+  line-height: 55px;
+  padding: 0 5px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dropdown-wrap.styled .dropdown > li:hover > a span {background: none;}
+.dropdown-wrap.styled .dropdown > li:hover > ul {
+  top: 51px;
+  left: 2px;
+}

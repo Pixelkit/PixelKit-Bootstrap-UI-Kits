@@ -1,0 +1,241 @@
+/*-----------------------------------*/
+/* Table Pricing */
+/*-----------------------------------*/
+
+/* Table Pricing Default Style */
+
+.pricing_box {
+  position:relative;
+  clear:both;
+  margin-bottom:50px;
+}
+.pricing_box ul {
+  margin:0;
+  text-align: center;
+}
+.pricing_box li.price_col {
+  display:inline-block;
+  vertical-align: middle;
+  padding:0;
+  position:relative;
+  margin:0 30px;
+}
+.price_col.col_active{
+  top:-13px;
+  z-index: 1;
+}
+.price_col .price_item,
+.price_col.col_active .price_item{
+  border-left: 2px solid #dbdbdb;
+  border-right: 3px solid #d8d8d8;
+  background-color: #FDFDFD;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.price_col .price_item {
+  width:217px;
+}
+.price_col.col_active .price_item {
+  width:250px;
+  position: relative;
+}
+.price_col .price_item .inner {
+  width:258px;
+  min-height:246px;
+  background:url(images/price.png) center top no-repeat;
+  position:relative;
+  left:-20px;
+}
+.price_col.col_active .price_item .inner {
+  width:294px !important;
+  min-height:286px;
+  background:url(images/price_big.png) center top no-repeat;
+  position:relative;
+  left:-22px;
+}
+.price_col .price_item .price_col_foot {
+  width:258px;
+  height:77px;
+  background:url(images/price_bottom.png) center top no-repeat;
+  position:relative;
+  left:-20px;
+  top:8px;
+}
+.price_col.col_active .price_item .price_col_foot {
+  width:294px;
+  height:89px;
+  background:url(images/price_big_bottom.png) center top no-repeat;
+  position:relative;
+  left:-22px;
+  top:8px;
+}
+
+.price_col .price_col_head {
+  position:relative;
+  background-image:url(images/price_head.png);
+  background-position: center 0;
+  color:#cc6600;
+  height: 116px;
+}
+.price_col_blue .price_col_head {background-position: center -116px;}
+.price_col_green .price_col_head {background-position: center -232px;}
+.price_col_purple .price_col_head {background-position: center -348px;}
+
+.price_col.col_active .price_col_head {
+  position: relative;
+  background-image:url(images/price_head_big.png);
+  background-position: center 0;
+  height: 134px;
+}
+.price_col.price_col_blue.col_active .price_col_head {background-position: center -134px;}
+.price_col.price_col_green.col_active .price_col_head {background-position: center -268px;}
+.price_col.price_col_purple.col_active .price_col_head {background-position: center -402px;}
+
+.price_col .price_col_head .price{
+  display:block;
+  padding:0;
+  font-size: @font-size * 4.43;
+  line-height: 86px;
+  color: #cc6600;
+  text-shadow: 0px -1px 1px rgba(0,0,0,0.5);
+}
+.price_col.price_col_blue .price_col_head .price{color: #1466c7;}
+.price_col.price_col_green .price_col_head .price{color: #688a00;}
+.price_col.price_col_purple .price_col_head .price{color: #fff;}
+
+.price_col .price span, .price sup, .price em{
+  position: relative;
+  display: inline-block;
+}
+.price_col .price span:before, .price span:after,
+.price_col .price sup:before, .price sup:after,
+.price_col .price em:before, .price em:after{
+  content: attr(title);
+  color: rgba(255,255,255,1);
+  position: absolute;
+}
+.price_col .price span:before,
+.price_col .price sup:before,
+.price_col .price em:before{
+  top: 1px;
+  left: 1px;
+  opacity:.1;
+}
+.price_col .price span:after,
+.price_col .price sup:after,
+.price_col .price em:after {
+  top: 2px;
+  left: 2px;
+  opacity:.1;
+}
+.price_col.col_active .price_col_head .price {
+  font-size: @font-size * 5.15;
+  line-height: 100px;
+}
+.price_col .price_col_head .price em{
+  font-size:0.26em;
+  font-style:normal;
+}
+.price_col .price_col_head .price sup{
+  vertical-align: baseline;
+  position: relative;
+  top: -1.1em;
+  font-size:0.4em;
+}
+
+.price_col .price_col_body .price_body_inner{
+  padding:0 20px;
+}
+.price_col .price_col_body{
+  margin-top: -10px;
+}
+.price_col .price_body_top strong{
+  font-size: @font-size * 2.5;
+  display:block;
+  margin-bottom: 3px;
+  font-weight:400 !important;
+  color:#f27300;
+}
+.price_col_blue .price_body_top strong{color:#385b8b;}
+.price_col_green .price_body_top strong{color:#336633;}
+.price_col_purple .price_body_top strong{color:#c75786;}
+
+.price_col.col_active .price_body_top strong{
+  font-size: @font-size * 2.86;
+  display:block;
+  margin-bottom: 2px;
+  color:#3a3a3a;
+}
+.price_col .price_body_top span{
+  font-size: @font-size - 2;
+  color:#666;
+  display:block;
+}
+.price_col.col_active .price_body_top span{
+  font-size: @font-size * 1.15;
+  color:#e87500;
+  display:block;
+}
+.price_col.price_col_blue.col_active .price_body_top span, .price_col.price_col_blue.col_active2 .price_body_top span{color:#0a8dd4;}
+.price_col.price_col_green.col_active .price_body_top span, .price_col.price_col_green.col_active2 .price_body_top span{color:#688a00;}
+.price_col.price_col_purple.col_active .price_body_top span, .price_col.price_col_purple.col_active2 .price_body_top span{color:#c75786;}
+
+.price_col .price_body_top .line{
+  height:1px;
+  margin:24px 10px 5px;
+  background:#ededed;
+}
+.price_col.col_active .price_body_top .line{
+  margin:26px 10px 8px;
+}
+.price_col .price_col_body ul li{
+  color:#999;
+  display:block;
+  line-height: 20px;
+  padding:0;
+  margin:0;
+}
+.price_col.col_active .price_col_body ul li{
+  color:#6d9100;
+  font-size: @font-size * 1.15;
+  line-height: 23px;
+}
+
+.price_col .price_col_foot .sign_up {
+  padding-top:11px;
+}
+
+.price_col.col_active .price_col_head .ribbon2 {
+  display:block;
+  width:172px;
+  height:98px;
+  background-image:url(images/best_big.png);
+  background-position: 0 0;
+  position:absolute;
+  right:-3px;
+  top:-7px;
+}
+.price_col.price_col_blue.col_active .price_col_head .ribbon2 {background-position: 0 -98px;}
+.price_col.price_col_green.col_active .price_col_head .ribbon2 {background-position: 0 -196px;}
+.price_col.price_col_purple.col_active .price_col_head .ribbon2 {background-position: 0 -294px;}
+
+/*-----------------------------------*/
+/* Pricing Tables on Index Page */
+/*-----------------------------------*/
+
+.pricing_box.boxed{padding-top: 30px;}
+.pricing_box.boxed .price_col.col_active{margin: 0 -114px;}
+
+.pricing_box.boxed .price_col.col_active:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top:41px;
+  left:50%;
+  z-index: -1;
+  width: 383px;
+  height: 327px;
+  margin-left: -192px;
+  background:url(images/pricing_shadow.png) no-repeat;
+}

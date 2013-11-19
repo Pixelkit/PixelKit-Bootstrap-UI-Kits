@@ -1,0 +1,173 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+
+.scrollbars .scrollbar {color:#eee; width: 18px; height: 275px;}
+.scrollbars .scrollbar.style6{width: 47px; height: 305px;}
+
+.scrollbar {
+  overflow: auto;
+  float: left;
+  margin-right: 15px;
+  color:#e6e6e5;
+}
+.jspContainer{
+  overflow: hidden;
+  position: relative;
+}
+.jspPane{
+  position: absolute;
+}
+.jspVerticalBar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 100%;
+  background: #eee;
+}
+.jspHorizontalBar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0 !important;
+  height: 0 !important;
+  background: #ffad07;
+}
+.jspVerticalBar *,
+.jspHorizontalBar *{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.jspCap{
+  display: none;
+}
+.jspHorizontalBar .jspCap{
+  float: left;
+}
+.jspTrack{
+  background: #d2d2d2;
+  position: relative;
+  border-left:2px solid #afafaf;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  width:10px;
+  margin-left: 3px;
+}
+.scrollbar.style2 .jspTrack,
+.scrollbar.style4 .jspTrack,
+.scrollbar.style6 .jspTrack{
+  background: #ffc308;
+  border-left:2px solid #d2a415;
+}
+.scrollbar.style3 .jspTrack,
+.scrollbar.style5 .jspTrack{
+  border-left:2px solid #bebebe;
+  width:5px;
+  margin-left: 5px;
+}
+.scrollbar.style4 .jspTrack{
+  width:6px;
+  margin-left: 5px;
+}
+.scrollbar.style6 .jspTrack{
+  margin-left: 15px;
+}
+.scrollbar.style6{
+  margin-top: -15px;
+}
+.scrollbar.style6 .jspVerticalBar{
+  width: 45px;
+  background: #f1f1f1;
+  border-left:1px solid #e1e1e1;
+  border-right:1px solid #e1e1e1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.scrollbar.style6 .jspCap{
+  display: block;
+  width: 43px;
+  height: 14px;
+  background: #f1f1f1;
+  border:1px solid #e1e1e1;
+  margin-left: -1px;
+}
+.scrollbar.style6 .jspCap.jspCapTop{
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-bottom: 0 none;
+}
+.scrollbar.style6 .jspCap.jspCapBottom{
+  border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-top: 0 none;
+}
+.jspDrag{
+  background-image: url(images/scrollbars.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 18px;
+  margin-left: -5px;
+}
+.scrollbar.style6 .jspDrag{width: 23px;}
+.scrollbar.style2 .jspDrag{background-position: -18px 0;}
+.scrollbar.style3 .jspDrag{background-position: -36px 0; margin-left: -7px;}
+.scrollbar.style4 .jspDrag{background-position: -54px 0; margin-left: -7px;}
+.scrollbar.style5 .jspDrag{background-position: -72px 0; margin-left: -7px;}
+.scrollbar.style6 .jspDrag{background-position: -90px 0; margin-left: -7px;}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag{
+  float: left;
+  height: 100%;
+}
+.jspArrow{
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+}
+.jspArrow.jspDisabled{
+  cursor: default;
+  background: #80808d;
+}
+.jspVerticalBar .jspArrow{
+  height: 16px;
+}
+.jspHorizontalBar .jspArrow{
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+.jspVerticalBar .jspArrow:focus{
+  outline: none;
+}
+.jspCorner{
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+.scrollbar.style6 .jspProgress{
+  background: #d2d2d2;
+  position: absolute;
+  top:0;
+  left: -2px;
+  height: 0;
+  border-left: 2px solid #AFAFAF;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  width: 10px;
+}

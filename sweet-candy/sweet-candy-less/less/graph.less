@@ -1,0 +1,44 @@
+/*-----------------------------------*/
+/* Simple Graph */
+/*-----------------------------------*/
+
+.widget_graph .graph{
+  width: 244px;
+  height: 154px;
+  margin: 7px 0 10px 3px;
+}
+.graph-tooltip{
+  position: absolute;
+  display: none;
+  width: 57px;
+  height: 31px;
+  font-family: Arial;
+  font-size: @font-size - 2;
+  font-weight: 700;
+  color: #ff6600;
+  line-height: 28px;
+  white-space: nowrap;
+  text-align: center;
+  background: url(images/graph-tooltip.png) no-repeat;
+}
+.flot-text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: @font-size * 0.65;
+  color: #BBB;
+}
+
+/* Simple Graph without Background */
+
+.widget_graph.no-bg .header-top,
+.widget_graph.no-bg .bottom{
+  display: none;
+}
+.widget_graph.no-bg .inner{
+  background: none;
+  border: 0 none;
+  padding-top: 0;
+}

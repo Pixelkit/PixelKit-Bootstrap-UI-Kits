@@ -1,0 +1,455 @@
+/*-----------------------------------*/
+/* General Styles */
+/*-----------------------------------*/
+body {
+  font-family: @font-family;
+  color: @font-color;
+  font-size: @font-size;
+  position:relative;
+  background: url(images/bg.jpg);
+}
+.body_wrap {
+  width:100%;
+  min-width: 980px;
+  position:relative;
+}
+.content_wrap {
+  width:1070px;
+  margin: 0 auto;
+  position:relative;
+}
+::-moz-selection {
+  background: #888;
+  color: #000;
+  text-shadow: none;
+}
+::selection {
+  background: #888;
+  color: #000;
+  text-shadow: none;
+}
+a:hover,
+a:focus {
+  color: @link-color-hover;
+  text-decoration: none;
+}
+a:active{background-color: transparent;}
+
+input, textarea, input[type="submit"]:focus, div {
+  outline: 0 none;
+  font-family: @font-family;
+}
+button, input, select, textarea {vertical-align: top;}
+input[type="text"], input[type="password"]{vertical-align: middle;}
+label{display: block;}
+
+.alpha{margin-left:0 !important;}
+.omega{margin-right:0 !important;}
+
+.inner,
+.rowSubmit,
+.dropdown *,
+.widget-container,
+.widget-container *,
+.post-item,
+.post-item *,
+.post-item-wide,
+.post-item-wide *,
+.service_item *,
+.price_item *,
+.tabs_framed,
+.tabs_framed *,
+.toggle,
+.toggle *,
+.alert,
+.alert *,
+.form-inner,
+.footer_center,
+.carouFredsel,
+.carouFredsel *,
+.playSlider *,
+.comment-list *,
+.progressbar,
+.progressbar *{
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.content, .sidebar{padding-top: 30px;}
+#middle{position: relative; z-index: 0;}
+#middle.sidebar_left > .container > .row > .col-md-8{float:right;}
+
+.header-top, .header-top span{
+  height: 10px;
+  background-image: url(images/header_top.png);
+  background-repeat: no-repeat;
+  background-position: right -10px;
+}
+.header-top span{
+  display: block;
+  margin-right: 10px;
+  background-position: left 0;
+}
+
+/*-----------------------------------*/
+/* Clear Floats */
+/*-----------------------------------*/
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*-----------------------------------*/
+/* Common styles for Components */
+/*-----------------------------------*/
+
+.widget_recent_entries .widget-title,
+.widget_recent_comments .widget-title,
+.widget_adv_filter .widget-title{
+  text-align:center;
+  height:48px;
+  padding-bottom:0 !important;
+  background:url(images/latest.png) -300px 0 no-repeat;
+}
+
+.post-item .post-image,
+.post-item-wide .post-image,
+.tab_image,
+.carouFredsel .carousel-image{
+  .border-radius(@border-radius);
+  box-shadow:inset 0 0 13px rgba(0,0,0,0.45);
+  -webkit-box-shadow:inset 0 0 13px rgba(0,0,0,0.45);
+  -moz-box-shadow:inset 0 0 13px rgba(0,0,0,0.45);
+}
+.post-item .post-image img,
+.post-item-wide .post-image img,
+.tab_image img,
+.carouFredsel .carousel-image img{
+  .border-radius(@border-radius);
+  display: block;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+}
+
+.post-item.style2,
+.post-item.style4,
+.post-item.post-quote,
+.post-item.post-video,
+.post-item.post-audio,
+.add-comment{
+  width:598px;
+  border-left: 1px solid #c9c9c9;
+  border-right: 1px solid #c4c4c4;
+  margin-left:10px;
+  background: #f7f7f7;
+}
+.post-item.style2 .inner,
+.post-item.style4 .inner,
+.post-item.post-quote .inner,
+.post-item.post-video .inner,
+.post-item.post-audio .inner,
+.comment-form{
+  width:620px;
+  margin-left:-11px;
+}
+
+.col-md-4 .tabs_framed,
+.widget_login,
+.widget_categories_filter,
+.widget_checkbox_filter,
+.widget_radio_filter{
+  width: 290px;
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #dbdbdb;
+  margin-left:4px;
+  margin-bottom: 25px;
+  background: #fefefe;
+}
+.col-md-4 .tabs_framed .inner,
+.widget_login .widget_inner,
+.widget_categories_filter .widget_inner,
+.widget_checkbox_filter .widget_inner,
+.widget_radio_filter .widget_inner{
+  width: 300px;
+  margin-left: -5px;
+  padding-top: 10px;
+  background: url(images/tabs_span4_bg.png) left top no-repeat;
+  position: relative;
+  z-index: 1;
+  min-height: 190px;
+}
+.col-md-4 .tabs_framed .bottom,
+.widget_login .bottom,
+.widget_categories_filter .bottom,
+.widget_checkbox_filter .bottom,
+.widget_radio_filter .bottom{
+  width: 300px;
+  height: 54px;
+  margin-left: -5px;
+  background: url(images/tabs_span4_bg.png) right bottom no-repeat;
+  position:relative;
+  top: 3px;
+  z-index: 0;
+}
+
+.dropdown ul li,
+.cusel span{
+  background: rgb(247,247,247);
+  background-image: linear-gradient(bottom, rgb(247,247,247) 0%, rgb(250,250,250) 36%, rgb(237,237,237) 85%);
+  background-image: -o-linear-gradient(bottom, rgb(247,247,247) 0%, rgb(250,250,250) 36%, rgb(237,237,237) 85%);
+  background-image: -moz-linear-gradient(bottom, rgb(247,247,247) 0%, rgb(250,250,250) 36%, rgb(237,237,237) 85%);
+  background-image: -webkit-linear-gradient(bottom, rgb(247,247,247) 0%, rgb(250,250,250) 36%, rgb(237,237,237) 85%);
+  background-image: -ms-linear-gradient(bottom, rgb(247,247,247) 0%, rgb(250,250,250) 36%, rgb(237,237,237) 85%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(247,247,247)),
+    color-stop(0.36, rgb(250,250,250)),
+    color-stop(0.85, rgb(237,237,237))
+  );
+}
+.dropdown ul li:hover,
+.cusel span:hover{
+  background: rgb(240,240,240);
+  background-image: linear-gradient(bottom, rgb(240,240,240) 0%, rgb(243,243,243) 36%, rgb(233,233,233) 85%);
+  background-image: -o-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(243,243,243) 36%, rgb(233,233,233) 85%);
+  background-image: -moz-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(243,243,243) 36%, rgb(233,233,233) 85%);
+  background-image: -webkit-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(243,243,243) 36%, rgb(233,233,233) 85%);
+  background-image: -ms-linear-gradient(bottom, rgb(240,240,240) 0%, rgb(243,243,243) 36%, rgb(233,233,233) 85%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(240,240,240)),
+    color-stop(0.36, rgb(243,243,243)),
+    color-stop(0.85, rgb(233,233,233))
+  );
+}
+
+/*-------------------------------------------*/
+/* Tags, Badges, Ribbons Layout on Home Page */
+/*-------------------------------------------*/
+
+.tags-badges{margin-left: -120px;}
+.tags-badges .tagcloud{padding: 0;}
+.ribbon-holder{
+  width:180px;
+  height: 80px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgba(240,240,240,0.5);
+  background: linear-gradient(top left, rgba(255,255,255,1), rgba(230,230,229,0));
+  background: -webkit-linear-gradient(top left, rgba(255,255,255,1), rgba(230,230,229,0));
+  background: -moz-linear-gradient(top left, rgba(255,255,255,1), rgba(230,230,229,0));
+  background: -ms-linear-gradient(top left, rgba(255,255,255,1), rgba(230,230,229,0));
+}
+.ribbon-holder .ribbon{
+  position: absolute;
+  top:20px;
+  left:-34px;
+}
+
+/*-------------------------------------------*/
+/* Disable Responsive Feature */
+/*-------------------------------------------*/
+
+.container {max-width: none; width: 960px; padding: 0 10px;}
+.container-fluid{max-width: none; width: 100%;}
+
+.col-md-1 {
+  width: 80px;
+}
+.col-md-2 {
+  width: 160px;
+}
+.col-md-3 {
+  width: 240px;
+}
+.col-md-4 {
+  width: 320px;
+}
+.col-md-5 {
+  width: 400px;
+}
+.col-md-6 {
+  width: 480px;
+}
+.col-md-7 {
+  width: 560px;
+}
+.col-md-8 {
+  width: 640px;
+}
+.col-md-9 {
+  width: 720px;
+}
+.col-md-10 {
+  width: 800px;
+}
+.col-md-11 {
+  width: 880px;
+}
+.col-md-12 {
+  width: 960px;
+}
+.col-md-offset-1 {
+  margin-left: 80px;
+}
+.col-md-offset-2 {
+  margin-left: 160px;
+}
+.col-md-offset-3 {
+  margin-left: 240px;
+}
+.col-md-offset-4 {
+  margin-left: 320px;
+}
+.col-md-offset-5 {
+  margin-left: 400px;
+}
+.col-md-offset-6 {
+  margin-left: 480px;
+}
+.col-md-offset-7 {
+  margin-left: 560px;
+}
+.col-md-offset-8 {
+  margin-left: 640px;
+}
+.col-md-offset-9 {
+  margin-left: 720px;
+}
+.col-md-offset-10 {
+  margin-left: 800px;
+}
+.col-md-offset-11 {
+  margin-left: 880px;
+}
+
+.container-fluid .col-md-1 {
+  width: 8.333333333333332%;
+}
+.container-fluid .col-md-2 {
+  width: 16.666666666666664%;
+}
+.container-fluid .col-md-3 {
+  width: 25%;
+}
+.container-fluid .col-md-4 {
+  width: 33.33333333333333%;
+}
+.container-fluid .col-md-5 {
+  width: 41.66666666666667%;
+}
+.container-fluid .col-md-6 {
+  width: 50%;
+}
+.container-fluid .col-md-7 {
+  width: 58.333333333333336%;
+}
+.container-fluid .col-md-8 {
+  width: 66.66666666666666%;
+}
+.container-fluid .col-md-9 {
+  width: 75%;
+}
+.container-fluid .col-md-10 {
+  width: 83.33333333333334%;
+}
+.container-fluid .col-md-11 {
+  width: 91.66666666666666%;
+}
+.container-fluid .col-md-12 {
+  width: 100%;
+}
+.container-fluid .col-md-offset-1 {
+  margin-left: 8.333333333333332%;
+}
+.container-fluid .col-md-offset-2 {
+  margin-left: 16.666666666666664%;
+}
+.container-fluid .col-md-offset-3 {
+  margin-left: 25%;
+}
+.container-fluid .col-md-offset-4 {
+  margin-left: 33.33333333333333%;
+}
+.container-fluid .col-md-offset-5 {
+  margin-left: 41.66666666666667%;
+}
+.container-fluid .col-md-offset-6 {
+  margin-left: 50%;
+}
+.container-fluid .col-md-offset-7 {
+  margin-left: 58.333333333333336%;
+}
+.container-fluid .col-md-offset-8 {
+  margin-left: 66.66666666666666%;
+}
+.container-fluid .col-md-offset-9 {
+  margin-left: 75%;
+}
+.container-fluid .col-md-offset-10 {
+  margin-left: 83.33333333333334%;
+}
+.container-fluid .col-md-offset-11 {
+  margin-left: 91.66666666666666%;
+}
+
+.container .row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.row .row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12{
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+}
