@@ -1,0 +1,43 @@
+/*-----------------------------------*/
+/* Ribbons */
+/*-----------------------------------*/
+
+.ribbon{
+  height:50px;
+  padding-right:40px;
+  display: inline-block;
+  background:url(images/ribbons.png) right -55px no-repeat;
+}
+.ribbon span{
+  display:block;
+  height:50px;
+  line-height: 38px;
+  padding-left:55px;
+  background:url(images/ribbons.png) left 0 no-repeat;
+  font-size: @font-size * 0.92;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  color:#fff;
+  white-space: nowrap;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .ribbon, .ribbon span {
+    background-image:url(images/ribbons-x2.png);
+    background-size: 900px auto;
+  }
+}
+.ribbon-orange{background-position:right -165px;}
+.ribbon-orange span{background-position:left -110px;}
+.ribbon-purple{background-position:right -275px;}
+.ribbon-purple span{background-position:left -220px;}
+
+.ribbon.style2{
+  height:64px;
+  background-position:right -396px;
+}
+.ribbon.style2 span{
+  height:64px;
+  line-height: 48px;
+  padding-left:65px;
+  background-position:left -330px;
+}

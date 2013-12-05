@@ -1,0 +1,247 @@
+/*-----------------------------------*/
+/* Widget Calendar */
+/*-----------------------------------*/
+
+.widget-calendar.boxed {.border-radius(@border-radius * 3);}
+.widget-calendar .inner {padding:0 12px 12px;}
+
+/* Datepicker General Styles
+---------------------------------------------------------------------*/
+
+.ui-datepicker {display: none;}
+.ui-state-disabled { cursor: default !important; }
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden;}
+#ui-datepicker-div{background: #DCDCDC; width: 239px; .border-radius-top(@border-radius * 3);}
+
+/* Datepicker Header
+---------------------------------------------------------------------*/
+
+.ui-datepicker-header {
+  position:relative;
+  padding:0;
+  border-bottom: 2px solid #58880f;
+  .border-radius-top(@border-radius * 3 - 1);
+  margin: 0 -12px 13px;
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.26);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.26);
+  background: rgb(163,199,67);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2EzYzc0MyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3OGE4MjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(163,199,67,1) 0%, rgba(120,168,32,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(163,199,67,1)), color-stop(100%,rgba(120,168,32,1)));
+  background: -webkit-linear-gradient(top,  rgba(163,199,67,1) 0%,rgba(120,168,32,1) 100%);
+  background: -o-linear-gradient(top,  rgba(163,199,67,1) 0%,rgba(120,168,32,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(163,199,67,1) 0%,rgba(120,168,32,1) 100%);
+  background: linear-gradient(to bottom,  rgba(163,199,67,1) 0%,rgba(120,168,32,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3c743', endColorstr='#78a820',GradientType=0 );
+}
+#ui-datepicker-div .ui-datepicker-header {
+  margin: 0 0 8px;
+  .border-radius-top(@border-radius);
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next{
+  position:absolute;
+  top: 17px;
+  left: 21px;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 8px solid #567913;
+  border-bottom: 5px solid transparent;
+}
+.ui-datepicker-next{
+  left: auto;
+  right: 21px;
+  border-top: 5px solid transparent;
+  border-right: none;
+  border-left: 8px solid #567913;
+  border-bottom: 5px solid transparent;
+}
+#ui-datepicker-div .ui-datepicker-prev,
+#ui-datepicker-div .ui-datepicker-next{
+  top: 11px;
+  left: 11px;
+}
+#ui-datepicker-div .ui-datepicker-next{
+  left: auto;
+  right: 11px;
+}
+.ui-datepicker-title {
+  height: 42px;
+  line-height: 42px;
+  font-size: @font-size * 1.29;
+  color: #f6ffdf;
+  letter-spacing: -1px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #7ea722;
+}
+#ui-datepicker-div .ui-datepicker-title{
+  height: 32px;
+  line-height: 32px;
+  font-size: @font-size;
+}
+
+/* Datepicker Table
+---------------------------------------------------------------------*/
+
+.ui-datepicker table {width: 100%; border-collapse: collapse;}
+
+/* MO-TU-WE-TH-FR-SA-SU */
+.ui-datepicker th {
+  text-align: center;
+  text-shadow: none;
+  padding-bottom: 8px;
+  font-size: @font-size * 0.86;
+  color: #7d7d7d;
+}
+
+/* Dates general */
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: block;
+  height: 36px;
+  font-size: @font-size;
+  line-height: 36px;
+  color: #7d7d7d;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: none;
+  border-top: 1px solid #dcdcdc;
+  border-left: 1px solid #dcdcdc;
+  background: rgb(249,249,249);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMmYyZjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(249,249,249,1) 0%, rgba(242,242,242,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,249,249,1)), color-stop(100%,rgba(242,242,242,1)));
+  background: -webkit-linear-gradient(top,  rgba(249,249,249,1) 0%,rgba(242,242,242,1) 100%);
+  background: -o-linear-gradient(top,  rgba(249,249,249,1) 0%,rgba(242,242,242,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(249,249,249,1) 0%,rgba(242,242,242,1) 100%);
+  background: linear-gradient(to bottom,  rgba(249,249,249,1) 0%,rgba(242,242,242,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#f2f2f2',GradientType=0 );
+}
+#ui-datepicker-div td span,
+#ui-datepicker-div td a {
+  height: 28px;
+  line-height: 28px;
+}
+.ui-datepicker tr td:last-child span,
+.ui-datepicker tr td:last-child a {
+  border-right: 1px solid #dcdcdc;
+}
+.ui-datepicker tr:last-child td span,
+.ui-datepicker tr:last-child td a {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+/* Date Today */
+td.ui-datepicker-today a,
+td.ui-datepicker-today a.ui-state-hover {
+  color: #fff;
+  border-top: 1px solid #f78921;
+  border-left: 1px solid #f78921;
+  background: rgb(244,111,16);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0NmYxMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZDQwMDUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(244,111,16,1) 0%, rgba(237,64,5,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,111,16,1)), color-stop(100%,rgba(237,64,5,1)));
+  background: -webkit-linear-gradient(top,  rgba(244,111,16,1) 0%,rgba(237,64,5,1) 100%);
+  background: -o-linear-gradient(top,  rgba(244,111,16,1) 0%,rgba(237,64,5,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(244,111,16,1) 0%,rgba(237,64,5,1) 100%);
+  background: linear-gradient(to bottom,  rgba(244,111,16,1) 0%,rgba(237,64,5,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f46f10', endColorstr='#ed4005',GradientType=0 );
+}
+
+/* Date Selected */
+td.ui-state-highlight a,
+td.ui-datepicker-today.ui-state-highlight a,
+#ui-datepicker-div td.ui-datepicker-current-day a,
+#ui-datepicker-div td.ui-datepicker-current-day.ui-datepicker-today a {
+  color: #575757;
+  border-top: 1px solid #c9c9c9;
+  border-left: 1px solid #c9c9c9;
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,0.2);
+  background: rgb(224,224,224);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UwZTBlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNGU0ZTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(228,228,228,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,224,224,1)), color-stop(100%,rgba(228,228,228,1)));
+  background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#e4e4e4',GradientType=0 );
+}
+
+/* Date on Hover */
+td a.ui-state-hover {
+  background: rgb(224,224,224);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UwZTBlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNGU0ZTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(228,228,228,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,224,224,1)), color-stop(100%,rgba(228,228,228,1)));
+  background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(228,228,228,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#e4e4e4',GradientType=0 );
+}
+
+/* Date from the Other Month */
+td.ui-datepicker-other-month span{color: #bcbcbc;}
+
+/*-----------------------------------*/
+/* Widget Calendar style 2 */
+/*-----------------------------------*/
+
+.widget-calendar.styled .ui-datepicker-header {margin-bottom: 10px;}
+
+.widget-calendar.styled .ui-datepicker-title {
+  height: 32px;
+  line-height: 32px;
+  font-size: @font-size;
+  color: #f8ffe5;
+  letter-spacing: 0;
+  text-shadow: 0 1px 1px #90b32c;
+}
+.widget-calendar.styled .ui-datepicker-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  border-bottom: 1px dotted #a8a8a8;
+}
+.widget-calendar.styled .ui-datepicker-prev,
+.widget-calendar.styled .ui-datepicker-next{
+  top: 13px;
+  left: 18px;
+  border-top: 4px solid transparent;
+  border-right: 5px solid #567913;
+  border-bottom: 4px solid transparent;
+}
+.widget-calendar.styled .ui-datepicker-next{
+  left: auto;
+  right: 18px;
+  border-top: 4px solid transparent;
+  border-right: none;
+  border-left: 5px solid #567913;
+  border-bottom: 4px solid transparent;
+}
+.widget-calendar.styled .ui-datepicker th {
+  padding-bottom: 5px;
+  font-size: @font-size * 0.72;
+  color: #909090;
+}
+.widget-calendar.styled .ui-datepicker td span,
+.widget-calendar.styled .ui-datepicker td a {
+  height: 28px;
+  font-size: @font-size * 0.86;
+  line-height: 28px;
+  color: #909090;
+}
+.widget-calendar.styled td.ui-datepicker-today a,
+.widget-calendar.styled td.ui-datepicker-today a.ui-state-hover {
+  color: #fff;
+}
+.widget-calendar.styled td.ui-state-highlight a,
+.widget-calendar.styled td.ui-datepicker-today.ui-state-highlight a {
+  color: #909090;
+}

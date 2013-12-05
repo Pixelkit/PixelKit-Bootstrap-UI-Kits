@@ -1,0 +1,17 @@
+/*-----------------------------------*/
+/* Rating Stars */
+/*-----------------------------------*/
+
+.rating {margin-bottom: 30px;}
+.rating span.star {display:block; float:left; width:19px; height:19px; padding-right: 2px; background-repeat: no-repeat;}
+.rating span.off {background-image: url(images/icons/star-off.png);}
+.rating span.on,
+.rating span.star:hover,
+.rating span.over {background-image: url(images/icons/star-on.png); cursor:pointer;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .rating span.off {background-image: url(images/icons/star-off-x2.png); background-size: 19px auto;}
+  .rating span.on,
+  .rating span.star:hover,
+  .rating span.over {background-image: url(images/icons/star-on-x2.png); background-size: 19px auto;}
+}

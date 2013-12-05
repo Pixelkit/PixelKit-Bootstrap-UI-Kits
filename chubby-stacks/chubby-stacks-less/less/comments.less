@@ -1,0 +1,98 @@
+/*-----------------------------------*/
+/* Comments */
+/*-----------------------------------*/
+
+.comment-list {
+  position: relative;
+  margin-bottom: 26px;
+}
+.comment-list h2 {
+  font-size: @font-size * 1.65;
+  margin-bottom: 30px;
+}
+.link-add-comment {
+  position: absolute;
+  top: 6px;
+  right: 2px;
+  color: @link-color-hover;
+  text-decoration: underline;
+  text-shadow: none;
+}
+.comment-list li.comment {
+  padding-left: 80px;
+  position: relative;
+}
+.comment-body {
+  padding: 23px 20px;
+  .border-radius(@border-radius);
+  -webkit-box-shadow: 0 2px 1px rgba(224, 222, 220, 0.75);
+  box-shadow: 0 2px 1px rgba(224, 222, 220, 0.75);
+  position: relative;
+  margin-bottom: 18px;
+  border: 1px solid #dfdcd6;
+  background: #fbfbfb;
+}
+.comment-body:before,
+.comment-body:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 14px;
+  left: -8px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 7px solid #dfdcd6;
+}
+.comment-body:after {left: -6px; border-right-color: #fbfbfb;}
+
+.comment-avatar {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 65px;
+  height: 65px;
+  background: #fbfbfb;
+  .border-radius(@border-radius);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.comment-avatar img {
+  display: block;
+  width: 57px;
+  height: 57px;
+  margin: 4px;
+  .border-radius(@border-radius / 2);
+}
+.comment-author {margin-bottom: 11px;}
+.comment-author .link-author {float: left; font-size: @font-size * 1.29; color: #3e362b;}
+.comment-author .comment-meta {float: right; font-size: @font-size * 0.86; color: #a4a4a4; text-align: right; margin-top: 4px;}
+.comment-author .comment-meta .link-reply {color: #a4a4a4;}
+.comment-entry {line-height: 19px;}
+
+@media (max-width: 479px) {
+  .comment-list .children li.comment {margin-left: -80px;}
+  .comment-list .children li.comment:before {display: none;}
+
+  .link-add-comment {
+    top: 30px;
+    left: 0;
+    right: auto;
+  }
+  .comment-author .link-author,
+  .comment-author .comment-meta {
+    float: none;
+    text-align: left;
+    display: block;
+  }
+  .comment-body {padding: 10px;}
+}
+
+/*-----------------------------------*/
+/* Simple Message Field */
+/*-----------------------------------*/
+
+.message-field .comment-body {padding: 13px 14px;}
+.message-field .comment-author {margin-bottom: 5px;}
+.message-field .comment-author .link-author {float: none; font-size: @font-size; color: #5a5a5a;}
+.message-field .comment-entry {font-size: @font-size * 0.8; color: #a5a5a5; line-height: 14px;}

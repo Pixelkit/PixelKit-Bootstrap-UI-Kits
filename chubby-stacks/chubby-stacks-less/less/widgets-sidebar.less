@@ -1,0 +1,55 @@
+/*
+  - Widget Tags
+*/
+
+
+
+/*-----------------------------------*/
+/* Sidebar widgets */
+/*-----------------------------------*/
+
+.widget-container{margin-bottom: 30px;}
+.widget-container .widget-title{font-size: @font-size * 1.5; margin-bottom: 12px;}
+
+/* Widget Tags */
+
+.tagcloud a {
+  display: inline-block;
+  font-size: @font-size * 0.86;
+  text-align: center;
+  white-space: nowrap;
+  background-image: url(images/tag.png);
+  background-repeat: no-repeat;
+  background-position: right -30px;
+  padding-right: 16px;
+  margin: 5px 1px;
+}
+.tagcloud a span {
+  display:block;
+  background-image: url(images/tag.png);
+  background-repeat: no-repeat;
+  background-position: left 0;
+  padding-left: 26px;
+  height: 28px;
+  line-height: 26px;
+}
+.tagcloud.style2 a {
+  font-size: @font-size * 0.8;
+  color: @link-color;
+  background-image: url(images/tag-2.png);
+}
+.tagcloud.style2 a:hover {color: @link-color-hover;}
+.tagcloud.style2 a span {background-image: url(images/tag-2.png);}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .tagcloud a,
+  .tagcloud a span {
+    background-image: url(images/tag-x2.png);
+    background-size: 300px auto;
+  }
+  .tagcloud.style2 a,
+  .tagcloud.style2 a span {
+    background-image: url(images/tag-2-x2.png);
+    background-size: 300px auto;
+  }
+}

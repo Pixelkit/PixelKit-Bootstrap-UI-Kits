@@ -1,0 +1,52 @@
+/*-----------------------------------*/
+/* Simple Graph */
+/*-----------------------------------*/
+
+.widget-graph {margin-bottom: 50px;}
+.widget-graph .inner {padding: 16px 12px 8px 8px;}
+
+#graph-tooltip {
+  font-size: @font-size * 0.8;
+  color: #6f6f6f;
+  white-space: nowrap;
+  text-align: center;
+  padding: 5px;
+  position: absolute;
+  top: -36px;
+  left: 0;
+  z-index: 1;
+  background: #f1f1f1;
+  border: 1px solid #d8d6d4;
+  border-bottom: 1px solid #b9b6b1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.32);
+}
+#graph-tooltip:before,
+#graph-tooltip:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #b9b6b1;
+}
+#graph-tooltip:after {
+  bottom: -3px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #f1f1f1;
+}
+.flot-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: @font-size * 0.66;
+  color: #cfcfcf;
+}

@@ -1,0 +1,28 @@
+/*-----------------------------------*/
+/* Knobs */
+/*-----------------------------------*/
+
+.widget-knob {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 95px;
+  height: 106px;
+  background: url(images/knob-balance-bg.png) no-repeat;
+  margin:5px;
+}
+.widget-volume {
+  width: 89px;
+  height: 95px;
+  background: url(images/knob-volume-bg.png) no-repeat;
+}
+.volume {background-image: url(images/knob-volume.png); margin: 2px 0 0 4px;}
+.balance {background-image: url(images/knob-balance.png); margin: 2px 0 0 4px;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .widget-knob {background-image: url(images/knob-balance-bg-x2.png); background-size: 95px auto;}
+  .widget-volume {background-image: url(images/knob-volume-bg-x2.png); background-size: 89px auto;}
+  .volume {background-image: url(images/knob-volume-x2.png); background-size: auto 81px; margin: 3px 0 0 4px;}
+  .balance {background-image: url(images/knob-balance-x2.png); background-size: auto 87px;}
+}
+.widget-knob input{display: none;}

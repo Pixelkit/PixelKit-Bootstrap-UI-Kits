@@ -1,0 +1,27 @@
+/* Border Radius */
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.border-radius-top(@radius) {
+  -webkit-border-radius: @radius @radius 0 0;
+  -moz-border-radius: @radius @radius 0 0;
+  border-radius: @radius @radius 0 0;
+}
+.border-radius-right(@radius) {
+  -webkit-border-radius: 0 @radius @radius 0;
+  -moz-border-radius: 0 @radius @radius 0;
+  border-radius: 0 @radius @radius 0;
+}
+.border-radius-bottom(@radius) {
+  -webkit-border-radius: 0 0 @radius @radius;
+  -moz-border-radius: 0 0 @radius @radius;
+  border-radius: 0 0 @radius @radius;
+}
+.border-radius-left(@radius) {
+  -webkit-border-radius: @radius 0 0 @radius;
+  -moz-border-radius: @radius 0 0 @radius;
+  border-radius: @radius 0 0 @radius;
+}

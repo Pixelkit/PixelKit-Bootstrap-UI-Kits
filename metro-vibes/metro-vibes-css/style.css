@@ -101,7 +101,7 @@ body {
     color:#8e8071;
 	font-size:13px;
 	position:relative;
-    background: url(images/bg.png) center top repeat;
+    background: #aa8a6e url(images/bg.jpg) center top repeat;
     background-size: 100% 100%;
 }
 ::-moz-selection {

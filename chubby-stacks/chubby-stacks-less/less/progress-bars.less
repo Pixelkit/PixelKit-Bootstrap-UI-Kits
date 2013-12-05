@@ -1,0 +1,130 @@
+/*-----------------------------------*/
+/* Progress Bars */
+/*-----------------------------------*/
+
+.progressbar {
+  margin: 45px 0;
+  position: relative;
+}
+.progressbar .pbar::selection {background: transparent;}
+
+/* Simple Progress Bar */
+
+.progressbar .mark-left,
+.progressbar .mark-right,
+.progressbar .elapsed,
+.progressbar .remained,
+.progressbar .total {
+  font-size: @font-size * 0.8;
+  color: #adadad;
+  text-shadow: none;
+  white-space: nowrap;
+  position: absolute;
+  top: -14px;
+  left: 0;
+}
+.progressbar .mark-right,
+.progressbar .remained,
+.progressbar .total {
+  left: auto;
+  right: 0;
+}
+.progressbar .elapsed,
+.progressbar .remained,
+.progressbar .percent,
+.progressbar .total {
+  display: none;
+}
+.progressbar .ui-progressbar {
+  height: 11px;
+  border-radius: 6px;
+  background: #d9ddd3;
+  -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.8);
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.8);
+  overflow: visible !important;
+  position: relative;
+  z-index: 0;
+  border: none;
+}
+.progressbar .ui-progressbar-value {
+  position: relative;
+  display: block !important;
+  min-width: 10px;
+  height: 100%;
+  border-radius: 6px;
+  background: rgb(202,225,114);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NhZTE3MiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2IyZDE0OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5NmJmMmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(202,225,114,1) 0%, rgba(178,209,73,1) 60%, rgba(150,191,42,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(202,225,114,1)), color-stop(60%,rgba(178,209,73,1)), color-stop(100%,rgba(150,191,42,1)));
+  background: -webkit-linear-gradient(top,  rgba(202,225,114,1) 0%,rgba(178,209,73,1) 60%,rgba(150,191,42,1) 100%);
+  background: -o-linear-gradient(top,  rgba(202,225,114,1) 0%,rgba(178,209,73,1) 60%,rgba(150,191,42,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(202,225,114,1) 0%,rgba(178,209,73,1) 60%,rgba(150,191,42,1) 100%);
+  background: linear-gradient(to bottom,  rgba(202,225,114,1) 0%,rgba(178,209,73,1) 60%,rgba(150,191,42,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cae172', endColorstr='#96bf2a',GradientType=0 );
+}
+.progressbar .ui-progressbar-value:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #9ebf2f;
+  border-bottom: 1px solid #90AD2E;
+  border-radius: 6px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAjklEQVQYV2NkQANVa0Uk24LfPEcWBokxIgtUrJI07gh7fhabGFxh5Wpxn/bQl1uQFSGLgRUCTUoDmjQLzSQUMcaK1RL1HaEvGlEUYRFDcSPU9JlA09PRTJ+JorBytcTm9tAXvqjuhIjBFQLdeQZokgmaSXAxsEKgSc+AuqTQTEIRY6xcLfm/PfQ5mhMwxQA2TEszx6ghMwAAAABJRU5ErkJggg==) -50% 0 repeat;
+}
+.progressbar .ui-progressbar-value span {
+  position: absolute;
+  right: -5px;
+  top: -2px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #b1b2af;
+  border-radius: 50%;
+  background: #fbfbfb;
+  -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+.progressbar .ui-progressbar-value span:before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border: 1px solid #a0b756;
+  border-radius: 50%;
+  background: #b1cd4e;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+/* Progress Bar with Download Bar */
+
+.progressbar.styled .mark-left,
+.progressbar.styled .mark-right {
+  display: none;
+}
+.progressbar.styled .elapsed,
+.progressbar.styled .total {
+  display: block;
+}
+.progressbar.styled .downloadbar {
+  position: absolute;
+  width: 100%;
+}
+.progressbar.styled .downloadbar .ui-progressbar-value {
+  background: rgb(190,194,180);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JlYzJiNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRmZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(190,194,180,1) 0%, rgba(221,223,214,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(190,194,180,1)), color-stop(100%,rgba(221,223,214,1)));
+  background: -webkit-linear-gradient(top,  rgba(190,194,180,1) 0%,rgba(221,223,214,1) 100%);
+  background: -o-linear-gradient(top,  rgba(190,194,180,1) 0%,rgba(221,223,214,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(190,194,180,1) 0%,rgba(221,223,214,1) 100%);
+  background: linear-gradient(to bottom,  rgba(190,194,180,1) 0%,rgba(221,223,214,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bec2b4', endColorstr='#dddfd6',GradientType=0 );
+
+}
+.progressbar.styled .downloadbar .ui-progressbar-value:before {
+  border: none;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.26);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.26);
+}
+.progressbar.styled .ui-progressbar-value span {display: none;}

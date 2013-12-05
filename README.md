@@ -1,3 +1,15 @@
+## Chubby Stacks
+
+![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/07/01.TheBasics.jpg)
+
+To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/chubby-stacks/> The complete Bootstrap UI kit that contains tons of additional elements spread across 6 categories is available on PixelKit.com <http://pixelkit.com/kits/fresh-ui-kit/>
+
+## Links
+
++ [Demo page](http://pixelkit.com/free-ui-kits/chubby-stacks/)
++ [Documentation page](http://pixelkit.com/free-ui-kits/chubby-stacks/docs/)
++ [Premium Version of this UI Kit](http://pixelkit.com/kits/fresh-ui-kit/)
+
 ## Sweet Candy
 
 ![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/05/The-Basics1.jpg)
@@ -72,6 +84,7 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 
 ## Changelog
 
++ 1.6 Added new kit Chubby Stacks.
 + 1.5 Added new kit Sweet Candy.
 + 1.4 Added new kit Arctic Sunset.
 + 1.3 Added new kit Dark Velvet.
