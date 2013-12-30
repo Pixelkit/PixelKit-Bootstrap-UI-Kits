@@ -1,0 +1,126 @@
+/*-----------------------------------*/
+/* Comments */
+/*-----------------------------------*/
+
+/*
+    - Post Comments
+    - Message Field
+*/
+
+
+
+/* Post Comments */
+/*-----------------------------------*/
+
+.comment-list {
+  position: relative;
+  margin-bottom: 30px;
+}
+.comment-list h2 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.link-add-comment {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  color: #fff;
+  text-decoration: underline;
+}
+.link-add-comment:hover {color: #fff;}
+
+.comment-list li.comment {
+  padding-left: 80px;
+  position: relative;
+}
+.comment-list .children li.comment:before {
+  content:'';
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top:7px;
+  left:-28px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.comment-body {
+  padding: 23px 20px;
+  position: relative;
+  margin-bottom: 18px;
+}
+.comment-body:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 12px;
+  left: -8px;
+  border-top: 8px solid #fff;
+  border-left: 8px solid transparent;
+}
+.comment-avatar {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 65px;
+  height: 65px;
+  border: 4px solid #fff;
+  -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+.comment-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.comment-author {margin-bottom: 11px;}
+.comment-author .link-author {float: left; font-size: @font-size * 1.39; color: #3e362b;}
+.comment-author .comment-meta {float: right; font-size: @font-size * 0.93; color: #a4a4a4; text-align: right;}
+.comment-author .comment-meta .link-reply {color: #a4a4a4;}
+.comment-entry {line-height: 19px;}
+
+@media (max-width: 479px) {
+  .comment-list .children li.comment {margin-left: -80px;}
+  .comment-list .children li.comment:before {display: none;}
+
+  .link-add-comment {
+    top: 30px;
+    left: 0;
+    right: auto;
+  }
+  .comment-author .link-author,
+  .comment-author .comment-meta {
+    float: none;
+    text-align: left;
+    display: block;
+  }
+  .comment-body {padding: 10px;}
+}
+
+/* Message Field */
+/*-----------------------------------*/
+
+.message-field .comment-body {padding: 20px;}
+.message-field .comment-body:before {top: 74px;}
+.message-field .comment-info {
+  font-size: @font-size * 0.93;
+  color: #a7b8c8;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.message-field .comment-author {margin-bottom: 10px;}
+.message-field .comment-author .link-author {
+  float: none;
+  font-size: @font-size * 1.7;
+  color: #164c87;
+  display: inline-block;
+  border-bottom: 1px solid #d0dbe7;
+  padding-bottom: 10px;
+}
+.message-field .comment-entry {font-size: @font-size * 0.93; line-height: 16px;}
+.message-field .comment-avatar {top: -4px; border: none;}
+
+@media (max-width: 479px), (min-width: 768px) and (max-width: 991px) {
+  .message-field .comment-body {padding: 15px;}
+}

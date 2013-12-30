@@ -1,0 +1,42 @@
+.pln{color:#000}
+
+@media screen{
+    .str{color:#D6464D}
+    .kwd{color:#008}
+    .com{color:#008200}
+    .typ{color:#606}
+    .lit{color:#088686}
+    .pun,.opn,.clo{color:#660}
+    .tag{color:#246A9F}
+    .atn{color:#54A3D3}
+    .atv{color:#D6464D}
+    .dec,.var{color:#CF38CF}
+    .fun{color:red}
+}
+
+@media print,projection{
+    .str{color:#060}
+    .kwd{color:#006;font-weight:bold}
+    .com{color:#600;font-style:italic}
+    .typ{color:#404;font-weight:bold}
+    .lit{color:#044}
+    .pun,.opn,.clo{color:#440}
+    .tag{color:#006;font-weight:bold}
+    .atn{color:#404}
+    .atv{color:#060}
+}
+
+ol.linenums{margin-top:0;margin-bottom:0}
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}
+li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+
+pre.prettyprint{
+    padding:20px 20px 10px;
+    border: 0 none;
+    background-color: transparent;
+    margin: 0;
+}
+pre.prettyprint,
+pre.prettyprint span{
+    font: normal normal 13px/20px "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+}

@@ -1,0 +1,110 @@
+.jp-current-time,
+.jp-duration,
+.jp-stop,
+.jp-repeat,
+.jp-repeat-off,
+.jp-shuffle,
+.jp-shuffle-off,
+.jp-volume-max,
+.jp-volume-bar,
+.jp-volume-max {
+  display: none !important;
+}
+.jp-audio a:hover,
+.jp-audio a:focus,
+.jp-audio a:active {
+  outline: none;
+}
+.jp-interface, .jp-interface .jp-controls {position: relative;}
+.jp-jplayer audio, .jp-jplayer {width:0; height:0;}
+.jp-jplayer {background-color: #000000;}
+
+/*Buttons*/
+.jp-buttons {
+  text-align: center;
+  border-top: 1px solid #cad7e5;
+  padding: 14px 0 6px;
+}
+.jp-buttons a {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.jp-buttons a:before {
+  font-family: "Glyphicons Halflings";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  color: #4ab3e8;
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.jp-previous.disabled, .jp-next.disabled {opacity: .4 !important;}
+
+.jp-buttons a.jp-play:before {content: '\e072';}
+.jp-pause:before {content: '\e073';}
+.jp-previous:before {content: '\e071';}
+.jp-next:before {content: '\e075';}
+.jp-playlist-toggle:before {content: '\e056';}
+.jp-mute:before {content: '\e038';}
+.jp-unmute:before {content: '\e036';}
+
+/*Progress Bar*/
+.jp-progress {
+  height: 3px;
+  overflow: hidden;
+  width: 100%;
+}
+.jp-seek-bar {
+  width: 100% !important;
+  height: 100%;
+  cursor: pointer;
+  background: #b7d7eb;
+  overflow: hidden;
+}
+.jp-play-bar {
+  background: #75c300;
+  width: 0;
+  height: 100%;
+  position: relative;
+}
+
+/*Song Title*/
+.song-title {padding: 12px 8px;}
+.song-image img {display: block; width: 100%;}
+
+.item-song {
+  display: block;
+  font-size: @font-size * 1.39;
+  font-weight: 700;
+  color: #164c87;
+}
+.item-artist {
+  display: block;
+  font-size: @font-size * 0.93;
+  color: #a5a5a5;
+}
+
+/*PlayList*/
+.jp-playlist {
+  display: none;
+  padding-bottom: 8px;
+}
+.jp-playlist li {
+  padding: 8px;
+  border-top: 1px solid #cad7e5;
+}
+.jp-playlist .item-image {display: none;}
+
+.jp-playlist-current .item-song,
+.jp-playlist-current .item-artist {
+  color: #c9376e;
+}
+.jp-playlist .item-song {font-size: @font-size; font-weight: 400;}

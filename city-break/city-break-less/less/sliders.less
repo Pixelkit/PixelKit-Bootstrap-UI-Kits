@@ -1,0 +1,63 @@
+/*-----------------------------------*/
+/* Sliders */
+/*-----------------------------------*/
+
+/*
+    - Image Slider
+*/
+
+
+
+/*-----------------------------------*/
+/* Image Slider */
+/*-----------------------------------*/
+
+.tf-gallery {background: #337fad;}
+.tf-gallery img {display: block; width: 100%;}
+
+.tf-gallery .gallery-images-wrap {
+  position: relative;
+  -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.26);
+}
+
+/*Thumbs*/
+.tf-gallery .gallery-thumbs-wrap {padding: 12px; position: relative;}
+
+.tf-gallery .gallery-thumbs li {
+  float: left;
+  width: 64px;
+  height: 44px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+.tf-gallery .gallery-thumbs li:hover,
+.tf-gallery .gallery-thumbs li.selected {
+  border-top-color: #c9376e;
+  border-bottom-color: #c9376e;
+  cursor: pointer;
+}
+
+/*Buttons*/
+.tf-gallery-btn {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  z-index: 1;
+  margin-top: -17px;
+  width: 18px;
+  height: 34px;
+  background-image: url(images/slider-controls.png);
+  background-position: left -190px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.tf-gallery-btn.next {background-position: right -190px; left: auto; right: 20px;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .tf-gallery-btn {
+    background-image: url(images/slider-controls-x2.png);
+    background-size: 60px auto;
+  }
+}

@@ -1,0 +1,61 @@
+/*-----------------------------------*/
+/* Progress Bars */
+/*-----------------------------------*/
+
+.progress {
+  height: 9px;
+  margin-bottom: 10px;
+  background-color: #21649c;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.progress-bar {
+  background-color: #44b0e7;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.progress-text {margin-bottom: 5px;}
+
+.progress-text .mark {
+  float: left;
+  width: 50%;
+  font-size: @font-size * 1.08;
+  font-weight: 700;
+  color: #fff;
+}
+.progress-text .mark.right {text-align: right;}
+
+/* Progress Bar with Download Bar */
+.progress.download {position: relative;}
+.progress.download .progress-bar {position: absolute; top: 0; left: 0;}
+.progress.download .download-bar {background-color: #3992c5;}
+
+/* Progress Bar style 2 */
+.progress.style2 {height: 4px; border-radius: 2px;}
+.progress.style2 .progress-bar {border-radius: 2px;}
+
+/* Progress Bar style 3 */
+.progress.style3 .progress-bar {
+  background-image: -webkit-gradient(linear, 100% 0, 0 100%, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-color: #35a7e6;
+  background-size: 20px 20px;
+}
+
+/* Progress Bar style 4 */
+.progress.style4 .progress-bar {background-color: #72c200;}
+
+/* Progress Bar style 5 */
+.progress.style5 {border: 1px solid #227ac4;}
+.progress.style5 .progress-bar {
+  background-image: -webkit-gradient(linear, 100% 0, 0 100%, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-color: #c43663;
+  background-size: 20px 20px;
+}

@@ -1,0 +1,195 @@
+/*-----------------------------------*/
+/* Forms */
+/*-----------------------------------*/
+
+/*
+    - Comment Form
+    - Contact Form
+    - Contact Form styled
+*/
+
+
+
+/* Inputs, Textareas */
+
+input::-webkit-input-placeholder {font-size: @font-size * 1.08; color: @input-color;}
+input:-moz-placeholder {font-size: @font-size * 1.08; color: @input-color;}
+textarea::-webkit-input-placeholder {font-size: @font-size * 1.08; color: @input-color;}
+textarea:-moz-placeholder {font-size: @font-size * 1.08; color: @input-color;}
+
+label, input, button, select, textarea {font-size: inherit; line-height: normal;}
+input[type="submit"] {border-radius: 0;}  /*For Apple*/
+
+input[type="text"],
+input[type="password"],
+textarea,
+.select_styled {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #d0d1d3;
+  background: #ebf1f8;
+  border-radius: 2px;
+  padding:0 12px;
+  font-size: @font-size * 1.08;
+  color: @input-color;
+  width: 100%;
+  margin: 0;
+}
+.boxed-blue input[type="text"],
+.boxed-blue input[type="password"],
+.boxed-blue textarea,
+.boxed-blue .select_styled {
+  border: 1px solid #0b3d74;
+  background: #164c87;
+  color: #81d5ff;
+}
+input[type="text"],
+input[type="password"]{
+  height: 50px;
+}
+.ie8 input[type="text"],
+.ie8 input[type="password"]{
+  line-height: 50px;
+}
+textarea {
+  padding: 10px 12px;
+  height: 150px;
+  resize: vertical;
+  overflow: auto;
+}
+.field_text,
+.field_select{
+  float:left;
+  margin-right: 2%;
+  margin-bottom: 18px;
+  width: 48%;
+  position: relative;
+}
+.field_text.omega,
+.field_select.omega{
+  float:right;
+}
+.field_text.field_textarea{
+  float: none;
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 24px;
+  position: relative;
+}
+.boxed-blue .label_title{
+  font-size: @font-size * 0.93;
+  color: #fff;
+}
+.label_title{
+  display: block;
+  margin-bottom: 8px;
+  font-size: @font-size * 1.16;
+  font-weight: 700;
+  color: #164c87;
+  text-transform: uppercase;
+  cursor: default;
+}
+@media (max-width:479px){
+  .field_text,
+  .field_select{
+    float: none !important;
+    width: 100% !important;
+    margin-right: 0;
+  }
+}
+
+/*-----------------------------------*/
+/* Comment Form */
+/*-----------------------------------*/
+
+.add-comment .comment-form {padding: 26px 30px;}
+
+.add-comment .add-comment-title h3 {
+  border-bottom: 2px solid #dce4ee;
+  padding: 20px 30px;
+  margin-bottom: 0;
+}
+.comment-form .error {overflow: hidden; border: 1px solid #c9376e !important;}
+
+.add-comment .btn-discard {float: left;}
+.add-comment .btn-submit {float: right;}
+
+@media (max-width: 479px) {
+  .add-comment .add-comment-title h3 {padding: 15px;}
+  .add-comment .comment-form {padding: 10px 15px 20px;}
+  .add-comment .btn-discard,
+  .add-comment .btn-submit {
+    float: none;
+    margin-bottom: 10px;
+  }
+}
+
+/*-----------------------------------*/
+/* Contact Form */
+/*-----------------------------------*/
+
+.contact-form .add-comment-title {display: none;}
+.contact-form .field_text,
+.contact-form .field_select {
+  float: none;
+  width: 100%;
+  margin-right: 0;
+}
+
+/*-----------------------------------*/
+/* Contact Form styled */
+/*-----------------------------------*/
+
+.add-comment.styled .add-comment-title {display: none;}
+.add-comment.styled .btn span, .add-comment.styled .btn input {padding: 0 12px 0 62px;}
+.add-comment.styled textarea {height: 100px;}
+
+@media (max-width: 479px), (min-width: 768px) and (max-width: 991px) {
+  .add-comment.styled .comment-form {padding: 15px;}
+  .add-comment.styled .btn {
+    float: none;
+    margin-bottom: 10px;
+  }
+}
+
+/* Text editor for contact form */
+
+.nicEdit-pane {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.nicEdit-panel {
+  overflow: hidden;
+  border-radius: 2px 2px 0 0;
+  width: 100%;
+  border: 1px solid #d0d1d3;
+
+}
+.nicEdit-button-undefined {border: none !important;}
+
+.nicEdit-button {
+  background-image: url(images/nicEditorIcons.png) !important;
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .nicEdit-button {
+    background-image: url(images/nicEditorIcons-x2.png) !important;
+    background-size: auto 18px;
+  }
+}
+.nicEdit-container {
+  border: 1px solid #d0d1d3;
+  background: #ebf1f8;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  padding:0;
+  font-weight: 400;
+  width: auto !important;
+}
+.nicEdit-container i {font-style: italic !important;}
+.nicEdit-container b {font-weight: 700 !important;}
+.nicEdit-container u {text-decoration: underline !important;}
+.nicEdit-container .nicEdit-main {font-size: @font-size * 1.08; color: @input-color; width: auto !important;}
+.nicEdit-main p, .nicEdit-main div {line-height: normal; margin-bottom: 0;}

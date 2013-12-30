@@ -1,0 +1,1039 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City Break | The Basics</title>
+
+<!-- main JS libs -->
+<script src="js/libs/jquery-1.10.2.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="style.css" media="screen" rel="stylesheet">
+
+<!-- General Scripts -->
+<script src="js/general.js"></script>
+
+<!-- custom input -->
+<script src="js/jquery.customInput.js"></script>
+
+<!-- Placeholders -->
+<script src="js/jquery.powerful-placeholder.min.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+        if($("[placeholder]").size() > 0) {
+            $.Placeholder.init();
+        }
+    });
+</script>
+
+<!-- CarouFredSel  -->
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+
+<!-- Lightbox prettyPhoto -->
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<script src="js/jquery.prettyPhoto.js"></script>
+
+<!-- Video Player -->
+<link href="css/video-js.css" rel="stylesheet">
+<script src="js/video.js"></script>
+<script>
+    videojs.options.flash.swf = "js/video-js.swf";
+</script>
+
+<!-- Audio Player -->
+<link href="css/jplayer.css" rel="stylesheet">
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-1.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Beyoncé</span><span class='item-song'>Love on Top</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-2.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Lene Marlin</span><span class='item-song'>Unforgivable Sinner</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-3.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Toby Lightman</span><span class='item-song'>Lets go Racing Boys</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+</script>
+
+<!-- Calendar -->
+<script src="js/jquery-ui.multidatespicker.js"></script>
+
+<!-- range sliders -->
+<script src="js/jquery.slider.bundle.js"></script>
+<script src="js/jquery.slider.js"></script>
+<link href="css/jslider.css" rel="stylesheet">
+
+<!-- Graph Builder -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<!-- Visual Text Editor -->
+<script src="js/nicEdit.js"></script>
+
+<!-- Multiselect (Chosen.js) -->
+<link rel="stylesheet" href="css/chosen.css">
+<script src="js/chosen.jquery.min.js"></script>
+
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+<div class="body-wrap">
+    <div class="content">
+        <!--container-->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Website Menu -->
+                    <ul class="menu boxed clearfix">
+                        <li><a href="#"><i class="menu-icon menu-icon-1"></i>Home</a></li>
+                        <li>
+                            <a href="#"><i class="menu-icon menu-icon-2"></i>Tickets</a>
+                            <ul>
+                                <li><a href="#">Air Tickets</a></li>
+                                <li><a href="#">Train Tickets</a></li>
+                                <li><a href="#">Ship Tickets</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon menu-icon-3"></i>Services</a>
+                            <ul>
+                                <li><a href="#">Service 1</a></li>
+                                <li><a href="#">Service 2</a></li>
+                                <li><a href="#">Service 3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon menu-icon-4"></i>Reservations</a>
+                            <ul>
+                                <li>
+                                    <a href="#">5 Stars Hotel</a>
+                                    <ul>
+                                        <li><a href="#">Single Room</a></li>
+                                        <li><a href="#">Double Room</a></li>
+                                        <li><a href="#">Triple Room</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">4 Stars Hotel</a>
+                                    <ul>
+                                        <li><a href="#">Single Room</a></li>
+                                        <li><a href="#">Double Room</a></li>
+                                        <li><a href="#">Triple Room</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">3 Stars Hotel</a>
+                                    <ul>
+                                        <li><a href="#">Single Room</a></li>
+                                        <li><a href="#">Double Room</a></li>
+                                        <li><a href="#">Triple Room</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="menu-icon menu-icon-5"></i>Restaurant</a></li>
+                        <li><a href="#"><i class="menu-icon menu-icon-6"></i>Contact Us</a></li>
+                    </ul>
+                    <!--/ Website Menu -->
+                </div>
+            </div>
+            <!--/ row -->
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- Video Player -->
+                    <div class="video-player">
+                        <video id="video1" controls preload="none" poster="images/temp/post-img-3.jpg" class="video-js vjs-styled-skin">
+                            <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                            <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                        </video>
+                        <script>
+                            videojs("video1", {
+                                "height": "auto",
+                                "width": "auto"
+                            }).ready(function() {
+                                var myPlayer = this; // Store the video object
+                                var aspectRatio = 1 / 2; // Make up an aspect ratio
+                                function resizeVideoJS() {
+                                    // Get the parent element's actual width
+                                    var width = document.getElementById(myPlayer.id()).parentElement.offsetWidth;
+                                    // Set width to fill parent element, Set height
+                                    myPlayer.width(width).height(width * aspectRatio);
+                                }
+                                resizeVideoJS(); // Initialize the function
+                                window.onresize = resizeVideoJS; // Call the function on resize
+                            });
+                        </script>
+                    </div>
+                    <!--/ Video Player -->
+
+                    <!-- row Level 2 -->
+                    <div class="row">
+                        <div class="col-sm-5 col-md-4">
+                            <!-- Widget Audio Player -->
+                            <div class="widget-container widget-audio boxed">
+                                <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                                <div id="jp_container_1" class="jp-audio">
+                                    <div class="jp-gui jp-interface">
+                                        <div class="jp-controls">
+                                            <div class="jp-current-time"></div>
+                                            <div class="jp-duration"></div>
+                                            <div class="song-image"></div>
+                                            <div class="jp-progress">
+                                                <div class="jp-seek-bar">
+                                                    <div class="jp-play-bar">
+                                                        <div class="jp-seek-handle"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="song-title"></div>
+                                        </div>
+                                        <div class="jp-controls jp-buttons">
+                                            <a href="javascript:;" class="jp-playlist-toggle" tabindex="1" title="toggle playlist">toggle playlist</a><!--
+                                            --><a href="javascript:;" class="jp-previous disabled" tabindex="1">previous</a><!--
+                                            --><a href="javascript:;" class="jp-play" tabindex="1">play</a><!--
+                                            --><a href="javascript:;" class="jp-pause" tabindex="1">pause</a><!--
+                                            --><a href="javascript:;" class="jp-next" tabindex="1">next</a><!--
+                                            --><a href="javascript:;" class="jp-stop" tabindex="1">stop</a><!--
+                                            --><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a><!--
+                                            --><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a><!--
+                                            --><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a><!--
+                                            --><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a><!--
+                                            --><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                                        </div>
+                                        <div class="jp-volume-bar">
+                                            <div class="jp-volume-bar-value"></div>
+                                        </div>
+                                    </div>
+                                    <div class="jp-playlist">
+                                        <ul class="jp-playlist-inner">
+                                            <li></li>
+                                        </ul>
+                                    </div>
+                                    <div class="jp-no-solution">
+                                        <span>Update Required</span>
+                                        <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Widget Audio Player -->
+                        </div>
+
+                        <div class="col-sm-7 col-md-8">
+                            <!-- widget calendar-->
+                            <div class="widget-container widget-calendar">
+                                <div class="inner">
+                                    <input type="text" name="date-departure" value="" id="date-departure">
+                                    <script>
+                                        // <![CDATA[
+                                        jQuery(document).ready(function($) {
+                                            var daysRange = 5;
+                                            function assignCalendar(id){
+                                                $('<div class="calendar" />')
+                                                        .insertAfter( $(id) )
+                                                        .multiDatesPicker({
+                                                            dateFormat: 'yy-mm-dd',
+                                                            minDate: new Date(),
+                                                            maxDate: '+1y',
+                                                            altField: id,
+                                                            firstDay: 1,
+                                                            showOtherMonths: true
+                                                        }).prev().hide();
+                                            }
+                                            assignCalendar('#date-departure');
+                                        });
+                                        // ]]>
+                                    </script>
+                                </div>
+                            </div>
+                            <!--/ widget calendar-->
+                        </div>
+                    </div>
+                    <!--/ row Level 2 -->
+
+                    <!-- Tabs -->
+                    <div class="tabs-framed tabs-small boxed">
+                        <ul class="tabs clearfix">
+                            <li class="active"><a href="#events" data-toggle="tab">Events</a></li>
+                            <li><a href="#reminders" data-toggle="tab">Reminders</a></li>
+                            <li><a href="#starred" data-toggle="tab">Starred</a></li>
+                            <li><a href="#archive" data-toggle="tab">Archive</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="events">
+                                <!-- Price item -->
+                                <div class="price-item style4">
+                                    <div class="price-content clearfix">
+                                        <div class="price-content-left">
+                                            <div class="price-image">
+                                                <img src="images/temp/price-img-13.jpg" alt="" />
+                                                <a href="#" class="badge badge-red"><span class="glyphicon glyphicon-heart"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="price-content-right">
+                                            <span class="price-info">10 Days Only</span>
+                                            <h2 class="price-title"><a href="#">Special offer</a></h2>
+                                            <div class="price-desc">
+                                                <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <strong><sup>$</sup>99</strong>
+                                                <span>per<br />night</span>
+                                                <i class="icon-price double"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-bottom clearfix">
+                                        <span class="price-info">Sale Ends 31.05</span>
+                                        <a href="#" class="price-reserve">Other hot deals</a>
+                                    </div>
+                                </div>
+                                <!--/ Price item -->
+                            </div>
+
+                            <div class="tab-pane fade" id="reminders">
+                                <!-- Price item -->
+                                <div class="price-item style4">
+                                    <div class="price-content clearfix">
+                                        <div class="price-content-left">
+                                            <div class="price-image">
+                                                <img src="images/temp/price-img-1.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="price-content-right">
+                                            <span class="price-info">8 Days Only</span>
+                                            <h2 class="price-title"><a href="#">Limited offer</a></h2>
+                                            <div class="price-desc">
+                                                <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <strong><sup>$</sup>199</strong>
+                                                <span>per<br />night</span>
+                                                <i class="icon-price triple"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-bottom clearfix">
+                                        <span class="price-info">Sale Ends 26.05</span>
+                                        <a href="#" class="price-reserve">Reserve</a>
+                                    </div>
+                                </div>
+                                <!--/ Price item -->
+                            </div>
+
+                            <div class="tab-pane fade" id="starred">
+                                <!-- Price item -->
+                                <div class="price-item style4">
+                                    <div class="price-content clearfix">
+                                        <div class="price-content-left">
+                                            <div class="price-image">
+                                                <img src="images/temp/price-img-13.jpg" alt="" />
+                                                <a href="#" class="badge"><span class="glyphicon glyphicon-tags"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="price-content-right">
+                                            <span class="price-info">14 Days Only</span>
+                                            <h2 class="price-title"><a href="#">Special offer</a></h2>
+                                            <div class="price-desc">
+                                                <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <strong><sup>$</sup>149</strong>
+                                                <span>per<br />night</span>
+                                                <i class="icon-price double"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-bottom clearfix">
+                                        <span class="price-info">Sale Ends 26.06</span>
+                                        <a href="#" class="price-reserve">Other hot deals</a>
+                                    </div>
+                                </div>
+                                <!--/ Price item -->
+                            </div>
+
+                            <div class="tab-pane fade" id="archive">
+                                <!-- Price item -->
+                                <div class="price-item style4">
+                                    <div class="price-content clearfix">
+                                        <div class="price-content-left">
+                                            <div class="price-image">
+                                                <img src="images/temp/price-img-1.jpg" alt="" />
+                                                <a href="#" class="badge badge-red"><span class="glyphicon glyphicon-tags"></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="price-content-right">
+                                            <span class="price-info">6 Days Only</span>
+                                            <h2 class="price-title"><a href="#">New offer</a></h2>
+                                            <div class="price-desc">
+                                                <p>Rooms at La Margherita are simply decorate and feature antique wood furniture. They all have free Wi-Fi access.</p>
+                                            </div>
+                                            <div class="price clearfix">
+                                                <strong><sup>$</sup>89</strong>
+                                                <span>per<br />night</span>
+                                                <i class="icon-price"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-bottom clearfix">
+                                        <span class="price-info">Sale Ends 20.05</span>
+                                        <a href="#" class="price-reserve">Reserve</a>
+                                    </div>
+                                </div>
+                                <!--/ Price item -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Tabs -->
+                </div>
+
+                <div class="col-sm-6">
+                    <!-- Statistics -->
+                    <div class="widget-container widget-stats boxed green-line">
+                        <div class="widget-title">
+                            <a href="#" class="link-refresh" id="link-refresh-1"><span class="glyphicon glyphicon-refresh"></span></a>
+                            <h3>Hotel occupancy</h3>
+                        </div>
+                        <div class="stats-content clearfix">
+                            <div class="stats-content-right">
+                                <div class="stats-select">
+                                    <strong><span>This Week</span></strong>
+                                    <ul>
+                                        <li><span>Last Week</span></li>
+                                        <li><span>This Week</span></li>
+                                        <li><span>Next Week</span></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Statistics Tab 1 -->
+                                <div class="stats-tab">
+                                    <div class="occupancy down"><span>14%</span></div>
+                                    <div id="graph-1" class="graph"></div>
+                                    <script type="text/javascript">
+                                        google.load("visualization", "1", {packages:["corechart"]});
+                                        google.setOnLoadCallback(drawChart);
+                                        function drawChart() {
+                                            var data = google.visualization.arrayToDataTable([
+                                                ['Day', 'Guests'],
+                                                ['SUN',  600],
+                                                ['MON',  440],
+                                                ['TUE',  260],
+                                                ['WED',  480],
+                                                ['THU',  640],
+                                                ['FRI',  500],
+                                                ['SAT',  620]
+                                            ]);
+                                            var options = {
+                                                curveType: 'function',
+                                                chartArea:{left:0, top:10, width:"100%"},
+                                                hAxis: {textStyle: {color: '#474748', fontSize: 10, bold: true}},
+                                                vAxis: {gridlines: {color: '#fff', count: 0}, baselineColor: '#fff'},
+                                                tooltip: {isHtml: true},
+                                                series: [{
+                                                    color: '#3797d3',
+                                                    visibleInLegend: false,
+                                                    pointSize: 5,
+                                                    lineWidth: 2,
+                                                    areaOpacity: 0
+                                                }]
+                                            };
+
+                                            var chart = new google.visualization.LineChart(document.getElementById('graph-1'));
+                                            chart.draw(data, options);
+
+                                            $(window).resize(function() {
+                                                chart.clearChart();
+                                                chart.draw(data, options);
+                                            });
+                                            $('.stats-select li').click(function() {
+                                                chart.clearChart();
+                                                chart.draw(data, options);
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                                <!--/ Statistics Tab 1 -->
+
+                                <!-- Statistics Tab 2 -->
+                                <div class="stats-tab active">
+                                    <div class="occupancy up"><span>45%</span></div>
+                                    <div id="graph-2" class="graph"></div>
+                                    <script type="text/javascript">
+                                        google.load("visualization", "1", {packages:["corechart"]});
+                                        google.setOnLoadCallback(drawChart);
+                                        function drawChart() {
+                                            var data = google.visualization.arrayToDataTable([
+                                                ['Day', 'Guests'],
+                                                ['SUN',  480],
+                                                ['MON',  500],
+                                                ['TUE',  550],
+                                                ['WED',  260],
+                                                ['THU',  620],
+                                                ['FRI',  440],
+                                                ['SAT',  640]
+                                            ]);
+                                            var options = {
+                                                curveType: 'function',
+                                                chartArea:{left:0, top:10, width:"100%"},
+                                                hAxis: {textStyle: {color: '#474748', fontSize: 10, bold: true}},
+                                                vAxis: {gridlines: {color: '#fff', count: 0}, baselineColor: '#fff'},
+                                                tooltip: {isHtml: true},
+                                                series: [{
+                                                    color: '#3797d3',
+                                                    visibleInLegend: false,
+                                                    pointSize: 5,
+                                                    lineWidth: 2,
+                                                    areaOpacity: 0
+                                                }]
+                                            };
+
+                                            var chart = new google.visualization.LineChart(document.getElementById('graph-2'));
+                                            chart.draw(data, options);
+
+                                            $(window).resize(function() {
+                                                chart.clearChart();
+                                                chart.draw(data, options);
+                                            });
+                                            $('.stats-select li').click(function() {
+                                                chart.clearChart();
+                                                chart.draw(data, options);
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                                <!--/ Statistics Tab 2 -->
+
+                                <!-- Statistics Tab 3 -->
+                                <div class="stats-tab">
+                                    <div class="occupancy up"><span>26%</span></div>
+                                    <div id="graph-3" class="graph"></div>
+                                    <script type="text/javascript">
+                                        google.load("visualization", "1", {packages:["corechart"]});
+                                        google.setOnLoadCallback(drawChart);
+                                        function drawChart() {
+                                            var data = google.visualization.arrayToDataTable([
+                                                ['Day', 'Guests'],
+                                                ['SUN',  260],
+                                                ['MON',  360],
+                                                ['TUE',  540],
+                                                ['WED',  650],
+                                                ['THU',  560],
+                                                ['FRI',  580],
+                                                ['SAT',  600]
+                                            ]);
+                                            var options = {
+                                                curveType: 'function',
+                                                chartArea:{left:0, top:10, width:"100%"},
+                                                hAxis: {textStyle: {color: '#474748', fontSize: 10, bold: true}},
+                                                vAxis: {gridlines: {color: '#fff', count: 0}, baselineColor: '#fff'},
+                                                tooltip: {isHtml: true},
+                                                series: [{
+                                                    color: '#3797d3',
+                                                    visibleInLegend: false,
+                                                    pointSize: 5,
+                                                    lineWidth: 2,
+                                                    areaOpacity: 0
+                                                }]
+                                            };
+
+                                            var chart = new google.visualization.LineChart(document.getElementById('graph-3'));
+                                            chart.draw(data, options);
+
+                                            $(window).resize(function() {
+                                                chart.clearChart();
+                                                chart.draw(data, options);
+                                            });
+                                            $('.stats-select li').click(function() {
+                                                chart.clearChart();
+                                                chart.draw(data, options);
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                                <!--/ Statistics Tab 3 -->
+                            </div>
+
+                            <div class="stats-content-left">
+                                <div class="inner">
+                                    <h6>Guest Info:</h6>
+
+                                    <div class="progressBar">
+                                        <div class="progress-text clearfix">
+                                            <span class="mark left">Male</span>
+                                            <span class="mark right">55%</span>
+                                        </div>
+                                         <div class="progress style2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progressBar">
+                                        <div class="progress-text clearfix">
+                                            <span class="mark left">Female</span>
+                                            <span class="mark right">40%</span>
+                                        </div>
+                                        <div class="progress style2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progressBar">
+                                        <div class="progress-text clearfix">
+                                            <span class="mark left">Kids</span>
+                                            <span class="mark right">5%</span>
+                                        </div>
+                                        <div class="progress style2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-icon btn-icon-right btn-icon-go"><span>View other stats</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Statistics -->
+
+                    <!-- Price List small -->
+                    <ul class="price-list-small">
+                        <li class="price-item-small boxed green-line">
+                            <div class="price-content">
+                                <h2 class="price-title"><a href="#">Standard</a></h2>
+                                <div class="price-rating">
+                                    <div class="rating clearfix">
+                                        <span class="star voted" rel="1"></span>
+                                        <span class="star voted" rel="2"></span>
+                                        <span class="star voted" rel="3"></span>
+                                        <span class="star" rel="4"></span>
+                                        <span class="star" rel="5"></span>
+                                    </div>
+                                </div>
+                                <div class="price-image">
+                                    <img src="images/temp/price-img-3.jpg" alt="" />
+                                </div>
+                                <div class="price clearfix">
+                                    <i class="icon-price double"></i>
+                                    <strong><sup>$</sup>129</strong>
+                                </div>
+                            </div>
+                            <div class="price-bottom">
+                                <a href="#" class="btn btn-icon btn-icon-checkout"><span>249 available</span></a>
+                            </div>
+                        </li>
+                        <li class="price-item-small active boxed red-line">
+                            <div class="price-content">
+                                <h2 class="price-title"><a href="#">Superior</a></h2>
+                                <div class="price-rating">
+                                    <div class="rating clearfix">
+                                        <span class="star voted" rel="1"></span>
+                                        <span class="star voted" rel="2"></span>
+                                        <span class="star voted" rel="3"></span>
+                                        <span class="star voted" rel="4"></span>
+                                        <span class="star voted" rel="5"></span>
+                                    </div>
+                                </div>
+                                <div class="price-image">
+                                    <img src="images/temp/price-img-2.jpg" alt="" />
+                                </div>
+                                <div class="price clearfix">
+                                    <i class="icon-price triple"></i>
+                                    <strong><sup>$</sup>399</strong>
+                                </div>
+                            </div>
+                            <div class="price-bottom">
+                                <a href="#" class="btn btn-icon btn-icon-checkout"><span>157 available</span></a>
+                            </div>
+                        </li>
+                        <li class="price-item-small boxed green-line">
+                            <div class="price-content">
+                                <h2 class="price-title"><a href="#">Apartments</a></h2>
+                                <div class="price-rating">
+                                    <div class="rating clearfix">
+                                        <span class="star voted" rel="1"></span>
+                                        <span class="star voted" rel="2"></span>
+                                        <span class="star voted" rel="3"></span>
+                                        <span class="star voted" rel="4"></span>
+                                        <span class="star" rel="5"></span>
+                                    </div>
+                                </div>
+                                <div class="price-image">
+                                    <img src="images/temp/price-img-4.jpg" alt="" />
+                                </div>
+                                <div class="price clearfix">
+                                    <i class="icon-price double"></i>
+                                    <strong><sup>$</sup>129</strong>
+                                </div>
+                            </div>
+                            <div class="price-bottom">
+                                <a href="#" class="btn btn-icon btn-icon-checkout"><span>185 available</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--/ Price List small -->
+
+                    <!-- Image Slider -->
+                    <div id="gallery-1" class="tf-gallery boxed">
+                        <div class="gallery-images-wrap">
+                            <ul class="gallery-images">
+                                <li><a href="images/temp/carousel-1.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-1.jpg" alt="" /></a></li>
+                                <li><a href="images/temp/carousel-2.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-2.jpg" alt="" /></a></li>
+                                <li><a href="images/temp/carousel-3.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-3.jpg" alt="" /></a></li>
+                                <li><a href="images/temp/carousel-4.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-4.jpg" alt="" /></a></li>
+                                <li><a href="images/temp/carousel-5.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-5.jpg" alt="" /></a></li>
+                                <li><a href="images/temp/carousel-6.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-6.jpg" alt="" /></a></li>
+                                <li><a href="images/temp/carousel-7.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-7.jpg" alt="" /></a></li>
+                                <li><a href="images/temp/carousel-8.jpg" data-rel="prettyPhoto[gal]"><img src="images/temp/carousel-8.jpg" alt="" /></a></li>
+                            </ul>
+                            <a href="#" class="tf-gallery-btn prev">PREV</a>
+                            <a href="#" class="tf-gallery-btn next">NEXT</a>
+                        </div>
+                        <div class="gallery-thumbs-wrap">
+                            <ul class="gallery-thumbs">
+                                <li><img src="images/temp/carousel-thumb-1.jpg" alt="" /></li>
+                                <li><img src="images/temp/carousel-thumb-2.jpg" alt="" /></li>
+                                <li><img src="images/temp/carousel-thumb-3.jpg" alt="" /></li>
+                                <li><img src="images/temp/carousel-thumb-4.jpg" alt="" /></li>
+                                <li><img src="images/temp/carousel-thumb-5.jpg" alt="" /></li>
+                                <li><img src="images/temp/carousel-thumb-6.jpg" alt="" /></li>
+                                <li><img src="images/temp/carousel-thumb-7.jpg" alt="" /></li>
+                                <li><img src="images/temp/carousel-thumb-8.jpg" alt="" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+                        jQuery(document).ready(function($) {
+                            var gallery = $("#gallery-1"),
+                                galleryContent = gallery.html();
+
+                            gallery.tfGallery();
+
+                            $(window).resize(function() {
+                                gallery.empty().html(galleryContent);
+                                setTimeout(function(){gallery.tfGallery()},0);
+                                $(".tf-gallery a[data-rel^='prettyPhoto']").prettyPhoto();
+                            });
+                        });
+                    </script>
+                    <!-- Image Slider -->
+                </div>
+            </div>
+            <!--/ row -->
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-sm-3">
+                    <!-- Profile -->
+                    <div class="widget-container widget-profile boxed blue-line">
+                        <div class="avatar"><img src="images/temp/avatar.jpg" alt="" /></div>
+                        <div class="inner">
+                            <h5 class="profile-title"><span>Charlize</span><strong>Theron</strong></h5>
+                            <span class="profile-subtitle">American model and actress</span>
+                        </div>
+                        <div class="follow">
+                            <a href="#" class="btn btn-icon btn-icon-right btn-icon-signup btn-green"><span>Following</span></a>
+                            <div class="followers"><strong>1687</strong><span>followers</span></div>
+                        </div>
+                    </div>
+                    <!--/ Profile -->
+
+                    <!-- Controls -->
+                    <div class="controls boxed">
+                        <!-- Range slider -->
+                        <div class="range-slider">
+                            <input id="price-range" type="text" name="price-range" value="26;76">
+                        </div>
+                        <script>
+                            jQuery(document).ready(function($) {
+                                // Price Range Input
+                                $("#price-range").rangeslider({
+                                    from: 0,
+                                    to: 100,
+                                    limits: false,
+                                    scale: ['0%', '100%'],
+                                    heterogeneity: ['50/50'],
+                                    step: 1,
+                                    smooth: true,
+                                    dimension: '%'
+                                });
+                            });
+                        </script>
+                        <!-- Range slider -->
+
+                        <!-- Range slider -->
+                        <div class="range-slider styled single">
+                            <input id="price-range-2" type="text" name="price-range" value="0;36">
+                        </div>
+                        <script>
+                            jQuery(document).ready(function($) {
+                                // Price Range Input
+                                $("#price-range-2").rangeslider({
+                                    from: 0,
+                                    to: 100,
+                                    limits: false,
+                                    scale: ['0%', '100%'],
+                                    heterogeneity: ['50/50'],
+                                    step: 1,
+                                    smooth: true,
+                                    dimension: '%'
+                                });
+                            });
+                        </script>
+                        <!-- Range slider -->
+
+                        <!-- Progress Bars -->
+                        <div class="progressbars">
+                            <!-- Progress Bar with Download Bar -->
+                            <div class="progress style2 download">
+                                <div class="progress-bar download-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                            </div>
+
+                            <!-- Progress Bar -->
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                            </div>
+
+                            <!-- Progress Bar style 3 -->
+                            <div class="progress style3">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                            </div>
+
+                            <!-- Progress Bar style 4 -->
+                            <div class="progress style4">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                            </div>
+
+                            <!-- Progress Bar style 5 -->
+                            <div class="progress style5">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <!--/ Progress Bars -->
+
+                        <!-- CheckBoxes, Radios -->
+                        <div class="input_styled checklist inline">
+                            <div class="rowCheckbox"><input name="signup1" type="checkbox" id="signup1" value="signup1"><label for="signup1"></label></div>
+                            <div class="rowCheckbox"><input name="signup2" checked type="checkbox" id="signup2" value="signup2"><label for="signup2"></label></div>
+                            <div class="rowCheckbox switch"><input name="signup3" type="checkbox" id="signup3" value="signup3"><label for="signup3"></label></div>
+                        </div>
+                        <div class="input_styled radiolist inline">
+                            <div class="rowRadio"><input type="radio" name="radio" value="radio1" id="radio1"><label for="radio1"></label></div>
+                            <div class="rowRadio"><input type="radio" name="radio" value="radio2" id="radio2" checked><label for="radio2"></label></div>
+                            <div class="rowCheckbox switch"><input name="signup4" type="checkbox" id="signup4" value="signup4" checked><label for="signup4"></label></div>
+                        </div>
+                        <!--/ CheckBoxes, Radios -->
+                    </div>
+                    <!--/ Controls -->
+                </div>
+
+                <div class="col-sm-5">
+                    <!-- Contact form -->
+                    <div class="add-comment contact-form styled boxed green-line">
+                        <div class="add-comment-title"><h3>Write a message</h3></div>
+                        <div class="comment-form">
+                            <script>
+                                // Fire multiselect
+                                jQuery(document).ready(function() {
+                                    jQuery('#contact-name').chosen({ width: "100%" });
+                                    jQuery('#commentForm .link-reset').click(function(){
+                                        jQuery("#contact-name").trigger("chosen:updated");
+                                    });
+                                });
+
+                                // Fire Text Editor
+                                bkLib.onDomLoaded(function() {
+                                    var myNicEditor = new nicEditor({
+                                        buttonList : [
+                                            'bold',
+                                            'italic',
+                                            'underline',
+                                            'forecolor',
+                                            'left',
+                                            'center',
+                                            'right',
+                                            'justify'
+                                        ]
+                                    });
+                                    myNicEditor.panelInstance('nicedit-message');
+
+                                    jQuery('#commentForm .link-reset').click(function(){
+                                        myNicEditor.removeInstance('nicedit-message');
+                                        $('#nicedit-message').val('');
+                                        myNicEditor.panelInstance('nicedit-message');
+                                    });
+                                });
+                            </script>
+                            <form action="#" method="post" id="commentForm">
+                                <div class="inner">
+                                    <div class="field_select">
+                                        <label for="contact-name" class="label_title">Contacts</label>
+                                        <select name="contact-name" id="contact-name" multiple data-placeholder="Select Name">
+                                            <option value='example1@gmail.com'>Mike Charley</option>
+                                            <option value='example2@gmail.com'>Andy Lurs</option>
+                                            <option value='example3@gmail.com'>Toby Lightman</option>
+                                            <option value='example4@gmail.com'>Lene Marlin</option>
+                                            <option value='example5@gmail.com'>Deep Purple</option>
+                                        </select>
+                                    </div>
+                                    <div class="field_text">
+                                        <label for="subject" class="label_title">Subject</label>
+                                        <input type="text" name="subject" id="subject" value="" placeholder="You can add a subject" />
+                                    </div>
+                                    <div class="field_text field_textarea">
+                                        <label for="nicedit-message" class="label_title">Message</label>
+                                        <textarea name="nicedit-message" id="nicedit-message"></textarea>
+                                    </div>
+                                    <div class="rowSubmit clearfix">
+                                        <a href="#" class="link-reset btn btn-icon btn-gray btn-discard" onclick="document.getElementById('commentForm').reset(); return false"><span>Discard</span></a>
+                                        <span class="btn btn-icon btn-icon-send btn-submit"><input type="submit" id="send" value="Send Message" /></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--/ Contact form -->
+
+                    <!-- Buttons -->
+                    <div class="buttons-wrap">
+                        <div class="buttons">
+                            <a href="#" class="btn btn-shadow"><span>Normal</span></a>
+                            <a href="#" class="btn hover btn-shadow"><span>Hover</span></a>
+                            <a href="#" class="btn active btn-shadow"><span>Pressed</span></a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-left btn-shadow"><span>Right</span></a>
+                            <a href="#" class="btn btn-shadow"><span>Change</span></a>
+                            <a href="#" class="btn btn-right btn-shadow"><span>Left</span></a>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-follow"><span><em>659</em>Follow</span></a>
+                            <a href="#" class="btn btn-like"><span><em>2159</em>Like</span></a>
+                        </div>
+                    </div>
+                    <!--/ Buttons -->
+                </div>
+
+                <div class="col-sm-4">
+
+                    <!-- User Menu -->
+                    <ul class="menu user-menu boxed clearfix">
+                        <li class="hover">
+                            <a href="#"><i class="menu-icon menu-icon-8"></i>My profile</a>
+                            <ul>
+                                <li><a href="#">invite friends</a></li>
+                                <li class="hover"><a href="#">Find Friend</a></li>
+                                <li><a href="#">Log Out</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon menu-icon-9"></i>Edit Profile</a>
+                            <ul>
+                                <li><a href="#">Edit UserName</a></li>
+                                <li><a href="#">Edit Password</a></li>
+                                <li><a href="#">Edit Info</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--/ User Menu -->
+
+                    <!-- row Level 2 -->
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-6">
+                            <!-- Ribbons -->
+                            <div class="ribbons boxed">
+                                <div class="inner">
+                                    <div class="ribbon"><span>Try now!</span></div>
+                                </div>
+                                <div class="inner">
+                                    <div class="ribbon ribbon-green"><span>Popular</span></div>
+                                </div>
+                            </div>
+                            <!--/ Ribbons -->
+                        </div>
+                    </div>
+                    <!--/ row Level 2 -->
+
+                    <!-- Message Field -->
+                    <div class="comment-list message-field">
+                        <ol>
+                            <li class="comment">
+                                <div class="comment-body boxed blue-line">
+                                    <div class="comment-avatar">
+                                        <div class="avatar"><img src="images/temp/avatar5.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="comment-text">
+                                        <div class="comment-info">Magazine</div>
+                                        <div class="comment-author"><a href="#" class="link-author">Channing Tatum</a></div>
+                                        <div class="comment-entry">Rooms at La Margherita are simply decorated and feature antique wood furniture.</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <!--/ Message Field -->
+
+                    <!-- widget Tags-->
+                    <div class="widget-container widget-tags styled boxed">
+                        <div class="inner">
+                            <h3 class="widget-title">Tags<i></i></h3>
+                            <div class="tagcloud clearfix">
+                                <a href="#"><span>Rooms</span></a>
+                                <a href="#"><span>Simple</span></a>
+                                <a href="#"><span>Decorated</span></a>
+                                <a href="#"><span>Wood</span></a>
+                                <a href="#"><span>Furniture</span></a>
+                                <a href="#"><span>Feature</span></a>
+                                <a href="#"><span>Conditioning</span></a>
+                                <a href="#"><span>Hotels</span></a>
+                                <a href="#"><span>Glasses</span></a>
+                                <a href="#"><span>Rooms</span></a>
+                                <a href="#"><span>Simple</span></a>
+                                <a href="#"><span>Decorated</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ widget Tags-->
+
+                </div>
+            </div>
+            <!--/ row -->
+        </div>
+        <!--/ container -->
+    </div>
+</div>
+</body>
+</html>

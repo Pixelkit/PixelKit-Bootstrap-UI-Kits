@@ -1,3 +1,15 @@
+## City Break
+
+![ScreenShot](http://pixelkit.com/free-ui-kits/city-break/city-break.jpg)
+
+To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/city-break/> The complete Bootstrap UI kit that contains tons of additional elements spread across 5 categories is available on PixelKit.com <http://pixelkit.com/kits/hotel-ui-kit/>
+
+## Links
+
++ [Demo page](http://pixelkit.com/free-ui-kits/city-break/)
++ [Documentation page](http://pixelkit.com/free-ui-kits/city-break/docs/)
++ [Premium Version of this UI Kit](http://pixelkit.com/kits/hotel-ui-kit/)
+
 ## Chubby Stacks
 
 ![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/07/01.TheBasics.jpg)
@@ -84,6 +96,7 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 
 ## Changelog
 
++ 1.7 Added new kit City Break.
 + 1.6 Added new kit Chubby Stacks.
 + 1.5 Added new kit Sweet Candy.
 + 1.4 Added new kit Arctic Sunset.
@@ -106,7 +119,7 @@ Facebook: [http://www.facebook.com/pixelkitcom](http://www.facebook.com/pixelkit
 
 ## License
 
-Free PixelKit Bootstrap UI Kits is licensed under a Creative Commons Attribution 3.0 Unported (CC BY 3.0)  (http://creativecommons.org/licenses/by/3.0/) and MIT License - http://opensource.org/licenses/mit-license.html. 
+Free PixelKit Bootstrap UI Kits is licensed under a MIT License - http://opensource.org/licenses/mit-license.html. 
 
 You are allowed to use these elements anywhere you want, however we’ll highly appreciate if you will link to our website when you share them - http://pixelkit.com
 

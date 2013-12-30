@@ -1,0 +1,111 @@
+/*-------------------------------------------*/
+/* Range Slider */
+/*-------------------------------------------*/
+
+.range-slider {margin: 50px 0 25px;}
+.jslider {display: block; width: 100%; position: relative;}
+.jslider table { width: 100%; border-collapse: collapse; border: 0; }
+.jslider td, .jslider th { padding: 0; vertical-align: top; text-align: left; border: 0; }
+.jslider table .jslider table tr, .jslider table tr td {width: 100%; vertical-align: top; padding:0; margin:0}
+
+/* Slider */
+.jslider-bg {
+  height: 4px;
+  border-radius: 2px;
+  background: #21649c;
+}
+.jslider-bg .l, .jslider-bg .r {display: none;}
+.jslider-bg .v {
+  display: block;
+  height: 100%;
+  background: #72c200;
+  margin: 0;
+  border-radius: 2px;
+}
+
+/* Pointer */
+.jslider-pointer {
+  width: 4px;
+  height: 10px;
+  position: absolute;
+  top: -3px;
+  z-index: 2 !important;
+  margin-left: -2px;
+  cursor: pointer;
+  background: #3796d2;
+}
+
+/* Tooltip */
+.jslider-value {
+  font-size: @font-size * 0.93;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  padding: 5px 8px;
+  position: absolute;
+  top: -36px;
+  left: 0;
+  z-index: 1;
+  background: #3797d3;
+  border-radius: 2px;
+}
+.jslider-value-to {left:80%;}
+
+.jslider-value:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #3797d3;
+}
+
+/* Min, Max Values */
+.jslider-label,
+.jslider-scale {
+  display: none;
+}
+
+/* Range Slider with Single Value */
+/*-------------------------------------------*/
+
+.range-slider.single .jslider-value,
+.range-slider.single .jslider-pointer {display: none;}
+.range-slider.single .jslider-value-to,
+.range-slider.single .jslider-pointer-to {display: block;}
+
+/*-------------------------------------------*/
+/* Range Slider style 2 */
+/*-------------------------------------------*/
+
+.range-slider.styled {margin-top: 25px;}
+
+/* Slider */
+.range-slider.styled .jslider-bg .v {background: #51bfee;}
+
+/* Pointer */
+.range-slider.styled .jslider-pointer {
+  width: 10px;
+  margin-left: -5px;
+  background: #3796d2;
+  border-radius: 50%;
+}
+/* Tooltip */
+.range-slider.styled .jslider-value {display: none;}
+
+/* Min, Max Values */
+.range-slider.styled .jslider-label {
+  display: block;
+  font-size: @font-size * 0.85;
+  color: #adadad;
+  text-shadow: none;
+  white-space: nowrap;
+  position: absolute;
+  top: -14px;
+  left: 0;
+}
+.range-slider.styled .jslider-label-to {left: auto; right: 0;}

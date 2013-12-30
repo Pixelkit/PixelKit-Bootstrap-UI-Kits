@@ -1,0 +1,34 @@
+/*-----------------------------------*/
+/* Ribbons */
+/*-----------------------------------*/
+
+.ribbon {
+  position: absolute;
+  top: 20px;
+  right: -5px;
+  background: #c9376e;
+  border-right: 5px solid #dd6a9c;
+  padding: 15px;
+}
+.ribbon:before,
+.ribbon:after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  border-left: 10px solid transparent;
+}
+.ribbon:before {border-top: 27px solid #c9376e; top: 0;}
+.ribbon:after {border-bottom: 27px solid #c9376e; bottom: 0;}
+
+.ribbon-green {background-color: #9cd70e; border-right-color: #bee628;}
+.ribbon-green:before {border-top-color: #9cd70e;}
+.ribbon-green:after {border-bottom-color: #9cd70e;}
+
+.ribbon span {
+  display: block;
+  font-size: @font-size * 1.39;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:#fff;
+  line-height: 20px;
+}

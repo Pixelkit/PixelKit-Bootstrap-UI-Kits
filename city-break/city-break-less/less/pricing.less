@@ -1,0 +1,200 @@
+/*-----------------------------------*/
+/* Price Items */
+/*-----------------------------------*/
+
+/*
+    - Price Item small
+    - Price Item style 4
+*/
+
+
+
+/* General price styles */
+.price-title {font-size: @font-size * 1.93; line-height: 33px;}
+.price-title a {color: #1c588f;}
+.price-content-left {float: left; width: 40%;}
+.price-content-right {float: right; width: 56%;}
+@media (max-width: 767px) {
+  .price-content-left,
+  .price-content-right {
+    float: none;
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+}
+.price-desc p {margin-bottom: 20px;}
+
+.price-image {
+  position: relative;
+  -webkit-box-shadow: 2px 2px 13px rgba(60,155,213,0.16);
+  box-shadow: 2px 2px 13px rgba(60,155,213,0.16);
+}
+.price-image img {display: block; width: 100%;}
+
+/* Price declaration */
+.price {text-align: center;}
+
+.icon-price {
+  display: block;
+  margin: 0 auto 10px;
+  width: 36px;
+  height: 36px;
+  border: 3px solid #cad7e5;
+  border-radius: 50%;
+  background: url(images/icons/person.png) 0 0 no-repeat;
+}
+.icon-price.double {background-position: 0 -30px;}
+.icon-price.triple {background-position: 0 -60px;}
+.icon-price.games {background-position: 0 -90px;}
+.icon-price.wifi {background-position: 0 -120px;}
+.icon-price.phone {background-position: 0 -150px;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .icon-price {
+    background-image: url(images/icons/person-x2.png);
+    background-size: 30px auto;
+  }
+}
+.price strong {
+  display: block;
+  font-size: @font-size * 3.24;
+  font-weight: 700;
+  color: #9cd70e;
+  margin-bottom: 4px;
+}
+.price sup {font-size: .54em;}
+.price span {display:block; color: #474748;}
+
+/* Additional infos */
+span.price-info {
+  font-size: @font-size * 0.85;
+  font-weight: 700;
+  color: #8e9eac;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.price-bottom span.price-info {
+  float: left;
+  font-size: @font-size * 1.24;
+  color: #676b6d;
+  margin-bottom: 0;
+}
+
+/* Reservation link */
+.price-reserve {
+  float: right;
+  font-size: @font-size * 1.24;
+  font-weight: 700;
+  color: #3999d4;
+  text-transform: uppercase;
+}
+.price-reserve strong {
+  font-size: @font-size * 2.16;
+  font-weight: 400;
+  line-height: 12px;
+  vertical-align: top;
+}
+
+/* Price Item small */
+/*-----------------------------------*/
+
+.price-list-small {text-align: center; margin-bottom: 13px;}
+.price-item-small {text-align: center;}
+
+.price-item-small .price-top {
+  background: #e6edf2;
+  border-bottom: 3px solid #c2d1e0;
+  padding: 21px 5px;
+  font-size: @font-size * 1.24;
+  font-style: italic;
+  color: #164c87;
+}
+.price-item-small .price-content {padding: 21px 30px 20px;}
+.price-item-small .price-title {line-height: 27px; margin-bottom: 6px;}
+.price-item-small .price-title a {color: #0c9df7;}
+.price-item-small .price-rating {margin-bottom: 18px;}
+.price-item-small .price-image {margin-bottom: 18px;}
+
+.price-item-small .price strong,
+.price-item-small .price span {
+  display: inline-block;
+  text-align: left;
+}
+.price-item-small .price strong {font-size: @font-size * 2.62;}
+.price-item-small .price sup {font-size: 1em; position: relative; top: 0;}
+.price-item-small .price span {line-height: 16px;}
+.price-item-small .btn {display: block;}
+
+/* Price List small */
+.price-list-small .price-item-small {display: inline-block; width: 170px;}
+
+.price-list-small .price-item-small.active {
+  margin: 0 -31px;
+  z-index: 1;
+  -webkit-box-shadow: 0 2px 13px rgba(60,155,213,0.16);
+  box-shadow: 0 2px 13px rgba(60,155,213,0.16);
+  position: relative;
+  top: 7px;
+}
+.price-list-small .price-item-small .price-title {font-size: @font-size * 1.54;}
+.price-list-small .price-item-small .price-title a {color: #164c87;}
+.price-list-small .price-item-small.active .price-title {font-size: @font-size * 1.85;}
+.price-list-small .price-item-small.active .price-title a {color: #0c9df7;}
+.price-list-small .price-item-small .price-content {padding: 18px 30px 9px;}
+.price-list-small .price-item-small.active .price-content {padding: 15px 19px 6px;}
+.price-list-small .price-item-small .btn span {background: #21649c; padding: 0 10px 0 60px;}
+.price-list-small .price-item-small .btn:before {background-color: #155595;}
+.price-list-small .price-item-small.active .btn span {background: #4ab3e8;}
+.price-list-small .price-item-small.active .btn:before {background-color: #2f98dd;}
+.price-list-small .price-item-small .btn:hover span {background: @button-blue-hover;}
+.price-list-small .price-item-small .btn:active span {background: #164c87;}
+.price-list-small .price-item-small strong {float: left; font-size: @font-size * 1.85; margin-top: 6px;}
+.price-list-small .price-item-small .icon-price {float: right;}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .price-list-small .price-item-small.active {margin: 0 -86px;}
+  .price-item-small .price-top {font-size: @font-size * 1.08;}
+  .price-item-small .price-content {padding: 15px;}
+  .price-item-small .btn-icon span {padding-left: 60px; padding-right: 5px;}
+}
+@media (max-width: 767px) {
+  .price-list-small .price-item-small,
+  .price-list-small .price-item-small.active {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px;
+    top: 0;
+  }
+}
+
+/* Price Item style 4 */
+/*-----------------------------------*/
+
+.price-item.style4 .price-title {margin-bottom: 10px;}
+.price-item.style4 .price-title a {color: #c9376e;}
+.price-item.style4 .price-content {padding: 20px 20px 14px;}
+
+.price-item.style4 .price-desc {border-bottom: 1px solid #cad7e5; margin-bottom: 10px;
+}
+.price-item.style4 .price-desc p {
+  margin-bottom: 12px;
+}
+.price-item.style4 .price strong {
+  float: left;
+  margin-right: 5px;
+}
+.price-item.style4 .price span {
+  float: left;
+  text-align: left;
+  margin-top: 7px;
+}
+.price-item.style4 .price .icon-price {
+  float: right;
+  margin: 0;
+  margin-top: 4px;
+}
+.price-item.style4 .price-bottom {
+  border-top: 1px solid #cad7e5;
+  padding: 15px 20px 18px;
+}
+.price-item.style4 .price-reserve {text-transform: none;}

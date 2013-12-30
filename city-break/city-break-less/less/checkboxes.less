@@ -1,0 +1,176 @@
+/*-----------------------------------*/
+/* Custom checkboxes, radios */
+/*-----------------------------------*/
+
+.custom-checkbox, .custom-radio {position:relative;}
+.custom-checkbox label::selection, .custom-radio label::selection {background: transparent; color: inherit;}
+.custom-checkbox input, .custom-radio input {position: absolute; top: 0; left: 10px; margin:0; border:none; width: 1px; height: 1px; display: none;}
+.ie8 .custom-checkbox input, .ie8 .custom-radio input {display:block;}
+.custom-checkbox label.focus, .custom-radio label.focus {outline: none;}
+
+.custom-checkbox label,
+.custom-radio label {
+  display: block;
+  position: relative;
+  font-size: @font-size * 1.08;
+  color: @input-color;
+  line-height: 24px;
+  padding-left: 36px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  min-height: 24px;
+}
+.custom-checkbox label {line-height: 22px; min-height: 22px; margin-bottom: 16px;}
+
+.custom-checkbox label:before,
+.custom-checkbox label:after,
+.custom-radio label:before,
+.custom-radio label:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-checkbox label:before,
+.custom-radio label:before {
+  width: 24px;
+  height: 24px;
+  background: #ebf1f8;
+  border: 1px solid #d0d1d3;
+  border-radius: 50%;
+}
+.custom-checkbox label:before {
+  width: 22px;
+  height: 22px;
+  border-radius: 1px;
+}
+.custom-checkbox label:after {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal !important;
+  font-size: 12px;
+  line-height: 22px;
+  color: #21649c;
+  text-align: center !important;
+  width: 22px;
+  height: 22px;
+}
+.custom-checkbox label.checked:after {content: '\e013';}
+
+.custom-radio label.checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #21649c;
+  top: 6px;
+  left: 6px;
+}
+.rowCheckbox-caps .custom-checkbox label,
+.rowRadio-caps .custom-radio label {
+  text-transform: uppercase !important;
+}
+
+/* checkboxes, radios Right Align */
+.label-right .custom-checkbox label,
+.label-right .custom-radio label {
+  padding-left: 0;
+  padding-right: 32px;
+  text-align: right;
+}
+.label-right .custom-checkbox label:before,
+.label-right .custom-checkbox label:after,
+.label-right .custom-radio label:before,
+.label-right .custom-radio label:after {
+  left: auto;
+  right: 0;
+}
+.label-right .custom-radio label.checked:after {left: auto; right: 6px;}
+
+/* Custom checkboxes, radios Alternative style
+--------------------------------------------------------*/
+
+.rowCheckbox-alt .custom-checkbox label,
+.rowRadio-alt .custom-radio label {
+  font-size: @font-size * 0.93;
+  color: #fff;
+  line-height: 22px;
+  min-height: 22px;
+}
+.rowCheckbox-alt .custom-checkbox label {line-height: 20px; min-height: 20px;}
+
+.rowCheckbox-alt .custom-checkbox label:before,
+.rowRadio-alt .custom-radio label:before {
+  width: 22px;
+  height: 22px;
+  background: #164c87;
+  border: 1px solid #0c3e75;
+}
+.rowCheckbox-alt .custom-checkbox label:before {
+  width: 20px;
+  height: 20px;
+}
+.rowCheckbox-alt .custom-checkbox label:after {
+  font-size: 10px;
+  line-height: 20px;
+  color: #9cd70e;
+  width: 20px;
+  height: 20px;
+}
+.rowRadio-alt .custom-radio label.checked:after {
+  width: 10px;
+  height: 10px;
+  background: #9cd70e;
+}
+
+/* Switch
+------------------------------------*/
+.switch .custom-checkbox label {
+  padding-left: 70px;
+  line-height: 26px;
+  min-height: 26px;
+}
+.switch .custom-checkbox label:before {
+  content: '\e014';
+  font-family: "Glyphicons Halflings";
+  width: 58px;
+  height: 26px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #c9376e;
+  text-align: right !important;
+  line-height: 24px;
+  border: none;
+  background: #164c87;
+  border-radius: 13px;
+}
+.switch .custom-checkbox label.checked:before {
+  content: '\e013';
+  color: #9cd70e;
+  text-align: left !important;
+}
+.switch .custom-checkbox label:after {
+  content: '';
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #c9376e;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+.switch .custom-checkbox label.checked:after {left: 34px; background: #9cd70e;}
+
+/* Switch Right Align */
+.label-right.switch .custom-checkbox label {padding-left: 0; padding-right: 70px;}
+.label-right.switch .custom-checkbox label:after {left: auto; right: 34px;}
+.label-right.switch .custom-checkbox label.checked:after {left: auto; right: 2px;}
+
+/* Inline checkboxes, radios
+--------------------------------*/
+.input_styled.inline .rowCheckbox,
+.input_styled.inline .rowRadio,
+.input_styled.inline span {
+  display: inline-block;
+  margin-right: 10px;
+}
+.input_styled.inline span {line-height: 22px; margin-bottom: 14px;}

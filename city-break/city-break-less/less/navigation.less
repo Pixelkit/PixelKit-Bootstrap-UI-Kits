@@ -1,0 +1,222 @@
+/*-----------------------------------*/
+/* Navigation */
+/*-----------------------------------*/
+
+/*
+    - Main Menu
+    - Main Menu style 2
+    - User Menu
+*/
+
+
+
+/* Main Menu */
+/*-----------------------------------*/
+
+/* Level 0 */
+.menu {background: #398fc7; z-index: 1000;}
+.ie8 .menu {filter:none; background: #398fc7;}  /* IE8 understands dropdown feature only without gradient */
+.menu a:hover, .menu a.hover {color: #fff !important;}
+
+.menu li {position: relative;}
+.menu > li {
+  float: left;
+  width: 16.666666666666664%;
+  border-top: 3px solid #4bb4e8;
+}
+.menu > li:hover, .menu > li.hover {border-top-color: #9cd70e; z-index: 1;}
+
+.menu > li > a {
+  display: block;
+  font-size: @font-size * 1.08;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 18px;
+  padding: 15px 5px;
+  text-shadow: 0 1px 1px rgba(45,118,158,0.5);
+  border-top: 2px solid #3484bd;
+  border-left: 1px solid #4b9cce;
+  border-right: 1px solid #1e86b5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu > li:first-child > a {border-left-color: transparent;}
+.menu > li:last-child > a {border-right-color: transparent;}
+
+.menu > li:hover > a,
+.menu > li.hover > a {
+  background: #52b1dd;
+  border: none;
+  border-top: 2px solid #4aa3d2;
+  -webkit-box-shadow: 0 2px 4px rgba(21,80,94,0.75);
+  box-shadow: 0 2px 4px rgba(21,80,94,0.75);
+}
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 13px;
+  background: url(images/icons/menu-icons.png) 0 0 no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .menu-icon {
+    background-image: url(images/icons/menu-icons-x2.png);
+    background-size: 60px auto;
+  }
+}
+.menu-icon-2 {background-position: 0 -30px;}
+.menu-icon-3 {background-position: 0 -60px;}
+.menu-icon-4 {background-position: 0 -90px;}
+.menu-icon-5 {background-position: 0 -120px;}
+.menu-icon-6 {background-position: 0 -150px;}
+.menu-icon-7 {background-position: 0 -180px;}
+.menu-icon-8 {background-position: 0 -210px;}
+.menu-icon-9 {background-position: 0 -240px;}
+
+.menu > li:hover > a .menu-icon, .menu > li.hover > a .menu-icon {background-position: -30px 0;}
+.menu > li:hover > a .menu-icon-2, .menu > li.hover > a .menu-icon-2 {background-position: -30px -30px;}
+.menu > li:hover > a .menu-icon-3, .menu > li.hover > a .menu-icon-3 {background-position: -30px -60px;}
+.menu > li:hover > a .menu-icon-4, .menu > li.hover > a .menu-icon-4 {background-position: -30px -90px;}
+.menu > li:hover > a .menu-icon-5, .menu > li.hover > a .menu-icon-5 {background-position: -30px -120px;}
+.menu > li:hover > a .menu-icon-6, .menu > li.hover > a .menu-icon-6 {background-position: -30px -150px;}
+.menu > li:hover > a .menu-icon-7, .menu > li.hover > a .menu-icon-7 {background-position: -30px -180px;}
+.menu > li:hover > a .menu-icon-8, .menu > li.hover > a .menu-icon-8 {background-position: -30px -210px;}
+.menu > li:hover > a .menu-icon-9, .menu > li.hover > a .menu-icon-9 {background-position: -30px -240px;}
+
+/* Level 1+ */
+.menu ul {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: 9499;
+  width:100%;
+  min-width: 110px;
+}
+.menu > li:hover > ul, .menu > li.hover > ul {
+  top: 93px;
+  left: 0;
+}
+.menu ul li a {
+  display: block;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background: #398fc7;
+  font-size: @font-size;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 16px;
+  padding: 20px 5px;
+}
+.menu ul li:first-child > a {border-top: none;}
+.menu ul li:last-child > a {border-bottom: none;}
+.menu ul li:hover > a, .menu ul li.hover > a {background: #52b1dd; border-color: #408aaf;}
+
+.menu ul li:hover:before, .menu ul li.hover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: #c9376e;
+}
+
+/* Level 2+ */
+.menu ul li:hover > ul, .menu ul li.hover > ul {
+  position: absolute;
+  top: 1px;
+  left: 100%;
+  width: 101%;
+  padding-left: 1%;
+}
+
+/* Main Menu style 2 */
+/*-----------------------------------*/
+
+.menu.style2 ul {display: none;}
+
+.menu.style2 {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.menu.style2 > li {
+  border-top: 3px solid #4bb4e8;
+  border-bottom: 3px solid #4bb4e8;
+}
+.menu.style2 > li:hover, .menu.style2 > li.hover {
+  border-top-color: #9cd70e;
+  border-bottom-color: #9cd70e;
+  z-index: 1;
+}
+.menu.style2 > li > a {
+  padding: 18px 5px 16px 0;
+  border: none;
+  border-left: 1px solid #062D52;
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.08);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+.menu.style2 > li:last-child > a {
+  border-right: 1px solid #062D52;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.08), 1px 0 0 rgba(255, 255, 255, 0.08);
+  margin-right: 1px;
+}
+.menu.style2 > li:hover > a,
+.menu.style2 > li.hover > a {
+  background: none;
+}
+.menu.style2 .menu-icon {
+  display: inline-block;
+  margin: 0 3px 3px 0;
+  vertical-align: middle;
+}
+
+/* User Menu */
+/*-----------------------------------*/
+
+.user-menu {background-color: #276f9a;}
+.user-menu > li {width: 50%;}
+.user-menu > li > a {
+  border-top-color: #236693;
+  border-left-color: #2A75A8;
+  border-right-color: #236693;
+}
+.user-menu > li:hover > a, .user-menu > li.hover > a {background-color: #3a8db6; border-top-color: #3582ad;}
+.user-menu ul li a {background-color: #276f9a;}
+.user-menu ul li:hover > a, .user-menu ul li.hover > a {background-color: #2d79a3;}
+
+/* Responsive Menu */
+@media (max-width: 991px) {
+  .menu > li > a {font-size: @font-size;}
+  .menu ul li a {font-size: @font-size * 0.93;}
+}
+@media (max-width: 767px) {
+  .menu > li {float: none; width: 100%;}
+
+  .menu > li:hover > ul,
+  .menu > li.hover > ul,
+  .menu ul li:hover > ul,
+  .menu ul li.hover > ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .menu.style2 > li {border-bottom: none;}
+
+  .menu.style2 > li > a,
+  .menu.style2 > li:last-child > a {
+    padding: 18px 5px 16px 0;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0;
+  }
+}

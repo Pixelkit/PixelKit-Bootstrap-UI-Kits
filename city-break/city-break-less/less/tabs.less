@@ -1,0 +1,78 @@
+/*-----------------------------------*/
+/* Tabs */
+/*-----------------------------------*/
+
+/* Tab Thumbs */
+.tabs.bookmarks2 li {max-width: 48%;}
+.tabs.bookmarks3 li {max-width: 32%;}
+.tabs.bookmarks4 li {max-width: 24%;}
+.tabs.bookmarks5 li {max-width: 18%;}
+.tabs.bookmarks6 li {max-width: 16%;}
+
+.tabs {border-bottom: 1px solid #d8d8d8;}
+.tabs li {float: left; border-right: 1px solid #d8d8d8; margin-bottom: -1px;}
+.tabs li:first-child {padding-left: 1px;}
+.tabs li.active {background: #f7fafc;}
+
+.tabs li a{
+  display: block;
+  font-size: @font-size * 1.54;
+  font-weight: 700;
+  color: #474748;
+  padding: 18px 34px;
+  margin: 0 -1px;
+  border-bottom: 3px solid transparent;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tabs li.active a{color:#164c87; border-bottom: 3px solid #4ab3e8;}
+
+/* Tab Content */
+
+.tab-image{
+  margin:0 0 12px 0;
+  -webkit-box-shadow: 2px 2px 13px rgba(60,155,213,0.16);
+  box-shadow: 2px 2px 13px rgba(60,155,213,0.16);
+}
+.tab-image img{display: block; width: 100%;}
+
+
+.tab-image.pull-left,
+.tab-image.pull-right{
+  width: 45%;
+}
+.col-sm-12 .tab-image.pull-left,
+.col-sm-12 .tab-image.pull-right{
+  width: 33%;
+}
+.tab-image.pull-left {margin:5px 20px 5px 0;}
+.tab-image.pull-right {margin:5px 0 5px 20px;}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .tabs li a{font-size: @font-size * 1.39; padding: 15px;}
+}
+@media (max-width: 479px) {
+  .tabs li a{font-size: @font-size * 1.08; padding: 12px;}
+
+  .tab-image.pull-left,
+  .tab-image.pull-right {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+    float: none !important;
+  }
+}
+
+/* Small Tabs */
+/*-----------------------------------*/
+
+.tabs-small .tabs li a {font-size: @font-size * 1.39; padding: 15px;}
+
+@media (max-width: 991px) {
+  .tabs-small .tabs li a{font-size: @font-size * 1.08; padding: 12px 10px;}
+}
+@media (max-width: 479px) {
+  .tabs-small .tabs li a{font-size: @font-size * 0.93; padding: 12px 8px;}
+}

@@ -1,0 +1,45 @@
+/*-----------------------------------*/
+/* Profile */
+/*-----------------------------------*/
+
+.widget-profile .inner {padding: 20px;}
+.widget-profile .avatar img {display: block; width: 100%;}
+.widget-profile .profile-title {margin-bottom: 12px;}
+
+.widget-profile .profile-title span {
+  display: block;
+  font-size: @font-size * 1.24;
+  color: #4ab3e8;
+  margin-bottom: 5px;
+}
+.widget-profile .profile-title strong {
+  display: block;
+  font-size: @font-size * 2.16;
+  color: #164c87;
+  position: relative;
+  padding-right: 20px;
+}
+.widget-profile .profile-title strong:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  border: 3px solid #72c200;
+  border-radius: 50%;
+}
+.widget-profile .profile-subtitle {
+  display: block;
+  font-size: @font-size;
+  font-style: italic;
+  color: #a5a5a5;
+  border-top: 1px solid #d0dbe7;
+  padding-top: 10px;
+}
+.widget-profile .followers {display: none;}
+.widget-profile .btn {display: block;}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .widget-profile .inner {padding: 10px;}
+}
