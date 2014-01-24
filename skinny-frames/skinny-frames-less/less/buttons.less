@@ -1,0 +1,218 @@
+/*-----------------------------------*/
+/* Buttons */
+/*-----------------------------------*/
+
+.btn {
+  display:inline-block;
+  padding:0;
+  border:none;
+  position:relative;
+  box-shadow:none !important;
+}
+
+.btn span,
+.btn input {
+  display:block;
+  height:31px;
+  line-height:31px;
+  background:#ee5190;
+  border:none;
+  border-radius:0;
+  font-size:14px;
+  color:#fff;
+  font-weight:300;
+  padding:0 14px;
+  opacity:1;
+  transition:all .15s ease;
+}
+
+.btn:hover span ,
+.btn:hover input {
+  opacity:.84;
+}
+
+.btn:active span ,
+.btn:active input {
+  background:#fff;
+  color:#ec5490;
+  border-color:#fff;
+}
+
+
+/* Buttons size */
+
+.btn-middle span, .btn-middle input{height: 31px; line-height: 31px; font-size: 14px; padding: 0 20px;}
+.btn-small span, .btn-small input{height: 30px; line-height: 28px; font-size: 14px; padding: 0 16px;}
+.btn-small.btn-caps span, .btn-small.btn-caps input{line-height: 30px; font-size: 10px;}
+.btn-large span, .btn-large input{height: 47px; line-height:46px; font-size: 14px;padding:0 22px;}
+.btn-caps span, .btn-caps input{text-transform: uppercase;}
+.btn-round span, .btn-round input{border-radius: 25px;}
+.btn-acute span, .btn-acute input{border-radius: 0;}
+
+/* Buttons with Arrows */
+
+.btn-left {
+  padding-left:14px;
+}
+
+.btn-right {
+  padding-right:14px;
+}
+
+.btn-left span,
+.btn-left input{
+    vertical-align: top;
+    padding-right: 14px;
+}
+
+.btn-right span,
+.btn-right input{
+    vertical-align: top;
+    padding-left: 14px;
+}
+
+.btn-right:before {
+  content:"";
+  position:absolute;
+  right:0;
+  width: 0px;
+  height: 31px;
+  border-style: solid;
+  border-width: 15.5px 0 15.5px 14px;
+  border-color: transparent transparent transparent #ee5190;
+  transition:all .15s ease;
+}
+
+.btn-left:before {
+  content:"";
+  position:absolute;
+  left:0;
+  width: 0px;
+  height: 31px;
+  border-style: solid;
+  border-width: 15.5px 14px 15.5px 0;
+  opacity:1;
+  border-color: transparent #ee5190 transparent transparent;
+  transition:all .15s ease;
+}
+
+.btn-left:hover:before,
+.btn-right:hover:before{
+  opacity:0.83;
+}
+
+.btn-large.btn-left span,
+.btn-large.btn-left input{
+    vertical-align: top;
+    padding-right: 22px;
+}
+
+.btn-large.btn-right span,
+.btn-large.btn-right input{
+    vertical-align: top;
+    padding-left: 22px;
+}
+
+.btn-large.btn-left {
+  padding-left:18px;
+}
+
+.btn-large.btn-left:before {
+  height: 47px;
+  border-style: solid;
+  border-width: 23.5px 18px 23.5px 0;
+}
+
+.btn-large.btn-right {
+  padding-right:18px;
+}
+
+.btn-large.btn-right:before {
+  height: 47px;
+  border-style: solid;
+  border-width: 23.5px 0 23.5px 18px;
+}
+
+
+/* btn gray*/
+.btn-gray span,
+.btn-gray input{background:#a4a2a2}
+
+
+/*btn green*/
+.btn-green span,
+.btn-green input{background:#c1ca00;}
+.btn-green.btn-left:before {border-color: transparent #c1ca00 transparent transparent;}
+.btn-green.btn-right:before {border-color: transparent transparent transparent #c1ca00;}
+
+/*btn orange*/
+.btn-orange span,
+.btn-orange input{background:#ffa800}
+.btn-orange.btn-left:before {border-color: transparent #ffa800 transparent transparent;}
+.btn-orange.btn-right:before {border-color: transparent transparent transparent #ffa800;}
+
+/*btn brown*/
+.btn-brown span,
+.btn-brown input{background:#ae8f75}
+.btn-brown.btn-left:before {border-color: transparent #ae8f75 transparent transparent;}
+.btn-brown.btn-right:before {border-color: transparent transparent transparent #ae8f75;}
+
+/*btn blue*/
+.btn-blue span,
+.btn-blue input{background:#0cc3d9}
+.btn-blue.btn-left:before {border-color: transparent #0cc3d9 transparent transparent;}
+.btn-blue.btn-right:before {border-color: transparent transparent transparent #0cc3d9;}
+
+/*btn white*/
+.btn-white span,
+.btn-white input {
+  background:#fff;
+  color:#ee5190;
+  transition: all .15s ease;
+  -moz-transition: all .15s ease;
+}
+
+.btn-white span:hover,
+.btn-white input:hover,
+.btn.hover span {
+  color:#616161;
+  background:#fafafa;
+}
+
+.btn-white span:active,
+.btn-white input:active,
+.btn-white:active span,
+.btn-white:active input {
+  color:#fff;
+  background:#ee5190}
+
+.btn-white.btn-left:before {border-color: transparent #fff transparent transparent;}
+.btn-white.btn-right:before {border-color: transparent transparent transparent #fff;}
+
+
+
+.btn-white.btn-left:active:before {border-color: transparent #ee5190 transparent transparent;}
+.btn-white.btn-right:active:before {border-color: transparent transparent transparent #ee5190;}
+
+
+.btn-left.active:before,
+.btn-left:active:before{
+  border-color: transparent #fff transparent transparent;
+}
+
+.btn-right.active:before,
+.btn-right:active:before{
+  border-color: transparent transparent transparent #fff;
+}
+
+.btn-group a {
+  margin: 5px;
+}
+
+@media (max-width:479px), (min-width:768px) and (max-width:991px) {
+.btn span,
+.btn input {
+  padding:0 11px;
+}
+}
+

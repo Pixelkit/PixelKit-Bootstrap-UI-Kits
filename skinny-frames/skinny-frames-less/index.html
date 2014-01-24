@@ -1,0 +1,1060 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skinny Frames | Index</title>
+
+<!-- main JS libs -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.10.2.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<!-- Style LESS -->
+<link href="style.less" media="screen" rel="stylesheet/less" type="text/css">
+
+<!-- LESS.JS -->
+<script src="js/libs/less.js"></script>
+
+<!-- General Scripts -->
+<script src="js/general.js"></script>
+
+<!-- custom input -->
+<script src="js/jquery.customInput.js"></script>
+<!-- Placeholders -->
+<script type="text/javascript" src="js/jquery.powerful-placeholder.min.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+        if($("[placeholder]").size() > 0) {
+            $.Placeholder.init();
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#contact-name').chosen({ width: "100%" });
+        jQuery('#commentForm .link-reset').click(function(){
+            jQuery("#contact-name").trigger("chosen:updated");
+        });
+    });
+</script>
+
+<!-- Lightbox prettyPhoto -->
+<script src="js/jquery.prettyPhoto.js"></script>
+
+<!-- Video Player -->
+<script src="js/video.js"></script>
+<script>
+    videojs.options.flash.swf = "js/video-js.swf";
+</script>
+
+<!-- Audio Player -->
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.playlist.min.js"></script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1 ",
+            cssSelectorAncestor: "#jp_container_1 "
+        }, [
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Madonna </span><span class='item-song'> - Frozen</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Lene Marlin </span><span class='item-song'> - Unforgivable Sinner</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Toby Lightman</span><span class='item-song'> - Lets go Racing Boys</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_2 ",
+            cssSelectorAncestor: "#jp_container_2 "
+        }, [
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Madonna </span><span class='item-song'> - Frozen</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            },
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Lene Marlin</span><span class='item-song'>Unforgivable Sinner</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Toby Lightman</span><span class='item-song'>Lets go Racing Boys</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_3 ",
+            cssSelectorAncestor: "#jp_container_3 "
+        }, [
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Madonna</span><span class='item-song'> - Frozen</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<div class='item-image'><img src='images/temp/music-player-4.jpg' alt='' /></div><div class='item-title'><span class='item-artist'>Queen</span><span class='item-song'> - Show must go on</span></div>",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    
+    });
+    //]]>
+</script>
+
+<!-- Calendar -->
+<script src="js/jquery-ui.multidatespicker.js"></script>
+
+<!-- Progress Bars -->
+<script src="js/progressbar.js"></script>
+
+<!-- range sliders -->
+<script src="js/jquery.slider.bundle.js"></script>
+<script src="js/jquery.slider.js"></script>
+
+<!-- Scroll Bars -->
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/jquery.jscrollpane.min.js"></script>
+
+
+<!-- Volume, Balance -->
+<script type="text/javascript" src="js/knobRot-0.2.2.js"></script>
+
+<!-- Visual Text Editor (NicEdit.js) -->
+<script src="js/nicEdit.js"></script>
+
+<!-- Multiselect (Chosen.js) -->
+<script src="js/chosen.jquery.min.js" type="text/javascript"></script>
+
+<!-- Graph Builder -->
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+<script type="text/javascript" src="js/jquery.flot.js"></script>
+<script type="text/javascript" src="js/jquery.flot.resize.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var graphwidth = $('.widget-graph .inner').width();
+        $('.widget-graph .graph').css('height', parseInt(graphwidth/1.6));
+        $(window).resize(function() {
+            graphwidth = $('.widget-graph .inner').width();
+            $('.widget-graph .graph').css('height', parseInt(graphwidth/1.6));
+        });
+
+        var d1 = [[0, 9], [1, 23], [1.6, 8], [2.2, 24], [2.8, 18], [4, 36]],
+        graphholder = $("#graph"),
+        plot = $.plot(graphholder, [d1], {
+            colors: ["#ee5190", "#ee5190", "#ee5190", "#ee5190", "#ee5190"],
+            xaxis: {
+                min: null,
+                max: null
+            },
+            yaxis: {
+                autoscaleMargin: 0.02
+            },
+            series: {
+                lines: {
+                    show: true,
+                    lineWidth: 2,
+                    fill: true,
+                    fillColor: "rgba(255,168,0,0.11)"
+                },
+                points: {
+                    show: true,
+                    radius: 5,
+                    lineWidth: 2,
+                    fillColor: "#fff"
+                },
+                shadowSize: 0
+            },
+            grid: {
+                hoverable: true,
+                clickable: true,
+                margin: 15,
+                color: "#333",
+                borderColor: "#e5e5e5"
+            }
+        });
+
+        function showTooltip(x, y, contents) {
+            $("<div id='graph-tooltip'>" + contents + "</div>").css({top: y - 60, left: x - 28}).appendTo("body").fadeIn(200);
+        }
+
+        var previousPoint = null;
+        graphholder.on("plothover", function (event, pos, item) {
+
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+
+                    previousPoint = item.dataIndex;
+
+                    $("#graph-tooltip").remove();
+                    var x = item.datapoint[0].toFixed(2),
+                            y = item.datapoint[1].toFixed(2);
+
+                    showTooltip(item.pageX, item.pageY, '$' + y*100);
+                }
+            } else {
+                $("#graph-tooltip").remove();
+                previousPoint = null;
+            }
+        });
+    });
+</script>
+
+
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+    <div class="body-wrap">
+        <div class="content">
+            <div class="container">
+                <br><br><br><br>
+                 <!-- .row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                    <!-- pricing1-->
+                    <div class="pricing_box price_style1">
+                        <ul>
+                            <li class="price_col price_col_green">
+                                <!--pricing item-->
+                                <div class="price_item">
+                                    <div class="inner">
+                                        <div class="price_col_head">
+                                            <div class="price_col_head_inner">
+                                            <span class="price"><em>$</em><span>/month</span>99</span>
+                                          </div>
+                                        </div>
+                                        <div class="price_col_body clearfix">
+                                            <div class="price_body_inner">
+                                                <div class="price_body_top">
+                                                    <strong>Basic</strong>
+                                                    <span>All important futures for work</span>
+                                                </div>
+                                                <ul>
+                                                    <li>250 SKU’s</li>
+                                                    <li>1 GB Storage</li>
+                                                    <li>3,5% transaction fee</li>
+                                                </ul>
+                                                <div class="sign_up left"><a href="#" class="btn btn-caps"><span>Try a Week</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/ pricing-item -->
+                            </li>
+
+                            <li class="price_col col_active">
+                                <!--pricing item-->
+                                <div class="price_item">
+                                    <div class="inner">
+                                        <div class="price_col_head">
+                                          <div class="price_col_head_inner">
+                                            <span class="price"><em>$</em><span>/month</span>299</span>
+                                          </div>
+                                        </div>
+                                        <div class="price_col_body clearfix">
+                                            <div class="price_body_inner">
+                                                <div class="price_body_top">
+                                                    <strong>Premium</strong>
+                                                    <span>Lots of clients &amp; users</span>
+                                                </div>
+                                                <ul>
+                                                    <li>2,500 SKU’s</li>
+                                                    <li>5 GB Storage</li>
+                                                    <li>1,5% transaction fee</li>
+                                                </ul>
+                                                <div class="sign_up left"><a href="#" class="btn btn-caps"><span>Buy Now</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/ pricing-item -->
+                            </li>
+
+                            <li class="price_col price_col_brown">
+                                <!--pricing item-->
+                                <div class="price_item">
+                                    <div class="inner">
+                                        <div class="price_col_head">
+                                          <div class="price_col_head_inner">
+                                            <span class="price"><em>$</em><span>/month</span>499</span>
+                                          </div>
+                                        </div>
+                                        <div class="price_col_body clearfix">
+                                            <div class="price_body_inner">
+                                                <div class="price_body_top">
+                                                    <strong>Ultimate</strong>
+                                                    <span>All important futures for work</span>
+                                                </div>
+                                                <ul>
+                                                    <li>Unlimited SKU’s</li>
+                                                    <li>20 GB Storage</li>
+                                                    <li>1% transaction fee</li>
+                                                </ul>
+                                                <div class="sign_up right"><a href="#" class="btn btn-caps"><span>Subscribe Now</span></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/ pricing-item -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/ pricing1-->
+                </div>
+                </div>
+                <!--/ .row -->
+    
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-sm-7">
+                    <!-- .row -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- Widget Audio Player -->
+                                <div class="widget-container widget-audio boxed">
+                                    <!-- jplayer-->
+                                    <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                                    <div id="jp_container_1" class="jp-audio">
+                                        <div class="jp-gui jp-interface">
+                                            <div class="jp-controls">
+                                                <div class="song-title"></div>
+                                                <div class="jp-current-time"></div>
+                                                <span class="separate">/</span>
+                                                <div class="jp-duration"></div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="jp-controls jp-buttons">
+                                                <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a><!--
+                                            --><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a><!--
+                                            --><a href="javascript:;" class="jp-previous disabled" tabindex="1"><span class="glyphicon glyphicon-fast-backward"></span></a><!--
+                                            --><a href="javascript:;" class="jp-play" tabindex="1"><span class="glyphicon glyphicon-play"></span></a><!--
+                                            --><a href="javascript:;" class="jp-pause" tabindex="1"><span class="glyphicon glyphicon-pause"></span></a><!--
+                                            --><a href="javascript:;" class="jp-next" tabindex="1"><span class="glyphicon glyphicon-fast-forward"></span></a><!--
+                                            --><a href="javascript:;" class="jp-stop" tabindex="1">stop</a><!--
+                                            --><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a><!--
+                                            --><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a><!--
+                                            --><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a>
+                                            </div>
+                                            <div class="jp-volume-bar">
+                                                <div class="jp-volume-bar-value"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-time-line">
+                                            <div class="jp-progress">
+                                                <div class="jp-seek-bar">
+                                                    <div class="jp-play-bar">
+                                                        <div class="jp-seek-handle"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-playlist">
+                                            <ul class="jp-playlist-inner">
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                        <div class="jp-no-solution">
+                                            <span>Update Required</span>
+                                            <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                        </div>
+                                    </div>
+                                    <!--/ jplayer-->
+                                </div>
+                                <!-- Widget Audio Player -->
+                            </div>
+                            <div class="col-sm-7">
+                                <!-- Widget Audio Player -->
+                                <div class="widget-container widget-audio player-small boxed">
+                                    <!-- jplayer-->
+                                    <div id="jquery_jplayer_2" class="jp-jplayer"></div>
+                                    <div id="jp_container_2" class="jp-audio">
+                                        <div class="jp-gui jp-interface">
+                                            <div class="jp-controls">
+                                                <div class="jp-current-time"></div>
+                                                <span class="separate">/</span>
+                                                <div class="jp-duration"></div>
+                                                <div class="song-title"></div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="jp-controls jp-buttons">
+                                                <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a><!--
+                                            --><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a><!--
+                                            --><a href="javascript:;" class="jp-previous disabled" tabindex="1"><span class="glyphicon glyphicon-fast-backward"></span></a><!--
+                                            --><a href="javascript:;" class="jp-play" tabindex="1"><span class="glyphicon glyphicon-play"></span></a><!--
+                                            --><a href="javascript:;" class="jp-pause" tabindex="1"><span class="glyphicon glyphicon-pause"></span></a><!--
+                                            --><a href="javascript:;" class="jp-next" tabindex="1"><span class="glyphicon glyphicon-fast-forward"></span></a><!--
+                                            --><a href="javascript:;" class="jp-stop" tabindex="1">stop</a><!--
+                                            --><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a><!--
+                                            --><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a><!--
+                                            --><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a>
+                                            </div>
+                                            <div class="jp-volume-bar">
+                                                <div class="jp-volume-bar-value"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-time-line">
+                                            <div class="jp-progress">
+                                                <div class="jp-seek-bar">
+                                                    <div class="jp-play-bar">
+                                                        <div class="jp-seek-handle"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-playlist">
+                                            <ul class="jp-playlist-inner">
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                        <div class="jp-no-solution">
+                                            <span>Update Required</span>
+                                            <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                        </div>
+                                    </div>
+                                    <!--/ jplayer-->
+                                </div>
+                                <!-- Widget Audio Player -->
+                            </div>
+
+                            <div class="col-sm-5">
+                                <!-- Widget Audio Player -->
+                                <div class="widget-container widget-audio player-small playlist boxed">
+                                    <!-- jplayer-->
+                                    <div id="jquery_jplayer_3" class="jp-jplayer"></div>
+                                    <div id="jp_container_3" class="jp-audio">
+                                        <div class="jp-gui jp-interface">
+                                            <div class="jp-controls">
+                                                <div class="song-title"></div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="jp-controls jp-buttons">
+                                                <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a><!--
+                                            --><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a><!--
+                                            --><a href="javascript:;" class="jp-previous disabled" tabindex="1"><span class="glyphicon glyphicon-fast-backward"></span></a><!--
+                                            --><a href="javascript:;" class="jp-play" tabindex="1"><span class="glyphicon glyphicon-play"></span></a><!--
+                                            --><a href="javascript:;" class="jp-pause" tabindex="1"><span class="glyphicon glyphicon-pause"></span></a><!--
+                                            --><a href="javascript:;" class="jp-next" tabindex="1"><span class="glyphicon glyphicon-fast-forward"></span></a><!--
+                                            --><a href="javascript:;" class="jp-stop" tabindex="1">stop</a><!--
+                                            --><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a><!--
+                                            --><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a><!--
+                                            --><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a><!--
+                                            --><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a>
+                                            </div>
+                                            <div class="jp-volume-bar">
+                                                <div class="jp-volume-bar-value"></div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-time-line">
+                                            <div class="jp-progress">
+                                                <div class="jp-seek-bar">
+                                                    <div class="jp-play-bar">
+                                                        <div class="jp-seek-handle"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jp-playlist">
+                                            <ul class="jp-playlist-inner">
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                        <div class="jp-no-solution">
+                                            <span>Update Required</span>
+                                            <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                        </div>
+                                    </div>
+                                    <!--/ jplayer-->
+                                </div>
+                                <!-- Widget Audio Player -->
+                            </div>
+                        </div>
+                    <!-- / .row -->
+                    <br>
+                    <!-- .row -->
+                        <div class="row">
+                            <div class="col-sm-7">
+                                 <!-- widget calendar-->
+                                    <div class="widget-container widget-calendar boxed stripes">
+                                        <div class="inner">
+                                            <input type="text" name="date_departure" class="inputField" value="" id="date_departure">
+                                            <script>
+                                                // <![CDATA[
+                                                jQuery(document).ready(function($) {
+                                                    var daysRange = 5;
+
+                                                    function assignCalendar(id){
+                                                        $('<div class="calendar" />')
+                                                                .insertAfter( $(id) )
+                                                                .multiDatesPicker({
+                                                                    dateFormat: 'yy-mm-dd',
+                                                                    minDate: new Date(),
+                                                                    maxDate: '+1y',
+                                                                    altField: id,
+                                                                    firstDay: 1,
+                                                                    showOtherMonths: true
+                                                                }).prev().hide();
+                                                    }
+
+                                                    assignCalendar('#date_departure');
+                                                });
+                                                // ]]>
+                                            </script>
+                                        </div>
+                                    </div>
+                                <!--/ widget calendar-->
+                            </div>
+                            <div class="col-sm-5">
+                                <!-- row level 2 -->
+                            <div class="row knobs">
+                                <div class="col-sm-12 col-xs-6">
+                                    <h6 class="foo2">Balance</h6>
+
+                                    <!-- Balance control -->
+                                    <div class="widget-knob widget-balance">
+                                        <input type="text" value="0" autocomplete="off" id="balance" />
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#balance').knobRot({
+                                                    'classes': ['balance'],
+                                                    'dragVertical': false,
+                                                    'frameCount': 36,
+                                                    'frameWidth': 90,
+                                                    'frameHeight': 90,
+                                                    'detent': true,
+                                                    'detentThreshold': 2,
+                                                    'minimumValue': -50,
+                                                    'maximumValue': 50,
+                                                    'hideInput': true
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                    <!--/ Balance control -->
+                                </div>
+                                <div class="col-sm-12 col-xs-6">
+                                    <h6 class="foo2 last">Volume</h6>
+
+                                    <!-- Volume control -->
+                                    <div class="widget-knob widget-volume">
+                                        <input type="text" value="100"  autocomplete="off" id="volume" />
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#volume').knobRot({
+                                                    'classes': ['volume'],
+                                                    'dragVertical': false,
+                                                    'frameCount': 54,
+                                                    'frameWidth': 90,
+                                                    'frameHeight': 90,
+                                                    'detent': true,
+                                                    'detentThreshold': 5,
+                                                    'minimumValue': 0,
+                                                    'maximumValue': 100,
+                                                    'hideInput': true
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                    <!--/ Volume control -->
+                                </div>
+                            </div>
+                        <!-- row level 2 -->
+                            </div>
+                        </div>        
+                    <!--/ .row -->
+                    <br><br><br>
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!-- post comments -->
+                            <div class="comment-list message-field">
+                                <ol>
+                                    <li class="comment">
+                                        <div class="comment-avatar">
+                                            <div class="avatar"><img src="images/temp/avatar9.png" alt="" /></div>
+                                        </div>
+                                        <div class="comment-body">
+                                            <div class="comment-text">
+                                                <div class="comment-author"><a href="#" class="link-author">Elijah Wood</a></div>
+                                                <div class="comment-entry">He made his film debut with a minor part in Back to the Future Part II (1989), then landed a succession.</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                            <!--/ post comments -->
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-8 col-sm-offset-3">
+                            <!-- Rating Stars -->
+                            <div class="rating clearfix">
+                                <span class="star on" rel="1"></span>
+                                <span class="star on" rel="2"></span>
+                                <span class="star on" rel="3"></span>
+                                <span class="star off" rel="4"></span>
+                                <span class="star off" rel="5"></span>
+                            </div>
+                            <!--/ Rating Stars -->
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-sm-12">
+                            <!-- tags -->
+                            <div class="tagcloud style2 margin-30">
+                                <a href="#" title="2 topics"><span>Design</span></a>
+                                <a href="#" title="3 topics"><span>Fashion Culture</span></a>
+                                <a href="#" title="6 topics"><span>Web</span></a>
+                            </div>
+                            <!--/ tags -->
+                        </div>
+
+                        <div class="col-sm-12">
+                            <!-- Website Menu -->
+                            <ul class="menu clearfix ">
+                                <li><a href="#"><span>Home</span></a></li>
+                                <li><a href="#"><span>About</span></a>
+                                    <ul>
+                                        <li><a href="#">Web design</a></li>
+                                        <li><a href="#">User interface</a></li>
+                                        <li><a href="#">Social media</a>
+                                            <ul>
+                                                <li><a href="#">Gallery images</a></li>
+                                                <li><a href="#">OneByOne Slider</a></li>
+                                                <li><a href="#">Audio Player</a></li>
+                                                <li><a href="#">Video Player</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#"><span>Contacts</span></a></li>
+                                <li><a href="#"><span>Products</span></a></li>
+                            </ul>
+                            <!--/ Website Menu -->
+                        </div>
+                            <br><br><br><br>
+                        <div class="col-sm-4 clearfix">
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown open">
+                                <a id="drop" href="#" role="button" class="dropdown-toggle gradient" data-toggle="dropdown"><span></span>About</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Web design</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">User interface</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Social Media</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Reminder</a></li>
+                                </ul>
+                            </div>
+                            <!--/ Dropdown Menu -->
+                        </div>
+                        <div class="clear"></div>
+                        <br><br><br><br><br><br><br><br><br>
+                        <div class="col-sm-12">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-left btn-large"><span>Left</span></a>
+                                <a href="#" class="btn btn-white btn-large"><span>Download all files</span></a>
+                                <a href="#" class="btn btn-white btn-right btn-large"><span>Right</span></a>
+                            </div><br><br>
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-white btn-large"><span>Normal</span></a>
+                                <a href="#" class="btn btn-white hover btn-large"><span>Hover</span></a>
+                                <a href="#" class="btn btn-large"><span>Pressed</span></a>
+                            </div>  
+                        </div>
+                        <br><br><br><br>
+                        <div class="col-sm-12">
+                             <!-- Image Slider -->
+                            <div class="widget-container widget-gallery boxed">
+                                <div class="inner">
+                                    <div id="myCarousel3" class="carousel slide" data-interval="20000">
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="active item">
+                                                <a href="images/temp/post-img-1.jpg" data-rel="prettyPhoto" title="Disney’s Brave"><img src="images/temp/post-img-1.jpg" alt="" /></a>
+                                                <div class="carousel-desc gradient"><strong>Brave</strong><span>&laquo;Change your fate.&raquo;</span></div>
+                                            </div>
+                                            <div class="item">
+                                                <a href="images/temp/post-img-2.jpg" data-rel="prettyPhoto" title="Ice Age"><img src="images/temp/post-img-2.jpg" alt="" /></a>
+                                                <div class="carousel-desc gradient"><strong>Ice Age</strong><span>&laquo;Change your fate.&raquo;</span></div>
+                                            </div>
+                                            <div class="item">
+                                                <a href="images/temp/post-img-3.jpg" data-rel="prettyPhoto" title="Horton"><img src="images/temp/post-img-3.jpg" alt="" /></a>
+                                                <div class="carousel-desc gradient"><strong>Horton</strong><span>&laquo;Change your fate.&raquo;</span></div>
+                                            </div>
+                                        </div>
+                                        <!-- Carousel indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel3" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel3" data-slide-to="2"></li>
+                                        </ol>
+                                        <!-- Carousel nav -->
+                                        <a class="carousel-control left" href="#myCarousel3" data-slide="prev"></a>
+                                        <a class="carousel-control right" href="#myCarousel3" data-slide="next"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Image Slider -->
+                        </div>
+                    </div>
+                    <!--/ .row -->
+
+                    </div><!-- / .col-sm-7 -->
+
+                    <div class="col-sm-5">
+                        <!-- .row -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- tabs -->
+                                <div class="tabs-framed styled">
+                                    <div class="inner">
+                                        <ul class="tabs clearfix">
+                                            <li class="active"><a href="#events" data-toggle="tab">Events</a></li>
+                                            <li><a href="#reminder" data-toggle="tab"><sup class="note">3</sup>Reminder</a></li>
+                                            <li><a href="#starred" data-toggle="tab">Starred</a></li>
+                                            <li><a href="#archive" data-toggle="tab">Archive</a></li>
+                                        </ul>
+                                        <div class="tab-content boxed">
+                                            <div class="tab-pane fade in active clearfix" id="events">
+                                                <div class="tab-image pull-left"><img src="images/temp/tab-img-5.jpg" alt="" /></div>
+                                                <h4>4 august 2013</h4>
+                                                <p>He made his film debut with a minor</p>
+                                                <a href="#" class="btn btn-green"><span>See more</span></a>
+                                            </div>
+                                            <div class="tab-pane fade clearfix" id="reminder">
+                                                <div class="tab-image pull-right"><img src="images/temp/tab-img-6.jpg" alt="" /></div>
+                                                <h4>5 November</h4>
+                                                <p>He made his film debut with a minor</p>
+                                                <a href="#" class="btn btn-green"><span>See more</span></a>
+                                            </div>
+                                            <div class="tab-pane fade clearfix" id="starred">
+                                                <div class="tab-image pull-left"><img src="images/temp/tab-img-7.jpg" alt="" /></div>
+                                                <h4>11 October</h4>
+                                                <p>He made his film debut with a minor</p>
+                                                <a href="#" class="btn btn-green"><span>See more</span></a>
+                                            </div>
+                                            <div class="tab-pane fade clearfix" id="archive">
+                                                <div class="tab-image pull-right"><img src="images/temp/tab-img-8.jpg" alt="" /></div>
+                                                <h4>14 September</h4>
+                                                <p>He made his film debut with a minor</p>
+                                                <a href="#" class="btn btn-green"><span>See more</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/ tabs -->
+                            </div>
+                            <br><br><br>
+                            <div class="col-sm-12">
+                                <!-- search widget -->
+                                <div class="widget-container widget-search boxed styled">
+                                    <div class="inner">
+                                        <form method="get" id="searchform" action="#">
+                                            <span class="btn btn-middle"><input type="submit" value="Search" /></span>
+                                            <div class="field_text lightPlaceholder"><input name="search" value="" type="text" placeholder="Type word here" /></div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--/ search widget -->
+                            </div>
+
+                            <div class="col-sm-12">
+                                <!-- Contact form -->
+                                <div class="add-comment styled boxed" id="addcomments">
+                                    <div class="add-comment-title"><h3>Write a message</h3></div>
+                                    <div class="comment-form">
+                                        <!-- Fire Text Editor -->
+                                        <script type="text/javascript">
+                                            bkLib.onDomLoaded(function() {
+                                                var myNicEditor = new nicEditor({
+                                                    buttonList : [
+                                                        'bold',
+                                                        'italic',
+                                                        'underline',
+                                                        'forecolor',
+                                                        'left',
+                                                        'center',
+                                                        'right',
+                                                        'justify'
+                                                    ]
+                                                });
+                                                myNicEditor.panelInstance('nicedit-message');
+
+                                                jQuery('#commentForm .link-reset').click(function(){
+                                                    myNicEditor.removeInstance('nicedit-message');
+                                                    $('#nicedit-message').val('');
+                                                    myNicEditor.panelInstance('nicedit-message');
+                                                });
+                                            });
+                                        </script>
+                                        <form action="#" method="post" id="commentForm">
+                                            <div class="form-inner">
+                                                <div class="field_select">
+                                                    <label for="contact-name" class="label_title">Name:</label>
+                                                    <select name="contact-name" id="contact-name" multiple data-placeholder="Select Name">
+                                                        <option value='example1@gmail.com'>Mike Charley</option>
+                                                        <option value='example2@gmail.com'>Andy Lurs</option>
+                                                        <option value='example3@gmail.com'>Toby Lightman</option>
+                                                        <option value='example4@gmail.com'>Lene Marlin</option>
+                                                        <option value='example5@gmail.com'>Deep Purple</option>
+                                                    </select>
+                                                </div>
+                                                <div class="field_text lightPlaceholder">
+                                                    <label for="subject" class="label_title">Subject:</label>
+                                                    <input type="text" name="subject" id="subject" value="" placeholder="ex. Electrosoul system" />
+                                                </div>
+                                                <div class="field_text field_textarea">
+                                                    <label for="nicedit-message" class="label_title">Message:</label>
+                                                    <textarea name="nicedit-message" id="nicedit-message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="rowSubmit">
+                                                <a onclick="document.getElementById('commentForm').reset(); return false" href="#" class="link-reset btn btn-middle btn-gray"><span>Discard</span></a>
+                                                <span class="btn btn-send"><input type="submit" id="send" value="Send Message" /></span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            <!--/ Contact form -->
+                            </div>
+
+                            <div class="col-sm-12">
+                                <!-- Profile -->
+                                <div class="widget-container widget-profile boxed">
+                                    <div class="inner clearfix">
+                                        <div class="avatar"><img src="images/temp/avatar.png" alt="" /></div>
+                                        <h5>Jim Carrey</h5>
+                                        <span class="subtitle">Сomedian actor</span>
+                                        <div class="follow">
+                                            <a href="#" class="btn btn-green"><span>Follow</span></a>
+                                            <div class="followers pull-right">
+                                                <strong>1687</strong>
+                                                <span>followers</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/ Profile -->
+                            </div>
+
+                            <div class="col-sm-12">
+                                <!-- Progress Bar -->
+                                <div id="progressBar1" class="progressbar">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="total"></div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+                                    <div class="pbar"></div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar1').anim_progressbar({
+                                            totaltime: 120
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar -->
+
+                                <!-- Range slider -->
+                                <div class="range-slider styled">
+                                    <input id="price-range" type="text" name="price-range" value="240;760">
+                                </div>
+                                <script type="text/javascript" >
+                                    jQuery(document).ready(function($) {
+                                        // Price Range Input
+                                        $("#price-range").rangeslider({
+                                            from: 0,
+                                            to: 1000,
+                                            limits: false,
+                                            scale: ['0$', '1000$'],
+                                            heterogeneity: ['50/500'],
+                                            step: 10,
+                                            smooth: true,
+                                            dimension: '$'
+                                        });
+                                    });
+                                </script>
+                                <!-- Range slider -->
+
+                                <!-- Progress Bar with Download Bar -->
+                                <div id="progressBar2" class="progressbar styled">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="total"></div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+                                    <div class="pbar">
+                                        <div id="downloadBar2" class="downloadbar">
+                                            <div class="pbar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar2').anim_progressbar({
+                                            totaltime: 180
+                                        });
+                                        $('#downloadBar2').anim_progressbar({
+                                            totaltime: 100
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar with Download Bar -->
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="checkboxes">
+
+                                    <div class="input_styled checklist pull-left margin-for-check">
+                                        <div class="rowCheckbox switch"><input name="signup1" type="checkbox" checked id="signup1" value="signup1"><label for="signup1"></label></div>
+                                        <div class="rowCheckbox switch"><input name="signup2" type="checkbox" id="signup2" value="signup2"><label for="signup2"></label></div>
+                                    </div>
+
+                                    <div class="input_styled checklist inline">
+                                        <div class="rowCheckbox"><input name="signup4" type="checkbox" id="signup4" value="signup4"><label for="signup4"></label></div>
+                                        <div class="rowCheckbox"><input name="signup5" checked type="checkbox" id="signup5" value="signup5"><label for="signup5"></label></div>
+                                        <div class="rowCheckbox green"><input name="signup5" checked type="checkbox" id="signup6" value="signup6"><label for="signup6"></label></div>
+                                    </div>
+                                    <div class="input_styled radiolist inline">
+                                        <div class="rowRadio"><input type="radio" name="radio" value="radio1" id="radio1"><label for="radio1"></label></div>
+                                        <div class="rowRadio"><input type="radio" name="radio" value="radio2" id="radio2" checked><label for="radio2"></label></div>
+                                        <div class="rowRadio green"><input type="radio" name="radio1" value="radio3" id="radio3" checked><label for="radio3"></label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br><br>
+                            <div class="col-sm-8 col-sm-offset-2 col-xs-offset-2">
+                                <div class="widget-container widget-text boxed">
+                                    <div class="inner clearfix">
+                                        <div class="ribbon">
+                                            <div class="ribbon-stitches-top"></div>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        </div>
+                                        <br><br><br><br>
+                                        <div class="ribbon ribbon-brown">
+                                            <div class="ribbon-stitches-top"></div>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        </div>
+                                        <br><br><br><br>
+                                        <div class="ribbon ribbon-green">
+                                            <div class="ribbon-stitches-top"></div>
+                                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                        </div><br><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="col-sm-10 col-sm-offset-1">
+                                 <!-- Simple Graph -->
+                                <div class="widget-container widget-graph boxed">
+                                    <div class="inner">
+                                        <div id="graph" class="graph"></div>
+                                    </div>
+                                </div>
+                                <!--/ Simple Graph -->
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
+                <!--/ .row -->
+                <br><br>
+                <!-- .row -->
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-pull-1 col-sm-pull-0 col-xs-offset-1 col-sm-offset-0">
+                            <div class="widget-container widget-text boxed badged">
+                                <div class="inner">
+                                    <div class="badge-top"></div>
+                                    <h3 class="widget-title">Text widget</h3>
+                                    <div class="textwidget">
+                                        <p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    </div>
+                                    <div class="badge-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-pull-1 col-sm-pull-0 col-xs-offset-1 col-sm-offset-0">
+                            <div class="widget-container widget-text boxed badged badge-green">
+                                <div class="inner">
+                                    <div class="badge-top"></div>
+                                    <h3 class="widget-title">Text widget</h3>
+                                    <div class="textwidget">
+                                        <p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    </div>
+                                    <div class="badge-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-pull-1 col-sm-pull-0 col-xs-offset-1 col-sm-offset-0">
+                            <div class="widget-container widget-text boxed badged badge-brown">
+                                <div class="inner">
+                                    <div class="badge-top"></div>
+                                    <h3 class="widget-title">Text widget</h3>
+                                    <div class="textwidget">
+                                        <p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                                    </div>
+                                    <div class="badge-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--/ .row -->
+
+                <br><br><br><br><br><br><br>
+            </div><!-- / .container -->
+        </div><!-- / .content -->
+    </div>
+</body>
+</html>

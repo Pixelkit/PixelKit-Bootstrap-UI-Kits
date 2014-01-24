@@ -14,7 +14,7 @@
   position: relative;
   margin-bottom: 30px;
   padding: 0 4px;
-  .border-radius(@border-radius);
+  border-radius: 4px;
   -webkit-box-shadow: inset 0 0 1px #a4a4a4, inset 0 -2px 0 #a4a4a4, 0 3px 3px -1px rgba(0,0,0,0.2);
   box-shadow: inset 0 0 1px #a4a4a4, inset 0 -2px 0 #a4a4a4, 0 3px 3px -1px rgba(0,0,0,0.2);
   background: rgb(245,245,245);
@@ -56,37 +56,36 @@
 }
 
 /* Level 1+ */
-.menu .submenu {
+.menu ul {
   position: absolute;
   top: -9999px;
   left: -9999px;
   z-index: 9499;
   width:100%;
   min-width: 160px;
+  border-radius: 4px;
 }
-.menu > li:hover > .submenu,
-.menu > li.hover > .submenu {
+.menu > li:hover > ul,
+.menu > li.hover > ul {
   top: 48px;
   left: 0;
   padding-top: 2px;
-}
-.menu ul {
-  .border-radius(@border-radius);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.36);
 }
 .menu ul li {
   position: relative;
   border-top: 1px solid #f9f9f9;
   border-bottom: 1px solid #dcdcdc;
   background: #eee;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.36);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.36);
 }
-.menu ul li:first-child {border-top: none; .border-radius-top(@border-radius);}
-.menu ul li:last-child {border-bottom: none;  .border-radius-bottom(@border-radius);}
+.menu ul li:first-child {border-top: none; border-radius: 4px 4px 0 0;}
+.menu ul li:last-child {border-bottom: none;  border-radius: 0 0 4px 4px;}
 .menu ul li:hover {background: #f5f5f5;}
 
 .menu ul li a {
   display: block;
-  font-size: @font-size * 0.92;
+  font-size: 13px;
   line-height: 15px;
   text-transform: none;
   color: #6f6f6f;
@@ -108,7 +107,7 @@
 .menu ul li:hover > a:before {background: #aaa;}
 
 /* Level 2+ */
-.menu ul li:hover > .submenu {
+.menu ul li:hover > ul {
   position: absolute;
   top: -2px;
   left: 100%;

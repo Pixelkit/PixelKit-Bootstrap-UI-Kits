@@ -1,0 +1,38 @@
+/*-----------------------------------*/
+/* Knobs */
+/*-----------------------------------*/
+
+.widget-knob {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 124px;
+    height: 124px;
+    margin:5px;
+    border-radius:50%;
+    border:8px solid #fff;
+    background:#ee5190;
+    box-shadow:1px 2px 0 #cdcdcd;
+}
+.widget-volume {
+  width: 124px;
+  height: 124px;
+  background:#fafafa;
+  border-color:#fafafa;
+}
+.volume {background-image: url(images/knob-volume.png); position:relative;top:50%;left:50%;width:90px;height:90px;margin-left:-45px;margin-top:-45px;}
+.balance {background-image: url(images/knob-balance.png); position:relative;top:50%;left:50%;width:90px;height:90px;margin-left:-45px;margin-top:-45px;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .widget-knob { background-size: 90px auto;}
+    .widget-volume {background-size: 90px auto;}
+    .volume {background-image: url(images/knob-volume-x2.png); background-size: auto 90px;}
+    .balance {background-image: url(images/knob-balance-x2.png); background-size: auto 90px;}
+}
+.widget-knob input{display: none;}
+
+.knobs {text-align: center;}
+@media (min-width: 768px) {
+    .knobs h6 {margin-bottom: 5px;margin-top:0;}
+    .knobs h6.last {margin-top: 10px;}
+}

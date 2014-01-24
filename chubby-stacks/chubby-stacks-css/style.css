@@ -1,10 +1,10 @@
 /*
 Kit Name: Chubby Stacks
-Kit URI: http://pixelkit.com
+Kit URI: http://pixelkit.com/kits/fresh-ui-kit/
 Description: 100+ elements
 Version: 1.0
-Author: ThemeFuse
-Author URI: http://themefuse.com
+Author: PixelKit
+Author URI: http://pixelkit.com
 
 CSS STRUCTURE:
 
@@ -1957,29 +1957,28 @@ textarea:focus {
 }
 
 /* Level 1+ */
-.menu .submenu {
+.menu ul {
     position: absolute;
     top: -9999px;
     left: -9999px;
     z-index: 9499;
     width:100%;
     min-width: 160px;
+    border-radius: 4px;
 }
-.menu > li:hover > .submenu,
-.menu > li.hover > .submenu {
+.menu > li:hover > ul,
+.menu > li.hover > ul {
     top: 48px;
     left: 0;
     padding-top: 2px;
-}
-.menu ul {
-    border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.36);
 }
 .menu ul li {
     position: relative;
     border-top: 1px solid #f9f9f9;
     border-bottom: 1px solid #dcdcdc;
     background: #eee;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.36);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.36);
 }
 .menu ul li:first-child {border-top: none; border-radius: 4px 4px 0 0;}
 .menu ul li:last-child {border-bottom: none;  border-radius: 0 0 4px 4px;}
@@ -2009,7 +2008,7 @@ textarea:focus {
 .menu ul li:hover > a:before {background: #aaa;}
 
 /* Level 2+ */
-.menu ul li:hover > .submenu {
+.menu ul li:hover > ul {
     position: absolute;
     top: -2px;
     left: 100%;

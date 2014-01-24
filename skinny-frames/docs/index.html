@@ -1,0 +1,2556 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skinny Frames | Documentation</title>
+ 
+<!-- main JS libs -->
+<script src="../skinny-frames-css/js/libs/modernizr.min.js"></script>
+<script src="../skinny-frames-css/js/libs/jquery-1.10.2.min.js"></script>
+<script src="../skinny-frames-css/js/libs/jquery-ui.min.js"></script>
+<script src="../skinny-frames-css/js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="../skinny-frames-css/css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="../skinny-frames-css/style.css" media="screen" rel="stylesheet">
+
+<!-- scripts -->
+<script src="../skinny-frames-css/js/general.js"></script>
+<script src="js/general.js"></script>
+
+<!-- custom input -->
+<script src="../skinny-frames-css/js/jquery.customInput.js"></script>
+
+<!-- Placeholders -->
+<script type="text/javascript" src="../skinny-frames-css/js/jquery.powerful-placeholder.min.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+        if($("[placeholder]").size() > 0) {
+            $.Placeholder.init();
+        }
+    });
+</script>
+
+<!-- Multiselect -->
+<link rel="stylesheet" href="../skinny-frames-css/css/chosen.css">
+<script src="../skinny-frames-css/js/chosen.jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#contact-name').chosen({ width: "100%" });
+        jQuery('#commentForm .link-reset').click(function(){
+            jQuery("#contact-name").trigger("chosen:updated");
+        });
+    });
+</script>
+
+
+
+<!-- Progress Bars -->
+<script src="../skinny-frames-css/js/progressbar.js"></script>
+
+<!-- range sliders -->
+<script src="../skinny-frames-css/js/jquery.slider.bundle.js"></script>
+<script src="../skinny-frames-css/js/jquery.slider.js"></script>
+<link rel="stylesheet" href="../skinny-frames-css/css/jslider.css">
+
+<!-- Volume, Balance -->
+<script type="text/javascript" src="../skinny-frames-css/js/knobRot-0.2.2.js"></script>
+
+<!-- Audio Player -->
+<link href="../skinny-frames-css/css/jplayer.css" rel="stylesheet">
+<script src="../skinny-frames-css/js/jquery.jplayer.min.js"></script>
+<script src="../skinny-frames-css/js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"<span class='item-artist'>Rihanna - </span><span class='item-song'>Only Girl</span><img class='item-image' src='../skinny-frames-css/images/temp/music-player-4.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"<span class='item-artist'>Yaki Da - </span><span class='item-song'>Dancing</span><img class='item-image' src='../skinny-frames-css/images/temp/music-player-5.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<span class='item-artist'>Pandora - </span><span class='item-song'>Sands of Time</span><img class='item-image' src='../skinny-frames-css/images/temp/music-player-6.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "../skinny-frames-css/js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+</script>
+
+<!-- Calendar -->
+<script src="../skinny-frames-css/js/jquery-ui.multidatespicker.js"></script>
+
+<!-- Visual Text Editor -->
+<script src="../skinny-frames-css/js/nicEdit.js"></script>
+
+<!-- Graph Builder -->
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../skinny-frames-css/js/excanvas.min.js"></script><![endif]-->
+<script type="text/javascript" src="../skinny-frames-css/js/jquery.flot.js"></script>
+<script type="text/javascript" src="../skinny-frames-css/js/jquery.flot.resize.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var graphwidth = $('.widget-graph .inner').width();
+        $('.widget-graph .graph').css('height', parseInt(graphwidth/1.6));
+        $(window).resize(function() {
+            graphwidth = $('.widget-graph .inner').width();
+            $('.widget-graph .graph').css('height', parseInt(graphwidth/1.6));
+        });
+
+        var d1 = [[0, 9], [1, 23], [1.6, 8], [2.2, 24], [2.8, 18], [4, 36]],
+        graphholder = $("#graph"),
+        plot = $.plot(graphholder, [d1], {
+            colors: ["#ee5190", "#ee5190", "#ee5190", "#ee5190", "#ee5190"],
+            xaxis: {
+                min: null,
+                max: null
+            },
+            yaxis: {
+                autoscaleMargin: 0.02
+            },
+            series: {
+                lines: {
+                    show: true,
+                    lineWidth: 2,
+                    fill: true,
+                    fillColor: "rgba(255,168,0,0.11)"
+                },
+                points: {
+                    show: true,
+                    radius: 5,
+                    lineWidth: 2,
+                    fillColor: "#fff"
+                },
+                shadowSize: 0
+            },
+            grid: {
+                hoverable: true,
+                clickable: true,
+                margin: 15,
+                color: "#333",
+                borderColor: "#e5e5e5"
+            }
+        });
+
+        function showTooltip(x, y, contents) {
+            $("<div id='graph-tooltip'>" + contents + "</div>").css({top: y - 60, left: x - 28}).appendTo("body").fadeIn(200);
+        }
+
+        var previousPoint = null;
+        graphholder.on("plothover", function (event, pos, item) {
+
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+
+                    previousPoint = item.dataIndex;
+
+                    $("#graph-tooltip").remove();
+                    var x = item.datapoint[0].toFixed(2),
+                            y = item.datapoint[1].toFixed(2);
+
+                    showTooltip(item.pageX, item.pageY, '$' + y*100);
+                }
+            } else {
+                $("#graph-tooltip").remove();
+                previousPoint = null;
+            }
+        });
+    });
+</script>
+
+<!-- SyntaxHighlighter -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<link href="css/prettify.css" rel="stylesheet">
+<!-- Documentation StyleSheet -->
+<link href="css/docs.css" media="screen" rel="stylesheet">
+
+<!--[if lt IE 9]><script src="../skinny-frames-css/js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div class="body-wrap">
+
+    <header class="header-demo">
+        <div class="inner gradient">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="logo"><img src="images/logo.png" alt="" /></div>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <h1>Skinny Frames UI Kit</h1>
+                        <span>Version: 1.0</span>
+                        <span>Last update: 04.12.2013</span>
+                    </div>
+                </div>
+                <!--/ row-->
+            </div>
+            <!--/ container -->
+        </div>
+    </header>
+
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="sidebar-demo hidden-print" role="complementary" data-spy="affix" data-offset-top="200">
+                    <ul class="nav">
+						<li><a href="#about">What is Skinny Frames</a></li>
+						<li><a href="#what-included">What is included</a></li>
+						<li><a href="#browser">Browser support</a></li>
+						<li><a href="#getting-started">Getting Started</a></li>
+						<li><a href="#template">Basic Template</a></li>
+						<li><a href="#typography">Typography</a></li>
+                        <li>
+                            <a href="#buttons">Components</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#buttons">Buttons</a>
+                                    <ul class="nav">
+                                        <li><a href="#buttons-simple">Simple Buttons</a></li>
+                                        <li><a href="#buttons-alternative">Alternative Buttons</a></li>
+                                        <li><a href="#buttons-sized">Different sizes</a></li>
+                                        <li><a href="#buttons-shaped">Shaped Buttons</a></li>
+                                        <li><a href="#buttons-special">Special Buttons</a></li>
+                                        <li><a href="#buttons-input">Buttoned Input</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#ribbons">Ribbons</a></li>
+                                <li><a href="#badges">Badges</a></li>
+                                <li><a href="#rating-stars">Rating Stars</a></li>
+                                <li>
+                                    <a href="#form">Form Elements</a>
+                                    <ul class="nav">
+                                        <li><a href="#form-checkboxes">Checkboxes</a></li>
+                                        <li><a href="#form-radios">Radio Buttons</a></li>
+                                        <li><a href="#form-inputs">Text Inputs</a></li>
+                                        <li><a href="#form-textarea">Textareas</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#progress-bars">Progress bars</a></li>
+                                <li><a href="#range-slider">Range Slider</a></li>
+                                <li>
+                                    <a href="#knobs">Knobs</a>
+                                    <ul class="nav">
+                                        <li><a href="#knobs-volume">Volume</a></li>
+                                        <li><a href="#knobs-balance">Balance</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#navigation">Navigation</a>
+                                    <ul class="nav">
+                                        <li><a href="#website-menu">Website Menu</a></li>
+                                        <li><a href="#dropdown-menu">Dropdown Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#tabs">Tabs</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#forms">Widgets</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#forms">Forms</a>
+                                    <ul class="nav">
+                                        <li><a href="#forms-contact">Contact Form</a></li>
+                                        <li><a href="#forms-search">Search Form</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#pricing">Pricing</a>
+                                    <ul class="nav">
+                                        <li><a href="#pricing-def">Default style</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#content-box">Content Box</a></li>
+                                <li><a href="#message-field">Message Field</a></li>
+                                <li><a href="#audio-player">Audio Player</a></li>
+                                <li>
+                                    <a href="#sliders">Sliders</a>
+                                    <ul class="nav">
+                                        <li><a href="#sliders-image">Image Slider</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#widget-calendar">Calendar</a></li>
+                                <li><a href="#user-profile">User Profile</a></li>
+                                <li><a href="#flot-graph">Graph</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <!-- content -->
+                <div class="content-demo" role="main">
+
+                    <!-- What is this -->
+                    <div class="section-demo">
+                        <h2 id="about">What is Skinny Frames UI Kit</h2>
+
+                        <div class="description">
+                            <p><a href="http://pixelkit.com/kits/modern-ui-kit/" target="_blank">Skinny Frames UI Kit</a> is a number of useful user interface components built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework. We did not modify any line of Bootstrap, so you can safely use Skinny Frames UI Kit in your ongoing project.</p>
+                        </div>
+
+                    </div>
+                    <!--/ What is this -->
+
+                    <!-- What's included -->
+                    <div class="section-demo">
+                        <h2 id="what-included">What is included</h2>
+
+                        <div class="description">
+                            <p>Once purchased, unzip the compressed folder to see the directory structure of Skinny Frames UI Kit. You'll see something like this:</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+skinny-frames
+├───docs
+│   ├───css
+│   ├───images
+│   └───js
+├───skinny-frames-css
+│   ├───css
+│   ├───fonts
+│   │   └───video-js
+│   ├───images
+│   │   ├───icons
+│   │   └───temp
+│   └───js
+│       └───libs
+└───skinny-frames-less
+    ├───fonts
+    │   └───video-js
+    ├───images
+    │   ├───icons
+    │   └───temp
+    ├───js
+    │   └───libs
+    └───less
+        └───bootstrap
+                                    </pre>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <dl class="clearfix">
+                                <dt class="parent">docs/</dt><dd>contains this documentation.</dd>
+                                <dt class="parent">skinny-frames-css/</dt><dd>contains Skinny Frames UI Kit in simple CSS format. Use it to easily start your project.</dd>
+                                <dt>css/</dt><dd>contains all the stylesheets for CSS version of the kit.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for CSS version of the kit.</dd>
+                                <dt>fonts/video-js/</dt><dd>contains Video Player Glyphicons for CSS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for CSS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for CSS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for CSS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for CSS version of the kit.</dd>
+
+                                <dt class="parent">skinny-frames-less/</dt><dd>contains Skinny Frames UI Kit in LESS format. Use it to modify this kit in your project.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for LESS version of the kit.</dd>
+                                <dt>fonts/video-js/</dt><dd>contains Video Player Glyphicons for LESS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for LESS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for LESS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for LESS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for LESS version of the kit.</dd>
+                                <dt>less/</dt><dd>contains all the stylesheets for LESS version of the kit.</dd>
+                            </dl>
+
+                            <p><em>Note:</em> The folders <code>skinny-frames-css</code> and <code>skinny-frames-less</code> is fully independent from each other, including all the images and JS files. You can use the version you prefer without pulling images or JS files from the other version of the kit.</p>
+                        </div>
+                    </div>
+                    <!--/ What's included -->
+
+                    <!-- Browser support -->
+                    <div class="section-demo">
+                        <h2 id="browser">Browser support</h2>
+
+                        <div class="description">
+                            <p>Since <a href="http://pixelkit.com/kits/modern-ui-kit/" target="_blank">Skinny Frames UI Kit</a> is built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework, it supports the same <a href="http://getbootstrap.com/getting-started/#browsers" target="_blank">browsers</a> as Bootstrap.</p>
+                        </div>
+
+                    </div>
+                    <!--/ Browser support -->
+
+                    <!-- Getting Started -->
+                    <div class="section-demo">
+                        <h2 id="getting-started">Getting Started</h2>
+
+                        <div class="description">
+                            <p>To start working with <a href="http://pixelkit.com/kits/modern-ui-kit/" target="_blank">Skinny Frames UI Kit</a> you can use a basic <code>template.html</code>, or take the completely functional pages included in this package. Since it is built on Bootstrap, you can also use it on your project with Bootstrap 3.
+                                <br />
+                                We provide you both CSS and LESS standalone versions which are completely identical in design and functions.
+                            </p>
+                            <p>
+                                <em>CSS Version:</em> You can use CSS version by dropping contents of <code>skinny-frames-css</code> folder to your project folder and including <code>style.css</code> file in your HTML page: <code>&lt;link href="style.css" media="screen" rel="stylesheet"></code>
+                            </p>
+                            <p>
+                                <em>LESS Version:</em> You can find it in <code>skinny-frames-less</code> folder. Use LESS if you want to modify Skinny Frames UI Kit. We built it Bootstrap way so you won't find big difference. Use <code>less/variables.less</code> to modify different styles, use <code>style.less</code> to remove needless components.
+                            </p>
+                            <p>
+                                If you want to start from scratch, the best way is to use <a href="#template">our template</a> where all startup files are already included and ready to be used. You can find <code>template.html</code> file both for CSS and LESS version in their respective folders.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- Getting Started -->
+
+                    <!-- Basic Template -->
+                    <div class="section-demo">
+                        <h2 id="template">Basic Template</h2>
+
+                        <div class="description">
+                            <p>You can use a basic <a href="../skinny-frames-css/template.html" target="_blank">HTML template</a> to write your code, or take completely functional pages included in this package. Basic template as well as completely functional pages are available both for CSS and LESS versions of the Skinny Frames UI Kit.</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!doctype html>
+&lt;!--[if lt IE 7 ]>&lt;html lang="en" class="no-js ie6"> &lt;![endif]-->
+&lt;!--[if IE 7 ]>&lt;html lang="en" class="no-js ie7"> &lt;![endif]-->
+&lt;!--[if IE 8 ]>&lt;html lang="en" class="no-js ie8"> &lt;![endif]-->
+&lt;!--[if IE 9 ]>&lt;html lang="en" class="no-js ie9"> &lt;![endif]-->
+&lt;!--[if (gt IE 9)|!(IE)]>&lt;!-->&lt;html lang="en" class="no-js"> &lt;!--&lt;![endif]-->
+&lt;head>
+    &lt;meta charset="utf-8">
+    &lt;meta name="author" content="">
+    &lt;meta name="keywords" content="">
+    &lt;meta name="viewport" content="width=device-width,initial-scale=1">
+    &lt;title>Skinny Frames | Template&lt;/title>
+
+    &lt;!-- main JS libs -->
+    &lt;script src="js/libs/modernizr.min.js">&lt;/script>
+    &lt;script src="js/libs/jquery-1.10.2.min.js">&lt;/script>
+    &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+    &lt;script src="js/libs/bootstrap.min.js">&lt;/script>
+
+    &lt;!-- Style CSS -->
+    &lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    &lt;link href="style.css" media="screen" rel="stylesheet">
+
+    &lt;!-- General Scripts -->
+    &lt;script src="js/general.js">&lt;/script>
+
+    &lt;!--[if lt IE 9]>&lt;script src="js/respond.min.js">&lt;/script>&lt;![endif]-->
+    &lt;!--[if gte IE 9]>
+    &lt;style type="text/css">
+        .gradient {filter: none !important;}
+    &lt;/style>
+    &lt;![endif]-->
+&lt;/head>
+
+&lt;body>
+    &lt;div class="body-wrap">
+        &lt;!--container-->
+        &lt;div class="container">
+            Start Your Work Here
+        &lt;/div>
+        &lt;!--/ container -->
+    &lt;/div>
+&lt;/body>
+&lt;/html>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Basic Template -->
+
+                    <!-- Typography -->
+                    <div class="section-demo">
+                        <h2 id="typography">Typography</h2>
+
+                        <div class="description">
+                            <p>
+                                Skinny Frames UI Kit uses free <a href="http://www.google.com/fonts#UsePlace:use/Collection:Sanchez" target="_blank">Sanchez</a> webfont available at the <a href="http://www.google.com/fonts" target="_blank">Google Fonts</a>. The global default font-size is 14px, this is applied to the <code>&lt;body></code>. In addition, all <code>&lt;p></code> (paragraphs) receive a bottom margin of 16px.
+                                <br />
+                                Also, all headings, <code>&lt;h1></code> through <code>&lt;h6></code> are available.
+                            </p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <h1>Example (h1)</h1>
+                                <h2>Example (h2)</h2>
+                                <h3>Example (h3)</h3>
+                                <h4>Example (h4)</h4>
+                                <h5>Example (h5)</h5>
+                                <h6>Example (h6)</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;h1>Example (h1)&lt;/h1>
+&lt;h2>Example (h2)&lt;/h2>
+&lt;h3>Example (h3)&lt;/h3>
+&lt;h4>Example (h4)&lt;/h4>
+&lt;h5>Example (h5)&lt;/h5>
+&lt;h6>Example (h6)&lt;/h6>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Typography -->
+
+                    <!-- Buttons -->
+                    <div class="section-demo">
+                        <h2 id="buttons">Buttons</h2>
+
+                        <!--/ Simple Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-simple">Simple Buttons</h3>
+                            <p>Use any of the available button classes to quickly create a simple button.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn"><span>Default</span></a>
+                                <a href="#" class="btn btn-white"><span>White</span></a>
+                                <a href="#" class="btn btn-gray"><span>Gray</span></a>
+                                <a href="#" class="btn btn-round"><span>Rounded</span></a>
+                                <a href="#" class="btn btn-caps"><span>All Capitals</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn">&lt;span>Default&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-white">&lt;span>White&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-gray">&lt;span>Gray&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-round">&lt;span>Rounded&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-caps">&lt;span>All Capitals&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Simple Buttons -->
+
+                        <!--/ Alternative Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-alternative">Alternative Buttons</h3>
+                            <p>Another button style with different colors.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn"><span>Pink</span></a>
+                                <a href="#" class="btn btn-orange"><span>Orange</span></a>
+                                <a href="#" class="btn btn-brown"><span>Brown</span></a>
+                                <a href="#" class="btn btn-green"><span>Green</span></a>
+                                <a href="#" class="btn btn-blue"><span>Blue</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn">&lt;span>Pink&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-orange">&lt;span>Orange&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-brown">&lt;span>Brown&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-green">&lt;span>Green&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-blue">&lt;span>Blue&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Alternative Buttons -->
+
+                        <!-- Button Sizes -->
+                        <div class="description">
+                            <h3 id="buttons-sized">Buttons with Different Sizes</h3>
+                            <p>Four different button sizes available.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn"><span>Default</span></a>
+                                <a href="#" class="btn btn-large"><span>Large</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn">&lt;span>Default&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-large">&lt;span>Large&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Button Sizes -->
+
+                        <!--/ Shaped Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-shaped">Shaped Buttons</h3>
+                            <p>Buttons with left and right pointers.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn btn-left"><span>Prev</span></a>
+                                <a href="#" class="btn btn-middle"><span>Download all files</span></a>
+                                <a href="#" class="btn btn-right"><span>Next</span></a>
+                                
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-left">&lt;span>Prev&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-middle">&lt;span>Download all files&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right">&lt;span>Next&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Shaped Buttons -->
+
+                        <!--/ Buttons with Icons -->
+                        <div class="description">
+                            <h3 id="buttons-special">Special Buttons</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn btn-follow"><span>Follow</span></a>
+                                <a href="#" class="btn btn-send"><span>Send Message</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-follow">&lt;span>Follow&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-send">&lt;span>Send Message&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Buttons with Icons -->
+
+                        <!-- Buttoned Input -->
+                        <div class="description">
+                            <h3 id="buttons-input">Buttoned Input</h3>
+                            <p>Wrap <code>input type="submit"</code> into <code>span</code> and use available button classes to create a styled Input.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <span class="btn"><input type="submit" value="Send Message" /></span>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;span class="btn">&lt;input type="submit" value="Send Message" />&lt;/span>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Buttoned Input -->
+                    </div>
+                    <!--/ Buttons -->
+
+                    <!-- Ribbons -->
+                    <div class="section-demo">
+                        <h2 id="ribbons">Ribbons</h2>
+
+                        <div class="description">
+                            <p>Easily highlight items with Ribbons.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-ribbons">
+                                <div class="ribbon">
+                                    <div class="ribbon-stitches-top"></div>
+                                    <span>Pink Ribbon</span>
+                                </div>
+                                <div class="ribbon ribbon-brown">
+                                    <div class="ribbon-stitches-top"></div>
+                                    <span>Brown Ribbon</span>
+                                </div>
+                                <div class="ribbon ribbon-green">
+                                    <div class="ribbon-stitches-top"></div>
+                                    <span>Green Ribbon</span>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="ribbon">
+    &lt;div class="ribbon-stitches-top">&lt;/div>
+    &lt;span>Pink Ribbon&lt;/span>
+&lt;/div>
+
+&lt;div class="ribbon ribbon-brown">
+    &lt;div class="ribbon-stitches-top">&lt;/div>
+    &lt;span>Brown Ribbon&lt;/span>
+&lt;/div>
+
+&lt;div class="ribbon ribbon-green">
+    &lt;div class="ribbon-stitches-top">&lt;/div>
+    &lt;span>Green Ribbon&lt;/span>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Ribbons -->
+
+                    <!-- Badges -->
+                    <div class="section-demo">
+                        <h2 id="badges">Badges</h2>
+
+                        <div class="description">
+                            <p>Easily highlight items with Badges.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-ribbons">
+                                <!-- .row -->
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-pull-1 col-sm-pull-0 col-xs-offset-1 col-sm-offset-0">
+                            <div class="widget-container widget-text boxed badged">
+                                <div class="inner">
+                                    <div class="badge-top"></div>
+                                    <h3 class="widget-title">Text widget</h3>
+                                    <div class="textwidget">
+                                        <p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate</p>
+                                    </div>
+                                    <div class="badge-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-pull-1 col-sm-pull-0 col-xs-offset-1 col-sm-offset-0">
+                            <div class="widget-container widget-text boxed badged badge-green">
+                                <div class="inner">
+                                    <div class="badge-top"></div>
+                                    <h3 class="widget-title">Text widget</h3>
+                                    <div class="textwidget">
+                                        <p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate</p>
+                                    </div>
+                                    <div class="badge-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-pull-1 col-sm-pull-0 col-xs-offset-1 col-sm-offset-0">
+                            <div class="widget-container widget-text boxed badged badge-brown">
+                                <div class="inner">
+                                    <div class="badge-top"></div>
+                                    <h3 class="widget-title">Text widget</h3>
+                                    <div class="textwidget">
+                                        <p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate</p>
+                                    </div>
+                                    <div class="badge-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--/ .row -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-text boxed badged">
+    &lt;div class="inner">
+        &lt;div class="badge-top">&lt;/div>
+        &lt;h3 class="widget-title">Text widget&lt;/h3>
+        &lt;div class="textwidget">
+        &lt;p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate&lt;/p>
+        &lt;/div>
+        &lt;div class="badge-bottom">&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="widget-container widget-text boxed badged badge-green">
+    &lt;div class="inner">
+        &lt;div class="badge-top">&lt;/div>
+        &lt;h3 class="widget-title">Text widget&lt;/h3>
+        &lt;div class="textwidget">
+        &lt;p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate&lt;/p>
+        &lt;/div>
+        &lt;div class="badge-bottom">&lt;/div>
+    &lt;/div>
+&lt;/div>
+
+&lt;div class="widget-container widget-text boxed badged badge-brown">
+    &lt;div class="inner">
+        &lt;div class="badge-top">&lt;/div>
+        &lt;h3 class="widget-title">Text widget&lt;/h3>
+        &lt;div class="textwidget">
+        &lt;p>Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate&lt;/p>
+        &lt;/div>
+        &lt;div class="badge-bottom">&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Badges -->
+
+                    <!-- Rating Stars -->
+                    <div class="section-demo">
+                        <h2 id="rating-stars">Rating Stars</h2>
+
+                        <div class="description">
+                            <p>Use rating stars for voting.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- Rating Stars -->
+                                <div class="rating clearfix">
+                                    <span class="star on" rel="1"></span>
+                                    <span class="star on" rel="2"></span>
+                                    <span class="star on" rel="3"></span>
+                                    <span class="star off" rel="4"></span>
+                                    <span class="star off" rel="5"></span>
+                                </div>
+                                <!--/ Rating Stars -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="rating clearfix">
+    &lt;span class="star on" rel="1">&lt;/span>
+    &lt;span class="star on" rel="2">&lt;/span>
+    &lt;span class="star on" rel="3">&lt;/span>
+    &lt;span class="star off" rel="4">&lt;/span>
+    &lt;span class="star off" rel="5">&lt;/span>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Rating Stars -->
+
+                    <!-- Form Elements -->
+                    <div class="section-demo">
+                        <h2 id="form">Form Elements</h2>
+
+                        <!-- CheckBoxes -->
+                        <div class="description">
+                            <h3 id="form-checkboxes">Checkboxes</h3>
+                            <p>Use styled checkboxes instead of the usual ones.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Attribute <code>name</code> required for <code>input</code> element.</p>
+                                <p>Styled Checkbox require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-checkbox">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="input_styled checklist">
+                                            <div class="rowCheckbox"><input name="signup" type="checkbox" checked id="signup" value="signup"><label for="signup">Simple Checkbox</label></div>
+                                            <div class="rowCheckbox switch"><input name="signup2" type="checkbox" checked id="signup2" value="signup2"><label for="signup2">Switch</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="input_styled checklist">
+                                            <div class="rowCheckbox label-right"><input name="signup4" type="checkbox" checked id="signup4" value="signup4"><label for="signup4">Text on the Left</label></div>
+                                            <div class="rowCheckbox switch label-right"><input name="signup5" type="checkbox" checked id="signup5" value="signup5"><label for="signup5">Text on the Left</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="input_styled checklist">
+    &lt;div class="rowCheckbox">
+        &lt;input name="signup" type="checkbox" checked id="signup" value="signup">
+        &lt;label for="signup">Simple Checkbox&lt;/label>
+    &lt;/div>
+    
+    &lt;div class="rowCheckbox switch">
+        &lt;input name="signup2" type="checkbox" checked id="signup2" value="signup2">
+        &lt;label for="signup2">Switch&lt;/label>
+    &lt;/div>
+    
+    &lt;div class="rowCheckbox switch-large">
+        &lt;input name="signup3" type="checkbox" checked id="signup3" value="signup3">
+        &lt;label for="signup3">Large Switch&lt;/label>
+    &lt;/div>
+&lt;/div>
+                                    
+&lt;div class="input_styled checklist">
+    &lt;div class="rowCheckbox label-right">
+        &lt;input name="signup4" type="checkbox" checked id="signup4" value="signup4">
+        &lt;label for="signup4">Text on the Left&lt;/label>
+    &lt;/div>
+
+    &lt;div class="rowCheckbox switch label-right">
+        &lt;input name="signup5" type="checkbox" checked id="signup5" value="signup5">
+        &lt;label for="signup5">Text on the Left&lt;/label>
+    &lt;/div>
+
+    &lt;div class="rowCheckbox switch-large label-right">
+        &lt;input name="signup6" type="checkbox" checked id="signup6" value="signup6">
+        &lt;label for="signup6">Text on the Left&lt;/label>
+    &lt;/div>
+&lt;/div>                                    
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ CheckBoxes -->
+
+                        <!-- Radios -->
+                        <div class="description">
+                            <h3 id="form-radios">Radio Buttons</h3>
+                            <p>Use styled radio buttons instead of the usual ones.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Attribute <code>name</code> required for <code>input</code> element.</p>
+                                <p>Styled Radio Button require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.customInput.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-checkbox">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="input_styled radiolist">
+                                            <div class="rowRadio"><input type="radio" name="survey" value="radio_v3" id="radio_v3" checked><label for="radio_v3">Checked</label></div>
+                                            <div class="rowRadio"><input type="radio" name="survey" value="radio_v4" id="radio_v4"><label for="radio_v4">Unchecked</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="input_styled radiolist">
+                                            <div class="rowRadio label-right"><input type="radio" name="survey" value="radio_v5" id="radio_v5"><label for="radio_v5">Text on the Left</label></div>
+                                            <div class="rowRadio label-right"><input type="radio" name="survey" value="radio_v6" id="radio_v6"><label for="radio_v6">Text on the Left</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="input_styled radiolist">
+    &lt;div class="rowRadio">
+        &lt;input type="radio" name="survey" value="radio1" id="radio1" checked>
+        &lt;label for="radio1">Checked&lt;/label>
+    &lt;/div>
+    
+    &lt;div class="rowRadio">
+        &lt;input type="radio" name="survey" value="radio2" id="radio2">
+        &lt;label for="radio2">Unchecked&lt;/label>
+    &lt;/div>
+&lt;/div>
+                                    
+&lt;div class="input_styled radiolist">
+    &lt;div class="rowRadio label-right">
+        &lt;input type="radio" name="survey" value="radio3" id="radio3">
+        &lt;label for="radio3">Text on the Left&lt;/label>
+    &lt;/div>
+    
+    &lt;div class="rowRadio label-right">
+        &lt;input type="radio" name="survey" value="radio4" id="radio4">
+        &lt;label for="radio4">Text on the Left&lt;/label>
+    &lt;/div>
+&lt;/div>                                    
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Radios -->
+
+                        <!-- Text Inputs -->
+                        <div class="description">
+                            <h3 id="form-inputs">Text Inputs</h3>
+                            <p>All Text inputs are styled.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Text Inputs with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_text">
+                                    <input type="text" name="name" id="name" placeholder="Name">
+                                </div>
+                                <div class="field_text omega">
+                                    <input type="text" name="email2" id="email2" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="field_text">
+    &lt;input type="text" name="name" id="name" placeholder="Name">
+&lt;/div>
+
+&lt;div class="field_text omega">
+    &lt;input type="text" name="email" id="email" placeholder="Email">
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Placeholders via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    jQuery(document).ready(function($) {
+        if($("[placeholder]").size() > 0) {
+            $.Placeholder.init();
+        }
+    });
+&lt;/script>
+                                </pre>
+
+                            </div>
+                        </div>
+                        <!--/ Text Inputs -->
+
+                        <!-- TextAreas -->
+                        <div class="description">
+                            <h3 id="form-textarea">Textareas</h3>
+                            <p>All Textareas are styled similar to Text inputs.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Textareas with <code>placeholders</code> require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.powerful-placeholder.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <div class="field_text field_textarea">
+                                    <textarea id="message" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="field_text field_textarea">
+    &lt;textarea id="message" placeholder="Message">&lt;/textarea>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Placeholders via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    jQuery(document).ready(function($) {
+        if($("[placeholder]").size() > 0) {
+            $.Placeholder.init();
+        }
+    });
+&lt;/script>
+                                </pre>
+
+                            </div>
+                        </div>
+                        <!--/ TextAreas -->
+                    </div>
+                    <!--/ Form Elements -->
+
+                    <!-- Progress Bars -->
+                    <div class="section-demo">
+                        <h2 id="progress-bars">Progress Bars</h2>
+
+                        <div class="description">
+                            <p>Use styled Progress Bars on your site.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Progress Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/progressbar.js">&lt;/script>
+                                </pre>
+                            </div>
+
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- Progress Bar -->
+                                <div id="progressBar1" class="progressbar">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="total"></div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+                                    <div class="pbar"></div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar1').anim_progressbar({
+                                            totaltime: 800
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar -->
+
+                                <!-- Progress Bar with Download Bar -->
+                                <div id="progressBar2" class="progressbar styled">
+                                    <span class="mark-left">0%</span>
+                                    <span class="mark-right">100%</span>
+                                    <div class="percent"></div>
+                                    <div class="total"></div>
+                                    <div class="elapsed"></div>
+                                    <div class="remained"></div>
+                                    <div class="pbar">
+                                        <div id="downloadBar2" class="downloadbar">
+                                            <div class="pbar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        $('#progressBar2').anim_progressbar({
+                                            totaltime: 900
+                                        });
+                                        $('#downloadBar2').anim_progressbar({
+                                            totaltime: 600
+                                        });
+                                    });
+                                </script>
+                                <!--/ Progress Bar with Download Bar -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!-- Progress Bar -->
+&lt;div id="progressBar1" class="progressbar">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="total">&lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+    &lt;div class="pbar">&lt;/div>
+&lt;/div>
+
+&lt;!-- Progress Bar with Download Bar -->
+&lt;div id="progressBar2" class="progressbar styled">
+    &lt;span class="mark-left">0%&lt;/span>
+    &lt;span class="mark-right">100%&lt;/span>
+    &lt;div class="percent">&lt;/div>
+    &lt;div class="total">&lt;/div>
+    &lt;div class="elapsed">&lt;/div>
+    &lt;div class="remained">&lt;/div>
+    &lt;div class="pbar">
+        &lt;div id="downloadBar2" class="downloadbar">
+            &lt;div class="pbar">&lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Progress Bars via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(document).ready(function() {
+
+        // Progress Bar
+        $('#progressBar1').anim_progressbar({
+            totaltime: 800
+        });
+
+        // Progress Bar with Download Bar
+        $('#progressBar2').anim_progressbar({
+            totaltime: 900
+        });
+        $('#downloadBar2').anim_progressbar({
+            totaltime: 600
+        });
+        
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Progress Bars -->
+
+                    <!-- Price Range -->
+                    <div class="section-demo">
+                        <h2 id="range-slider">Range Slider</h2>
+
+                        <div class="description">
+                            <p>Range Slider allow users to select a value from a numerical range by simply dragging a slider.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Range Slider require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery.slider.bundle.js">&lt;/script>
+&lt;script src="js/jquery.slider.js">&lt;/script>
+&lt;link rel="stylesheet" href="css/jslider.css">
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item clearfix">
+                                <!-- Range slider -->
+                                <div class="range-slider styled">
+                                    <input id="price-range" type="text" name="price-range" value="240;760">
+                                </div>
+                                <script type="text/javascript" >
+                                    jQuery(document).ready(function($) {
+                                        $("#price-range").rangeslider({
+                                            from: 0,
+                                            to: 1000,
+                                            limits: false,
+                                            scale: ['0$', '1000$'],
+                                            heterogeneity: ['50/500'],
+                                            step: 10,
+                                            smooth: true,
+                                            dimension: '$'
+                                        });
+                                    });
+                                </script>
+                                <!-- Range slider -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="range-slider styled">
+    &lt;input id="price-range" type="text" name="price-range" value="240;760">
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Price Range via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript" >
+    jQuery(document).ready(function($) {
+        $("#price-range").rangeslider({
+            from: 0,
+            to: 1000,
+            limits: false,
+            scale: ['0$', '1000$'],
+            heterogeneity: ['50/500'],
+            step: 10,
+            smooth: true,
+            dimension: '$'
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Price Range -->
+
+                    <!-- Knobs -->
+                    <div class="section-demo">
+                        <h2 id="knobs">Knobs</h2>
+
+                        <div class="description">
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Knob elements require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script type="text/javascript" src="js/knobRot-0.2.2.js">&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+
+                        <!-- Volume Knob -->
+                        <div class="description">
+                            <h3 id="knobs-volume">Volume Knob</h3>
+                            <p>Adjust volume with this element.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- Volume control -->
+                                <div class="widget-knob widget-volume">
+                                    <input type="text" value="100"  autocomplete="off" id="volume" />
+                                    <script type="text/javascript">
+                                        $(document).ready(function() {
+                                            $('#volume').knobRot({
+                                                'classes': ['volume'],
+                                                'dragVertical': false,
+                                                'frameCount': 54,
+                                                'frameWidth': 90,
+                                                'frameHeight': 90,
+                                                'detent': true,
+                                                'detentThreshold': 5,
+                                                'minimumValue': 0,
+                                                'maximumValue': 100,
+                                                'hideInput': true
+                                            });
+                                        });
+                                    </script>
+                                </div>
+                                <!--/ Volume control -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-knob widget-volume">
+    &lt;input type="text" value="100"  autocomplete="off" id="volume" />
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Volume via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(document).ready(function() {
+        $('#volume').knobRot({
+            'classes': ['volume'],
+            'dragVertical': false,
+            'frameCount': 51,
+            'frameWidth': 81,
+            'frameHeight': 81,
+            'detent': true,
+            'detentThreshold': 5,
+            'minimumValue': 0,
+            'maximumValue': 100,
+            'hideInput': true
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Volume Knob -->
+
+                        <!-- Balance Knob -->
+                        <div class="description">
+                            <h3 id="knobs-balance">Balance Knob</h3>
+                            <p>Adjust balance with this element.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- Balance control -->
+                                    <div class="widget-knob widget-balance">
+                                        <input type="text" value="0" autocomplete="off" id="balance" />
+                                        <script type="text/javascript">
+                                            $(document).ready(function() {
+                                                $('#balance').knobRot({
+                                                    'classes': ['balance'],
+                                                    'dragVertical': false,
+                                                    'frameCount': 36,
+                                                    'frameWidth': 90,
+                                                    'frameHeight': 90,
+                                                    'detent': true,
+                                                    'detentThreshold': 2,
+                                                    'minimumValue': -50,
+                                                    'maximumValue': 50,
+                                                    'hideInput': true
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                    <!--/ Balance control -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-knob widget-balance">
+    &lt;input type="text" value="0" autocomplete="off" id="balance" />
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Balance via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(document).ready(function() {
+        $('#balance').knobRot({
+            'classes': ['balance'],
+            'dragVertical': false,
+            'frameCount': 51,
+            'frameWidth': 87,
+            'frameHeight': 87,
+            'detent': true,
+            'detentThreshold': 2,
+            'minimumValue': -50,
+            'maximumValue': 50,
+            'hideInput': true
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Balance Knob -->
+                    </div>
+                    <!--/ Knobs -->
+
+                    <!-- Navigation -->
+                    <div class="section-demo">
+                        <h2 id="navigation">Navigation</h2>
+
+                        <!-- Website Menu -->
+                        <div class="description">
+                            <h3 id="website-menu">Website Menu</h3>
+                            <p>Website menu with dropdown submenu.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- Website Menu -->
+                                <ul class="menu clearfix ">
+                                    <li><a href="#"><span>Home</span></a></li>
+                                    <li><a href="#"><span>About</span></a>
+                                        <ul>
+                                            <li><a href="#">Web design</a></li>
+                                            <li><a href="#">User interface</a></li>
+                                            <li><a href="#">Social media</a>
+                                                <ul>
+                                                    <li><a href="#">Gallery images</a></li>
+                                                    <li><a href="#">OneByOne Slider</a></li>
+                                                    <li><a href="#">Audio Player</a></li>
+                                                    <li><a href="#">Video Player</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><span>Contacts</span></a></li>
+                                    <li><a href="#"><span>Products</span></a></li>
+                                </ul>
+                                <!--/ Website Menu -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;ul class="menu clearfix ">
+    &lt;li>&lt;a href="#">&lt;span>Home&lt;/span>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">&lt;span>About&lt;/span>&lt;/a>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Web design&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">User interface&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Social media&lt;/a>
+                &lt;ul>
+                    &lt;li>&lt;a href="#">Gallery images&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">OneByOne Slider&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Audio Player&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Video Player&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/li>
+    &lt;li>&lt;a href="#">&lt;span>Contacts&lt;/span>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">&lt;span>Products&lt;/span>&lt;/a>&lt;/li>
+&lt;/ul>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Website Menu -->
+
+                        <!-- Dropdown Menu -->
+                        <div class="description">
+                            <h3 id="dropdown-menu">Dropdown Menu</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Dropdown Menu -->
+                                        <div class="dropdown gradient">
+                                            <a id="drop" href="#" role="button" class="dropdown-toggle gradient" data-toggle="dropdown"><span></span>Settings</a>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+                                                <li role="presentation"><a role="menuitem" href="#">Web design</a></li>
+                                                <li role="presentation"><a role="menuitem" href="#">User interface</a></li>
+                                                <li role="presentation"><a role="menuitem" href="#">Social Media</a></li>
+                                                <li role="presentation"><a role="menuitem" href="#">Reminder</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--/ Dropdown Menu -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="dropdown gradient">
+    &lt;a id="drop" href="#" role="button" class="dropdown-toggle gradient" data-toggle="dropdown">&lt;span>&lt;/span>Settings&lt;/a>
+    &lt;ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+        &lt;li role="presentation">&lt;a role="menuitem" href="#">Web design&lt;/a>&lt;/li>
+        &lt;li role="presentation">&lt;a role="menuitem" href="#">User interface&lt;/a>&lt;/li>
+        &lt;li role="presentation">&lt;a role="menuitem" href="#">Social Media&lt;/a>&lt;/li>
+        &lt;li role="presentation">&lt;a role="menuitem" href="#">Reminder&lt;/a>&lt;/li>
+    &lt;/ul>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Website Menu -->
+                    </div>
+                    <!--/ Navigation -->
+
+                    <!-- Tabs -->
+                    <div class="section-demo">
+                        <h2 id="tabs">Tabs</h2>
+
+                        <div class="description">
+                            <p>Add quick, dynamic tab functionality to transition through panes of local content. Two different Tab styles available.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- tabs -->
+                                        <div class="tabs-framed styled">
+                                            <div class="inner">
+                                                <ul class="tabs clearfix">
+                                                    <li class="active"><a href="#events" data-toggle="tab">Events</a></li>
+                                                    <li><a href="#reminder" data-toggle="tab"><sup class="note">3</sup>Reminder</a></li>
+                                                    <li><a href="#starred" data-toggle="tab">Starred</a></li>
+                                                    <li><a href="#archive" data-toggle="tab">Archive</a></li>
+                                                </ul>
+                                                <div class="tab-content boxed">
+                                                    <div class="tab-pane fade in active clearfix" id="events">
+                                                        <div class="tab-image pull-left"><img src="../skinny-frames-css/images/temp/tab-img-5.jpg" alt="" /></div>
+                                                        <h4>4 august 2013</h4>
+                                                        <p>He made his film debut with a minor part in Back to the Future</p>
+                                                        <a href="#" class="btn btn-green"><span>See more</span></a>
+                                                    </div>
+                                                    <div class="tab-pane fade clearfix" id="reminder">
+                                                        <div class="tab-image pull-right"><img src="../skinny-frames-css/images/temp/tab-img-6.jpg" alt="" /></div>
+                                                        <h4>5 November</h4>
+                                                        <p>He made his film debut with a minor part in Back to the Future</p>
+                                                        <a href="#" class="btn btn-green"><span>See more</span></a>
+                                                    </div>
+                                                    <div class="tab-pane fade clearfix" id="starred">
+                                                        <div class="tab-image pull-left"><img src="../skinny-frames-css/images/temp/tab-img-7.jpg" alt="" /></div>
+                                                        <h4>11 October</h4>
+                                                        <p>He made his film debut with a minor part in Back to the Future</p>
+                                                        <a href="#" class="btn btn-green"><span>See more</span></a>
+                                                    </div>
+                                                    <div class="tab-pane fade clearfix" id="archive">
+                                                        <div class="tab-image pull-right"><img src="../skinny-frames-css/images/temp/tab-img-8.jpg" alt="" /></div>
+                                                        <h4>14 September</h4>
+                                                        <p>He made his film debut with a minor part in Back to the Future</p>
+                                                        <a href="#" class="btn btn-green"><span>See more</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ tabs -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!-- tabs -->
+&lt;div class="tabs-framed styled">
+    &lt;div class="inner">
+        &lt;ul class="tabs clearfix">
+            &lt;li class="active">&lt;a href="#events" data-toggle="tab">Events&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#reminder" data-toggle="tab">&lt;sup class="note">3&lt;/sup>Reminder&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#starred" data-toggle="tab">Starred&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#archive" data-toggle="tab">Archive&lt;/a>&lt;/li>
+        &lt;/ul>
+        &lt;div class="tab-content boxed">
+            &lt;div class="tab-pane fade in active clearfix" id="events">
+                &lt;div class="tab-image pull-left">&lt;img src="../skinny-frames-css/images/temp/tab-img-5.jpg" alt="" />&lt;/div>
+                &lt;h4>4 august 2013&lt;/h4>
+                &lt;p>He made his film debut with a minor part in Back to the Future&lt;/p>
+                &lt;a href="#" class="btn btn-green">&lt;span>See more&lt;/span>&lt;/a>
+            &lt;/div>
+            &lt;div class="tab-pane fade clearfix" id="reminder">
+                &lt;div class="tab-image pull-right">&lt;img src="../skinny-frames-css/images/temp/tab-img-6.jpg" alt="" />&lt;/div>
+                &lt;h4>5 November&lt;/h4>
+                &lt;p>He made his film debut with a minor part in Back to the Future&lt;/p>
+                &lt;a href="#" class="btn btn-green">&lt;span>See more&lt;/span>&lt;/a>
+            &lt;/div>
+            &lt;div class="tab-pane fade clearfix" id="starred">
+                &lt;div class="tab-image pull-left">&lt;img src="../skinny-frames-css/images/temp/tab-img-7.jpg" alt="" />&lt;/div>
+                &lt;h4>11 October&lt;/h4>
+                &lt;p>He made his film debut with a minor part in Back to the Future&lt;/p>
+                &lt;a href="#" class="btn btn-green">&lt;span>See more&lt;/span>&lt;/a>
+            &lt;/div>
+            &lt;div class="tab-pane fade clearfix" id="archive">
+                &lt;div class="tab-image pull-right">&lt;img src="../skinny-frames-css/images/temp/tab-img-8.jpg" alt="" />&lt;/div>
+                &lt;h4>14 September&lt;/h4>
+                &lt;p>He made his film debut with a minor part in Back to the Future&lt;/p>
+                &lt;a href="#" class="btn btn-green">&lt;span>See more&lt;/span>&lt;/a>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+&lt;!--/ tabs -->          
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Tabs -->
+
+                    <!-- Forms -->
+                    <div class="section-demo">
+                        <h2 id="forms">Forms</h2>
+
+                        <!-- Contact Form -->
+                        <div class="description">
+                            <h3 id="forms-contact">Contact Form</h3>
+                            <p></p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Contact Form require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link rel="stylesheet" href="css/chosen.css">
+&lt;script src="js/chosen.jquery.min.js" type="text/javascript">&lt;/script>
+&lt;script src="js/nicEdit.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- Contact form -->
+                                        <div class="add-comment styled boxed" id="addcomments">
+                                            <div class="add-comment-title"><h3>Write a message</h3></div>
+                                            <div class="comment-form">
+                                                <!-- Fire Text Editor -->
+                                                <script type="text/javascript">
+                                                    bkLib.onDomLoaded(function() {
+                                                        var myNicEditor = new nicEditor({
+                                                            buttonList : [
+                                                                'bold',
+                                                                'italic',
+                                                                'underline',
+                                                                'forecolor',
+                                                                'left',
+                                                                'center',
+                                                                'right',
+                                                                'justify'
+                                                            ]
+                                                        });
+                                                        myNicEditor.panelInstance('nicedit-message');
+
+                                                        jQuery('#commentForm .link-reset').click(function(){
+                                                            myNicEditor.removeInstance('nicedit-message');
+                                                            jQuery('#nicedit-message').val('');
+                                                            myNicEditor.panelInstance('nicedit-message');
+                                                        });
+                                                    });
+                                                </script>
+                                                <form action="#" method="post" id="commentForm">
+                                                    <div class="form-inner">
+                                                        <div class="field_select">
+                                                            <label for="contact-name" class="label_title">Name:</label>
+                                                            <select name="contact-name" id="contact-name" multiple data-placeholder="Select Name">
+                                                                <option value='example1@gmail.com'>Mike Charley</option>
+                                                                <option value='example2@gmail.com'>Andy Lurs</option>
+                                                                <option value='example3@gmail.com'>Toby Lightman</option>
+                                                                <option value='example4@gmail.com'>Lene Marlin</option>
+                                                                <option value='example5@gmail.com'>Deep Purple</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="field_text lightPlaceholder">
+                                                            <label for="subject" class="label_title">Subject:</label>
+                                                            <input type="text" name="subject" id="subject" value="" placeholder="ex. Electrosoul system" />
+                                                        </div>
+                                                        <div class="field_text field_textarea">
+                                                            <label for="nicedit-message" class="label_title">Message:</label>
+                                                            <textarea name="nicedit-message" id="nicedit-message"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rowSubmit">
+                                                        <a onclick="document.getElementById('commentForm').reset(); return false" href="#" class="link-reset btn btn-middle btn-gray"><span>Discard</span></a>
+                                                        <span class="btn btn-send"><input type="submit" id="send" value="Send Message" /></span>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--/ Contact form -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="add-comment styled boxed" id="addcomments">
+    &lt;div class="add-comment-title">&lt;h3>Write a message&lt;/h3>&lt;/div>
+    &lt;div class="comment-form">
+        &lt;form action="#" method="post" id="commentForm">
+            &lt;div class="form-inner">
+                &lt;div class="field_select">
+                    &lt;label for="contact-name" class="label_title">Name:&lt;/label>
+                    &lt;select name="contact-name" id="contact-name" multiple data-placeholder="Select Name">
+                        &lt;option value='example1@gmail.com'>Mike Charley&lt;/option>
+                        &lt;option value='example2@gmail.com'>Andy Lurs&lt;/option>
+                        &lt;option value='example3@gmail.com'>Toby Lightman&lt;/option>
+                        &lt;option value='example4@gmail.com'>Lene Marlin&lt;/option>
+                        &lt;option value='example5@gmail.com'>Deep Purple&lt;/option>
+                    &lt;/select>
+                &lt;/div>
+                &lt;div class="field_text lightPlaceholder">
+                    &lt;label for="subject" class="label_title">Subject:&lt;/label>
+                    &lt;input type="text" name="subject" id="subject" value="" placeholder="ex. Electrosoul system" />
+                &lt;/div>
+                &lt;div class="field_text field_textarea">
+                    &lt;label for="nicedit-message" class="label_title">Message:&lt;/label>
+                    &lt;textarea name="nicedit-message" id="nicedit-message">&lt;/textarea>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="rowSubmit">
+                &lt;a onclick="document.getElementById('commentForm').reset(); return false" href="#" class="link-reset btn btn-middle btn-gray">&lt;span>Discard&lt;/span>&lt;/a>
+                &lt;span class="btn btn-send">&lt;input type="submit" id="send" value="Send Message" />&lt;/span>
+            &lt;/div>
+        &lt;/form>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Contact Form via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    
+    // Chosen
+    jQuery(document).ready(function() {
+        jQuery('#contact-name').chosen({ width: "100%" });
+        jQuery('#commentForm .link-reset').click(function(){
+            jQuery("#contact-name").trigger("chosen:updated");
+        });
+    });
+
+    // NicEdit
+    bkLib.onDomLoaded(function() {
+        var myNicEditor = new nicEditor({
+            buttonList : [
+                'bold',
+                'italic',
+                'underline',
+                'forecolor',
+                'left',
+                'center',
+                'right',
+                'justify'
+            ]
+        });
+        myNicEditor.panelInstance('nicedit-message');
+
+        jQuery('#commentForm .link-reset').click(function(){
+            myNicEditor.removeInstance('nicedit-message');
+            jQuery('#nicedit-message').val('');
+            myNicEditor.panelInstance('nicedit-message');
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Contact Form -->
+
+                        <!-- Search Form -->
+                        <div class="description">
+                            <h3 id="forms-search">Search Form</h3>
+                            <p>Two different styles available.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- search widget -->
+                                        <div class="widget-container widget-search boxed">
+                                            <div class="inner">
+                                                <form method="get" id="searchform" action="#">
+                                                    <span class="btn btn-middle btn-gray"><input type="submit" value="Search" /></span>
+                                                    <div class="field_text"><input name="search" value="" type="text" placeholder="Type word here" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--/ search widget -->
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <!-- search widget -->
+                                        <div class="widget-container widget-search boxed styled">
+                                            <div class="inner">
+                                                <form method="get" id="searchform2" action="#">
+                                                    <span class="btn btn-middle btn-caps"><input type="submit" value="Search" /></span>
+                                                    <div class="field_text lightPlaceholder"><input name="search2" value="" type="text" placeholder="Type word here" /></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--/ search widget -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!-- Widget Search Default style -->
+&lt;div class="widget-container widget-search boxed">
+    &lt;div class="inner">
+        &lt;form method="get" id="searchform" action="#">
+            &lt;span class="btn btn-middle btn-gray">
+                &lt;input type="submit" value="Search" />
+            &lt;/span>
+            &lt;div class="field_text">
+                &lt;input name="search" value="" type="text" placeholder="Type word here" />
+            &lt;/div>
+        &lt;/form>
+    &lt;/div>
+&lt;/div>
+                                    
+&lt;!-- Widget Search Alternative style -->
+&lt;div class="widget-container widget-search boxed styled">
+    &lt;div class="inner">
+        &lt;form method="get" id="searchform2" action="#">
+            &lt;span class="btn btn-middle btn-caps">
+                &lt;input type="submit" value="Search" />
+            &lt;/span>
+            &lt;div class="field_text lightPlaceholder">
+                &lt;input name="search2" value="" type="text" placeholder="Type word here" />
+            &lt;/div>
+        &lt;/form>
+    &lt;/div>
+&lt;/div>                                    
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Search Form -->
+                    </div>
+                    <!--/ Forms -->
+
+                    <!-- Pricing List Style 1 -->
+                        <div class="description">
+                            <p>
+                                Use pricing items to announce prices for your services. Three different pricing styles available. Add class <code>col_active</code> to <code>price_col</code> to highlight pricing item. Add color class to <code>price_col</code> class to change item color.
+                                <br />Available color classes are the next: <code>price_col_green</code>, <code>price_col_blue</code>, <code>price_col_purple</code>.
+                            </p>
+                            <h3 id="pricing-def">Pricing Items default style</h3>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- pricing1-->
+                                <div class="pricing_box price_style1">
+                                    <ul>
+                                       <li class="price_col price_col_green">
+                                            <!--pricing item-->
+                                            <div class="price_item">
+                                                <div class="inner">
+                                                    <div class="price_col_head">
+                                                        <div class="price_col_head_inner">
+                                                        <span class="price"><em>$</em><span>/month</span>99</span>
+                                                      </div>
+                                                    </div>
+                                                    <div class="price_col_body clearfix">
+                                                        <div class="price_body_inner">
+                                                            <div class="price_body_top">
+                                                                <strong>Basic</strong>
+                                                                <span>All important futures for work</span>
+                                                            </div>
+                                                            <ul>
+                                                                <li>250 SKU’s</li>
+                                                                <li>1 GB Storage</li>
+                                                                <li>3,5% transaction fee</li>
+                                                            </ul>
+                                                            <div class="sign_up left"><a href="#" class="btn btn-caps"><span>Try a Week</span></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/ pricing-item -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/ pricing1-->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="pricing_box price_style1">
+    &lt;ul>
+        &lt;li class="price_col price_col_green">
+            &lt;div class="price_item">
+                &lt;div class="inner">
+                    &lt;div class="badge badge-popular">&lt;/div>
+                    &lt;div class="price_col_head">
+                        &lt;span class="price">
+                            &lt;em>$&lt;/em>99&lt;sup>99&lt;/sup>&lt;span>/month&lt;/span>
+                        &lt;/span>
+                    &lt;/div>
+                    &lt;div class="price_col_body clearfix">
+                        &lt;div class="price_body_inner">
+                            &lt;div class="price_body_top">
+                                &lt;strong>Basic&lt;/strong>
+                                &lt;span>All important futures for work&lt;/span>
+                            &lt;/div>
+                            &lt;ul>
+                                &lt;li>250 SKU’s&lt;/li>
+                                &lt;li>1 GB Storage&lt;/li>
+                                &lt;li>3,5% transaction fee&lt;/li>
+                            &lt;/ul>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="price_col_foot">
+                        &lt;div class="sign_up">
+                            &lt;a href="#" class="btn btn-gray">
+                                &lt;span>Try a Week&lt;/span>
+                            &lt;/a>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Pricing List Style 1 -->
+
+                    <!-- Content Box -->
+                    <div class="section-demo">
+                        <h2 id="content-box">Content Box</h2>
+
+                        <div class="description">
+                            <p>Use titled box to display different content.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item content-box-demo">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- widget -->
+                                        <div class="widget-container boxed border-top pink">
+                                            <div class="inner">
+                                                <h3 class="widget-title">Widget Title</h3>
+
+                                            </div>
+                                        </div>
+                                        <!-- /widget -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container boxed border-top pink">
+    &lt;div class="inner">
+        &lt;h3 class="widget-title">Widget Title&lt;/h3>
+        &lt;!-- place your content here -->
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Content Box -->
+
+                    <!-- Message Field -->
+                    <div class="section-demo">
+                        <h2 id="message-field">Message Field</h2>
+
+                        <div class="description">
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- post comments -->
+                                <div class="comment-list message-field">
+                                    <ol>
+                                        <li class="comment">
+                                            <div class="comment-avatar">
+                                                <div class="avatar"><img src="../skinny-frames-css/images/temp/avatar9.png" alt="" /></div>
+                                            </div>
+                                            <div class="comment-body">
+                                                <div class="comment-text">
+                                                    <div class="comment-author"><a href="#" class="link-author">Elijah Wood</a></div>
+                                                    <div class="comment-entry">He made his film debut with a minor part in Back to the Future Part II (1989), then landed a succession.</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!--/ post comments -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="comment-list message-field">
+    &lt;ol>
+        &lt;li class="comment">
+            &lt;div class="comment-body">
+                &lt;div class="comment-avatar">
+                    &lt;div class="avatar">
+                        &lt;img src="images/temp/avatar5.png" alt="" />
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="comment-text">
+                    &lt;div class="comment-author">
+                        &lt;a href="#" class="link-author">Elijah Wood&lt;/a>
+                    &lt;/div>
+                    &lt;div class="comment-entry">
+                        He made his film debut with a minor part in Back to the Future Part II (1989), then landed a succession. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/li>
+    &lt;/ol>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Message Field -->
+
+                    <!-- Audio Player -->
+                    <div class="section-demo">
+                        <h2 id="audio-player">Audio Player</h2>
+
+                        <div class="description">
+                            <p>Use jPlayer to play audio content.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Audio Player require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link href="css/jplayer.css" rel="stylesheet">
+&lt;script src="js/jquery.jplayer.min.js">&lt;/script>
+&lt;script src="js/jplayer.playlist.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <!-- Widget Audio Player -->
+                                            <div class="widget-container widget-audio boxed">
+                                                <!-- jplayer-->
+                                                <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                                                <div id="jp_container_1" class="jp-audio">
+                                                    <div class="jp-gui jp-interface">
+                                                        <div class="jp-controls">
+                                                            <div class="song-title"></div>
+                                                            <div class="jp-current-time"></div>
+                                                            <span class="separate">/</span>
+                                                            <div class="jp-duration"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        <div class="jp-controls jp-buttons">
+                                                            <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a><!--
+                                                        --><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a><!--
+                                                        --><a href="javascript:;" class="jp-previous disabled" tabindex="1"><span class="glyphicon glyphicon-fast-backward"></span></a><!--
+                                                        --><a href="javascript:;" class="jp-play" tabindex="1"><span class="glyphicon glyphicon-play"></span></a><!--
+                                                        --><a href="javascript:;" class="jp-pause" tabindex="1"><span class="glyphicon glyphicon-pause"></span></a><!--
+                                                        --><a href="javascript:;" class="jp-next" tabindex="1"><span class="glyphicon glyphicon-fast-forward"></span></a><!--
+                                                        --><a href="javascript:;" class="jp-stop" tabindex="1">stop</a><!--
+                                                        --><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a><!--
+                                                        --><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a><!--
+                                                        --><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a><!--
+                                                        --><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a><!--
+                                                        --><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a>
+                                                        </div>
+                                                        <div class="jp-volume-bar">
+                                                            <div class="jp-volume-bar-value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="jp-time-line">
+                                                        <div class="jp-progress">
+                                                            <div class="jp-seek-bar">
+                                                                <div class="jp-play-bar">
+                                                                    <div class="jp-seek-handle"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="jp-playlist">
+                                                        <ul class="jp-playlist-inner">
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="jp-no-solution">
+                                                        <span>Update Required</span>
+                                                        <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                                    </div>
+                                                </div>
+                                                <!--/ jplayer-->
+                                            </div>
+                                            <!-- Widget Audio Player -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-audio boxed">
+    &lt;div id="jquery_jplayer_1" class="jp-jplayer">&lt;/div>
+    &lt;div id="jp_container_1" class="jp-audio">
+        &lt;div class="jp-gui jp-interface">
+            &lt;div class="jp-controls">
+                &lt;div class="song-title">&lt;/div>
+                &lt;div class="jp-current-time">&lt;/div>
+                &lt;div class="jp-duration">&lt;/div>
+                &lt;div class="clear">&lt;/div>
+                &lt;div class="jp-progress">
+                    &lt;div class="jp-seek-bar">
+                        &lt;div class="jp-play-bar gradient">
+                            &lt;div class="jp-seek-handle">&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="jp-controls jp-buttons">
+                &lt;a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-previous disabled" tabindex="1">previous&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-play" tabindex="1">play&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-pause" tabindex="1">pause&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-next" tabindex="1">next&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-stop" tabindex="1">stop&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle&lt;/a>&lt;!--
+                -->&lt;a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off&lt;/a>
+            &lt;/div>
+            &lt;div class="jp-volume-bar">
+                &lt;div class="jp-volume-bar-value">&lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="jp-playlist">
+            &lt;ul class="jp-playlist-inner">
+                &lt;li>&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+        &lt;div class="jp-no-solution">
+            &lt;span>Update Required&lt;/span>
+            &lt;a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin&lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Audio Player via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    //&lt;![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"&lt;span class='item-artist'>Rihanna - &lt;/span>&lt;span class='item-song'>Only Girl&lt;/span>&lt;img class='item-image' src='images/temp/music-player-4.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"&lt;span class='item-artist'>Yaki Da - &lt;/span>&lt;span class='item-song'>Dancing&lt;/span>&lt;img class='item-image' src='images/temp/music-player-5.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"&lt;span class='item-artist'>Pandora - &lt;/span>&lt;span class='item-song'>Sands of Time&lt;/span>&lt;img class='item-image' src='images/temp/music-player-6.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Audio Player -->
+
+                    <!-- Sliders -->
+                    <div class="section-demo">
+                        <h2 id="sliders">Sliders</h2>
+
+                        <!-- Image Slider -->
+                        <div class="description">
+                            <h3 id="sliders-image">Image Slider</h3>
+                            <p>This slideshow is based on Bootstrap's <code>carousel.js</code></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                                        <!-- Image Slider -->
+                                        <div class="widget-container widget-gallery boxed">
+                                            <div class="inner">
+                                                <div id="myCarousel3" class="carousel slide" data-interval="20000">
+                                                    <!-- Carousel items -->
+                                                    <div class="carousel-inner">
+                                                        <div class="active item">
+                                                            <a href="#"><img src="../skinny-frames-css/images/temp/post-img-1.jpg" alt="" /></a>
+                                                            <div class="carousel-desc gradient"><strong>Brave</strong><span>&laquo;Change your fate.&raquo;</span></div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <a href="#"><img src="../skinny-frames-css/images/temp/post-img-2.jpg" alt="" /></a>
+                                                            <div class="carousel-desc gradient"><strong>Ice Age</strong><span>&laquo;Change your fate.&raquo;</span></div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <a href="#"><img src="../skinny-frames-css/images/temp/post-img-3.jpg" alt="" /></a>
+                                                            <div class="carousel-desc gradient"><strong>Horton</strong><span>&laquo;Change your fate.&raquo;</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Carousel indicators -->
+                                                    <ol class="carousel-indicators">
+                                                        <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+                                                        <li data-target="#myCarousel3" data-slide-to="1"></li>
+                                                        <li data-target="#myCarousel3" data-slide-to="2"></li>
+                                                    </ol>
+                                                    <!-- Carousel nav -->
+                                                    <a class="carousel-control left" href="#myCarousel3" data-slide="prev"></a>
+                                                    <a class="carousel-control right" href="#myCarousel3" data-slide="next"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ Image Slider -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;div class="widget-container widget-gallery boxed">
+    &lt;div class="inner">
+        &lt;div id="myCarousel3" class="carousel slide" data-interval="20000">
+            &lt;!-- Carousel items -->
+            &lt;div class="carousel-inner">
+                &lt;div class="active item">
+                    &lt;a href="#">
+                        &lt;img src="images/temp/post-img-1.jpg" alt="" />
+                    &lt;/a>
+                    &lt;div class="carousel-desc gradient">
+                        &lt;strong>Brave&lt;/strong>
+                        &lt;span>&laquo;Change your fate.&raquo;&lt;/span>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="item">
+                    &lt;a href="#">
+                        &lt;img src="images/temp/post-img-2.jpg" alt="" />
+                    &lt;/a>
+                    &lt;div class="carousel-desc gradient">
+                        &lt;strong>Ice Age&lt;/strong>
+                        &lt;span>&laquo;Change your fate.&raquo;&lt;/span>
+                    &lt;/div>
+                &lt;/div>
+                ...
+                ...
+                ...
+            &lt;/div>
+            &lt;!-- Carousel indicators -->
+            &lt;ol class="carousel-indicators">
+                &lt;li data-target="#myCarousel3" data-slide-to="0" class="active">&lt;/li>
+                &lt;li data-target="#myCarousel3" data-slide-to="1">&lt;/li>
+                ...
+                ...
+                ...
+            &lt;/ol>
+            &lt;!-- Carousel nav -->
+            &lt;a class="carousel-control left" href="#myCarousel3" data-slide="prev">&lt;/a>
+            &lt;a class="carousel-control right" href="#myCarousel3" data-slide="next">&lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                    </pre>
+                            </div>
+                        </div>
+                        <!--/ Image Slider -->
+                    </div>
+                    <!--/ Sliders -->
+
+                    <!-- Calendar -->
+                    <div class="section-demo">
+                        <h2 id="widget-calendar">Calendar</h2>
+
+                        <div class="description">
+                            <p>Calendar allow users to select multiple dates. Two different styles available.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Calendar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+&lt;script src="js/jquery-ui.multidatespicker.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- widget calendar-->
+                                        <div class="widget-container widget-calendar boxed">
+                                            <div class="inner">
+                                                <input type="text" name="date_departure" class="inputField" value="" id="date_departure">
+                                                <script>
+                                                    // <![CDATA[
+                                                    jQuery(document).ready(function($) {
+                                                        var daysRange = 5;
+
+                                                        function assignCalendar(id){
+                                                            $('<div class="calendar" />')
+                                                                    .insertAfter( $(id) )
+                                                                    .multiDatesPicker({
+                                                                        dateFormat: 'yy-mm-dd',
+                                                                        minDate: new Date(),
+                                                                        maxDate: '+1y',
+                                                                        altField: id,
+                                                                        firstDay: 1,
+                                                                        showOtherMonths: true
+                                                                    }).prev().hide();
+                                                        }
+
+                                                        assignCalendar('#date_departure');
+                                                    });
+                                                    // ]]>
+                                                </script>
+                                            </div>
+                                        </div>
+                                        <!--/ widget calendar-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+
+&lt;!-- Widget Calendar default style -->                                    
+&lt;div class="widget-container widget-calendar boxed">
+    &lt;div class="inner">
+        &lt;input type="text" name="date_departure" class="inputField" value="" id="date_departure">
+    &lt;/div>
+&lt;/div>
+                                 
+                                </pre>
+
+                                <div class="fire-js">Enable Calendar via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    // &lt;![CDATA[
+    jQuery(document).ready(function($) {
+        var daysRange = 5;
+
+        function assignCalendar(id){
+            $('&lt;div class="calendar" />')
+                    .insertAfter( $(id) )
+                    .multiDatesPicker({
+                        dateFormat: 'yy-mm-dd',
+                        minDate: new Date(),
+                        maxDate: '+1y',
+                        altField: id,
+                        firstDay: 1,
+                        showOtherMonths: true
+                    }).prev().hide();
+        }
+
+        assignCalendar('#date_departure');
+    });
+    // ]]>
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Calendar -->
+
+                    <!-- User Profile -->
+                    <div class="section-demo">
+                        <div class="description">
+                            <h2 id="user-profile">User Profile</h2>
+                            <p>Display information about user in a styled box.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- Profile -->
+                                        <div class="widget-container widget-profile boxed">
+                                            <div class="inner clearfix">
+                                                <div class="avatar"><img src="../skinny-frames-css/images/temp/avatar.png" alt="" /></div>
+                                                <h5>Bradley Cooper</h5>
+                                                <span class="subtitle">Сomedian actor</span>
+                                                <div class="follow">
+                                                    <a href="#" class="btn btn-follow"><span>Follow</span></a>
+                                                    <div class="followers pull-right">
+                                                        <strong>1687</strong>
+                                                        <span>followers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ Profile -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-profile boxed">
+    &lt;div class="inner clearfix">
+        &lt;div class="avatar">
+            &lt;img src="images/temp/avatar.png" alt="" />
+        &lt;/div>
+        &lt;h5>Bradley Cooper&lt;/h5>
+        &lt;span class="subtitle">Сomedian actor&lt;/span>
+        &lt;div class="follow">
+            &lt;a href="#" class="btn btn-follow">&lt;span>Follow&lt;/span>&lt;/a>
+            &lt;div class="followers">
+                &lt;strong>1687&lt;/strong>
+                &lt;span>followers&lt;/span>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ User Profile -->
+
+                    <!-- Simple Graph -->
+                    <div class="section-demo">
+                        <h2 id="flot-graph">Simple Graph</h2>
+
+                        <div class="description">
+                            <p>Build graphs with Flot - attractive JavaScript plotting for jQuery.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Flot require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;!--[if lte IE 8]>
+    &lt;script type="text/javascript" src="js/excanvas.min.js">&lt;/script>
+&lt;![endif]-->
+&lt;script type="text/javascript" src="js/jquery.flot.js">&lt;/script>
+&lt;script type="text/javascript" src="js/jquery.flot.resize.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <!-- Simple Graph -->
+                                        <div class="widget-container widget-graph boxed">
+                                            <div class="inner">
+                                                <div id="graph" class="graph"></div>
+                                            </div>
+                                        </div>
+                                        <!--/ Simple Graph -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-graph boxed">
+    &lt;div class="inner">
+        &lt;div id="graph" class="graph">&lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Graph via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script type="text/javascript">
+    $(function() {
+        var graphwidth = $('.widget-graph .inner').width();
+        $('.widget-graph .graph').css('height', parseInt(graphwidth/1.6));
+        $(window).resize(function() {
+            graphwidth = $('.widget-graph .inner').width();
+            $('.widget-graph .graph').css('height', parseInt(graphwidth/1.6));
+        });
+
+        var d1 = [[0, 9], [1, 23], [1.6, 8], [2.2, 24], [2.8, 18], [4, 36]],
+        graphholder = $("#graph"),
+        plot = $.plot(graphholder, [d1], {
+            colors: ["#ee5190", "#ee5190", "#ee5190", "#ee5190", "#ee5190"],
+            xaxis: {
+                min: null,
+                max: null
+            },
+            yaxis: {
+                autoscaleMargin: 0.02
+            },
+            series: {
+                lines: {
+                    show: true,
+                    lineWidth: 2,
+                    fill: true,
+                    fillColor: "rgba(255,168,0,0.11)"
+                },
+                points: {
+                    show: true,
+                    radius: 5,
+                    lineWidth: 2,
+                    fillColor: "#fff"
+                },
+                shadowSize: 0
+            },
+            grid: {
+                hoverable: true,
+                clickable: true,
+                margin: 15,
+                color: "#333",
+                borderColor: "#e5e5e5"
+            }
+        });
+
+        function showTooltip(x, y, contents) {
+            $("&lt;div id='graph-tooltip'>" + contents + "&lt;/div>").css({top: y - 60, left: x - 28}).appendTo("body").fadeIn(200);
+        }
+
+        var previousPoint = null;
+        graphholder.on("plothover", function (event, pos, item) {
+
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+
+                    previousPoint = item.dataIndex;
+
+                    $("#graph-tooltip").remove();
+                    var x = item.datapoint[0].toFixed(2),
+                            y = item.datapoint[1].toFixed(2);
+
+                    showTooltip(item.pageX, item.pageY, '$' + y*100);
+                }
+            } else {
+                $("#graph-tooltip").remove();
+                previousPoint = null;
+            }
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Simple Graph -->
+
+                </div>
+                <!--/ content -->
+            </div>
+        </div>
+        <!--/ row-->
+    </div>
+    <!--/ container -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/*
+  - General Styles
+  - Clear Floats
+  - Boxes
+  - Layout on Index Page
+*/
+
+
+
+/*-----------------------------------*/
+/* General Styles */
+/*-----------------------------------*/
+
+body {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: 400;
+  color: @font-color;
+  position: relative;
+  background: #fafaf6;
+}
+.body-wrap {
+  background:#ededed
+}
+::-moz-selection {
+  background: #ccc;
+  color: #000;
+  text-shadow: none;
+}
+::selection {
+  background: #ccc;
+  color: #333;
+  text-shadow: none;
+}
+a {color: @link-color;}
+a:hover, a:focus {color: @link-color-hover; text-decoration: none;}
+a:active {background-color: transparent;}
+
+input, textarea, input[type="submit"]:focus, div {
+  outline: none;
+  font-family: @font-family;
+}
+button, input, select, textarea {vertical-align: top; margin: 0;}
+
+.alpha{margin-left:0 !important;}
+.omega{margin-right:0 !important;}
+
+/*-----------------------------------*/
+/* Clear Floats */
+/*-----------------------------------*/
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear {
+  background: none;
+  border: 0;
+  clear: both;
+  display: block;
+  float: none;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/*-----------------------------------*/
+/* Boxes */
+/*-----------------------------------*/
+
+.content, .sidebar {padding:0 0 20px;}
+#middle {position: relative; z-index: 0;}
+#middle.sidebar-left > .container > .row > .col-sm-8{float:right;}
+
+.boxed {
+    background: #fff;
+    margin-bottom:65px;
+    position: relative;
+    z-index: 0;
+}
+
+.boxed > .inner {padding: 22px 24px 22px;}
+
+@media (max-width: 479px), (min-width: 768px) and (max-width: 991px) {
+    .boxed > .inner {padding: 20px 10px;}
+}
+
+/*-------------------------------------------*/
+/* Layout on Index Page */
+/*-------------------------------------------*/
+
+.knobs {text-align: center;}
+@media (min-width: 768px) {
+  .knobs h6 {margin-bottom: 5px;}
+  .knobs h6.last {margin-top: 0;}
+}
+.badges {margin-bottom: 30px;}
+.badges .badge {margin-right: -10px;}
+.ribbons {padding-top: 16px; position: relative;}
+.ribbons:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 34px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.16) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.16)));
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.16) 100%);
+  background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.16) 100%);
+  background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.16) 100%);
+  background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.16) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#29000000',GradientType=1 );
+}
+.ribbons .ribbon{margin-bottom: 12px; min-width: 100%;}
+
+.checkboxes h6.last {margin-top: 20px;}
+
+
+/*-------------------------------------------*/
+/* BORDERS */
+/*-------------------------------------------*/
+
+.border-top {
+  border:0;
+  border-top:4px solid transparent;
+}
+
+.border-left {
+  border:0;
+  border-left:4px solid transparent;
+}
+
+.border-right {
+  border:0;
+  border-right:4px solid transparent;
+}
+
+.border-bottom {
+  border:0;
+  border-bottom:4px solid transparent;
+}
+
+[class^="border-"].yellow,
+[class*=" border-"].yellow {
+  border-color:#ffa800;
+}
+
+[class^="border-"].pink,
+[class*=" border-"].pink {
+  border-color:#f26ea1;
+}
+
+[class^="border-"].green,
+[class*=" border-"].green {
+  border-color:#c1ca00;
+}
+
+[class^="border-"].blue,
+[class*=" border-"].blue {
+  border-color:#0cc3d9;
+}

@@ -1,0 +1,35 @@
+/*-----------------------------------*/
+/* Rating Stars */
+/*-----------------------------------*/
+
+.rate {
+  display: inline-block;
+  width: 130px;
+  height: 22px;
+  background-image:url(images/icons/rate.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+.rate.rate-1 {background-position:center -25px;}
+.rate.rate-2 {background-position:center -50px;}
+.rate.rate-3 {background-position:center -75px;}
+.rate.rate-4 {background-position:center -100px;}
+.rate.rate-5 {background-position:center -125px;}
+
+.rating {margin-bottom: 30px;}
+.rating span.star {display:block; float:left; width:24px; height:22px; padding-right: 2px; background-repeat: no-repeat;}
+.rating span.off {background-image: url(images/icons/star-off.png);}
+.rating span.on,
+.rating span.star:hover,
+.rating span.over {background-image: url(images/icons/star-on.png); cursor:pointer;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .rate {
+        background-image: url(images/icons/rate-x2.png);
+        background-size: 130px auto;
+    }
+    .rating span.off {background-image: url(images/icons/star-off-x2.png); background-size: 19px auto;}
+    .rating span.on,
+    .rating span.star:hover,
+    .rating span.over {background-image: url(images/icons/star-on-x2.png); background-size: 19px auto;}
+}

@@ -1,0 +1,136 @@
+.chosen-disabled {opacity: 0.5 !important; cursor: default !important;}
+
+.chosen-container {
+    position: relative;
+    background: #ebebeb;
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.15);
+}
+.chosen-drop {
+    position: absolute;
+    top: 100%;
+    left: -9999px;
+    z-index: 999;
+    margin-top: 2px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    background: #fff;
+}
+.chosen-with-drop .chosen-drop {left: -1px; right: -1px;}
+
+/* Selected List */
+.chosen-choices {
+    position: relative;
+    overflow: hidden;
+    cursor: text;
+    padding-right: 30px;
+}
+.chosen-choices:after {
+    content: '\2b';
+    font-family: 'Glyphicons Halflings';
+    font-size: 10px;
+    color: #ebebeb;
+    line-height: 22px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #a4a2a2;
+}
+.chosen-choices li {float: left;}
+
+.chosen-choices li.search-field {
+    padding-left: 12px;
+    white-space: nowrap;
+}
+.chosen-choices li.search-field input {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none !important;
+    background: transparent !important;
+    filter:none;
+    box-shadow: none;
+    height: 31px;
+    font-size: 15px;
+    color: #3a3a3a;
+    box-shadow:none !important
+}
+.chosen-choices li.search-choice {
+    position: relative;
+    margin: 2px;
+    padding: 0 20px 0 12px;
+    font-size: 14px;
+    color: #fff;
+    height: 27px;
+    line-height: 26px;
+    cursor: default;
+    background: #ee5190;
+}
+.chosen-choices .search-choice-close {
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    opacity: .5;
+    font-size: 10px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.36);
+}
+.chosen-choices .search-choice-close:before {
+    content: '\e014';
+    font-family: 'Glyphicons Halflings';
+}
+.chosen-choices .search-choice-close:hover {opacity: 1;}
+
+/* Dropdown List */
+.chosen-results {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 180px;
+    -webkit-overflow-scrolling: touch;
+}
+.chosen-results li {
+    display: none;
+    margin: 0;
+    padding: 6px 13px;
+    font-size: 13px;
+    color: #786e55;
+}
+.chosen-results li:first-child {border-radius: 4px 4px 0 0;}
+.chosen-results li:last-child {border-radius: 0 0 4px 4px;}
+
+.chosen-results li.highlighted {
+    color: #fff !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.36);
+    background: rgb(105,174,234);
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY5YWVlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzdkZDkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(105,174,234,1) 0%, rgba(51,125,217,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(105,174,234,1)), color-stop(100%,rgba(51,125,217,1)));
+    background: -webkit-linear-gradient(top,  rgba(105,174,234,1) 0%,rgba(51,125,217,1) 100%);
+    background: -o-linear-gradient(top,  rgba(105,174,234,1) 0%,rgba(51,125,217,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(105,174,234,1) 0%,rgba(51,125,217,1) 100%);
+    background: linear-gradient(to bottom,  rgba(105,174,234,1) 0%,rgba(51,125,217,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69aeea', endColorstr='#337dd9',GradientType=0 );
+}
+.chosen-results li.active-result {
+    display: list-item;
+    cursor: pointer;
+}
+.chosen-results li.result-selected,
+.chosen-results li.disabled-result {
+    display: list-item;
+    color: #B7B8B6;
+    cursor: default;
+}
+.chosen-results li.no-results {display: list-item;}
+.chosen-results li.no-results span {color: #cc3636;}
+.chosen-results li em {font-style: normal; text-decoration: underline;}

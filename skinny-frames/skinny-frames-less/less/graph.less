@@ -1,0 +1,41 @@
+/*-----------------------------------*/
+/* Simple Graph */
+/*-----------------------------------*/
+
+.widget-graph {margin-bottom: 50px;}
+.widget-graph .inner {padding: 16px 12px 8px 8px;}
+
+#graph-tooltip {
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    padding: 7px 8px;
+    position: absolute;
+    top: -36px;
+    left: 0;
+    z-index: 1;
+    background: #ffa800;
+}
+#graph-tooltip:before {
+    content: '';
+    position: absolute;
+    bottom:-18px;
+    left: 50%;
+    margin-left: -9px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 18px 8.5px 0 8.5px;
+    border-color: #ffaa00 transparent transparent transparent;
+}
+
+.flot-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 9px;
+    color: #cfcfcf;
+}

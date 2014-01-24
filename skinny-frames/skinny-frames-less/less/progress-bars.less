@@ -1,0 +1,118 @@
+/*-----------------------------------*/
+/* Progress Bars */
+/*-----------------------------------*/
+
+.progressbar {
+  margin: 45px 0;
+  position: relative;
+  padding:9px;
+  background:#fff;
+}
+.progressbar .pbar::selection {background: transparent;}
+
+/* Simple Progress Bar */
+
+.progressbar .mark-left,
+.progressbar .mark-right,
+.progressbar .elapsed,
+.progressbar .remained,
+.progressbar .total {
+    font-size: 11px;
+    color: #adadad;
+    text-shadow: none;
+    white-space: nowrap;
+    position: absolute;
+    top: -14px;
+    left: 0;
+}
+.progressbar .mark-right,
+.progressbar .remained,
+.progressbar .total {
+    left: auto;
+    right: 0;
+}
+.progressbar .elapsed,
+.progressbar .remained,
+.progressbar .percent,
+.progressbar .total {
+  display: none;
+}
+.progressbar .ui-progressbar {
+    height: 11px;
+    background: #cacaca;
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.8);
+    box-shadow: inset 0 1px 0 rgba(0,0,0,0.16), 0 1px 0 rgba(255,255,255,0.8);
+    overflow: visible !important;
+    position: relative;
+    z-index: 0;
+    border: none;
+}
+.progressbar .ui-progressbar-value {
+    position: relative;
+    display: block !important;
+    min-width: 10px;
+    height: 100%;
+    background: #ee5190;
+    box-shadow: inset 0 1px 0 rgba(0,0,0,.1);
+}
+.progressbar .ui-progressbar-value:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;}
+
+.progressbar .ui-progressbar-value span {
+    position: absolute;
+    right: -5px;
+    top: -4px;
+    width: 18px;
+    height: 18px;
+    background: #ee5190;
+}
+.progressbar .ui-progressbar-value span:before {
+    content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin: 5px;
+}
+
+/* Progress Bar with Download Bar */
+
+.progressbar.styled .mark-left,
+.progressbar.styled .mark-right {
+    display: none;
+}
+.progressbar.styled .elapsed,
+.progressbar.styled .total {
+    display: block;
+}
+.progressbar.styled .downloadbar {
+    position: absolute;
+    width: 100%;
+}
+.progressbar.styled .downloadbar .ui-progressbar-value {
+    background: #a4a2a2;
+}
+
+.progressbar.styled .ui-progressbar-value span {display: none;}
+
+/* Range Slider */
+
+.range-slider.styled .jslider  {
+  padding:9px;
+  background:#fff;
+}
+
+.range-slider.styled .jslider .jslider-pointer {
+  top:5px;
+} 
+
+.range-slider.styled .jslider .jslider-value {
+  top:-36px;
+}
+
+.range-slider.styled .jslider .jslider-pointer-to {
+  margin-left:-10px;
+}

@@ -1,0 +1,213 @@
+/*-----------------------------------*/
+/* Tabs */
+/*-----------------------------------*/
+
+.tabs-framed {margin-bottom: 50px;}
+.sidebar .tabs-framed {margin-bottom: 30px;}
+
+/* Tab Thumbs */
+.tabs.bookmarks2 li {max-width: 48%;}
+.tabs.bookmarks3 li {max-width: 32%;}
+.tabs.bookmarks4 li {max-width: 28%;}
+.tabs.bookmarks5 li {max-width: 18%;}
+.tabs.bookmarks6 li {max-width: 16%;}
+
+.tabs {
+    position: relative;
+    top: 1px;
+    z-index: 1;
+}
+.tabs li{
+  float: left;
+  position: relative;
+  border-bottom: none;
+  margin-right:2px;
+  background:#f4f4f4;
+}
+.tabs li.active{
+  background: #fff;
+  margin-top: -8px;
+  border-top:4px solid #f46ca1;
+}
+.tabs li a{
+  display: block;
+  height: 39px;
+  line-height: 39px;
+  font-size: 15px;
+  color:#949494;
+  padding: 0 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tabs li.active a{
+  height: 44px;
+  line-height: 46px;
+  font-size: 17px;
+  color:#ee5190;
+}
+
+/* Tab Thumb Counter */
+.tabs li span {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #b7b7b7;
+  font-weight:normal !important;
+}
+.tabs li.active span {
+    background: #ee5190;
+    color:#fff;
+}
+.tabs .note {top: -12px; right: -8px;}
+
+/* Tab Content */
+.tab-content.boxed {border-top-left-radius: 0; margin-bottom: 0;}
+
+.tab-content {
+    overflow: visible;
+    padding: 28px 34px 20px;
+}
+.tab-content h4{color: #191919;}
+
+.tab-image{
+    margin:0 0 12px 0;
+}
+.tab-image img{
+    display: block;
+    position: relative;
+    z-index: -1;
+    max-width: 100%;
+}
+.tab-image.pull-left,
+.tab-image.pull-right{
+    width: 45%;
+}
+.col-sm-12 .tab-image.pull-left,
+.col-sm-12 .tab-image.pull-right{
+    width: 33%;
+}
+.tab-image.pull-left{margin:5px 20px 5px 0;}
+.tab-image.pull-right{margin:5px 0 5px 20px;}
+
+/* Tab Content with Icon on the Left */
+.tab-pane-icon {padding-left: 64px;}
+.tab-icon {position: absolute; top: 37px; left: 27px;}
+
+/* Responsive */
+@media (min-width: 768px) and (max-width: 991px) {
+    .tab-content {padding: 20px;}
+    .tab-icon {left: 6px;}
+}
+@media (max-width: 479px) {
+    .tabs li span {display: none;}
+    .tabs li a{
+        height: 29px;
+        line-height: 29px;
+        font-size: 12px;
+        padding: 0 6px;
+    }
+    .tabs li.active a{
+        height: 34px;
+        line-height: 38px;
+        font-size: 13px;
+    }
+    .tab-content {padding: 20px;}
+
+    .tab-image.pull-left,
+    .tab-image.pull-right{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 16px;
+        float: none !important;
+    }
+    .tab-pane-icon {padding: 0;}
+    .tab-icon {display: none;}
+}
+
+/*-----------------------------------*/
+/* Tabs styled */
+/*-----------------------------------*/
+
+.tabs-framed.styled {margin-bottom: 30px;}
+
+.tabs-framed.styled .tab-content {
+  background:#fcfcfc;
+}
+
+.tabs-framed.styled .tabs li a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 17px;
+    color:#6f6f6f;
+    font-weight:500;
+}
+.tabs-framed.styled .tabs li.active a {
+    height: 30px;
+    line-height: 30px;
+}
+.tabs-framed.styled .tab-content {padding: 20px 26px 20px;}
+
+.tabs-framed.styled .tab-content h4 {
+    font-size: 21px;
+    color: #3e3e3e;
+    margin:0 0 4px;
+}
+.tabs-framed.styled p {
+    font-size: 12px;
+    color: #a5a5a5;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+.tabs-framed.styled a.see-more {font-size: 12px; color: #6a9300;}
+.tabs-framed.styled a.see-more:hover {color: #f87600;}
+
+.tabs-framed.styled .tab-image {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.tabs-framed.styled .tab-image.pull-left{margin: 0 20px 5px 0; width: 29%;}
+.tabs-framed.styled .tab-image.pull-right{margin: 0 0 5px 20px; width: 29%;}
+
+.tabs-framed.styled .tabs li {
+  background:#fcfcfc;
+  margin-right:3px;
+  padding:4px;
+  padding-bottom:0;
+}
+
+.tabs-framed.styled .tabs li.active {
+  border:none;
+  margin:0 3px 0 0;
+  padding:4px;
+  padding-bottom:0;
+}
+
+.tabs-framed.styled .tabs li.active a {
+  background:#ee5190;
+  color:#fff;
+  height:40px;
+  line-height:40px;
+}
+
+/* Responsive */
+@media (max-width: 479px), (min-width: 768px) and (max-width: 991px) {
+    .tabs-framed.styled .tabs li a{
+        font-size: 12px;
+        padding: 0 4px;
+    }
+    .tabs-framed.styled .tab-content {padding: 10px;}
+
+    .tabs-framed.styled .tab-image.pull-left {float: left !important;}
+    .tabs-framed.styled .tab-image.pull-right {float: right !important;}
+}

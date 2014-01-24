@@ -1,0 +1,68 @@
+/*-----------------------------------*/
+/* Badges */
+/*-----------------------------------*/
+
+/*-----------------------------------*/
+/* Badges */
+/*-----------------------------------*/
+
+.badge:empty {display:inline-block;}
+
+.badged .inner {
+  padding:30px 40px 22px !important; 
+}
+
+.badged .badge-top,
+.badged .badge-bottom {
+  display: inline-block;
+  position: absolute;
+  right: -16px;
+  top: -15px;
+  background: url(images/badges.png) 0 0 no-repeat;
+  width: 133px;
+  height: 133px;}
+
+.badged .badge-bottom {
+  bottom: -2px;
+  left: -2px;
+  top: auto;
+  width: 38px;
+  height: 50px;
+  background-position: 0 -135px;}
+
+/* green badge */
+.badged.badge-green .badge-top {background-position:-143px 0;}
+.badged.badge-green .badge-bottom {background-position:-143px -135px;}
+
+/* brown badge */
+.badged.badge-brown .badge-top {background-position:-287px 0;}
+.badged.badge-brown .badge-bottom {background-position:-287px -135px;}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .badged .badge-top,
+  .badged .badge-bottom {
+    background: url(images/badges-x2.png) 0 0 no-repeat ;
+    background-size:400px 185px;
+  }
+
+  .badged.badge-green .badge-top {
+    background-position: -133px 0;
+  }
+
+  .badged.badge-brown .badge-top {
+    background-position: -266px 0;
+  }
+
+  .badged .badge-bottom {
+    background-position: 0 bottom;
+  }
+
+  .badged.badge-green .badge-bottom {
+    background-position: -133px bottom;
+  }
+
+  .badged.badge-brown .badge-bottom {
+    background-position: -266px bottom;
+  }
+
+}

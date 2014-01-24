@@ -1,0 +1,93 @@
+/*-----------------------------------*/
+/* Typography */
+/*-----------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  line-height:1.2em;
+  margin-bottom:.7em;
+}
+h1, h2, h3{letter-spacing: -1px;}
+h1{font-size:29px}
+h2{font-size:25px}
+h3{font-size:23px}
+h4{font-size:19px}
+h5{font-size:17px}
+h6{font-size:14px}
+
+em{font-style: italic;}
+strong{font-weight: 400;}
+small{font-size: 85%;}
+
+i{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  font-style: normal;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+}
+p{
+  line-height: 19px;
+  margin-bottom: 16px;
+}
+.margin-10 {margin-bottom: 10px !important;}
+.margin-20 {margin-bottom: 20px !important;}
+.margin-30 {margin-bottom: 30px !important;}
+.margin-40 {margin-bottom: 40px !important;}
+.margin-50 {margin-bottom: 50px !important;}
+.margin-60 {margin-bottom: 60px !important;}
+.margin-80 {margin-bottom: 80px !important;}
+.margin-100 {margin-bottom: 100px !important;}
+.margin-for-check {margin-right:90px;}
+
+@media (max-width:479px), (min-width:768px) and (max-width:991px) {
+  .margin-for-check {margin-right:45px;}
+}
+
+h6.foo {
+    font-size: 10px;
+  color: #6d6054;
+  text-shadow: none;
+  margin: 50px 0 30px;
+}
+h6.foo2 {
+    font-size: 10px;
+    color: #807367;
+    text-shadow: none;
+    margin: 30px 0 10px;
+}
+
+
+/*-----------------------------------*/
+/* Pull Quotes */
+/*-----------------------------------*/
+
+.typography {margin-bottom: 30px;}
+.typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {margin-top: 28px;}
+
+.quote-left, .quote-right {
+  font-size: 21px;
+  line-height: 29px;
+  color: #e7367e;
+  width: 40%;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-style:italic;
+}
+.quote-left{float: left; margin-right: 5%;}
+.quote-right{float: right; margin-left: 5%;}
+.block-quotes{margin-bottom: 50px;}
+.block-quotes h2{font-size: 29px;}
+
+@media (max-width:479px) {
+    .quote-left, .quote-right {
+        float:none;
+        display:block;
+        width: auto;
+        margin-left: 0;
+    }
+}

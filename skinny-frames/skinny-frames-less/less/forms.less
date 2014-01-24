@@ -1,0 +1,205 @@
+/*-----------------------------------*/
+/* Forms */
+/*-----------------------------------*/
+
+/* Inputs, Textareas */
+
+input::-webkit-input-placeholder {font-size: 15px; color: #3a3a3a;}
+input:-moz-placeholder {font-size: 15px; color: #3a3a3a;}
+textarea::-webkit-input-placeholder {font-size: 15px; color: #3a3a3a;}
+textarea:-moz-placeholder {font-size: 15px; color: #3a3a3a;}
+
+.lightPlaceholder input::-webkit-input-placeholder {font-size: 12px; color: #c0beba;}
+.lightPlaceholder input:-moz-placeholder {font-size: 12px; color: #c0beba;}
+.lightPlaceholder textarea::-webkit-input-placeholder {font-size: 12px; color: #c0beba;}
+.lightPlaceholder textarea:-moz-placeholder {font-size: 12px; color: #c0beba;}
+
+label, input, button, select, textarea {font-size: inherit; line-height: normal;}
+
+input[type="text"],
+input[type="password"],
+textarea,
+.select_styled {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: #ebebeb;
+    padding:0 12px;
+    color: #362c27;
+    width: 100%;
+    margin: 0;
+    border-left:1px solid #cacaca;
+    border-top:1px solid #cacaca;
+}
+input[type="text"],
+input[type="password"]{
+    height: 31px;
+}
+.ie8 input[type="text"],
+.ie8 input[type="password"]{
+    line-height: 31px;
+}
+textarea {
+    padding: 10px 12px;
+    height: 100px;
+    resize: vertical;
+    overflow: auto;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border: none;
+    border-left: 1px solid #cacaca;
+    border-top: 1px solid #cacaca;
+}
+.field_text,
+.field_select{
+    float:left;
+    margin-right: 2%;
+    margin-bottom: 14px;
+    width: 48%;
+    position: relative;
+}
+.field_text.omega,
+.field_select.omega{
+    float:right;
+}
+.field_text.field_textarea{
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+    position: relative;
+}
+.label_title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: default;
+    font-weight:500;
+}
+
+@media (max-width:479px){
+    .field_text,
+    .field_select{
+        float: none !important;
+        width: 100% !important;
+        margin-right: 0;
+    }
+}
+
+
+/*-----------------------------------*/
+/* Search Form */
+/*-----------------------------------*/
+
+.widget-search .inner{padding: 16px 14px;}
+.widget-search .btn{float:right; margin-top: -1px;}
+.widget-search .field_text{margin: 0 96px 0 0; width: auto !important; float: none;}
+.widget-search .field_text input{padding-left: 26px;font-style:italic;color:#a0a0a0}
+.widget-search .field_text:before {
+    content: '\e003';
+    font-family: 'Glyphicons Halflings';
+    font-size: 16px;
+    color: #bababa;
+    text-shadow: none;
+    position: absolute;
+    top: 10px;
+    left: 6px;
+}
+
+/*-----------------------------------*/
+/* Contact Form styled */
+/*-----------------------------------*/
+
+.add-comment.styled .add-comment-title {display: none;}
+
+.add-comment.styled input[type="text"],
+.add-comment.styled input[type="password"] {
+    background: #ebebeb;
+}
+.add-comment {background:#fff;}
+.add-comment.with_ava {background:#fcfcfc;}
+.add-comment.with_ava.boxed .comment-form {
+  padding-bottom:25px;
+}
+.add-comment.styled .comment-form {padding: 32px 28px 26px 28px;}
+.add-comment.styled .comment-form textarea {height: 52px;}
+
+.add-comment.styled .field_text,
+.add-comment.styled .field_select{
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.add-comment.styled .field_text.field_textarea {margin-bottom: 16px;}
+
+.add-comment.styled .label_title {
+    font-size: 14px;
+    color: #646464;
+    font-weight:normal;
+}
+
+@media (max-width: 479px), (min-width: 768px) and (max-width: 991px) {
+    .add-comment.styled .comment-form {padding: 18px;}
+    .add-comment.styled .label_title {position: static; text-align: left;}
+}
+
+/* Text editor for contact form */
+
+.nicEdit-pane {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.nicEdit-panel {
+    overflow: hidden;
+    position:absolute;
+    right:0;
+    top:-3px;
+}
+.nicEdit-button-undefined {border: none !important;}
+
+.nicEdit-button {
+    background-image: url(images/nicEditorIcons.png) !important;
+    background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .nicEdit-button {
+        background-image: url(images/nicEditorIcons-x2.png) !important;
+        background-size: auto 18px;
+    }
+}
+.nicEdit-container {
+    background: #ebebeb;
+    padding:0;
+}
+.nicEdit-container {font-weight: 300; width: auto !important;clear:both}
+.nicEdit-container i {font-style: italic !important;}
+.nicEdit-container b {font-weight: 700 !important;}
+.nicEdit-container u {text-decoration: underline !important;}
+.nicEdit-container .nicEdit-main {font-size: 15px; color: #3a3a3a; width: auto !important;}
+.nicEdit-main p, .nicEdit-main div {line-height: normal; margin-bottom: 0;}
+.text_editor .label_title  {float:left;}
+.text_editor {position:relative;}
+
+/*-----------------------------------*/
+/* Simple Message Field */
+/*-----------------------------------*/
+.message-field .comment-avatar {width:111px;height:110px;bottom:-70px;left: -22px !important;}
+.message-field .comment-avatar img {border-width:5px;}
+.message-field .comment-body {padding: 19px 24px 24px;margin-bottom:90px;}
+.message-field .comment-author {margin-bottom: 5px;}
+.message-field .comment-author .link-author {float: none; font-size: 17px; color: #ee5190;}
+.message-field .comment-entry {font-size: 13px; color: #191919; line-height: 18px;}
+
+
+@media screen and (max-width:768px) {
+  .message-field .comment-avatar {
+    left:-5px !important;
+  }
+  .comment-list li.comment {
+    padding-left:98px;
+  }
+}

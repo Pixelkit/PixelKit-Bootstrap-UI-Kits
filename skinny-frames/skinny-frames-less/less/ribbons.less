@@ -1,0 +1,108 @@
+/*-----------------------------------*/
+/* Ribbons */
+/*-----------------------------------*/
+
+.ribbon {
+  position:relative;
+  display:inline-block;
+  height:36px;
+  line-height:36px;
+  background:#ee5190;
+  color:#fff;
+  font-size:14px;
+  font-style:italic;
+  text-shadow:0 1px 0 rgba(0,0,0,.3);
+  padding:0 10px 0 25px;
+  z-index:3;
+  left:-50px;}
+
+.ribbon:after {
+  content:'';
+  position:absolute;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 18px 0 18px 15px;
+  border-color: transparent transparent transparent #ee5190;
+  top:0;
+  right:-15px;
+}
+
+.ribbon:before {
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-27px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 26px 27px 0;
+  border-color: transparent #d03473 transparent transparent;
+  z-index:2;
+}
+
+.ribbon .ribbon-stitches-top {
+  position:absolute;
+  bottom:-27px;
+  left:-25px;
+  height:35px;
+  width:51px;
+  background:#ee5190;
+  z-index:1;
+}
+
+.ribbon .ribbon-stitches-top:before {
+  content:'';
+  position:absolute;
+  left:-14px;
+  top:0;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 14px 16px 0;
+  border-color: transparent #ee5190 transparent transparent;
+}
+
+.ribbon .ribbon-stitches-top:after {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:-11px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 0 18px 11px;
+  border-color: transparent transparent #ee5190 transparent;
+}
+
+/* green ribbon*/
+.ribbon.ribbon-green,.ribbon.ribbon-green .ribbon-stitches-top {background:#c1ca00;}
+.ribbon.ribbon-green:after {border-color: transparent transparent transparent #c1ca00;}
+.ribbon.ribbon-green:before {border-color: transparent #a6ae00 transparent transparent;}
+.ribbon.ribbon-green .ribbon-stitches-top:before{border-color: transparent #c1ca00 transparent transparent;}
+.ribbon.ribbon-green .ribbon-stitches-top:after {border-color: transparent transparent #c1ca00 transparent;}
+
+/*brown ribbon*/
+.ribbon.ribbon-brown,.ribbon.ribbon-brown .ribbon-stitches-top {background:#ae8f75;}
+.ribbon.ribbon-brown:after {border-color: transparent transparent transparent #ae8f75;}
+.ribbon.ribbon-brown:before {border-color: transparent #917055 transparent transparent;}
+.ribbon.ribbon-brown .ribbon-stitches-top:before{border-color: transparent #ae8f75 transparent transparent;}
+.ribbon.ribbon-brown .ribbon-stitches-top:after {border-color: transparent transparent #ae8f75 transparent;}
+
+/*orange ribbon*/
+.ribbon.ribbon-orange,.ribbon.ribbon-orange .ribbon-stitches-top {background:#ffb529;}
+.ribbon.ribbon-orange:after {border-color: transparent transparent transparent #ffb529;}
+.ribbon.ribbon-orange:before {border-color: transparent #d29520 transparent transparent;}
+.ribbon.ribbon-orange .ribbon-stitches-top:before{border-color: transparent #ffb529 transparent transparent;}
+.ribbon.ribbon-orange .ribbon-stitches-top:after {border-color: transparent transparent #ffb529 transparent;}
+
+/*blue ribbon*/
+.ribbon.ribbon-blue,.ribbon.ribbon-blue .ribbon-stitches-top {background:#0cc3d9;}
+.ribbon.ribbon-blue:after {border-color: transparent transparent transparent #0cc3d9;}
+.ribbon.ribbon-blue:before {border-color: transparent #0f98a9 transparent transparent;}
+.ribbon.ribbon-blue .ribbon-stitches-top:before{border-color: transparent #0cc3d9 transparent transparent;}
+.ribbon.ribbon-blue .ribbon-stitches-top:after {border-color: transparent transparent #0cc3d9 transparent;}
+
+@media (max-width:479px), (min-width:768px) and (max-width:991px) {
+  .ribbon {left:-36px;}
+}

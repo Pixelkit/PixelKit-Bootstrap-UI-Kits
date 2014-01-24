@@ -1,3 +1,15 @@
+## Skinny Frames
+
+![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/11/Slider_1_SkinnyFrames.jpg)
+
+To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/skinny-frames/> The complete Bootstrap UI kit that contains tons of additional elements spread across 6 categories is available on PixelKit.com <http://pixelkit.com/kits/modern-ui-kit/>
+
+## Links
+
++ [Demo page](http://pixelkit.com/free-ui-kits/skinny-frames/)
++ [Documentation page](http://pixelkit.com/free-ui-kits/skinny-frames/docs/)
++ [Premium Version of this UI Kit](http://pixelkit.com/kits/modern-ui-kit/)
+
 ## City Break
 
 ![ScreenShot](http://pixelkit.com/free-ui-kits/city-break/city-break.jpg)
@@ -96,6 +108,7 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 
 ## Changelog
 
++ 1.8 Added new kit Skinny Frames.
 + 1.7 Added new kit City Break.
 + 1.6 Added new kit Chubby Stacks.
 + 1.5 Added new kit Sweet Candy.

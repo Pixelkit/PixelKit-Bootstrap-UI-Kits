@@ -1,0 +1,72 @@
+/*-----------------------------------*/
+/* Sidebar widgets */
+/*-----------------------------------*/
+
+.widget-container{margin-bottom: 30px;}
+.widget-container .widget-title{font-size: 15px; margin-bottom: 25px;text-transform: uppercase;letter-spacing:0.1px;}
+
+
+
+/* Widget Tags */
+
+.tagcloud a {
+  display: inline-block;
+  position:relative;
+  font-size: 13px;
+  text-align: center;
+  white-space: nowrap;
+  margin: 0 5px 10px 12px;
+  color:#6f6f6f;
+  background:#f1f1f1;
+  padding-right:15px;
+  padding-left:16px;
+}
+
+.tagcloud a:before {
+  display:inline-block;
+  position:absolute;
+  left:-12px;
+  content:"";
+  width: 0px;
+  height: 34px;
+  border-style: solid;
+  border-width: 17px 12px 17px 0;
+  border-color: transparent #f1f1f1 transparent transparent;
+}
+
+.tagcloud a:hover {
+  background:#f26ea1;
+  color:#fff;
+  text-shadow:none;
+}
+
+.tagcloud a:hover:before{
+  border-color: transparent #f26ea1 transparent transparent !important;
+}
+
+.tagcloud a span {
+  display:block;
+  height: 34px;
+  line-height: 33px;
+}
+
+.tagcloud.style2 a {
+  font-size:14px;
+  color:#565656;
+  background:#fff;
+  font-weight:500;
+  letter-spacing:0;}
+
+.tagcloud.style2 a:hover {
+  color:#ee5190;
+}
+
+.tagcloud.style2 a:before,
+.tagcloud.style2 a:hover:before {
+  border-color: transparent #fff transparent transparent !important;
+}
+
+
+/* Widget Text */
+
+.widget-text .inner {padding-bottom: 15px;}

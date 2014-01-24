@@ -1,0 +1,145 @@
+/*-----------------------------------*/
+/* Comments */
+/*-----------------------------------*/
+
+.comment-list {
+    position: relative;
+}
+.comment-list h2 {
+  font-size: 23px;
+  margin-bottom: 30px;
+  font-weight:500;
+}
+.link-add-comment {
+  position: absolute;
+  top: 6px;
+  right: 2px;
+  color: #f87600;
+  text-decoration: underline;
+    text-shadow: none;
+    font-size:14px;
+    font-weight:500;
+    color:#e7367e;
+}
+.comment-list li.comment {
+  padding-left: 80px;
+  position: relative;
+}
+.comment-list .children li.comment:first-child:before {
+  content:'';
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top:7px;
+  left:-28px;
+  background: url(images/comment-sub.png) no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .comment-list .children li.comment:before {
+        background: url(images/comment-sub-x2.png) no-repeat;
+        background-size: 11px auto;
+    }
+}
+.comment-body {
+  padding: 23px 20px;
+  position: relative;
+  margin-bottom: 30px;
+  background: #fcfcfc;
+}
+
+.comment-body:before,
+.add-comment.with_ava:before {
+    content: '';
+    width: 30px;
+    height: 53px;
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    background: url(images/comment_say.png);
+    z-index: 10;
+}
+
+
+.comment-avatar,
+.user-avatar {
+  position: absolute;
+  bottom: 0;
+  left: -72px;
+  width: 66px;
+  height: 65px;
+  background: #ec5490;
+  padding:4px;
+}
+
+.user-avatar {
+  top:35px;
+  bottom:auto;
+}
+
+.comment-avatar img,
+.user-avatar img {
+  display: block;
+  max-width:100%;
+  max-height:100%;
+  border:1px solid #fcfcfc;
+}
+
+.comment-list li.comment.odd {
+  padding-left:0;
+  padding-right:80px;
+}
+
+.comment-list li.comment.odd > .comment-body > .comment-avatar {
+  left:auto;
+  right:-72px;
+}
+
+.comment-list li.comment.odd > .comment-body:before {
+  left:auto;
+  right:-30px;
+  background-position:30px 0;
+}
+
+.comment-list li.comment.even .comment-avatar {
+  right:auto;
+  left:-72px;
+}
+
+.comment-list li.comment.even > .comment-body:before {
+  left:-30px;
+  right:auto;
+  background-position:0 0;
+}
+
+ul.children  {
+  padding-left:60px;
+}
+
+ul.children .children {
+  padding:0;
+}
+
+.comment-author {margin-bottom: 11px;}
+.comment-author .link-author {float: left; font-size: 18px; color: #ec5490;}
+.comment-author .comment-meta {float: right; font-size: 12px; color: #a4a4a4; text-align: right; margin-top: 4px;}
+.comment-author .comment-meta .link-reply {color: #a4a4a4;}
+.comment-entry {line-height: 19px;color:#212121;}
+
+@media (max-width: 479px) {
+    .comment-list .children li.comment {margin-left: -80px;}
+    .comment-list .children li.comment:before {display: none;}
+
+    .link-add-comment {
+        top: 30px;
+        left: 0;
+        right: auto;
+    }
+    .comment-author .link-author,
+    .comment-author .comment-meta {
+        float: none;
+        text-align: left;
+        display: block;
+    }
+    .comment-body {padding: 10px;}
+}

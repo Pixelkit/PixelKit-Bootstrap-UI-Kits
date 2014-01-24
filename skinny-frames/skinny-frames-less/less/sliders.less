@@ -1,0 +1,120 @@
+
+
+/*-----------------------------------*/
+/* Image Slider */
+/*-----------------------------------*/
+
+.widget-gallery {margin-bottom: 50px;}
+.widget-gallery .inner {padding: 18px 26px;}
+
+.widget-gallery .carousel-inner {
+    height: 230px;
+}
+.widget-gallery .carousel-inner > .item {
+    height: 100%;
+    overflow:hidden;
+}
+.widget-gallery .carousel-inner > .item > img,
+.widget-gallery .carousel-inner > .item > a > img {
+    width: auto;
+    max-width: none;
+}
+.widget-gallery .carousel-desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding:14px 18px 13px;
+    background: rgba(0,0,0,.5);
+}
+.widget-gallery .carousel-desc strong,
+.widget-gallery .carousel-desc span {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom:5px;
+    font-weight: 500 !important;
+}
+.widget-gallery .carousel-desc span {
+    font-size: 11px;
+    color: #fff;
+}
+.widget-gallery .carousel-control {
+    position: absolute;
+    top: 50%;
+    margin-top:-11.5px;
+    opacity:1;
+    background:transparent;
+    height:21px;
+    left: -20px;
+    margin-top: -32px;
+}
+.widget-gallery .carousel-control.left {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10.5px 13px 10.5px 0;
+  border-color: transparent #d4d4d4 transparent transparent;
+  background:transparent;
+}
+
+.widget-gallery .carousel-control.left:hover {
+  border-color: transparent #ee5190 transparent transparent;
+}
+
+.widget-gallery .carousel-control.right {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 10.5px 0 10.5px 13px;
+  border-color: transparent transparent transparent #d4d4d4;
+  right:-20px;
+  left:auto;
+}
+
+.widget-gallery .carousel-control.right:hover {
+  border-color: transparent transparent transparent #ee5190;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .widget-gallery .carousel-control.left,
+    .widget-gallery .carousel-control.right {
+        background-image:url(images/bs-carousel-arrows-x2.png);
+        background-size: 38px auto;
+    }
+}
+
+.widget-gallery .carousel-indicators {
+    position: relative;
+    display:block;
+    left:0;
+    bottom:0;
+    width: auto;
+    padding: 0;
+    margin:20px 0 0 ;
+}
+.widget-gallery .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #d4d4d4;
+}
+.widget-gallery .carousel-indicators .active {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    background: #ee5190;
+}
+
+.widget-gallery h6.title {
+  text-align:center;
+  color:#484848;
+  margin-bottom:15px;
+}
+
+.widget-gallery h6.title span {
+  color:#ee5190;
+}

@@ -1,0 +1,93 @@
+.range-slider {margin: 50px 0 20px;}
+.jslider {display: block; width: 100%; position: relative;}
+.jslider table { width: 100%; border-collapse: collapse; border: 0; }
+.jslider td, .jslider th { padding: 0; vertical-align: top; text-align: left; border: 0; }
+.jslider table .jslider table tr, .jslider table tr td {width: 100%; vertical-align: top; padding:0; margin:0;}
+
+/* Slider */
+.jslider .jslider-bg {
+    height: 11px;
+    background: #cacaca;
+    border-left:1px solid #a3a3a3;
+    border-top:1px solid #bababa;
+}
+.jslider .jslider-bg .l, .jslider .jslider-bg .r {display: none;}
+.jslider .jslider-bg .v {
+    display: block;
+    height: 100%;
+    background:#ee5190;
+}
+
+
+/* Pointer */
+.jslider .jslider-pointer {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -4px;
+    z-index: 2 !important;
+    margin-left: -5px;
+    cursor: pointer;
+    background: #ee5190;
+}
+
+.jslider .jslider-pointer:before {
+    content:"";
+    display:inline-block;
+    width:8px;
+    height:8px;
+    background:#fff;
+    margin:5px;
+}
+
+
+/* Tooltip */
+.jslider .jslider-value {
+    font-size: 12px;
+    color: #fcfcfc;
+    white-space: nowrap;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 1;
+    background: #ee5190;
+}
+.jslider .jslider-value-to {left:80%;}
+
+.jslider .jslider-value:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    margin-left: -6px;
+    border-style: solid;
+    border-width: 12px 6px 0 6px;
+    border-color: #ee5190 transparent transparent transparent;
+}
+
+.jslider-value.jslider-value-to {
+    background:#ffa800;
+}
+
+.jslider-value-to.jslider-value:before {
+    border-color: #ffa800 transparent transparent transparent;
+}
+
+
+/* Min, Max Values */
+.jslider .jslider-label {
+    font-size: 11px;
+    color: #adadad;
+    text-shadow: none;
+    white-space: nowrap;
+    position: absolute;
+    top: -14px;
+    left: 0;
+}
+.jslider .jslider-label-to {left: auto; right: 0;}
+
+.jslider .jslider-scale {display: none;}
