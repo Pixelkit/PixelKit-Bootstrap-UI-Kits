@@ -1,0 +1,91 @@
+/*
+    - General Styles
+    - Background Images
+*/
+
+
+/*-----------------------------------*/
+/* General Styles */
+/*-----------------------------------*/
+
+  body {
+    font-family: @font-family-open-sans;
+    font-size: @font-size;
+    font-weight: 600;
+    color: @font-color;
+    position: relative;
+    background: url(images/bg.jpg) center top repeat;
+    background-size: 100% auto;
+  }
+  .ie7 body {background: none; filter:none; font-size:20px; color: #333; text-align: center; padding-top: 200px;}
+  .ie7 .body-wrap {display: none;}
+
+  ::-moz-selection {
+    background: #b0617d;
+    color: #fff;
+    text-shadow: none;
+  }
+  ::selection {
+    background: #b0617d;
+    color: #fff;
+    text-shadow: none;
+  }
+  a {
+    color: @link-color;
+    -webkit-transition: color 0.16s ease;
+    -moz-transition: color 0.16s ease;
+    -ms-transition: color 0.16s ease;
+    transition: color 0.16s ease;
+  }
+  a:hover, a:focus {color: @link-color-hover !important; text-decoration: none; outline: none;}
+  a:active {background-color: transparent;}
+
+  input, textarea, input[type="submit"]:focus {
+    outline: none;
+    font-family: @font-family-allerta;
+  }
+  label, input, button, select, textarea {
+    vertical-align: top;
+    margin: 0;
+    font-size: inherit;
+    line-height: normal;
+  }
+  .alpha {margin-left:0 !important;}
+  .omega {margin-right:0 !important;}
+
+  .content, .sidebar {padding: 50px 0;}
+  @media (max-width: 767px) {
+    .content, .sidebar {padding: 20px 0;}
+  }
+  .boxed {
+    background-color: @boxed;
+    .box-shadow(@box-shadow);
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .boxed-transparent {
+    background-color: #a9728e;
+    background-color: @boxed-transparent;
+  }
+  .widget-container {margin-bottom: 30px;}
+  .caroufredsel_wrapper {margin: 0 auto !important;}
+
+/*-----------------------------------*/
+/* Background Images */
+/*-----------------------------------*/
+
+[class^="bg-image-"], [class*=" bg-image-"] {
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+.bg-image-home {background-image: url(images/icons/bg-home.png);}
+.bg-image-arrow {background-image: url(images/icons/bg-arrow.png);}
+.bg-image-note4 {background-image: url(images/icons/bg-note4.png);}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .bg-image-home {background-image: url(images/icons/bg-home-x2.png); background-size: 143px auto;}
+  .bg-image-arrow {background-image: url(images/icons/bg-arrow-x2.png); background-size: 337px auto;}
+  .bg-image-note4 {background-image: url(images/icons/bg-note4-x2.png); background-size: 143px auto;}
+}
+
+

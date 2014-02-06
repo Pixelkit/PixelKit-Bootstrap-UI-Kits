@@ -1,0 +1,2349 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funky Tunes | Documentation</title>
+ 
+<!-- main JS libs -->
+<script src="../funky-tunes-css/js/libs/jquery-1.11.0.min.js"></script>
+<script src="../funky-tunes-css/js/libs/jquery-ui.min.js"></script>
+<script src="../funky-tunes-css/js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS -->
+<link href="../funky-tunes-css/css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="../funky-tunes-css/style.css" media="screen" rel="stylesheet">
+
+<!-- scripts -->
+<script src="../funky-tunes-css/js/general.js"></script>
+<script src="js/general.js"></script>
+
+<!-- Scroll Bars -->
+<script src="../funky-tunes-css/js/jquery.mousewheel.js"></script>
+<script src="../funky-tunes-css/js/jquery.jscrollpane.min.js"></script>
+<script>
+    jQuery(function() {
+        jQuery('.scrollbar').jScrollPane({
+            autoReinitialise: true,
+            verticalGutter: 0
+        });
+    });
+</script>
+
+<!-- Lightbox prettyPhoto -->
+<link href="../funky-tunes-css/css/prettyPhoto.css" rel="stylesheet">
+<script src="../funky-tunes-css/js/jquery.prettyPhoto.js"></script>
+
+<!-- CarouFredSel -->
+<script src="../funky-tunes-css/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="../funky-tunes-css/js/jquery.touchSwipe.min.js"></script>
+    
+<!-- Video Player -->
+<link href="../funky-tunes-css/css/video-js.css" rel="stylesheet">
+<script src="../funky-tunes-css/js/video.js"></script>
+<script>
+    videojs.options.flash.swf = "../funky-tunes-css/js/video-js.swf";
+</script>
+
+<!-- Audio Player -->
+<link href="../funky-tunes-css/css/jplayer.css" rel="stylesheet">
+<script src="../funky-tunes-css/js/jplayer/jquery.jplayer.min.js"></script>
+<script src="../funky-tunes-css/js/jplayer/jplayer.playlist.min.js"></script>
+<script src="../funky-tunes-css/js/jplayer/jquery.transform2d.js"></script>
+<script src="../funky-tunes-css/js/jplayer/jquery.grab.js"></script>
+<script src="../funky-tunes-css/js/jplayer/mod.csstransforms.min.js"></script>
+<script src="../funky-tunes-css/js/jplayer/circle.player.js"></script>
+
+<!-- Graph Builder -->
+<script src="https://www.google.com/jsapi"></script>
+    
+<!-- SyntaxHighlighter -->
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<link href="css/prettify.css" rel="stylesheet">
+<!-- Documentation StyleSheet -->
+<link href="css/docs.css" media="screen" rel="stylesheet">
+
+<!--[if lt IE 9]>
+<script src="../funky-tunes-css/js/libs/html5shiv.js"></script>
+<script src="../funky-tunes-css/js/libs/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="body-wrap">
+
+    <header class="header-demo">
+        <div class="inner gradient">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="logo"><img src="images/logo.png" alt="" /></div>
+                    </div>
+
+                    <div class="col-sm-9">
+                        <h1>Funky Tunes UI Kit</h1>
+                        <span>Version: 1.0</span>
+                        <span>Last update: 04.02.2014</span>
+                    </div>
+                </div>
+                <!--/ row-->
+            </div>
+            <!--/ container -->
+        </div>
+    </header>
+
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="sidebar-demo hidden-print" role="complementary" data-spy="affix" data-offset-top="200">
+                    <ul class="nav">
+						<li><a href="#about">What is Funky Tunes</a></li>
+						<li><a href="#what-included">What is included</a></li>
+						<li><a href="#browser">Browser support</a></li>
+						<li><a href="#getting-started">Getting Started</a></li>
+						<li><a href="#template">Basic Template</a></li>
+						<li><a href="#typography">Typography</a></li>
+                        <li>
+                            <a href="#buttons">Components</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#buttons">Buttons</a>
+                                    <ul class="nav">
+                                        <li><a href="#buttons-simple">Simple Buttons</a></li>
+                                        <li><a href="#buttons-transparent">Transparent Buttons</a></li>
+                                        <li><a href="#buttons-sized">Different sizes</a></li>
+                                        <li><a href="#buttons-shaped">Shaped Buttons</a></li>
+                                        <li><a href="#buttons-icons">Buttons with Icons</a></li>
+                                        <li><a href="#buttons-input">Buttoned Input</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#rating-stars">Rating Stars</a></li>
+                                <li><a href="#scroll-bars">Scroll Bars</a></li>
+                                <li><a href="#navigation">Navigation</a></li>
+                                <li><a href="#tabs">Tabs</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#post-tabs">Widgets</a>
+                            <ul class="nav">
+                                <li><a href="#post-tabs">Post Tabs</a></li>
+                                <li>
+                                    <a href="#pricing">Pricing Items</a>
+                                    <ul class="nav">
+                                        <li><a href="#pricing3">Pricing style 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#content-box">Content Box</a></li>
+                                <li><a href="#video-player">Video Player</a></li>
+                                <li>
+                                    <a href="#audio-player">Audio Players</a>
+                                    <ul class="nav">
+                                        <li><a href="#audio-player-circle">Circle Player</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#user-profile">User Profile</a></li>
+                                <li><a href="#statistics">Statistics</a></li>
+                                <li><a href="#widget-schedule">Schedule</a></li>
+                                <li>
+                                    <a href="#charts">Charts</a>
+                                    <ul class="nav">
+                                        <li><a href="#charts-top3">Top 3 chart</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <!-- content -->
+                <div class="content-demo" role="main">
+
+                    <!-- What is this -->
+                    <div class="section-demo">
+                        <h2 id="about">What is Funky Tunes UI Kit</h2>
+
+                        <div class="description">
+                            <p><a href="http://pixelkit.com/kits/music-ui-kit/" target="_blank">Funky Tunes UI Kit</a> is a number of useful user interface components built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework. We did not modify any line of Bootstrap, so you can safely use Funky Tunes UI Kit in your ongoing project.</p>
+                        </div>
+
+                    </div>
+                    <!--/ What is this -->
+
+                    <!-- What's included -->
+                    <div class="section-demo">
+                        <h2 id="what-included">What is included</h2>
+
+                        <div class="description">
+                            <p>Once purchased, unzip the compressed folder to see the directory structure of Funky Tunes UI Kit. You'll see something like this:</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+funky-tunes
+├───docs
+│   ├───css
+│   ├───images
+│   └───js
+├───funky-tunes-css
+│   ├───css
+│   ├───fonts
+│   │   └───video-js
+│   │   └───icons-small
+│   ├───images
+│   │   ├───icons
+│   │   ├───prettyPhoto
+│   │   └───temp
+│   └───js
+│       └───libs
+│       └───jplayer
+└───funky-tunes-less
+    ├───fonts
+    │   └───video-js
+    │   └───icons-small
+    ├───images
+    │   ├───icons
+    │   ├───prettyPhoto
+    │   └───temp
+    ├───js
+    │   └───libs
+    │   └───jplayer
+    └───less
+        └───bootstrap
+                                    </pre>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <dl class="clearfix">
+                                <dt class="parent">docs/</dt><dd>contains this documentation.</dd>
+                                <dt class="parent">funky-tunes-css/</dt><dd>contains Funky Tunes UI Kit in simple CSS format. Use it to easily start your project.</dd>
+                                <dt>css/</dt><dd>contains all the stylesheets for CSS version of the kit.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for CSS version of the kit.</dd>
+                                <dt>fonts/video-js/</dt><dd>contains Video Player icons for CSS version of the kit.</dd>
+                                <dt>fonts/icons-small/</dt><dd>contains Font icons for CSS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for CSS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for CSS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for CSS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for CSS version of the kit.</dd>
+
+                                <dt class="parent">funky-tunes-less/</dt><dd>contains Funky Tunes UI Kit in LESS format. Use it to modify this kit in your project.</dd>
+                                <dt>fonts/</dt><dd>contains Bootstrap Glyphicons for LESS version of the kit.</dd>
+                                <dt>fonts/video-js/</dt><dd>contains Video Player icons for LESS version of the kit.</dd>
+                                <dt>fonts/icons-small/</dt><dd>contains Font icons for LESS version of the kit.</dd>
+                                <dt>images/</dt><dd>contains all the images for LESS version of the kit.</dd>
+                                <dt>images/icons/</dt><dd>contains all the icons for LESS version of the kit.</dd>
+                                <dt>images/temp/</dt><dd>contains all the temporary images for LESS version of the kit.</dd>
+                                <dt>js/</dt><dd>contains all the JS files for LESS version of the kit.</dd>
+                                <dt>less/</dt><dd>contains all the stylesheets for LESS version of the kit.</dd>
+                            </dl>
+
+                            <p><em>Note:</em> The folders <code>funky-tunes-css</code> and <code>funky-tunes-less</code> is fully independent from each other, including all the images and JS files. You can use the version you prefer without pulling images or JS files from the other version of the kit.</p>
+                        </div>
+                    </div>
+                    <!--/ What's included -->
+
+                    <!-- Browser support -->
+                    <div class="section-demo">
+                        <h2 id="browser">Browser support</h2>
+
+                        <div class="description">
+                            <p>Since <a href="http://pixelkit.com/kits/music-ui-kit/" target="_blank">Funky Tunes UI Kit</a> is built on <a href="http://getbootstrap.com" target="_blank">Bootstrap 3</a> framework, it supports the same <a href="http://getbootstrap.com/getting-started/#browsers" target="_blank">browsers</a> as Bootstrap.</p>
+                        </div>
+
+                    </div>
+                    <!--/ Browser support -->
+
+                    <!-- Getting Started -->
+                    <div class="section-demo">
+                        <h2 id="getting-started">Getting Started</h2>
+
+                        <div class="description">
+                            <p>To start working with <a href="http://pixelkit.com/kits/music-ui-kit/" target="_blank">Funky Tunes UI Kit</a> you can use a basic <code>template.html</code>, or take the completely functional pages included in this package. Since it is built on Bootstrap, you can also use it on your project with Bootstrap 3.
+                                <br />
+                                We provide you both CSS and LESS standalone versions which are completely identical in design and functions.
+                            </p>
+                            <p>
+                                <em>CSS Version:</em> You can use CSS version by dropping contents of <code>funky-tunes-css</code> folder to your project folder and including <code>style.css</code> file in your HTML page: <code>&lt;link href="style.css" media="screen" rel="stylesheet"></code>
+                            </p>
+                            <p>
+                                <em>LESS Version:</em> You can find it in <code>funky-tunes-less</code> folder. Use LESS if you want to modify Funky Tunes UI Kit. We built it Bootstrap way so you won't find big difference. Use <code>less/variables.less</code> to modify different styles, use <code>style.less</code> to remove needless components.
+                            </p>
+                            <p>
+                                If you want to start from scratch, the best way is to use <a href="#template">our template</a> where all startup files are already included and ready to be used. You can find <code>template.html</code> file both for CSS and LESS version in their respective folders.
+                            </p>
+                        </div>
+
+                    </div>
+                    <!-- Getting Started -->
+
+                    <!-- Basic Template -->
+                    <div class="section-demo">
+                        <h2 id="template">Basic Template</h2>
+
+                        <div class="description">
+                            <p>You can use a basic <a href="../funky-tunes-css/template.html" target="_blank">HTML template</a> to write your code, or take completely functional pages included in this package. Basic template as well as completely functional pages are available both for CSS and LESS versions of the Funky Tunes UI Kit.</p>
+                        </div>
+                        <div class="example">
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;!doctype html>
+&lt;!--[if lt IE 8 ]>&lt;html lang="en" class="ie7"> &lt;![endif]-->
+&lt;!--[if IE 8 ]>&lt;html lang="en" class="ie8"> &lt;![endif]-->
+&lt;!--[if IE 9 ]>&lt;html lang="en" class="ie9"> &lt;![endif]-->
+&lt;!--[if (gt IE 9)|!(IE)]>&lt;!-->&lt;html lang="en"> &lt;!--&lt;![endif]-->
+    &lt;head>
+        &lt;meta charset="utf-8">
+        &lt;meta name="author" content="">
+        &lt;meta name="keywords" content="">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+        &lt;title>Funky Tunes | Template&lt;/title>
+
+        &lt;!-- main JS libs  -->
+        &lt;script src="js/libs/jquery-1.11.0.min.js">&lt;/script>
+        &lt;script src="js/libs/jquery-ui.min.js">&lt;/script>
+        &lt;script src="js/libs/bootstrap.min.js">&lt;/script>
+
+        &lt;!-- Style CSS -->
+        &lt;link href="css/bootstrap.css" media="screen" rel="stylesheet">
+        &lt;link href="style.css" media="screen" rel="stylesheet">
+
+        &lt;!-- General Scripts -->
+        &lt;script src="js/general.js">&lt;/script>
+
+        &lt;!--[if lt IE 9]>
+        &lt;script src="js/libs/html5shiv.js">&lt;/script>
+        &lt;script src="js/libs/respond.min.js">&lt;/script>
+        &lt;![endif]-->
+    &lt;/head>
+
+    &lt;body>
+        &lt;div class="body-wrap">
+            &lt;!-- container-->
+            &lt;div class="container">
+                Start Your Work Here
+
+
+            &lt;/div>
+            &lt;!--/ container-->
+        &lt;/div>
+    &lt;/body>
+&lt;/html>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Basic Template -->
+
+                    <!-- Typography -->
+                    <div class="section-demo">
+                        <h2 id="typography">Typography</h2>
+
+                        <div class="description">
+                            <p>
+                                Funky Tunes UI Kit uses free <a href="http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans" target="_blank">Open Sans</a>, <a href="http://www.google.com/fonts#UsePlace:use/Collection:Allerta" target="_blank">Allerta</a> and <a href="http://www.google.com/fonts#UsePlace:use/Collection:Montserrat" target="_blank">Montserrat</a> webfonts available at the <a href="http://www.google.com/fonts" target="_blank">Google Fonts</a>. The global default font-size is 14px, this is applied to the <code>&lt;body></code>. In addition, all <code>&lt;p></code> (paragraphs) receive a line height of 24px and bottom margin of 25px.
+                                <br />
+                                Also, all headings, <code>&lt;h1></code> through <code>&lt;h6></code> are available.
+                            </p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <h1>Example (h1)</h1>
+                                <h2>Example (h2)</h2>
+                                <h3>Example (h3)</h3>
+                                <h4>Example (h4)</h4>
+                                <h5>Example (h5)</h5>
+                                <h6>Example (h6)</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;h1>Example (h1)&lt;/h1>
+&lt;h2>Example (h2)&lt;/h2>
+&lt;h3>Example (h3)&lt;/h3>
+&lt;h4>Example (h4)&lt;/h4>
+&lt;h5>Example (h5)&lt;/h5>
+&lt;h6>Example (h6)&lt;/h6>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+&lt;p>Lorem ipsum dolor sit amet.&lt;/p>
+                                    </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Typography -->
+
+                    <!-- Buttons -->
+                    <div class="section-demo">
+                        <h2 id="buttons">Buttons</h2>
+
+                        <!--/ Simple Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-simple">Simple Buttons</h3>
+                            <p>Use any of the available button classes to quickly create a simple button.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color example-buttons">
+                                <a href="#" class="btn"><span>Default</span></a>
+                                <a href="#" class="btn btn-green"><span>Green</span></a>
+                                <a href="#" class="btn btn-red"><span>Red</span></a>
+                                <a href="#" class="btn btn-caps"><span>All Capitals</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn">&lt;span>Default&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-white">&lt;span>White&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-gray">&lt;span>Gray&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-round">&lt;span>Rounded&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-caps">&lt;span>All Capitals&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Simple Buttons -->
+
+                        <!--/ Transparent Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-transparent">Transparent Buttons</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-buttons">
+                                <a href="#" class="btn btn-left btn-transparent"><span>Prev</span></a>
+                                <a href="#" class="btn btn-transparent"><span>Download all files</span></a>
+                                <a href="#" class="btn btn-right btn-transparent"><span>Next</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-left btn-transparent">&lt;span>Prev&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-transparent">&lt;span>Download all files&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right btn-transparent">&lt;span>Next&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Transparent Buttons -->
+                        
+                        <!-- Button Sizes -->
+                        <div class="description">
+                            <h3 id="buttons-sized">Buttons with Different Sizes</h3>
+                            <p>Two button sizes available.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color example-buttons">
+                                <a href="#" class="btn"><span>Default Button</span></a>
+                                <a href="#" class="btn btn-large"><span>Large Button</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn">&lt;span>Default Button&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-large">&lt;span>Large Button&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Button Sizes -->
+
+                        <!--/ Shaped Buttons -->
+                        <div class="description">
+                            <h3 id="buttons-shaped">Shaped Buttons</h3>
+                            <p>Buttons with left and right pointers.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color example-buttons">
+                                <a href="#" class="btn btn-left"><span>Prev</span></a>
+                                <a href="#" class="btn"><span>Download all files</span></a>
+                                <a href="#" class="btn btn-right"><span>Next</span></a>
+                                <br />
+                                <a href="#" class="btn btn-left btn-red"><span>Prev</span></a>
+                                <a href="#" class="btn btn-red"><span>Download all files</span></a>
+                                <a href="#" class="btn btn-right btn-red"><span>Next</span></a>
+                                <br />
+                                <a href="#" class="btn btn-left btn-green"><span>Prev</span></a>
+                                <a href="#" class="btn btn-green"><span>Download all files</span></a>
+                                <a href="#" class="btn btn-right btn-green"><span>Next</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-left">&lt;span>Prev&lt;/span>&lt;/a>
+&lt;a href="#" class="btn">&lt;span>Download all files&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right">&lt;span>Next&lt;/span>&lt;/a>
+
+&lt;a href="#" class="btn btn-left btn-red">&lt;span>Prev&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-red">&lt;span>Download all files&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right btn-red">&lt;span>Next&lt;/span>&lt;/a>
+
+&lt;a href="#" class="btn btn-left btn-green">&lt;span>Prev&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-green">&lt;span>Download all files&lt;/span>&lt;/a>
+&lt;a href="#" class="btn btn-right btn-green">&lt;span>Next&lt;/span>&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Shaped Buttons -->
+
+                        <!--/ Buttons with Icons -->
+                        <div class="description">
+                            <h3 id="buttons-icons">Buttons with Icons</h3>
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color example-buttons">
+                                <a href="#" class="btn btn-red"><span><i class="glyphicon glyphicon-shopping-cart"></i>Buy Now!</span></a>
+                                <a href="#" class="btn btn-green"><span><i class="glyphicon glyphicon-download-alt"></i>Download</span></a>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;a href="#" class="btn btn-red">
+    &lt;span>&lt;i class="glyphicon glyphicon-shopping-cart">&lt;/i>Buy Now!&lt;/span>
+&lt;/a>
+                                    
+&lt;a href="#" class="btn btn-green">
+    &lt;span>&lt;i class="glyphicon glyphicon-download-alt">&lt;/i>Download&lt;/span>
+&lt;/a>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Buttons with Icons -->
+
+                        <!-- Buttoned Input -->
+                        <div class="description">
+                            <h3 id="buttons-input">Buttoned Input</h3>
+                            <p>Wrap <code>input type="submit"</code> into <code>span</code> and use available button classes to create a styled Input.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color example-buttons">
+                                <span class="btn"><input type="submit" value="Send Message" /></span>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;span class="btn">&lt;input type="submit" value="Send Message" />&lt;/span>
+                                </pre>
+                            </div>
+                        </div>
+                        <!--/ Buttoned Input -->
+                    </div>
+                    <!--/ Buttons -->
+
+                    <!-- Rating Stars -->
+                    <div class="section-demo">
+                        <h2 id="rating-stars">Rating Stars</h2>
+
+                        <div class="description">
+                            <p>Use rating stars for voting.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item alt-color">
+                                <!-- Rating Stars -->
+                                <div class="rating clearfix margin-bottom-20">
+                                    <span class="star voted" rel="1"></span>
+                                    <span class="star voted" rel="2"></span>
+                                    <span class="star voted" rel="3"></span>
+                                    <span class="star voted" rel="4"></span>
+                                    <span class="star" rel="5"></span>
+                                </div>
+                                <!--/ Rating Stars -->
+                                <br />
+                                <!-- Rating Stars -->
+                                <div class="rating rating-large clearfix">
+                                    <span class="star voted" rel="1"></span>
+                                    <span class="star voted" rel="2"></span>
+                                    <span class="star voted" rel="3"></span>
+                                    <span class="star" rel="4"></span>
+                                    <span class="star" rel="5"></span>
+                                </div>
+                                <!--/ Rating Stars -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="rating clearfix">
+    &lt;span class="star voted" rel="1">&lt;/span>
+    &lt;span class="star voted" rel="2">&lt;/span>
+    &lt;span class="star voted" rel="3">&lt;/span>
+    &lt;span class="star voted" rel="4">&lt;/span>
+    &lt;span class="star" rel="5">&lt;/span>
+&lt;/div>
+
+&lt;div class="rating rating-large clearfix">
+    &lt;span class="star voted" rel="1">&lt;/span>
+    &lt;span class="star voted" rel="2">&lt;/span>
+    &lt;span class="star voted" rel="3">&lt;/span>
+    &lt;span class="star" rel="4">&lt;/span>
+    &lt;span class="star" rel="5">&lt;/span>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Rating Stars -->
+
+                    <!-- Scroll Bars -->
+                    <div class="section-demo">
+                        <h2 id="scroll-bars">Scroll Bars</h2>
+
+                        <div class="description">
+                            <p>Create a styled Scroll Bar for your site.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Styled Scroll Bar require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="js/jquery.mousewheel.js">&lt;/script>
+&lt;script src="js/jquery.jscrollpane.min.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item example-scrollbars">
+                                <div class="scrollbars clearfix">
+                                    <!-- ScrollBars -->
+                                    <div class="scrollbar">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div>
+                                    <div class="scrollbar style2">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                    <!--/ ScrollBars -->
+                                </div>        
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="scrollbar">
+    ...Content...
+&lt;/div>
+                                    
+&lt;div class="scrollbar style2">
+    ...Content...
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Scroll Bars via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    jQuery(function() {
+        jQuery('.scrollbar').jScrollPane({
+            autoReinitialise: true,
+            verticalGutter: 0
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Scroll Bars -->
+
+                    <!-- Navigation -->
+                    <div class="section-demo">
+                        <h2 id="navigation">Navigation</h2>
+
+                        <div class="description">
+                            <p>Website menu with dropdown submenu.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <!-- Website Menu -->
+                                <ul class="menu boxed clearfix bg-image-home">
+                                    <li><a href="#"><i class="menu-icon menu-icon-1"></i>Home</a></li>
+                                    <li>
+                                        <a href="#"><i class="menu-icon menu-icon-2"></i>Online Radio</a>
+                                        <ul>
+                                            <li><a href="#">Katy Perry</a></li>
+                                            <li><a href="#">Miley Cyrus</a></li>
+                                            <li><a href="#">Selena Gomez</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="menu-icon menu-icon-3"></i>Top 25</a>
+                                        <ul>
+                                            <li><a href="#">Miley Cyrus</a></li>
+                                            <li><a href="#">Katy Perry</a></li>
+                                            <li><a href="#">Lene Marlin</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="menu-icon menu-icon-4"></i>TV show</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Katy Perry</a>
+                                                <ul>
+                                                    <li><a href="#">Album 1</a></li>
+                                                    <li><a href="#">Album 2</a></li>
+                                                    <li><a href="#">Album 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Miley Cyrus</a>
+                                                <ul>
+                                                    <li><a href="#">Album 1</a></li>
+                                                    <li><a href="#">Album 2</a></li>
+                                                    <li><a href="#">Album 3</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Selena Gomez</a>
+                                                <ul>
+                                                    <li><a href="#">Album 1</a></li>
+                                                    <li><a href="#">Album 2</a></li>
+                                                    <li><a href="#">Album 3</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#"><i class="menu-icon menu-icon-5"></i>News</a></li>
+                                    <li><a href="#"><i class="menu-icon menu-icon-8"></i>Contact Us</a></li>
+                                </ul>
+                                <!--/ Website Menu -->
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;ul class="menu boxed clearfix bg-image-home">
+    &lt;li>&lt;a href="#">&lt;i class="menu-icon menu-icon-1">&lt;/i>Home&lt;/a>&lt;/li>
+    &lt;li>
+        &lt;a href="#">&lt;i class="menu-icon menu-icon-2">&lt;/i>Online Radio&lt;/a>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Katy Perry&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Miley Cyrus&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Selena Gomez&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">&lt;i class="menu-icon menu-icon-3">&lt;/i>Top 25&lt;/a>
+        &lt;ul>
+            &lt;li>&lt;a href="#">Miley Cyrus&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Katy Perry&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Lene Marlin&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/li>
+    &lt;li>
+        &lt;a href="#">&lt;i class="menu-icon menu-icon-4">&lt;/i>TV show&lt;/a>
+        &lt;ul>
+            &lt;li>
+                &lt;a href="#">Katy Perry&lt;/a>
+                &lt;ul>
+                    &lt;li>&lt;a href="#">Album 1&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Album 2&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Album 3&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+            &lt;li>
+                &lt;a href="#">Miley Cyrus&lt;/a>
+                &lt;ul>
+                    &lt;li>&lt;a href="#">Album 1&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Album 2&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Album 3&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+            &lt;li>
+                &lt;a href="#">Selena Gomez&lt;/a>
+                &lt;ul>
+                    &lt;li>&lt;a href="#">Album 1&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Album 2&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Album 3&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/li>
+    &lt;li>&lt;a href="#">&lt;i class="menu-icon menu-icon-5">&lt;/i>News&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="#">&lt;i class="menu-icon menu-icon-8">&lt;/i>Contact Us&lt;/a>&lt;/li>
+&lt;/ul>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Navigation -->
+
+                    <!-- Tabs -->
+                    <div class="section-demo">
+                        <h2 id="tabs">Tabs</h2>
+
+                        <div class="description">
+                            <p>Add quick, dynamic tab functionality to transition through panes of local content.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8 col-md-offset-2">
+                                        <!-- Widget Profile -->
+                                        <div class="tabs-framed tabs-framed-right boxed widget-container widget-profile">
+                                            <ul class="tabs clearfix">
+                                                <li><a href="#profile1" data-toggle="tab"><i class="icon-tab-4"></i>Photos</a></li>
+                                                <li class="active"><a href="#profile2" data-toggle="tab"><i class="icon-tab-5"></i>Profile</a></li>
+                                                <li><a href="#profile3" data-toggle="tab"><i class="icon-tab-6"></i>Music</a></li>
+                                                <li><a href="#profile4" data-toggle="tab"><i class="icon-tab-7"></i>Comments</a></li>
+                                            </ul>
+
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade" id="profile1">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-1.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Miley Cyrus</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade in active" id="profile2">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-2.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Anna Maria Jopek</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="profile3">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-3.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Katy Perry</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="profile4">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-4.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Madonna</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ Widget Profile -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="tabs-framed tabs-framed-right boxed">
+    &lt;ul class="tabs clearfix">
+        &lt;li>&lt;a href="#profile1" data-toggle="tab">&lt;i class="icon-tab-4">&lt;/i>Photos&lt;/a>&lt;/li>
+        &lt;li class="active">&lt;a href="#profile2" data-toggle="tab">&lt;i class="icon-tab-5">&lt;/i>Profile&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#profile3" data-toggle="tab">&lt;i class="icon-tab-6">&lt;/i>Music&lt;/a>&lt;/li>
+    &lt;/ul>
+    &lt;div class="tab-content">
+        &lt;div class="tab-pane fade" id="profile1">
+            ...Content...
+        &lt;/div>
+
+        &lt;div class="tab-pane fade in active" id="profile2">
+            ...Content...
+        &lt;/div>
+
+        &lt;div class="tab-pane fade" id="profile3">
+            ...Content...
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Tabs -->
+
+                    <!-- Post Tabs -->
+                    <div class="section-demo">
+                        <h2 id="post-tabs">Tabbed Post Items</h2>
+
+                        <div class="description">
+                            <p></p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- Post Tabs -->
+                                        <div class="post-tabs clearfix">
+                                            <div class="post-tabs-bookmarks">
+                                                <ul class="scrollbar style2">
+                                                    <li class="active">Lil Wayne</li>
+                                                    <li>Bruno mars</li>
+                                                    <li>Niki Minaj</li>
+                                                    <li>Selena Gomez</li>
+                                                    <li>Tim McGraw</li>
+                                                    <li>Deep Purple</li>
+                                                    <li>Katy Perry</li>
+                                                    <li>Miley Cyrus</li>
+                                                    <li>Christina</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="post-tabs-content boxed">
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow active">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-11.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-11.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Lil Wayne</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-12.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-12.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Bruno mars</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-13.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-13.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Niki Minaj</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-14.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-14.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Selena Gomez</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-13.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-13.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Tim McGraw</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-11.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-11.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Deep Purple</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-13.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-13.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Katy Perry</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-14.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-14.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Miley Cyrus</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+
+                                                <!-- post item -->
+                                                <div class="post-item style6 clearfix bg-image-arrow">
+                                                    <div class="post-image"><a href="../funky-tunes-css/images/temp/post-img-11.jpg" data-rel="prettyPhoto" title="Music"><img src="../funky-tunes-css/images/temp/post-img-11.jpg" alt="" /></a></div>
+                                                    <div class="post-content">
+                                                        <h2 class="post-title"><a href="#">Christina</a></h2>
+                                                        <h6 class="post-subtitle">ARTISTs OF THE WEEK</h6>
+                                                        <div class="post-desc">
+                                                            <p>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci.</p>
+                                                        </div>
+                                                        <ul class="post-links-alt">
+                                                            <li class="post-more"><a href="#">Read more<i class="icon-small-next"></i></a></li>
+                                                            <li class="post-refresh"><a href="#"><i class="icon-small-refresh"></i></a></li>
+                                                            <li class="post-like"><a href="#" title="128 Likes"><i class="icon-small-like"></i></a></li>
+                                                            <li class="post-comments"><a href="#" title="96 Comments"><i class="icon-small-comment"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <!--/ post item -->
+                                            </div>
+                                        </div>
+                                        <!--/ Post Tabs -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Post Tabs -->
+
+                    <!-- Pricing List -->
+                    <div class="section-demo">
+                        <h2 id="pricing">Pricing</h2>
+
+                          <!-- Pricing List Style 3 -->
+                        <div class="description">
+                            <p>Use pricing items to announce prices for your services.</p>
+                            <h3 id="pricing3">Pricing Items style 3</h3>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-offset-4">
+                                        <!-- Price List -->
+                                        <div class="price-list style3">
+                                            <div class="price-item boxed">
+                                                <div class="price-content bg-image-note4">
+                                                    <h3 class="price-title">Full acc</h3>
+                                                    <h6 class="price-subtitle">For music lovers</h6>
+                                                    <ul>
+                                                        <li>50 000 songs</li>
+                                                        <li>All profiles</li>
+                                                        <li>Exclusive</li>
+                                                        <li>Hot news</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="price">
+                                                    <strong><sub>$</sub>9</strong>
+                                                    <span>per month</span>
+                                                </div>
+                                                <a href="#" class="btn btn-full btn-large"><span><i class="glyphicon glyphicon-shopping-cart"></i>Buy!</span></a>
+                                            </div>
+                                        </div>
+                                        <!--/ Price List -->    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="price-list style3">
+    &lt;div class="price-item boxed">
+        &lt;div class="price-content bg-image-note4">
+            &lt;h3 class="price-title">Full acc&lt;/h3>
+            &lt;h6 class="price-subtitle">For music lovers&lt;/h6>
+            &lt;ul>
+                &lt;li>50 000 songs&lt;/li>
+                &lt;li>All profiles&lt;/li>
+                &lt;li>Exclusive stories&lt;/li>
+                &lt;li>Hot news&lt;/li>
+            &lt;/ul>
+        &lt;/div>
+        &lt;div class="price">
+            &lt;strong>&lt;sub>$&lt;/sub>9&lt;/strong>
+            &lt;span>per month&lt;/span>
+        &lt;/div>
+        &lt;a href="#" class="btn btn-full btn-large">
+            &lt;span>&lt;i class="glyphicon glyphicon-shopping-cart">&lt;/i>Buy!&lt;/span>
+        &lt;/a>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Pricing List Style 3 -->
+                    </div>
+                    <!--/ Pricing List -->
+
+                    <!-- Content Box -->
+                    <div class="section-demo">
+                        <h2 id="content-box">Content Box</h2>
+
+                        <div class="description">
+                            <p>Use titled box to display different content.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item content-box-demo">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-offset-3">
+                                        <!-- widget -->
+                                        <div class="widget-container boxed">
+                                            <h3 class="widget-title">Title</h3>
+                                            <h6 class="widget-subtitle">SubTitle</h6>
+                                        </div>
+                                        <!-- /widget -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container boxed">
+    &lt;div class="inner">
+        &lt;h3 class="widget-title">Widget Title&lt;/h3>
+        &lt;!-- place your content here -->
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Content Box -->
+
+                    <!-- Video Player -->
+                    <div class="section-demo">
+                        <h2 id="video-player">Video Player</h2>
+
+                        <div class="description">
+                            <p>Use Video.js player to play video content.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Video Player require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link href="css/video-js.css" rel="stylesheet">
+&lt;script src="js/video.js">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-10 col-md-offset-1">
+                                        <!-- Video Player -->
+                                        <div class="widget-container widget-video boxed">
+                                            <video id="video1" controls preload="auto" poster="../funky-tunes-css/images/temp/vjs-poster-4.jpg" class="video-js vjs-styled-skin">
+                                                <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            </video>
+                                            <script>
+                                                videojs("video1", {
+                                                    "height": "auto",
+                                                    "width": "auto"
+                                                }).ready(function() {
+                                                    var myPlayer = this; // Store the video object
+                                                    var aspectRatio = 342 / 536; // Make up an aspect ratio
+                                                    function resizeVideoJS() {
+                                                        // Get the parent element's actual width
+                                                        var width = document.getElementById(myPlayer.id()).parentElement.offsetWidth;
+                                                        // Set width to fill parent element, Set height
+                                                        myPlayer.width(width).height(width * aspectRatio);
+                                                    }
+                                                    resizeVideoJS(); // Initialize the function
+                                                    window.addEventListener("resize", resizeVideoJS, false); // Call the function on resize
+                                                });
+                                            </script>
+                                        </div>
+                                        <!--/ Video Player -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-video boxed">
+    &lt;video id="video1" controls preload="auto" poster="images/temp/vjs-poster-4.jpg" class="video-js vjs-styled-skin">
+        &lt;source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        &lt;source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+    &lt;/video>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Video Player via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    videojs("video1", {
+        "height": "auto",
+        "width": "auto"
+    }).ready(function() {
+        var myPlayer = this; // Store the video object
+        var aspectRatio = 342 / 536; // Make up an aspect ratio
+        function resizeVideoJS() {
+            // Get the parent element's actual width
+            var width = document.getElementById(myPlayer.id()).parentElement.offsetWidth;
+            // Set width to fill parent element, Set height
+            myPlayer.width(width).height(width * aspectRatio);
+        }
+        resizeVideoJS(); // Initialize the function
+        window.addEventListener("resize", resizeVideoJS, false); // Call the function on resize
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Video Player -->
+
+                    <!-- Audio Player -->
+                    <div class="section-demo">
+                        <h2 id="audio-player">Audio Players</h2>
+
+                        <!-- Circle Audio Player -->
+                        <div class="description">
+                            <h3 id="audio-player-circle">Circle Audio Player</h3>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Circle Audio Player require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;link href="css/jplayer.css" rel="stylesheet">
+&lt;script src="js/jplayer/jquery.jplayer.min.js">&lt;/script>
+&lt;script src="js/jplayer/jquery.transform2d.js">&lt;/script>
+&lt;script src="js/jplayer/jquery.grab.js">&lt;/script>
+&lt;script src="js/jplayer/mod.csstransforms.min.js">&lt;/script>
+&lt;script src="js/jplayer/circle.player.js">&lt;/script>   
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-3">
+                                        <!-- Circle Player -->
+                                        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                                        <div id="cp_container_1" class="cp-container clearfix">
+                                            <div class="cp-wrap">
+                                                <div class="cp-progress-holder">
+                                                    <div class="cp-progress-1"></div>
+                                                    <div class="cp-progress-2"></div>
+                                                </div>
+                                                <div class="cp-circle-control"></div>
+                                                <ul class="cp-controls">
+                                                    <li><a class="cp-play" tabindex="1">play</a></li>
+                                                    <li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+                                                </ul>
+                                                <div class="jp-current-time"></div>
+                                            </div>
+                                            <div class="jp-controls jp-buttons">
+                                                <div class="song-title">
+                                                    <div class="item-song">Picasso Baby</div>
+                                                    <div class="item-artist">jay-z</div>
+                                                </div>
+                                                <a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a>
+                                                <a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a>
+                                                <div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div>
+                                            </div>
+                                            <div class="jp-no-solution">
+                                                <span>Update Required</span>
+                                                <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            //<![CDATA[
+                                            $(document).ready(function(){
+
+                                                new CirclePlayer(
+                                                    "#jquery_jplayer_1",
+                                                    {
+                                                        mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                                                        oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+                                                    },
+                                                    {
+                                                        cssSelectorAncestor: "#cp_container_1",
+                                                        swfPath: "js/jplayer",
+                                                        supplied: "oga, mp3",
+                                                        wmode: "window",
+                                                        smoothPlayBar: false,
+                                                        keyEnabled: false,
+                                                        preload: "auto"
+                                                    }
+                                                );
+                                            });
+                                            //]]>
+                                        </script>
+                                        <!--/ Circle Player -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div id="jquery_jplayer_1" class="jp-jplayer">&lt;/div>
+&lt;div id="cp_container_1" class="cp-container clearfix">
+    &lt;div class="cp-wrap">
+        &lt;div class="cp-progress-holder">
+            &lt;div class="cp-progress-1">&lt;/div>
+            &lt;div class="cp-progress-2">&lt;/div>
+        &lt;/div>
+        &lt;div class="cp-circle-control">&lt;/div>
+        &lt;ul class="cp-controls">
+            &lt;li>&lt;a class="cp-play" tabindex="1">play&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="cp-pause" style="display:none;" tabindex="1">pause&lt;/a>&lt;/li>
+        &lt;/ul>
+        &lt;div class="jp-current-time">&lt;/div>
+    &lt;/div>
+    &lt;div class="jp-controls jp-buttons">
+        &lt;div class="song-title">
+            &lt;div class="item-song">Picasso Baby&lt;/div>
+            &lt;div class="item-artist">jay-z&lt;/div>
+        &lt;/div>
+        &lt;a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute&lt;/a>
+        &lt;a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute&lt;/a>
+        &lt;div class="jp-volume-bar">&lt;div class="jp-volume-bar-value">&lt;/div>&lt;/div>
+    &lt;/div>
+    &lt;div class="jp-no-solution">
+        &lt;span>Update Required&lt;/span>
+        &lt;a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin&lt;/a>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Circle Audio Player via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    //&lt;![CDATA[
+    $(document).ready(function(){
+
+        new CirclePlayer(
+            "#jquery_jplayer_1",
+            {
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            },
+            {
+                cssSelectorAncestor: "#cp_container_1",
+                swfPath: "js/jplayer",
+                supplied: "oga, mp3",
+                wmode: "window",
+                smoothPlayBar: false,
+                keyEnabled: false,
+                preload: "auto"
+            }
+        );
+    });
+    //]]>
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                        <!-- Circle Audio Player -->
+                    </div>
+                    <!--/ Audio Player -->
+
+                    <!-- User Profile -->
+                    <div class="section-demo">
+                        <div class="description">
+                            <h2 id="user-profile">User Profile</h2>
+                            <p>Display information about user in a styled box.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8 col-md-offset-2">
+                                        <!-- Widget Profile -->
+                                        <div class="tabs-framed tabs-framed-right boxed widget-container widget-profile">
+                                            <ul class="tabs clearfix">
+                                                <li><a href="#profile5" data-toggle="tab"><i class="icon-tab-4"></i>Photos</a></li>
+                                                <li class="active"><a href="#profile6" data-toggle="tab"><i class="icon-tab-5"></i>Profile</a></li>
+                                                <li><a href="#profile7" data-toggle="tab"><i class="icon-tab-6"></i>Music</a></li>
+                                                <li><a href="#profile8" data-toggle="tab"><i class="icon-tab-7"></i>Comments</a></li>
+                                            </ul>
+
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade" id="profile5">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-1.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Miley Cyrus</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade in active" id="profile6">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-2.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Anna Maria Jopek</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="profile7">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-3.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Katy Perry</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="profile8">
+                                                    <div class="profile-social">
+                                                        <a href="#"><span class="icon-small-pinterest"></span></a>
+                                                        <a href="#"><span class="icon-small-twitter"></span></a>
+                                                        <a href="#"><span class="icon-small-facebook"></span></a>
+                                                    </div>
+                                                    <div class="profile-image">
+                                                        <img src="../funky-tunes-css/images/temp/profile-4.jpg" alt="" />
+                                                    </div>
+                                                    <div class="bottom">
+                                                        <div class="profile-desc">
+                                                            <a href="#" class="profile-title">Madonna</a>
+                                                            <span class="profile-subtitle">ARTIST PROFILE</span>
+                                                        </div>
+                                                        <ul class="profile-links clearfix">
+                                                            <li class="profile-views"><a href="#"><i class="icon-small-author"></i>7 034</a></li>
+                                                            <li class="profile-likes"><a href="#"><i class="icon-small-like"></i>12 980</a></li>
+                                                            <li class="profile-comments"><a href="#"><i class="icon-small-comment"></i>9 156</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ Widget Profile -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="tabs-framed tabs-framed-right boxed widget-container widget-profile">
+    &lt;ul class="tabs clearfix">
+        &lt;li>
+            &lt;a href="#profile5" data-toggle="tab">&lt;i class="icon-tab-4">&lt;/i>Photos&lt;/a>
+        &lt;/li>
+        &lt;li class="active">
+            &lt;a href="#profile6" data-toggle="tab">&lt;i class="icon-tab-5">&lt;/i>Profile&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#profile7" data-toggle="tab">&lt;i class="icon-tab-6">&lt;/i>Music&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="#profile8" data-toggle="tab">&lt;i class="icon-tab-7">&lt;/i>Comments&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+
+    &lt;div class="tab-content">
+        &lt;div class="tab-pane fade" id="profile5">
+            &lt;div class="profile-social">
+                &lt;a href="#">&lt;span class="icon-small-pinterest">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-twitter">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-facebook">&lt;/span>&lt;/a>
+            &lt;/div>
+            &lt;div class="profile-image">
+                &lt;img src="images/temp/profile-1.jpg" alt="" />
+            &lt;/div>
+            &lt;div class="bottom">
+                &lt;div class="profile-desc">
+                    &lt;a href="#" class="profile-title">Miley Cyrus&lt;/a>
+                    &lt;span class="profile-subtitle">ARTIST PROFILE&lt;/span>
+                &lt;/div>
+                &lt;ul class="profile-links clearfix">
+                    &lt;li class="profile-views">
+                        &lt;a href="#">&lt;i class="icon-small-author">&lt;/i>7 034&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-likes">
+                        &lt;a href="#">&lt;i class="icon-small-like">&lt;/i>12 980&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-comments">
+                        &lt;a href="#">&lt;i class="icon-small-comment">&lt;/i>9 156&lt;/a>
+                    &lt;/li>
+                &lt;/ul>
+            &lt;/div>
+        &lt;/div>
+
+        &lt;div class="tab-pane fade in active" id="profile6">
+            &lt;div class="profile-social">
+                &lt;a href="#">&lt;span class="icon-small-pinterest">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-twitter">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-facebook">&lt;/span>&lt;/a>
+            &lt;/div>
+            &lt;div class="profile-image">
+                &lt;img src="images/temp/profile-2.jpg" alt="" />
+            &lt;/div>
+            &lt;div class="bottom">
+                &lt;div class="profile-desc">
+                    &lt;a href="#" class="profile-title">Anna Maria Jopek&lt;/a>
+                    &lt;span class="profile-subtitle">ARTIST PROFILE&lt;/span>
+                &lt;/div>
+                &lt;ul class="profile-links clearfix">
+                    &lt;li class="profile-views">
+                        &lt;a href="#">&lt;i class="icon-small-author">&lt;/i>7 034&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-likes">
+                        &lt;a href="#">&lt;i class="icon-small-like">&lt;/i>12 980&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-comments">
+                        &lt;a href="#">&lt;i class="icon-small-comment">&lt;/i>9 156&lt;/a>
+                    &lt;/li>
+                &lt;/ul>
+            &lt;/div>
+        &lt;/div>
+
+        &lt;div class="tab-pane fade" id="profile7">
+            &lt;div class="profile-social">
+                &lt;a href="#">&lt;span class="icon-small-pinterest">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-twitter">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-facebook">&lt;/span>&lt;/a>
+            &lt;/div>
+            &lt;div class="profile-image">
+                &lt;img src="images/temp/profile-3.jpg" alt="" />
+            &lt;/div>
+            &lt;div class="bottom">
+                &lt;div class="profile-desc">
+                    &lt;a href="#" class="profile-title">Katy Perry&lt;/a>
+                    &lt;span class="profile-subtitle">ARTIST PROFILE&lt;/span>
+                &lt;/div>
+                &lt;ul class="profile-links clearfix">
+                    &lt;li class="profile-views">
+                        &lt;a href="#">&lt;i class="icon-small-author">&lt;/i>7 034&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-likes">
+                        &lt;a href="#">&lt;i class="icon-small-like">&lt;/i>12 980&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-comments">
+                        &lt;a href="#">&lt;i class="icon-small-comment">&lt;/i>9 156&lt;/a>
+                    &lt;/li>
+                &lt;/ul>
+            &lt;/div>
+        &lt;/div>
+
+        &lt;div class="tab-pane fade" id="profile8">
+            &lt;div class="profile-social">
+                &lt;a href="#">&lt;span class="icon-small-pinterest">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-twitter">&lt;/span>&lt;/a>
+                &lt;a href="#">&lt;span class="icon-small-facebook">&lt;/span>&lt;/a>
+            &lt;/div>
+            &lt;div class="profile-image">
+                &lt;img src="images/temp/profile-4.jpg" alt="" />
+            &lt;/div>
+            &lt;div class="bottom">
+                &lt;div class="profile-desc">
+                    &lt;a href="#" class="profile-title">Madonna&lt;/a>
+                    &lt;span class="profile-subtitle">ARTIST PROFILE&lt;/span>
+                &lt;/div>
+                &lt;ul class="profile-links clearfix">
+                    &lt;li class="profile-views">
+                        &lt;a href="#">&lt;i class="icon-small-author">&lt;/i>7 034&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-likes">
+                        &lt;a href="#">&lt;i class="icon-small-like">&lt;/i>12 980&lt;/a>
+                    &lt;/li>
+                    &lt;li class="profile-comments">
+                        &lt;a href="#">&lt;i class="icon-small-comment">&lt;/i>9 156&lt;/a>
+                    &lt;/li>
+                &lt;/ul>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ User Profile -->
+
+                    <!-- Statistics -->
+                    <div class="section-demo">
+                        <h2 id="statistics">Statistical Data</h2>
+
+                        <div class="description">
+                            <p>Statistics widget is based on <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/linechart" target="_blank">Google Charts</a>.</p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Google Charts require next file to be included into <code>&lt;head></code> section of the page:</p>
+                                <pre class="prettyprint">
+&lt;script src="https://www.google.com/jsapi">&lt;/script>
+                                </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-offset-3">
+                                        <!-- Statistics -->
+                                        <div class="widget-container widget-stats boxed boxed-transparent">
+                                            <div class="stats-top">
+                                                <h6 class="widget-title">Chart positions</h6>
+                                                <div class="widget-subtitle">2013</div>
+                                            </div>
+                                            <div class="stats-content fade-effect">
+                                                <div id="stats" class="carousel slide" data-interval="20000">
+                                                    <!-- Carousel items -->
+                                                    <div class="carousel-inner">
+                                                        <div class="active item">
+                                                            <div id="graph-1" class="graph"></div>
+                                                            <script type="text/javascript">
+                                                                google.load("visualization", "1", {packages:["corechart"]});
+                                                                google.setOnLoadCallback(drawChart);
+                                                                function drawChart() {
+                                                                    var data = google.visualization.arrayToDataTable([
+                                                                        ['Month', 'Place', {type: 'string', role: 'tooltip', p: {html:true}}],
+                                                                        ['Jan',  3, '<strong>3</strong><span>place</span>'],
+                                                                        ['Feb',  1, '<strong>1</strong><span>place</span>'],
+                                                                        ['Mar',  5, '<strong>5</strong><span>place</span>'],
+                                                                        ['Apr',  8, '<strong>8</strong><span>place</span>'],
+                                                                        ['May',  9, '<strong>9</strong><span>place</span>'],
+                                                                        ['Jun',  6, '<strong>6</strong><span>place</span>'],
+                                                                        ['Jul',  3, '<strong>3</strong><span>place</span>'],
+                                                                        ['Aug',  8, '<strong>8</strong><span>place</span>'],
+                                                                        ['Sep',  4, '<strong>4</strong><span>place</span>'],
+                                                                        ['Oct',  2, '<strong>2</strong><span>place</span>'],
+                                                                        ['Nov',  6, '<strong>6</strong><span>place</span>'],
+                                                                        ['Dec',  9, '<strong>9</strong><span>place</span>']
+                                                                    ]);
+
+                                                                    var options = {
+                                                                        curveType: 'function',
+                                                                        chartArea:{left:0, top:10, width:"100%"},
+                                                                        hAxis: {textStyle: {color: 'transparent', fontSize: 0}},
+                                                                        vAxis: {direction: -1, gridlines: {color: 'transparent', count: 0}, baselineColor: 'transparent'},
+                                                                        tooltip: {isHtml: true},
+                                                                        backgroundColor:{fill: 'transparent'},
+                                                                        series: [{
+                                                                            color: '#fff',
+                                                                            visibleInLegend: false,
+                                                                            pointSize: 4,
+                                                                            lineWidth: 3,
+                                                                            areaOpacity: .1
+                                                                        }]
+                                                                    };
+
+                                                                    var chart = new google.visualization.LineChart(document.getElementById('graph-1'));
+                                                                    chart.draw(data, options);
+
+                                                                    $(window).resize(function() {
+                                                                        chart.clearChart();
+                                                                        chart.draw(data, options);
+                                                                    });
+                                                                    $('#stats').on('slid.bs.carousel', function () {
+                                                                        chart.clearChart();
+                                                                        chart.draw(data, options);
+                                                                    })
+                                                                }
+                                                            </script>
+                                                            <div class="stats-tab-bottom clearfix">
+                                                                <span class="artist">Passenger</span>
+                                                                <span class="position"><strong>1</strong>st<em>top<br>position</em></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div id="graph-2" class="graph"></div>
+                                                            <script type="text/javascript">
+                                                                google.load("visualization", "1", {packages:["corechart"]});
+                                                                google.setOnLoadCallback(drawChart);
+                                                                function drawChart() {
+                                                                    var data = google.visualization.arrayToDataTable([
+                                                                        ['Month', 'Place', {type: 'string', role: 'tooltip', p: {html:true}}],
+                                                                        ['Jan',  9, '<strong>9</strong><span>place</span>'],
+                                                                        ['Feb',  8, '<strong>8</strong><span>place</span>'],
+                                                                        ['Mar',  6, '<strong>6</strong><span>place</span>'],
+                                                                        ['Apr',  4, '<strong>4</strong><span>place</span>'],
+                                                                        ['May',  3, '<strong>3</strong><span>place</span>'],
+                                                                        ['Jun',  2, '<strong>2</strong><span>place</span>'],
+                                                                        ['Jul',  1, '<strong>1</strong><span>place</span>'],
+                                                                        ['Aug',  2, '<strong>2</strong><span>place</span>'],
+                                                                        ['Sep',  4, '<strong>4</strong><span>place</span>'],
+                                                                        ['Oct',  5, '<strong>5</strong><span>place</span>'],
+                                                                        ['Nov',  8, '<strong>8</strong><span>place</span>'],
+                                                                        ['Dec',  6, '<strong>6</strong><span>place</span>']
+                                                                    ]);
+
+                                                                    var options = {
+                                                                        curveType: 'function',
+                                                                        chartArea:{left:0, top:10, width:"100%"},
+                                                                        hAxis: {textStyle: {color: 'transparent', fontSize: 0}},
+                                                                        vAxis: {direction: -1, gridlines: {color: 'transparent', count: 0}, baselineColor: 'transparent'},
+                                                                        tooltip: {isHtml: true},
+                                                                        backgroundColor:{fill: 'transparent'},
+                                                                        series: [{
+                                                                            color: '#fff',
+                                                                            visibleInLegend: false,
+                                                                            pointSize: 4,
+                                                                            lineWidth: 3,
+                                                                            areaOpacity: .1
+                                                                        }]
+                                                                    };
+
+                                                                    var chart = new google.visualization.LineChart(document.getElementById('graph-2'));
+                                                                    chart.draw(data, options);
+
+                                                                    $(window).resize(function() {
+                                                                        chart.clearChart();
+                                                                        chart.draw(data, options);
+                                                                    });
+                                                                    $('#stats').on('slid.bs.carousel', function () {
+                                                                        chart.clearChart();
+                                                                        chart.draw(data, options);
+                                                                    })
+                                                                }
+                                                            </script>
+                                                            <div class="stats-tab-bottom clearfix">
+                                                                <span class="artist">Miley Cyrus</span>
+                                                                <span class="position"><strong>2</strong>d<em>top<br>position</em></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div id="graph-3" class="graph"></div>
+                                                            <script type="text/javascript">
+                                                                google.load("visualization", "1", {packages:["corechart"]});
+                                                                google.setOnLoadCallback(drawChart);
+                                                                function drawChart() {
+                                                                    var data = google.visualization.arrayToDataTable([
+                                                                        ['Month', 'Place', {type: 'string', role: 'tooltip', p: {html:true}}],
+                                                                        ['Jan',  2, '<strong>2</strong><span>place</span>'],
+                                                                        ['Feb',  4, '<strong>4</strong><span>place</span>'],
+                                                                        ['Mar',  5, '<strong>5</strong><span>place</span>'],
+                                                                        ['Apr',  6, '<strong>6</strong><span>place</span>'],
+                                                                        ['May',  3, '<strong>3</strong><span>place</span>'],
+                                                                        ['Jun',  1, '<strong>1</strong><span>place</span>'],
+                                                                        ['Jul',  2, '<strong>2</strong><span>place</span>'],
+                                                                        ['Aug',  4, '<strong>4</strong><span>place</span>'],
+                                                                        ['Sep',  8, '<strong>8</strong><span>place</span>'],
+                                                                        ['Oct',  9, '<strong>9</strong><span>place</span>'],
+                                                                        ['Nov',  5, '<strong>5</strong><span>place</span>'],
+                                                                        ['Dec',  4, '<strong>4</strong><span>place</span>']
+                                                                    ]);
+
+                                                                    var options = {
+                                                                        curveType: 'function',
+                                                                        chartArea:{left:0, top:10, width:"100%"},
+                                                                        hAxis: {textStyle: {color: 'transparent', fontSize: 0}},
+                                                                        vAxis: {direction: -1, gridlines: {color: 'transparent', count: 0}, baselineColor: 'transparent'},
+                                                                        tooltip: {isHtml: true},
+                                                                        backgroundColor:{fill: 'transparent'},
+                                                                        series: [{
+                                                                            color: '#fff',
+                                                                            visibleInLegend: false,
+                                                                            pointSize: 4,
+                                                                            lineWidth: 3,
+                                                                            areaOpacity: .1
+                                                                        }]
+                                                                    };
+
+                                                                    var chart = new google.visualization.LineChart(document.getElementById('graph-3'));
+                                                                    chart.draw(data, options);
+
+                                                                    $(window).resize(function() {
+                                                                        chart.clearChart();
+                                                                        chart.draw(data, options);
+                                                                    });
+                                                                    $('#stats').on('slid.bs.carousel', function () {
+                                                                        chart.clearChart();
+                                                                        chart.draw(data, options);
+                                                                    })
+                                                                }
+                                                            </script>
+                                                            <div class="stats-tab-bottom clearfix">
+                                                                <span class="artist">Katy Perry</span>
+                                                                <span class="position"><strong>3</strong>rd<em>top<br>position</em></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Carousel nav -->
+                                                    <a class="carousel-control left" href="#stats" data-slide="prev"></a>
+                                                    <a class="carousel-control right" href="#stats" data-slide="next"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/ Statistics -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-stats boxed boxed-transparent">
+    &lt;div class="stats-top">
+        &lt;h6 class="widget-title">Chart positions&lt;/h6>
+        &lt;div class="widget-subtitle">2013&lt;/div>
+    &lt;/div>
+    &lt;div class="stats-content fade-effect">
+        &lt;div id="stats" class="carousel slide" data-interval="20000">
+            &lt;!-- Carousel items -->
+            &lt;div class="carousel-inner">
+                
+                &lt;div class="item">
+                    &lt;div id="graph-1" class="graph">&lt;/div>
+                    &lt;script type="text/javascript">
+                        google.load("visualization", "1", {packages:["corechart"]});
+                        google.setOnLoadCallback(drawChart);
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Month', 'Place', {type: 'string', role: 'tooltip', p: {html:true}}],
+                                ['Jan',  3, '&lt;strong>3&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Feb',  1, '&lt;strong>1&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Mar',  5, '&lt;strong>5&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Apr',  8, '&lt;strong>8&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['May',  9, '&lt;strong>9&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Jun',  6, '&lt;strong>6&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Jul',  3, '&lt;strong>3&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Aug',  8, '&lt;strong>8&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Sep',  4, '&lt;strong>4&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Oct',  2, '&lt;strong>2&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Nov',  6, '&lt;strong>6&lt;/strong>&lt;span>place&lt;/span>'],
+                                ['Dec',  9, '&lt;strong>9&lt;/strong>&lt;span>place&lt;/span>']
+                            ]);
+
+                            var options = {
+                                curveType: 'function',
+                                chartArea:{left:0, top:10, width:"100%"},
+                                hAxis: {textStyle: {color: 'transparent', fontSize: 0}},
+                                vAxis: {direction: -1, gridlines: {color: 'transparent', count: 0}, baselineColor: 'transparent'},
+                                tooltip: {isHtml: true},
+                                backgroundColor:{fill: 'transparent'},
+                                series: [{
+                                    color: '#fff',
+                                    visibleInLegend: false,
+                                    pointSize: 4,
+                                    lineWidth: 3,
+                                    areaOpacity: .1
+                                }]
+                            };
+
+                            var chart = new google.visualization.LineChart(document.getElementById('graph-1'));
+                            chart.draw(data, options);
+
+                            $(window).resize(function() {
+                                chart.clearChart();
+                                chart.draw(data, options);
+                            });
+                            $('#stats').on('slid.bs.carousel', function () {
+                                chart.clearChart();
+                                chart.draw(data, options);
+                            })
+                        }
+                    &lt;/script>
+                    &lt;div class="stats-tab-bottom clearfix">
+                        &lt;span class="artist">Passenger&lt;/span>
+                        &lt;span class="position">&lt;strong>1&lt;/strong>st&lt;em>top&lt;br>position&lt;/em>&lt;/span>
+                    &lt;/div>
+                &lt;/div>
+                ...
+                ...
+                ...
+                
+            &lt;/div>
+            &lt;!-- Carousel nav -->
+            &lt;a class="carousel-control left" href="#stats" data-slide="prev">&lt;/a>
+            &lt;a class="carousel-control right" href="#stats" data-slide="next">&lt;/a>
+        &lt;/div>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Statistics -->
+
+                    <!-- Schedule -->
+                    <div class="section-demo">
+                        <h2 id="widget-schedule">Tour Calendar</h2>
+
+                        <div class="description">
+                            <p></p>
+                            <div class="callout">
+                                <h5>Element specific usage</h5>
+                                <p>Widget Schedule require next files to be included into <code>&lt;head></code> section of the page:</p>
+                                    <pre class="prettyprint">
+&lt;script src="js/jquery.carouFredSel-6.2.1-packed.js">&lt;/script>
+&lt;script src="js/jquery.touchSwipe.min.js">&lt;/script>
+                                    </pre>
+                            </div>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <!-- Widget Schedule -->
+                                        <div class="widget-container widget-schedule clearfix">
+                                            <h2 class="widget-title"><i></i>Calendar</h2>
+                                            <div class="carousel">
+                                                <ul id="schedule">
+                                                    <li class="schedule-item clearfix">
+                                                        <div class="schedule-left">
+                                                            <div class="schedule-name">Kyle<br />Minouge</div>
+                                                            <div class="schedule-date">january 25th</div>
+                                                            <div class="rating clearfix">
+                                                                <span class="star voted" rel="1"></span>
+                                                                <span class="star voted" rel="2"></span>
+                                                                <span class="star voted" rel="3"></span>
+                                                                <span class="star" rel="4"></span>
+                                                                <span class="star" rel="5"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="schedule-right">
+                                                            <div class="schedule-avatar"><a href="#"><img src="../funky-tunes-css/images/temp/schedule-avatar-2.jpg" alt="" /></a></div>
+                                                            <div class="schedule-links">
+                                                                <a class="schedule-details" href="#"><i class="icon-small-info"></i>Details</a>
+                                                                <a class="schedule-add" href="#"><i class="icon-small-star"></i>Add to list</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="schedule-item clearfix">
+                                                        <div class="schedule-left">
+                                                            <div class="schedule-name">Selena<br />Gomez</div>
+                                                            <div class="schedule-date">MARCH 18th</div>
+                                                            <div class="rating clearfix">
+                                                                <span class="star voted" rel="1"></span>
+                                                                <span class="star voted" rel="2"></span>
+                                                                <span class="star voted" rel="3"></span>
+                                                                <span class="star voted" rel="4"></span>
+                                                                <span class="star" rel="5"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="schedule-right">
+                                                            <div class="schedule-avatar"><a href="#"><img src="../funky-tunes-css/images/temp/schedule-avatar-3.jpg" alt="" /></a></div>
+                                                            <div class="schedule-links">
+                                                                <a class="schedule-details" href="#"><i class="icon-small-info"></i>Details</a>
+                                                                <a class="schedule-add" href="#"><i class="icon-small-star"></i>Add to list</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="schedule-item clearfix">
+                                                        <div class="schedule-left">
+                                                            <div class="schedule-name">Maria<br />Jopek</div>
+                                                            <div class="schedule-date">MARCH 12th</div>
+                                                            <div class="rating clearfix">
+                                                                <span class="star voted" rel="1"></span>
+                                                                <span class="star voted" rel="2"></span>
+                                                                <span class="star voted" rel="3"></span>
+                                                                <span class="star voted" rel="4"></span>
+                                                                <span class="star voted" rel="5"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="schedule-right">
+                                                            <div class="schedule-avatar"><a href="#"><img src="../funky-tunes-css/images/temp/schedule-avatar-4.jpg" alt="" /></a></div>
+                                                            <div class="schedule-links">
+                                                                <a class="schedule-details" href="#"><i class="icon-small-info"></i>Details</a>
+                                                                <a class="schedule-add" href="#"><i class="icon-small-star"></i>Add to list</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <a class="prev" id="schedule-prev" href="#">&lsaquo;</a>
+                                                <a class="next" id="schedule-next" href="#">&rsaquo;</a>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            jQuery(document).ready(function ($) {
+
+                                                function scheduleInit() {
+                                                    $('#schedule').carouFredSel({
+                                                        swipe : {
+                                                            onTouch: true
+                                                        },
+                                                        prev: '#schedule-prev',
+                                                        next: "#schedule-next",
+                                                        auto: {
+                                                            play: true,
+                                                            timeoutDuration: 16000
+                                                        },
+                                                        scroll: {
+                                                            pauseOnHover: true,
+                                                            items: 1,
+                                                            duration: 500,
+                                                            easing: 'swing'
+                                                        }
+                                                    });
+                                                }
+
+                                                scheduleInit();
+
+                                                $(window).resize(function() {
+                                                    scheduleInit();
+                                                });
+                                            });
+                                        </script>
+                                        <!--/ Widget Schedule -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                <pre class="prettyprint">
+&lt;div class="widget-container widget-schedule clearfix">
+    &lt;h2 class="widget-title">&lt;i>&lt;/i>Calendar&lt;/h2>
+    &lt;div class="carousel">
+        &lt;ul id="schedule">
+            
+            &lt;li class="schedule-item clearfix">
+                &lt;div class="schedule-left">
+                    &lt;div class="schedule-name">Kyle&lt;br />Minouge&lt;/div>
+                    &lt;div class="schedule-date">january 25th&lt;/div>
+                    &lt;div class="rating clearfix">
+                        &lt;span class="star voted" rel="1">&lt;/span>
+                        &lt;span class="star voted" rel="2">&lt;/span>
+                        &lt;span class="star voted" rel="3">&lt;/span>
+                        &lt;span class="star" rel="4">&lt;/span>
+                        &lt;span class="star" rel="5">&lt;/span>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="schedule-right">
+                    &lt;div class="schedule-avatar">
+                        &lt;a href="#">&lt;img src="images/temp/schedule-avatar-2.jpg" alt="" />&lt;/a>
+                    &lt;/div>
+                    &lt;div class="schedule-links">
+                        &lt;a class="schedule-details" href="#">&lt;i class="icon-small-info">&lt;/i>Details&lt;/a>
+                        &lt;a class="schedule-add" href="#">&lt;i class="icon-small-star">&lt;/i>Add to list&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/li>
+            ...
+            ...
+            ...
+
+        &lt;/ul>
+        &lt;a class="prev" id="schedule-prev" href="#">&lsaquo;&lt;/a>
+        &lt;a class="next" id="schedule-next" href="#">&rsaquo;&lt;/a>
+    &lt;/div>
+&lt;/div>
+                                </pre>
+
+                                <div class="fire-js">Enable Schedule via JS:</div>
+
+                                <pre class="prettyprint">
+&lt;script>
+    jQuery(document).ready(function ($) {
+
+        function scheduleInit() {
+            $('#schedule').carouFredSel({
+                swipe : {
+                    onTouch: true
+                },
+                prev: '#schedule-prev',
+                next: "#schedule-next",
+                auto: {
+                    play: true,
+                    timeoutDuration: 16000
+                },
+                scroll: {
+                    pauseOnHover: true,
+                    items: 1,
+                    duration: 500,
+                    easing: 'swing'
+                }
+            });
+        }
+
+        scheduleInit();
+
+        $(window).resize(function() {
+            scheduleInit();
+        });
+    });
+&lt;/script>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ Schedule -->
+
+                    <!-- Charts -->
+                    <div class="section-demo">
+                        <h2 id="charts">Music Charts</h2>
+
+                        <!-- Top 3 Chart -->
+                        <div class="description">
+                            <h3 id="charts-top3">Top 3 Chart</h3>
+                            <p>Top 3 songs and video clips.</p>
+                            <h4>Example</h4>
+                        </div>
+                        <div class="example">
+                            <div class="example-item">
+                                <div class="row">
+                                    <div class="col-sm-8 col-md-offset-2">
+                                        <!-- Top 3 Chart -->
+                                        <div class="widget-container widget-top3chart boxed">
+                                            <ul class="chart-tab music">
+                                                <li class="clearfix">
+                                                    <span class="position">1</span>
+                                                    <div class="chart-avatar"><img src="../funky-tunes-css/images/temp/thumb-4.jpg" alt="" /></div>
+                                                    <a href="#" class="chart-title"><strong>Wide Awake</strong>Miley Cyrus</a>
+                                                    <a href="#" class="chart-like">246<i class="icon-small-like"></i></a>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="position">2</span>
+                                                    <div class="chart-avatar"><img src="../funky-tunes-css/images/temp/thumb-6.jpg" alt="" /></div>
+                                                    <a href="#" class="chart-title"><strong>Bullet proof</strong>Madonna</a>
+                                                    <a href="#" class="chart-like">984<i class="icon-small-like"></i></a>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="position">3</span>
+                                                    <div class="chart-avatar"><img src="../funky-tunes-css/images/temp/thumb-8.jpg" alt="" /></div>
+                                                    <a href="#" class="chart-title"><strong>She Wolf</strong>Rihanna</a>
+                                                    <a href="#" class="chart-like">896<i class="icon-small-like"></i></a>
+                                                </li>
+                                            </ul>
+
+                                            <ul class="chart-tab video active">
+                                                <li class="clearfix">
+                                                    <span class="position">1</span>
+                                                    <div class="chart-avatar"><img src="../funky-tunes-css/images/temp/thumb-9.jpg" alt="" /></div>
+                                                    <a href="#" class="chart-title"><strong>She Wolf</strong>Shakira</a>
+                                                    <a href="#" class="chart-like">593<i class="icon-small-like"></i></a>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="position">2</span>
+                                                    <div class="chart-avatar"><img src="../funky-tunes-css/images/temp/thumb-10.jpg" alt="" /></div>
+                                                    <a href="#" class="chart-title"><strong>Wide Awake</strong>Katy Perry</a>
+                                                    <a href="#" class="chart-like">412<i class="icon-small-like"></i></a>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="position">3</span>
+                                                    <div class="chart-avatar"><img src="../funky-tunes-css/images/temp/thumb-11.jpg" alt="" /></div>
+                                                    <a href="#" class="chart-title"><strong>Bullet proof</strong>Bruno Mars</a>
+                                                    <a href="#" class="chart-like">360<i class="icon-small-like"></i></a>
+                                                </li>
+                                            </ul>
+                                            <ul class="chart-links green clearfix">
+                                                <li class="text">Top3</li>
+                                                <li><a href="javascript:;" class="music"><i class="icon-small-note"></i>Music</a></li>
+                                                <li><a href="javascript:;" class="video active"><i class="icon-small-cam"></i>Videos</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--/ Top 3 Chart -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="example-code">
+                                    <pre class="prettyprint">
+&lt;div class="widget-container widget-top3chart boxed">
+    &lt;ul class="chart-tab music">
+        &lt;li class="clearfix">
+            &lt;span class="position">1&lt;/span>
+            &lt;div class="chart-avatar">&lt;img src="images/temp/thumb-4.jpg" alt="" />&lt;/div>
+            &lt;a href="#" class="chart-title">&lt;strong>Wide Awake&lt;/strong>Miley Cyrus&lt;/a>
+            &lt;a href="#" class="chart-like">246&lt;i class="icon-small-like">&lt;/i>&lt;/a>
+        &lt;/li>
+        &lt;li class="clearfix">
+            &lt;span class="position">2&lt;/span>
+            &lt;div class="chart-avatar">&lt;img src="images/temp/thumb-6.jpg" alt="" />&lt;/div>
+            &lt;a href="#" class="chart-title">&lt;strong>Bullet proof&lt;/strong>Madonna&lt;/a>
+            &lt;a href="#" class="chart-like">984&lt;i class="icon-small-like">&lt;/i>&lt;/a>
+        &lt;/li>
+        &lt;li class="clearfix">
+            &lt;span class="position">3&lt;/span>
+            &lt;div class="chart-avatar">&lt;img src="images/temp/thumb-8.jpg" alt="" />&lt;/div>
+            &lt;a href="#" class="chart-title">&lt;strong>She Wolf&lt;/strong>Rihanna&lt;/a>
+            &lt;a href="#" class="chart-like">896&lt;i class="icon-small-like">&lt;/i>&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+
+    &lt;ul class="chart-tab video active">
+        &lt;li class="clearfix">
+            &lt;span class="position">1&lt;/span>
+            &lt;div class="chart-avatar">&lt;img src="images/temp/thumb-9.jpg" alt="" />&lt;/div>
+            &lt;a href="#" class="chart-title">&lt;strong>She Wolf&lt;/strong>Shakira&lt;/a>
+            &lt;a href="#" class="chart-like">593&lt;i class="icon-small-like">&lt;/i>&lt;/a>
+        &lt;/li>
+        &lt;li class="clearfix">
+            &lt;span class="position">2&lt;/span>
+            &lt;div class="chart-avatar">&lt;img src="images/temp/thumb-10.jpg" alt="" />&lt;/div>
+            &lt;a href="#" class="chart-title">&lt;strong>Wide Awake&lt;/strong>Katy Perry&lt;/a>
+            &lt;a href="#" class="chart-like">412&lt;i class="icon-small-like">&lt;/i>&lt;/a>
+        &lt;/li>
+        &lt;li class="clearfix">
+            &lt;span class="position">3&lt;/span>
+            &lt;div class="chart-avatar">&lt;img src="images/temp/thumb-11.jpg" alt="" />&lt;/div>
+            &lt;a href="#" class="chart-title">&lt;strong>Bullet proof&lt;/strong>Bruno Mars&lt;/a>
+            &lt;a href="#" class="chart-like">360&lt;i class="icon-small-like">&lt;/i>&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+    &lt;ul class="chart-links green clearfix">
+        &lt;li class="text">Top3&lt;/li>
+        &lt;li>
+            &lt;a href="javascript:;" class="music">&lt;i class="icon-small-note">&lt;/i>Music&lt;/a>
+        &lt;/li>
+        &lt;li>
+            &lt;a href="javascript:;" class="video active">&lt;i class="icon-small-cam">&lt;/i>Videos&lt;/a>
+        &lt;/li>
+    &lt;/ul>
+&lt;/div>
+                                    </pre>
+                            </div>
+                        </div>
+                        <!--/ Top 3 Chart -->
+                    </div>
+                    <!--/ Charts -->
+
+                </div>
+                <!--/ content -->
+            </div>
+        </div>
+        <!--/ row-->
+    </div>
+    <!--/ container -->
+</div>
+</body>
+</html>

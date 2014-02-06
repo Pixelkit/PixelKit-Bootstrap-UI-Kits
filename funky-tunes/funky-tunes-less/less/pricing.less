@@ -1,0 +1,78 @@
+/*-----------------------------------*/
+/* Price Items */
+/*-----------------------------------*/
+
+  .price-item {position: relative; .box-shadow(@box-shadow);}
+  .price-image img {display: block; width: 100%;}
+
+    /* Price Item style 3 */
+    /*-----------------------------------*/
+
+  .price-list.style3 .price-content {
+    border-top: 6px solid #53529b;
+    padding: 28px 27px 23px;
+  }
+  .price-list.style3 .price-title {
+    font-size: @font-size * 2.15;
+    color: @header-color;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  .price-list.style3 .price-subtitle {
+    font-family: @font-family-montserrat;
+    font-size: @font-size * 0.92;
+    font-weight: 700;
+    color: @header-color;
+    text-transform: uppercase;
+    letter-spacing: -0.6px;
+    margin-bottom: 27px;
+  }
+  .price-list.style3 li {
+    font-family: @font-family-allerta;
+    font-size: @font-size;
+    font-weight: 400;
+    padding-left: 16px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .price-list.style3 li:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    background: #b8c901;
+    border-radius: 50%;
+  }
+  .price-list.style3 .price {
+    font-family: @font-family-montserrat;
+    padding: 16px 10px 27px;
+    background-color: #fdf5f7;
+    box-shadow: inset 0 5px 5px -2px rgba(107,60,96,0.2);
+    text-align: center;
+  }
+  .price-list.style3 .price strong {
+    display: block;
+    font-size: @font-size * 6;
+    font-weight: 400;
+    color: #53529b;
+    margin-bottom: 4px;
+  }
+  .price-list.style3 .price sub {
+    font-size: @font-size * 2.86;
+    bottom: 0;
+  }
+  .price-list.style3 .price span {
+    font-size: @font-size * 0.86;
+    font-weight: 700;
+    color: @header-color;
+    text-transform: uppercase;
+  }
+  .price-list.style3 .btn-large span {font-size: @font-size * 2.58; font-weight: 600;}
+
+  @media (min-width:768px) and (max-width:991px) {
+    .price-list.style3 .price-content {padding: 20px 20px 16px;}
+    .price-list.style3 .price {padding: 10px 10px 20px;}
+  }

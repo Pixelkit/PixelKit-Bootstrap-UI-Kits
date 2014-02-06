@@ -1,0 +1,69 @@
+/*-----------------------------------*/
+/* Typography */
+/*-----------------------------------*/
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @header-color;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.2em;
+    margin-bottom: .4em;
+  }
+  h1 {font-size: @font-size * 3.29; color: @header-color-main; letter-spacing: -3px;}
+  h2 {font-size: @font-size * 2.43;}
+  h3 {font-size: @font-size * 2.15;}
+  h4 {font-size: @font-size * 1.72; font-weight: 600;}
+  h5 {font-size: @font-size * 1.58;}
+  h6 {font-family: @font-family-allerta; font-size: @font-size * 1.29; font-weight: 400;}
+
+  @media (max-width: 479px), (min-width: 768px) and (max-width: 991px) {
+    h1 {font-size: @font-size * 2.15; letter-spacing: -1px;}
+    h2 {font-size: @font-size * 1.93;}
+    h3 {font-size: @font-size * 1.72;}
+    h4 {font-size: @font-size * 1.43;}
+    h5 {font-size: @font-size * 1.22;}
+    h6 {font-size: @font-size;}
+  }
+
+  em {font-style: italic;}
+  strong {font-weight: 700;}
+  small {font-size: 85%;}
+
+  i {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    font-style: normal;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+  p {line-height: 24px; margin-bottom: 25px;}
+  p.small {font-size: @font-size * 0.86; line-height: 21px;}
+  p.italic {font-style: italic;}
+
+  @media (max-width:479px) {
+    p {font-size: @font-size * 0.92; line-height: 21px; margin-bottom: 10px;}
+  }
+  .margin-top-0 {margin-top: 0 !important;}
+  .margin-top-10 {margin-top: 10px !important;}
+  .margin-top-20 {margin-top: 20px !important;}
+  .margin-top-30 {margin-top: 30px !important;}
+  .margin-top-40 {margin-top: 40px !important;}
+  .margin-top-50 {margin-top: 50px !important;}
+  .margin-top-60 {margin-top: 60px !important;}
+  .margin-top-80 {margin-top: 80px !important;}
+  .margin-top-90 {margin-top: 90px !important;}
+  .margin-top-100 {margin-top: 100px !important;}
+  .margin-bottom-0 {margin-bottom: 0 !important;}
+  .margin-bottom-10 {margin-bottom: 10px !important;}
+  .margin-bottom-20 {margin-bottom: 20px !important;}
+  .margin-bottom-30 {margin-bottom: 30px !important;}
+  .margin-bottom-40 {margin-bottom: 40px !important;}
+  .margin-bottom-50 {margin-bottom: 50px !important;}
+  .margin-bottom-60 {margin-bottom: 60px !important;}
+  .margin-bottom-80 {margin-bottom: 80px !important;}
+  .margin-bottom-90 {margin-bottom: 90px !important;}
+  .margin-bottom-100 {margin-bottom: 100px !important;}

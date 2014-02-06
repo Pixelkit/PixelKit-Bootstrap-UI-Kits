@@ -1,0 +1,211 @@
+/*
+            - Top 3 Chart
+	        - Top 10 Chart
+*/
+
+
+
+
+
+/*-----------------------------------*/
+/* Charts */
+/*-----------------------------------*/
+
+    /*Links*/
+  .chart-links {background: #7978b4; overflow: hidden; position: relative;}
+  .chart-links li {float: right; position: relative;}
+
+  .chart-links .text {
+    font-family: @font-family-montserrat;
+    font-size: 70px;
+    font-weight: 700;
+    color: #8c8bc8;
+    letter-spacing: -6px;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: -3px;
+  }
+  .chart-links a {
+    display: block;
+    padding: 12px 30px;
+    text-align: center;
+    border-left: 1px solid #6d6cac;
+    font-size: @button-font-size;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 200px;
+    margin-bottom: -190px;
+  }
+  .chart-links li:first-child a {border-left-width: 0;}
+  .chart-links a:hover, .chart-links a.active {color: #fff !important;}
+
+  .chart-links [class*="icon-small-"] {
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #53529b;
+    -webkit-transition: all 0.16s ease;
+    -moz-transition: all 0.16s ease;
+    -ms-transition: all 0.16s ease;
+    transition: all 0.16s ease;
+  }
+  .chart-links .icon-small-prev, .chart-links .icon-small-next {font-size: 22px;}
+  .chart-links .icon-small-cam {font-size: 14px;}
+  .chart-links a:hover [class*="icon-small-"], .chart-links a.active [class*="icon-small-"] {color: #d4e729;}
+
+    /*Green Links*/
+  .chart-links.green {background: #b8c901;}
+  .chart-links.green .text {color: #989f01;}
+  .chart-links.green a {
+    border-left: 1px solid #b4c201;
+    -webkit-transition: all 0.16s ease;
+    -moz-transition: all 0.16s ease;
+    -ms-transition: all 0.16s ease;
+    transition: all 0.16s ease;
+  }
+  .chart-links.green a:hover, .chart-links.green a.active {background: #989f01; box-shadow: inset 0 16px 10px -10px rgba(77, 83, 14, 0.8);}
+  .chart-links.green [class*="icon-small-"] {color: #fff;}
+  .chart-links.green a:hover [class*="icon-small-"], .chart-links.green a.active [class*="icon-small-"] {color: #b8c901;}
+
+    /*Red Links*/
+  .chart-links.red {background: #bf5d90;}
+  .chart-links.red .text {color: #cc6b9e;}
+  .chart-links.red a {border-left: 1px solid #ab447a;}
+  .chart-links.red [class*="icon-small-"] {color: #fff;}
+  .chart-links.red a:hover [class*="icon-small-"], .chart-links.red a.active [class*="icon-small-"] {color: #FFB3DB;}
+
+    /* Top 3 Chart */
+    /*-----------------------------------*/
+
+  .widget-top3chart {margin-left: 50px; box-shadow: none;}
+  .widget-top3chart .chart-tab {display: none;}
+  .widget-top3chart .chart-tab.active {display: block;}
+  .widget-top3chart .chart-links {margin-left: -50px; .box-shadow(@box-shadow);}
+  .widget-top3chart .chart-tab li {
+    border-top: 1px solid #eee;
+    position: relative;
+    padding: 28px 62px 29px 94px;
+    min-height: 90px;
+  }
+  .widget-top3chart .chart-tab li:first-child {border-top: none;}
+
+  .widget-top3chart .position {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    bottom: 0;
+    margin: 0;
+    width: 50px;
+    background-color: #d98f88;
+    background-color: rgba(255, 241, 244, 0.1);
+    box-shadow: inset -5px 0 5px -2px rgba(104, 16, 52, 0.2);
+    font-family: @font-family-montserrat;
+    font-size: @font-size * 1.29;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    padding-top: 36px;
+  }
+  .widget-top3chart .chart-avatar {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .widget-top3chart .chart-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .widget-top3chart .chart-title {
+    display: block;
+    font-size: @font-size * 0.86;
+    font-weight: 400;
+    color: #7380b0;
+  }
+  .widget-top3chart .chart-title strong {
+    display: block;
+    font-size: @font-size * 1.36;
+    color: @header-color;
+    margin-bottom: 2px;
+  }
+  .widget-top3chart .chart-title:hover strong {color: @link-color-hover;}
+
+  .widget-top3chart .chart-like {
+    position: absolute;
+    top: 36px;
+    right: 17px;
+    font-size: @font-size * 0.8;
+    font-weight: 700;
+    color: #bf5d90;
+    line-height: 20px;
+  }
+  .widget-top3chart .chart-like i {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: #ecdee1;
+    margin: 0 0 0 3px;
+    vertical-align: -34%;
+    -webkit-transition: all 0.16s ease;
+    -moz-transition: all 0.16s ease;
+    -ms-transition: all 0.16s ease;
+    transition: all 0.16s ease;
+  }
+  .widget-top3chart .chart-like:hover i {
+    font-size: 14px;
+    color: #b8c901;
+  }
+
+    /* Top 10 Chart */
+    /*-----------------------------------*/
+
+  .widget-top10chart {.box-shadow(@box-shadow);}
+
+  .widget-top10chart .chart-item {
+    padding-left: 36px;
+    position: relative;
+    box-shadow: 0 -1px 1px rgba(43, 35, 40, 0.2);
+  }
+  .widget-top10chart .chart-item:first-child {box-shadow: none;}
+
+  .widget-top10chart .position {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 36px;
+    background-color: #d98f88;
+    background-color: rgba(255, 241, 244, 0.1);
+    box-shadow: inset -5px 0 5px -2px rgba(104, 16, 52, 0.2);
+    font-family: @font-family-montserrat;
+    font-size: @font-size * 1.29;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    padding-top: 12px;
+  }
+  .widget-top10chart .position:before {
+    content: '';
+    font-family: 'fashion';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    position: absolute;
+    top: 38px;
+    left: 14px;
+  }
+  .widget-top10chart .position.up:before {content: '\e600'; color: #d4e729;}
+  .widget-top10chart .position.down:before {content: '\e609'; color: #ffb19d;}

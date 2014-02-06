@@ -1,0 +1,28 @@
+/*-----------------------------------*/
+/* Rating Stars */
+/*-----------------------------------*/
+
+  .rating {display: inline-block;}
+
+  .rating span.star {
+    font-family: "fashion";
+    font-weight: normal;
+    font-style: normal;
+    float: left;
+    padding: 0 2px;
+    cursor:pointer;
+  }
+  .rating span.star:before {
+    content: "\e77d";
+    display: block;
+    font-size: 10px;
+    color: #ecdee1;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .rating-large span.star:before {font-size: 15px;}
+  .rating span.voted:before {color: #b8c901;}
+  .rating:hover span.star:before {color: #ecdee1 !important;}
+  .rating:hover span.star.over:before {color: #b8c901 !important;}

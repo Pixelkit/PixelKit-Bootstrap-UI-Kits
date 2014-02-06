@@ -1,0 +1,171 @@
+/*-----------------------------------*/
+/* Statistics */
+/*-----------------------------------*/
+
+  .widget-stats .carousel-inner {overflow: visible;}
+
+  .widget-stats .stats-top {
+    padding: 18px 20px 0;
+    margin-bottom: -10px;
+  }
+  .widget-stats .widget-title {
+    font-family: @font-family-allerta;
+    font-size: @font-size * 1.15;
+    line-height: 1;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    margin-bottom: 3px;
+    letter-spacing: 0;
+  }
+  .widget-stats .widget-subtitle {
+    font-family: @font-family-montserrat;
+    font-size: @font-size * 0.8;
+    line-height: 1;
+    font-weight: 700;
+    color: #da74b7;
+  }
+  .graph {height: 200px;}
+
+    /*Tooltip*/
+  .google-visualization-tooltip {
+    font-family: @font-family-montserrat;
+    border: none !important;
+    background: transparent url(images/tooltip.png) 0 0 no-repeat !important;
+    width: 48px !important;
+    height: 60px !important;
+    position: absolute;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    text-align: center;
+    padding-top: 8px !important;
+    margin-left: -24px !important;
+    margin-top: -10px !important;
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .google-visualization-tooltip {
+      background-image: url(images/tooltip-x2.png) !important;
+      background-size: 48px auto !important;
+    }
+  }
+  .google-visualization-tooltip strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .google-visualization-tooltip span {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    color: #6c7f00;
+    text-transform: uppercase;
+  }
+
+    /*Bottom Section*/
+  .stats-content:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background: #fff;
+  }
+
+  .stats-tab-bottom {
+    background-color: #fff;
+    margin-top: -20px;
+    padding-left: 50px;
+  }
+  .stats-tab-bottom .artist {
+    font-size: @font-size * 1.36;
+    font-weight: 700;
+    color: @header-color-main;
+    height: 50px;
+    line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 51%;
+    float: left;
+  }
+  .stats-tab-bottom .position {
+    display: inline-block;
+    font-family: @font-family-montserrat;
+    font-size: @font-size * 1.72;
+    font-weight: 700;
+    color: @header-color;
+    height: 50px;
+    line-height: 46px;
+    white-space: nowrap;
+    border-left: 1px solid #eee;
+    padding: 0 10px 0 10px;
+    float: right;
+    max-width: 49%;
+  }
+  .stats-tab-bottom .position strong {
+    font-size: 1.5em;
+  }
+  .stats-tab-bottom .position em {
+    display: inline-block;
+    font-style: normal;
+    font-size: 0.4em;
+    line-height: 10px;
+    text-transform: uppercase;
+    margin-left: 5px;
+  }
+
+    /*Buttons*/
+  .widget-stats .carousel-control.left,
+  .widget-stats .carousel-control.right {
+    position:absolute;
+    left: 0;
+    bottom: 25px;
+    top: auto;
+    right: auto;
+    z-index: 2;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    background: #b8c901 url(images/calendar.png) 0 0 no-repeat;
+    opacity: 1;
+    filter: none;
+  }
+  .widget-stats .carousel-control.left {
+    bottom: 0;
+    border-top: 1px solid #98ad00;
+    background-position: 0 -25px;
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .widget-stats .carousel-control.left,
+    .widget-stats .carousel-control.right {
+      background-image: url(images/calendar-x2.png);
+      background-size: 70px auto;
+    }
+  }
+
+    /* Fade Effect */
+  .stats-content.fade-effect .item {
+    opacity: 0;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -ms-transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
+  }
+  .stats-content.fade-effect .active.item {opacity: 1;}
+
+  .stats-content.fade-effect .active.left,
+  .stats-content.fade-effect .active.right {
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  @media (min-width:768px) and (max-width:991px) {
+    .stats-tab-bottom {margin-top: -40px; padding-left: 40px;}
+    .stats-tab-bottom .position em {display: none;}
+    .stats-tab-bottom .artist {font-size: @font-size * 1.15; max-width: 60%;}
+    .stats-tab-bottom .position {max-width: 40%;}
+  }

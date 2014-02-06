@@ -1,0 +1,68 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+
+  .scrollbars{margin-bottom: 30px;}
+  .scrollbars p {visibility:hidden; opacity: 0;}
+  .scrollbars p::selection{background: transparent; color: rgba(0, 0, 0, 0);}
+  .scrollbars .scrollbar {width: 23px; height: 210px; float: left;}
+
+  .scrollbar {overflow: auto;}
+  .scrollbar:focus {outline: none;}
+  .jspContainer {overflow: hidden; position: relative;}
+  .jspPane {position: absolute;}
+  .jspHorizontalBar {display: none;}
+  .jspVerticalBar {position: absolute; top: 0; right: 0; bottom: 0;}
+
+    /* Bar */
+  .jspTrack {
+    float: right;
+    width: 4px;
+    position: relative;
+  }
+  .jspTrack:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #f2e2e6;
+    border-radius: 2px;
+    background: #fefbfc;
+    background: rgba(253,245,247,0.38);
+  }
+  .scrollbar.style2 .jspTrack:before {display: none;}
+
+    /* Arrows */
+  .jspArrow {
+    display: none;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 1px;
+    height: 0;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 4px solid #a9a8a5;
+    position: relative;
+    top: 9px;
+    z-index: 1;
+  }
+  .jspArrowDown {
+    border-top: 4px solid #a9a8a5;
+    border-bottom: none;
+    top: auto;
+    bottom: 9px;
+  }
+
+    /* Handle */
+  .jspDrag {
+    width: 4px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 2px;
+    background: #bf5d90;
+  }

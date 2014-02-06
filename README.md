@@ -1,3 +1,15 @@
+## Funky Tunes
+
+![ScreenShot](http://pixelkit.com/free-ui-kits/funky-tunes/funky-tunes.jpg)
+
+To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/funky-tunes/> The complete Bootstrap UI kit that contains tons of additional elements spread across 6 categories is available on PixelKit.com <http://pixelkit.com/kits/music-ui-kit/>
+
+## Links
+
++ [Demo page](http://pixelkit.com/free-ui-kits/funky-tunes/)
++ [Documentation page](http://pixelkit.com/free-ui-kits/funky-tunes/docs/)
++ [Premium Version of this UI Kit](http://pixelkit.com/kits/music-ui-kit/)
+
 ## Skinny Frames
 
 ![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/11/Slider_1_SkinnyFrames.jpg)
@@ -108,6 +120,7 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 
 ## Changelog
 
++ 1.9 Added new kit Funky Tunes.
 + 1.8 Added new kit Skinny Frames.
 + 1.7 Added new kit City Break.
 + 1.6 Added new kit Chubby Stacks.

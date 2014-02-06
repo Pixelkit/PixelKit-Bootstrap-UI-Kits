@@ -1,0 +1,112 @@
+/*-----------------------------------*/
+/* Navigation */
+/*-----------------------------------*/
+
+  .slicknav_menu {display: none;}
+  .menu.bg-image-home {background-position: -56px -46px;}
+
+    /* Level 0 */
+  .menu {z-index: 999;}
+  .menu li {position: relative;}
+  .menu > li {
+    float: left;
+    width: 12.5%;
+  }
+  .menu > li > a {
+    display: block;
+    font-family: @font-family-allerta;
+    font-size: @font-size * 1.08;
+    font-weight: 400;
+    color: #644370;
+    text-align: center;
+    line-height: 18px;
+    padding: 9px 5px 15px;
+    border-left: 1px solid #f3f3f3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .menu > li:first-child > a {border-left: none;}
+
+  .menu > li:hover > a,
+  .menu > li.hover > a {
+    background: #d6927b;
+    border-left-color: #ca7e6e;
+    box-shadow: inset 5px 2px 3px rgba(144, 27, 42, 0.16);
+    color: #fff !important;
+  }
+  .menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 2px;
+    background: url(images/icons/menu-icons.png) 0 0 no-repeat;
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    .menu-icon {
+      background-image: url(images/icons/menu-icons-x2.png);
+      background-size: 80px auto;
+    }
+  }
+  .menu-icon-2 {background-position: 0 -40px;}
+  .menu-icon-3 {background-position: 0 -80px;}
+  .menu-icon-4 {background-position: 0 -120px;}
+  .menu-icon-5 {background-position: 0 -160px;}
+  .menu-icon-6 {background-position: 0 -200px;}
+  .menu-icon-7 {background-position: 0 -240px;}
+  .menu-icon-8 {background-position: 0 -280px;}
+
+  .menu > li:hover > a .menu-icon, .menu > li.hover > a .menu-icon {background-position: -40px 0;}
+  .menu > li:hover > a .menu-icon-2, .menu > li.hover > a .menu-icon-2 {background-position: -40px -40px;}
+  .menu > li:hover > a .menu-icon-3, .menu > li.hover > a .menu-icon-3 {background-position: -40px -80px;}
+  .menu > li:hover > a .menu-icon-4, .menu > li.hover > a .menu-icon-4 {background-position: -40px -120px;}
+  .menu > li:hover > a .menu-icon-5, .menu > li.hover > a .menu-icon-5 {background-position: -40px -160px;}
+  .menu > li:hover > a .menu-icon-6, .menu > li.hover > a .menu-icon-6 {background-position: -40px -200px;}
+  .menu > li:hover > a .menu-icon-7, .menu > li.hover > a .menu-icon-7 {background-position: -40px -240px;}
+  .menu > li:hover > a .menu-icon-8, .menu > li.hover > a .menu-icon-8 {background-position: -40px -280px;}
+
+    /* Level 1+ */
+  .menu ul {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    z-index: 9499;
+    width:100%;
+    min-width: 140px;
+  }
+  .menu > li:hover > ul, .menu > li.hover > ul {
+    top: 84px;
+    left: 0;
+  }
+  .menu ul li a {
+    display: block;
+    background: #fff;
+    font-size: @font-size * 1.08;
+    font-weight: 700;
+    line-height: normal;
+    color: #985965;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    border-top: 1px solid #f3f3f3;
+  }
+  .menu ul li:first-child  a {border-top: none;}
+  .menu ul li:hover > a, .menu ul li.hover > a {background: #faf6f8;}
+
+    /* Level 2+ */
+  .menu ul li:hover > ul, .menu ul li.hover > ul {
+    position: absolute;
+    top: 1px;
+    left: 100%;
+    width: 101%;
+    padding-left: 1%;
+  }
+
+    /* Responsive */
+  @media (max-width: 991px) {
+    .menu > li > a {font-size: @font-size * 0.92;}
+    .menu ul li a {font-size: @font-size * 0.86;}
+  }
+  @media (max-width: 767px) {
+    .menu, .menu-icon {display: none;}
+    .slicknav_menu {display: block;}
+  }
