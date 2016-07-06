@@ -1,3 +1,14 @@
+##PixelKit UI Kits sponsored by [BitBlox.me](http://www.bitblox.me/)
+
+![ScreenShot](https://github.com/Pixelkit/PixelKit-Bootstrap-UI-Kits/blob/master/static/04839f02a8.jpg)
+
+[BitBlox](http://www.bitblox.me) is a new platform when you can create your site by adding pre-made design elements called blocks. You can visit [BitBlox.me](http://www.bitblox.me/) and we-d love to hear your thoughts. 
+
+## Links
+
++ [BitBlox Demo](http://bit.ly/29iPNxp)
++ [BitBlox Homepage](http://www.bitblox.me/)
+
 ## Funky Tunes
 
 ![ScreenShot](http://pixelkit.com/free-ui-kits/funky-tunes/funky-tunes.jpg)
