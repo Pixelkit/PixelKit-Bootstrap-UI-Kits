@@ -7,8 +7,8 @@
   zoom: 1;
   *display: inline;
     background: #DED6C5;
-    box-shadow: inset 1px 1px 3px rgba(118, 108, 100, 0.26), 0 1px 1px rgba(255, 255, 255, 0.6);
-    border: 1px solid #B9AD9E;
+    box-shadow: inset 2px 1px 3px rgba(118, 108, 100, 0.26), 0 1px 1px rgba(255, 255, 255, 0.6);
+    border: 1px solid #B3AD9E;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
