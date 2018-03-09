@@ -1,0 +1,19 @@
+{
+  "name": "Pixelkit/PixelKit-Bootstrap-UI-Kits",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "description": "please add it",
+  "license": "Eclipse",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "<dependency_name>": "<semantic_version>",
+    "<dependency_name>": "<Local_folder>",
+    "<dependency_name>": "<package>"
+  },
+  "devDependencies": {
+    "<test-framework-name>": "<version>"
+  }
+}
