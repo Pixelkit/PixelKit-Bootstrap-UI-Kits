@@ -11,18 +11,6 @@ You can visit BitBlox.me and we-d love to hear your thoughts.
 + [BitBlox Homepage](http://www.bitblox.me/)
 + [BitBlox Themes](http://www.bitblox.me/themes)
 
-## Funky Tunes
-
-![ScreenShot](http://pixelkit.com/free-ui-kits/funky-tunes/funky-tunes.jpg)
-
-To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/funky-tunes/> The complete Bootstrap UI kit that contains tons of additional elements spread across 6 categories is available on PixelKit.com <http://pixelkit.com/kits/music-ui-kit/>
-
-## Links
-
-+ [Demo page](http://pixelkit.com/free-ui-kits/funky-tunes/)
-+ [Documentation page](http://pixelkit.com/free-ui-kits/funky-tunes/docs/)
-+ [Premium Version of this UI Kit](http://pixelkit.com/kits/music-ui-kit/)
-
 ## Pixel
 
 ![ScreenShot](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/pixel-lite-screenshot-1.jpg)
