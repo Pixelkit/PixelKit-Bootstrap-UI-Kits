@@ -23,6 +23,18 @@ To get started check out our free sample demo <http://pixelkit.com/free-ui-kits/
 + [Documentation page](http://pixelkit.com/free-ui-kits/funky-tunes/docs/)
 + [Premium Version of this UI Kit](http://pixelkit.com/kits/music-ui-kit/)
 
+## Pixel
+
+![ScreenShot](https://themesberg.s3.us-east-2.amazonaws.com/public/products/pixel-lite/github/pixel-lite-screenshot-1.jpg)
+
+To get started check out our free sample demo <https://demo.themesberg.com/pixel-lite/> The complete Bootstrap UI kit that contains tons of additional elements is available on themesberg.com <https://themesberg.com/product/ui-kits/pixel-lite-free-bootstrap-4-ui-kit>
+
+## Links
+
++ [Demo page](https://demo.themesberg.com/pixel-lite/)
++ [Documentation page](https://themesberg.com/docs/pixel-bootstrap/getting-started/overview/)
++ [Premium Version of this UI Kit](https://demo.themesberg.com/pixel-pro/)
+
 ## Skinny Frames
 
 ![ScreenShot](http://pixelkit.com/wp-content/uploads/2013/11/Slider_1_SkinnyFrames.jpg)
